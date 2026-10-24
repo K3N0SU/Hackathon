@@ -1,4 +1,5 @@
 import {
+  Apple,
   AudioLines,
   Banknote,
   BellRing,
@@ -150,6 +151,7 @@ const tools = [
   { icon: AudioLines, title: "Voice chat", body: "Talk to Milpa in any language and hear the answer out loud." },
   { icon: Languages, title: "Interpreter", body: "Hand the phone across the table. Each side speaks, Milpa translates out loud." },
   { icon: Shirt, title: "Gear check", body: "A photo of you, checked against the gear the label requires." },
+  { icon: Apple, title: "Food check", body: "A photo of a food label: your allergies, organic or not, and what it means for pesticides." },
   { icon: Banknote, title: "Pay check", body: "Is the pay stub right? Minimum wage, overtime and missing items, in plain words." },
   { icon: BellRing, title: "Re-entry alarms", body: "A countdown for each block that buzzes when it is safe to go back in." },
   { icon: Sun, title: "Heat check", body: "The hottest hour today where you stand and what your employer owes you." },
@@ -501,7 +503,7 @@ export default function Home() {
       <section id="features" className="zoom-rise mx-auto max-w-6xl px-6 py-28 lg:py-40">
         <Eyebrow>Everything in it</Eyebrow>
         <h2 className="reveal mt-3 max-w-3xl font-display text-5xl font-semibold leading-[0.98] text-ink sm:text-6xl">
-          <Hover text="Fifteen tools. One free app." />
+          <Hover text="Sixteen tools. One free app." />
         </h2>
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {tools.map((tool, index) => {
