@@ -6,6 +6,7 @@ export type ScanResult = {
   readable: boolean;
   product: string;
   signal: Signal;
+  reentryHours: number;
   reentry: string;
   gear: string[];
   firstAid: string[];
@@ -44,6 +45,15 @@ type Copy = {
   offline: string;
   noVoice: string;
   disclaimer: string;
+  sprayedAt: string;
+  startClock: string;
+  clocksHeading: string;
+  safeAt: string;
+  safeNow: string;
+  hoursUnit: string;
+  minutesUnit: string;
+  leftWord: string;
+  clearClock: string;
   signal: Record<Signal, string>;
 };
 
@@ -68,6 +78,15 @@ export const copy: Record<Language, Copy> = {
     offline: "No connection. Showing a saved example result.",
     noVoice: "This phone has no voice for this language.",
     disclaimer: "This is a reading aid. Always follow the label and your supervisor.",
+    sprayedAt: "When was it sprayed?",
+    startClock: "Start the clock",
+    clocksHeading: "Fields on the clock",
+    safeAt: "Safe to enter at",
+    safeNow: "Safe to enter",
+    hoursUnit: "h",
+    minutesUnit: "min",
+    leftWord: "left",
+    clearClock: "Remove",
     signal: { caution: "Caution", warning: "Warning", danger: "Danger", unknown: "Not shown" },
   },
   es: {
@@ -90,6 +109,15 @@ export const copy: Record<Language, Copy> = {
     offline: "Sin conexión. Mostrando un resultado de ejemplo guardado.",
     noVoice: "Este teléfono no tiene voz para este idioma.",
     disclaimer: "Esto es una ayuda de lectura. Siga siempre la etiqueta y a su supervisor.",
+    sprayedAt: "¿Cuándo se roció?",
+    startClock: "Iniciar el reloj",
+    clocksHeading: "Campos en el reloj",
+    safeAt: "Seguro para entrar a las",
+    safeNow: "Seguro para entrar",
+    hoursUnit: "h",
+    minutesUnit: "min",
+    leftWord: "faltan",
+    clearClock: "Quitar",
     signal: { caution: "Cuidado", warning: "Aviso", danger: "Peligro", unknown: "No indicado" },
   },
   pa: {
@@ -112,6 +140,15 @@ export const copy: Record<Language, Copy> = {
     offline: "ਕਨੈਕਸ਼ਨ ਨਹੀਂ ਹੈ। ਸੰਭਾਲਿਆ ਹੋਇਆ ਨਮੂਨਾ ਨਤੀਜਾ ਦਿਖਾ ਰਿਹਾ ਹੈ।",
     noVoice: "ਇਸ ਫ਼ੋਨ ਵਿੱਚ ਇਸ ਭਾਸ਼ਾ ਦੀ ਆਵਾਜ਼ ਨਹੀਂ ਹੈ।",
     disclaimer: "ਇਹ ਪੜ੍ਹਨ ਵਿੱਚ ਮਦਦ ਹੈ। ਹਮੇਸ਼ਾ ਲੇਬਲ ਅਤੇ ਆਪਣੇ ਸੁਪਰਵਾਈਜ਼ਰ ਦੀ ਗੱਲ ਮੰਨੋ।",
+    sprayedAt: "ਛਿੜਕਾਅ ਕਦੋਂ ਹੋਇਆ?",
+    startClock: "ਘੜੀ ਚਲਾਓ",
+    clocksHeading: "ਘੜੀ 'ਤੇ ਖੇਤ",
+    safeAt: "ਅੰਦਰ ਜਾਣਾ ਸੁਰੱਖਿਅਤ ਹੋਵੇਗਾ",
+    safeNow: "ਅੰਦਰ ਜਾਣਾ ਸੁਰੱਖਿਅਤ ਹੈ",
+    hoursUnit: "ਘੰਟੇ",
+    minutesUnit: "ਮਿੰਟ",
+    leftWord: "ਬਾਕੀ",
+    clearClock: "ਹਟਾਓ",
     signal: { caution: "ਸਾਵਧਾਨ", warning: "ਚੇਤਾਵਨੀ", danger: "ਖ਼ਤਰਾ", unknown: "ਦਿਖਾਇਆ ਨਹੀਂ" },
   },
 };

@@ -9,6 +9,7 @@ Rules:
 - Write every text field in the requested language, in short plain sentences at a sixth-grade reading level. Keep product names, numbers, dates, times and phone numbers exactly as printed, but translate units and every other word, for example hours = ਘੰਟੇ in Punjabi and horas in Spanish.
 - "signal" is the signal word on the label or sign: caution, warning or danger. Use "unknown" if none is visible.
 - "reentry" is when it is safe to go back into the treated area (the restricted-entry interval or the do-not-enter date and time). Write it as one full sentence in the requested language that states the exact hours or date, for example "Do not enter for 12 hours after spraying."
+- "reentryHours" is the re-entry interval as a plain number of hours (convert days to hours). Use 0 if the label or sign gives only a calendar date and time, or no interval.
 - "gear" lists the protective equipment the label requires. "firstAid" lists the first aid steps and any poison control number.
 - If the photo is not a pesticide label or a field sign, or is too blurry or cut off to read, set "readable" to false and leave the other fields empty.
 - If any key detail is unclear, partly hidden or contradictory, set "ask" to one short sentence in the requested language telling the worker to ask their supervisor about that part. Otherwise leave "ask" empty.
@@ -21,13 +22,14 @@ const schema = {
     readable: { type: "BOOLEAN" },
     product: { type: "STRING" },
     signal: { type: "STRING", format: "enum", enum: ["caution", "warning", "danger", "unknown"] },
+    reentryHours: { type: "NUMBER" },
     reentry: { type: "STRING" },
     gear: { type: "ARRAY", items: { type: "STRING" } },
     firstAid: { type: "ARRAY", items: { type: "STRING" } },
     summary: { type: "STRING" },
     ask: { type: "STRING" },
   },
-  required: ["readable", "product", "signal", "reentry", "gear", "firstAid", "summary", "ask"],
+  required: ["readable", "product", "signal", "reentryHours", "reentry", "gear", "firstAid", "summary", "ask"],
 };
 
 const mediaTypes = ["image/jpeg", "image/png", "image/webp", "image/gif"] as const;
