@@ -14,11 +14,12 @@ Update before ending every task. Keep terse.
 - 17 languages (scan.ts): en es pa hmn tl hi ar vi zh ko ur fa hy ru fr pt ja; RTL ar ur fa. i18n in-memory cache + preload on language button hover. After copy changes: dev server on 3100, `FURROW_URL=http://localhost:3100 node scripts/translate.mjs`.
 - QA account in scratchpad qa.json. Screenshot scripts: scratchpad app2.js (app), shoot.js (landing).
 
+- Pay, food and gear checks open the in-app LiveCamera (portaled to body; gear uses front camera). Tool names/intro reworded to say farmworker pesticide/heat/pay (en, es; others via translate.mjs). Tool cards: no blob, hover arrow.
 - Food check also takes a typed name (no label/barcode); "Check another" returns to start. Google sign-in: unauthorized-domain shows a "use milpa-cali.vercel.app" message, popup failures fall back to redirect, getRedirectResult surfaces errors.
-- Devpost media done: Downloads/media/images (30: 17 square posters + 13 desktop shots), Downloads/media/videos (5 silent 1080p mp4s with captions), Downloads/Milpa.pptx (20 slides, notes). Generators in scratchpad: cap.js (captures), poster.js, panel.js, deck3.js (run with NODE_PATH=scratchpad/node_modules), videos.js (CDP frame recorder, fake mic qes.wav), compose.js (ffmpeg via imageio-ffmpeg).
+- Devpost media done: Downloads/media/images (30: 17 square posters + 13 desktop shots), Downloads/media/videos (desktop showcase reels 1-6 + 0-full-showcase, browser frame, title cards, sped-up AI waits; scratchpad showcase.js records, compose3.js edits), Downloads/Milpa.pptx (20 slides, notes). Generators in scratchpad: cap.js (captures), poster.js, panel.js, deck3.js (run with NODE_PATH=scratchpad/node_modules), videos.js (CDP frame recorder, fake mic qes.wav), compose.js (ffmpeg via imageio-ffmpeg).
 
 ## Next
-- User: submit on Devpost (Main, Best AI/ML, Best Solo) with media folder + Milpa.pptx, optionally add voiceover to videos, delete Downloads/env.local.txt. If Google sign-in still fails, read the new on-screen message (likely wrong site URL).
+- User: submit on Devpost (Main, Best AI/ML, Best Solo) with media folder + Milpa.pptx, optionally add voiceover to videos, delete Downloads/env.local.txt. Suggestions list: Downloads/Milpa-500-ideas.md (section A = before deadline). If Google sign-in still fails, read the new on-screen message (likely wrong site URL).
 
 ## Decisions
 - Accounts required. No Punjabi script on landing. Pay check facts: CA min wage $16.90 (2026), ag overtime after 8h/day or 40h/week, double after 12h. Labor Commissioner 1-833-526-4636.
