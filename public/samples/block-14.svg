@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" font-family="Arial, Helvetica, sans-serif">
+<rect width="800" height="1000" fill="#8a8f7a"/>
+<rect x="40" y="40" width="720" height="920" rx="26" fill="#ffffff" stroke="#111111" stroke-width="8"/>
+<path d="M 40 66 a 26 26 0 0 1 26 -26 h 668 a 26 26 0 0 1 26 26 v 190 h -720 z" fill="#c8102e"/>
+<text x="400" y="190" text-anchor="middle" font-size="136" font-weight="700" fill="#ffffff">DANGER</text>
+<rect x="40" y="256" width="720" height="130" fill="#111111"/>
+<text x="400" y="342" text-anchor="middle" font-size="86" font-weight="700" fill="#ffffff">PELIGRO</text>
+<text x="400" y="460" text-anchor="middle" font-size="58" font-weight="700" fill="#111111">PESTICIDES</text>
+<text x="400" y="525" text-anchor="middle" font-size="58" font-weight="700" fill="#111111">PESTICIDAS</text>
+<line x1="90" y1="560" x2="710" y2="560" stroke="#111111" stroke-width="3"/>
+<text x="90" y="615" font-size="34" font-weight="700" fill="#111111">Almond Block 14</text>
+<text x="90" y="665" font-size="28" fill="#111111">Sprayed: Oct 24, 6:30 AM</text>
+<text x="90" y="705" font-size="28" fill="#111111">Aplicado: 24 de octubre, 6:30 a. m.</text>
+<rect x="80" y="735" width="640" height="96" fill="#fff200" stroke="#111111" stroke-width="5"/>
+<text x="400" y="780" text-anchor="middle" font-size="34" font-weight="700" fill="#111111">DO NOT ENTER UNTIL OCT 26, 6:30 AM</text>
+<text x="400" y="816" text-anchor="middle" font-size="26" font-weight="700" fill="#111111">NO ENTRE HASTA EL 26 DE OCT, 6:30 A. M.</text>
+<text x="90" y="870" font-size="22" fill="#111111">Early entry only by trained workers with respirator</text>
+<text x="90" y="900" font-size="22" fill="#111111">and chemical-resistant coveralls.</text>
+<text x="90" y="935" font-size="22" fill="#111111">If exposed call Poison Control 1-800-222-1222.</text>
+</svg>

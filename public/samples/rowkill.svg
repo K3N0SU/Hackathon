@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="1000" viewBox="0 0 800 1000" font-family="Arial, Helvetica, sans-serif">
+<rect width="800" height="1000" fill="#e9e4d4"/>
+<rect x="30" y="30" width="740" height="940" fill="#fffdf6" stroke="#7a2e1d" stroke-width="4"/>
+<rect x="30" y="30" width="740" height="160" fill="#7a2e1d"/>
+<text x="400" y="110" text-anchor="middle" font-size="76" font-weight="700" fill="#fffdf6">ROWKILL 4L</text>
+<text x="400" y="158" text-anchor="middle" font-size="24" letter-spacing="3" fill="#f1cdb8">HERBICIDE FOR ORCHARD AND VINEYARD ROWS</text>
+<text x="60" y="232" font-size="19" font-weight="700" fill="#1d1d1d">ACTIVE INGREDIENT</text>
+<text x="60" y="260" font-size="19" fill="#1d1d1d">Glufosinate-ammonium ................ 24.5%</text>
+<text x="60" y="288" font-size="19" fill="#1d1d1d">OTHER INGREDIENTS ................... 75.5%</text>
+<rect x="520" y="205" width="220" height="90" fill="none" stroke="#1d1d1d" stroke-width="4"/>
+<text x="630" y="268" text-anchor="middle" font-size="40" font-weight="700" fill="#1d1d1d">WARNING</text>
+<text x="400" y="342" text-anchor="middle" font-size="22" font-weight="700" fill="#1d1d1d">KEEP OUT OF REACH OF CHILDREN</text>
+<line x1="60" y1="362" x2="740" y2="362" stroke="#7a2e1d" stroke-width="2"/>
+<text x="60" y="397" font-size="21" font-weight="700" fill="#1d1d1d">PRECAUTIONARY STATEMENTS</text>
+<text x="60" y="429" font-size="18" fill="#1d1d1d">Causes substantial but temporary eye injury. Do not get in eyes or on</text>
+<text x="60" y="453" font-size="18" fill="#1d1d1d">clothing. Harmful if swallowed or absorbed through skin.</text>
+<text x="60" y="498" font-size="21" font-weight="700" fill="#1d1d1d">PERSONAL PROTECTIVE EQUIPMENT (PPE)</text>
+<text x="60" y="530" font-size="18" fill="#1d1d1d">Mixers, loaders and applicators must wear: coveralls over long-sleeved</text>
+<text x="60" y="554" font-size="18" fill="#1d1d1d">shirt and long pants, chemical-resistant gloves, protective eyewear</text>
+<text x="60" y="578" font-size="18" fill="#1d1d1d">(goggles), and chemical-resistant footwear plus socks.</text>
+<text x="60" y="623" font-size="21" font-weight="700" fill="#1d1d1d">FIRST AID</text>
+<text x="60" y="655" font-size="18" font-weight="700" fill="#1d1d1d">If in eyes:</text>
+<text x="60" y="679" font-size="18" fill="#1d1d1d">Hold eye open and rinse slowly and gently with water for 15-20 minutes.</text>
+<text x="60" y="703" font-size="18" fill="#1d1d1d">Remove contact lenses, if present, after the first 5 minutes.</text>
+<text x="60" y="735" font-size="18" font-weight="700" fill="#1d1d1d">If on skin or clothing:</text>
+<text x="60" y="759" font-size="18" fill="#1d1d1d">Take off contaminated clothing. Rinse skin with plenty of water.</text>
+<text x="60" y="791" font-size="18" font-weight="700" fill="#1d1d1d">If swallowed:</text>
+<text x="60" y="815" font-size="18" fill="#1d1d1d">Call a poison control center (1-800-222-1222) or doctor right away.</text>
+<rect x="60" y="845" width="680" height="62" fill="#f1d9c9" stroke="#7a2e1d" stroke-width="2"/>
+<text x="75" y="870" font-size="18" font-weight="700" fill="#1d1d1d">Restricted-Entry Interval (REI): 24 hours. Do not enter or allow</text>
+<text x="75" y="894" font-size="18" font-weight="700" fill="#1d1d1d">worker entry into treated areas during the REI.</text>
+<text x="60" y="940" font-size="14" fill="#555555">EPA Reg. No. 00000-000. Net contents 2.5 gal (9.46 L). Rowkill Agricultural Supply, Stockton, CA</text>
+</svg>

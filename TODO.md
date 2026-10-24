@@ -3,21 +3,24 @@
 Update before ending every task. Keep terse.
 
 ## State
-- Starter scaffolded: Next 16, TS, Tailwind v4, shadcn (button, card, input, textarea), Anthropic SDK. Streaming route `src/app/api/claude/route.ts`, test page `src/app/page.tsx`.
+- Stack: Next 16, TS, Tailwind v4, shadcn, Anthropic SDK. Furrow vertical slice built: `src/app/api/scan/route.ts` (image + language to tool-forced JSON), `src/components/scanner.tsx` (start, reading, result, problem states, language switch, speech), `src/lib/scan.ts` (types, UI copy en/es/pa), `src/lib/samples.ts` (3 samples with cached results in 3 languages), `public/samples/*.svg`. Fonts Fraunces + Public Sans + Noto Sans Gurmukhi, warm palette with green primary in globals.css. Old /api/claude removed.
 - Installed: Node 24, Git 2.56, Python 3.12 (winget, source winget only; msstore has a cert error).
-- Theme: not announced yet.
-- Hack end time / tracks / sponsors: unknown.
+- Theme: solve a real challenge in agriculture, transportation, education or community in the Central Valley (Manteca, CA). Tracks: Main and Best Use of AI/ML.
+- Rubric (user): Innovation 30, Technical 25, Relevance and Impact 20, Presentation 50 (sums to 125), plus explanation and enjoyability. Submit to Devpost with screenshots, slides, demo video, link.
+- Event: Hack Club lists it as in-person, high school, about 12 hours, small field (~22). Listed date Oct 24 vs user's Oct 25: confirm start and deadline at check-in. Official rubric not reachable online.
 
 ## Done
-- Tooling installed, starter scaffolded, `npm run build` passes, CLAUDE.md written, `git init -b main` run and files staged.
+- Tooling, starter, CLAUDE.md, git pushed to origin/main (a3822e5), winning plan approved (plan file in `~/.claude/plans/`).
 
 ## Next
-- User: set git identity (`git config --global user.name`/`user.email`), create `.env.local` with `ANTHROPIC_API_KEY`, add GitHub remote, link Vercel, Devpost account, check Sierra rules.
-- Me: first commit (blocked on git identity), push, deploy to Vercel, test the route with a real key.
-- At kickoff: user pastes theme + rules. Reply with 3 scored ideas and one pick.
+- User: Devpost account, `ANTHROPIC_API_KEY` in `.env.local` and Vercel env (the pick uses AI), confirm deadline and sponsor credits at check-in, 3 label or sign photos (else I seed samples).
+- Me next: user adds ANTHROPIC_API_KEY then test live scan with the 3 samples and a real photo, check on phone, fix Punjabi quality and any layout issues. Then polish (favicon, logo, spacing), README, Devpost copy, slides outline, demo script.
+- Not yet verified visually in a browser; lint and build pass.
 
 ## Decisions
-- none yet
+- Repo: https://github.com/K3N0SU/Hackathon (branch main), linked to Vercel. Git identity K3N0SU / sefefarg@gmail.com, pushes via Git Credential Manager.
+- Idea (approved plan): Furrow (working name), farmworkers photograph pesticide labels or re-entry signs, Claude vision returns re-entry time, gear, first aid, plain summary in Spanish, Punjabi or English with read-aloud. No accounts or database. Seeded samples plus cached fallback. Palette: neutral plus earthy green.
+- Backups: crop-disease photo diagnosis; farmworker ride-pooling.
 
 ## Notes
 - Folder name has capitals so package name is `sierrahacks-app`.
