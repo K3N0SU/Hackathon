@@ -1,5 +1,4 @@
 import {
-  ArrowRight,
   BellRing,
   Camera,
   ClipboardPen,
@@ -13,7 +12,7 @@ import {
   Sun,
   UserRoundCheck,
 } from "lucide-react";
-import Link from "next/link";
+import { AccountCta } from "@/components/account-cta";
 import { AskDemo } from "@/components/ask-demo";
 import { FieldLines } from "@/components/field-lines";
 import { LabelHighlight } from "@/components/label-highlight";
@@ -203,15 +202,10 @@ export default function Home() {
               className="enter mt-9 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
               style={delay("1.15s")}
             >
-              <Magnetic>
-                <Link
-                  href="/sign-up"
-                  className="sweep group flex h-14 items-center gap-2 rounded-full bg-primary px-8 text-lg font-semibold text-primary-foreground shadow-lg shadow-primary/25 [--sweep-color:var(--harvest)] hover:text-harvest-foreground active:scale-95"
-                >
-                  Get started free
-                  <ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-1.5" />
-                </Link>
-              </Magnetic>
+              <AccountCta
+                primary="Get started free"
+                primaryClass="sweep group flex h-14 items-center gap-2 rounded-full bg-primary px-8 text-lg font-semibold text-primary-foreground shadow-lg shadow-primary/25 [--sweep-color:var(--harvest)] hover:text-harvest-foreground active:scale-95"
+              />
               <Magnetic strength={0.2}>
                 <a
                   href="#tour"
@@ -458,23 +452,12 @@ export default function Home() {
             </span>
           </h2>
           <div className="reveal mt-12 flex flex-wrap items-center justify-center gap-3" style={delay("0.25s")}>
-            <Magnetic>
-              <Link
-                href="/sign-up"
-                className="sweep group flex h-14 items-center gap-2 rounded-full bg-harvest px-9 text-lg font-semibold text-harvest-foreground [--sweep-color:var(--ink-foreground)] active:scale-95"
-              >
-                Make a free account
-                <ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-1.5" />
-              </Link>
-            </Magnetic>
-            <Magnetic strength={0.2}>
-              <Link
-                href="/sign-in"
-                className="flex h-14 items-center rounded-full border-2 border-white/25 px-8 text-lg font-medium transition-colors hover:border-white/60 hover:bg-white/10 active:scale-95"
-              >
-                I already have one
-              </Link>
-            </Magnetic>
+            <AccountCta
+              primary="Make a free account"
+              primaryClass="sweep group flex h-14 items-center gap-2 rounded-full bg-harvest px-9 text-lg font-semibold text-harvest-foreground [--sweep-color:var(--ink-foreground)] active:scale-95"
+              secondary={{ label: "I already have one", href: "/sign-in" }}
+              secondaryClass="flex h-14 items-center rounded-full border-2 border-white/25 px-8 text-lg font-medium transition-colors hover:border-white/60 hover:bg-white/10 active:scale-95"
+            />
           </div>
         </div>
       </section>

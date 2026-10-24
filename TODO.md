@@ -3,25 +3,27 @@
 Update before ending every task. Keep terse.
 
 ## State
-- Live: https://furrow-valley.vercel.app. Repo https://github.com/K3N0SU/Hackathon main, auto-deploys.
-- Stack: Next 16, TS, Tailwind v4, shadcn, lucide, Gemini free tier via REST, Open-Meteo, Firebase (Auth + Firestore, Spark plan). Everything free.
-- Firebase project `furrow-422fa` (account sefefarg@gmail.com, CLI logged in, global `firebase` installed). Web config hardcoded in src/lib/firebase.ts (public by design). Email/password + Google enabled, authorized domains include furrow-valley.vercel.app and localhost. Rules in firestore.rules (owner + email_verified only), deploy `firebase deploy --only firestore:rules`.
-- Auth: /sign-in, /sign-up (auth-form.tsx), /verify (verify-email.tsx, polls reload, refreshes token), auth-provider.tsx (useSession, useSavedLanguage), user-menu.tsx in site-nav and app header. Copy en/es/pa in src/lib/auth-copy.ts.
-- /scan requires a verified account (app-shell.tsx redirects). Tabs Labels, Heat, Exposed, Saved (saved-scans.tsx). Data in src/lib/cloud.ts: users/{uid} {language, clocks, lastScan}, users/{uid}/scans {createdAt, language, thumb 360px jpeg, result}. clocks.ts syncs to cloud.
-- Live in-app camera: live-camera.tsx (getUserMedia, frame, shutter, retake, flip, gallery, fallback to capture input).
-- Landing `/` remade dark: hero with word-mask headline + HeroDemo phone loop (hero-demo.tsx), crop marquee, ScrollWords story, sticky Tour of 5 tools (tour.tsx, phone-screens.tsx), CountUp numbers, spotlight bento, honest section with orbit ring, FAQ, CTA. No Punjabi script on landing (user). Motion helpers landing-motion.tsx, scroll-reveal.tsx (IntersectionObserver). Section dots ids: top story tour numbers features honest questions.
-- Slides: C:/Users/sefef/Downloads/Furrow.pptx (scratchpad deck.js). Not updated for accounts/camera yet.
-- Screenshots: scratchpad shoot.js (puppeteer-core + installed Chrome): `node shoot.js URL W H prefix stops...`.
+- Live: https://furrow-valley.vercel.app. Repo https://github.com/K3N0SU/Hackathon (public) main, auto-deploys.
+- Venue wifi DNS blocks vercel.app, github.com, netlify.app, github.io (resolve to 10.251.253.61). Push with `git -c http.curloptResolve=github.com:443:140.82.112.3 push origin main`. Test site with `curl --resolve furrow-valley.vercel.app:443:76.76.21.21`. Demo on mobile data.
+- Stack: Next 16, TS, Tailwind v4, lucide, Gemini free tier via REST (src/lib/gemini.ts helper), Firebase Auth + Firestore (Spark), Open-Meteo, OSM tiles. npm registry also blocked on this wifi (motion/lenis not installed; motion helpers hand-written in src/components/motion.tsx).
+- Design: light "field card" (cream, ink green, amber, Fraunces display, Public Sans). Tokens + motion CSS in globals.css (sweep, sheen, lift, tilt, reveal/reveal-left/reveal-pop, seen, stamp, heat-flip, draw, label-scan, callout).
+- Landing src/app/page.tsx: hero LabelReader, marquee, LabelHighlight (#problem), Tour 6 steps (#tour), AskDemo (#ask), numbers Odometer (#numbers), heat (#heat), Stamp (#honest), 12 tools (#features), FAQ, closing. AccountCta swaps sign-up CTAs to Open Furrow when signed in.
+- App /scan (app-shell.tsx): tabs Scan, Ask, Tools, Saved; Tools = symptoms, exposed, heat (+water reminders), brief, paper, report, map, install. Language picker sheet, 8 languages (en es pa hmn tl hi ar vi), RTL for ar.
+- AI routes: /api/scan (evidence, confidence, others), /api/ask, /api/symptoms, /api/read, /api/report, /api/brief, /api/translate.
+- i18n: core en/es/pa static; others via useCopy -> bundled src/lib/translations/*.json (keyed by fingerprint of en dict) -> localStorage -> /api/translate. After changing any copy: run server, `FURROW_URL=http://localhost:3100 npm run translate`.
+- Data: users/{uid} {language, clocks, lastScan{result}}, users/{uid}/scans {+latitude,longitude}, shares/{id} public get (/s/[id] page translates live). Rules deployed.
+- PWA: src/app/manifest.ts, public/sw.js, icons in public; alarms src/lib/alarms.ts.
+- QA account furrow-qa@example.com (verified, password in scratchpad qa.json). Scratchpad: app.js/gallery.js/lang.js puppeteer flows, deck2.js slides, translate-all.js.
+- Submission assets: Downloads/Furrow.pptx (11 slides, new design), Downloads/Furrow screenshots (01-11 png). DEVPOST.md, DEMO.md, README.md updated.
 
 ## Next
-- User: sign up once on the live site to confirm the verification email arrives (check spam), then a scan shows in Saved. Record video and screenshots per DEMO.md, submit on Devpost early. Delete Downloads/env.local.txt.
-- Me if asked: refresh Furrow.pptx for accounts + camera; test signed-in /scan on phone.
+- User: check live site on mobile data after deploy, record demo video per DEMO.md, submit on Devpost (tracks Main + Best Use of AI/ML), delete Downloads/env.local.txt.
 
 ## Decisions
 - Name: Furrow. Rubric: Innovation 30, Technical 25, Relevance 20, Presentation 50.
-- Accounts required (user). Photos saved as Firestore thumbnails because Firebase Storage needs Blaze.
+- Accounts required (user). Photos saved as Firestore thumbnails (Storage needs Blaze).
+- No Punjabi script on landing (user). Mixteco skipped (MT quality).
 - Heat thresholds: 80°F shade, 95°F high heat, 1 quart water per hour.
 
 ## Notes
-- Local wifi DNS blocks vercel.app, netlify.app, github.io (resolve to 10.251.253.61, ERR_CONNECTION_CLOSED). Site is up (200 via 76.76.21.21). Use cellular/hotspot to demo. *.web.app resolves fine.
-- Windows: bash has no python, use `py`; node patch scripts in scratchpad. Kill stale `next start` before restarting (PowerShell Get-CimInstance filter).
+- Windows: bash has no python, use `py`; kill stale `next start` via PowerShell Get-CimInstance before rebuild. Slides render via PowerPoint COM export.

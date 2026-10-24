@@ -3,6 +3,7 @@
 import {
   Bookmark,
   HeartPulse,
+  MessageCircleQuestion,
   ScanLine,
   Sun,
   TimerReset,
@@ -10,6 +11,7 @@ import {
 } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import {
+  AskScreen,
   ClockScreen,
   ExposedScreen,
   HeatScreen,
@@ -43,6 +45,14 @@ const steps: Step[] = [
     body: "Tell Furrow when the block was sprayed and it counts down the re-entry time. Red means stay out. Green means the time is up. It is still counting when you open your phone at lunch.",
     accent: "text-danger",
     Screen: ClockScreen,
+  },
+  {
+    icon: MessageCircleQuestion,
+    tag: "Ask",
+    title: "Ask it anything, out loud.",
+    body: "Ask follow-up questions in your own words, typed or spoken, in your language. Furrow answers only from the label you scanned and California’s farm safety rules, and tells you who to ask when the label does not say.",
+    accent: "text-primary",
+    Screen: AskScreen,
   },
   {
     icon: Sun,

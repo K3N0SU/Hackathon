@@ -3,11 +3,11 @@
 import {
   Bookmark,
   Droplets,
-  HeartPulse,
+  LayoutGrid,
+  MessageCircleQuestion,
   Phone as PhoneIcon,
   ScanLine,
   ShowerHead,
-  Sun,
   Volume2,
 } from "lucide-react";
 import { useEffect, useState } from "react";
@@ -40,7 +40,7 @@ export function PhoneFrame({
 }
 
 function AppBar({ active }: { active: number }) {
-  const icons = [ScanLine, Sun, HeartPulse, Bookmark];
+  const icons = [ScanLine, MessageCircleQuestion, LayoutGrid, Bookmark];
   return (
     <div className="absolute inset-x-0 bottom-0 z-20 grid grid-cols-4 border-t bg-card/95 pb-3 pt-2 backdrop-blur">
       {icons.map((Icon, index) => (
@@ -237,7 +237,7 @@ export function HeatScreen() {
           <p className="text-xs leading-snug">{heat.water}</p>
         </div>
       </div>
-      <AppBar active={1} />
+      <AppBar active={2} />
     </>
   );
 }
@@ -400,5 +400,49 @@ export function CameraScreen() {
         </span>
       </div>
     </div>
+  );
+}
+
+export function AskScreen() {
+  return (
+    <>
+      <Header />
+      <div className="px-5 pt-4">
+        <p className="screen-in font-display text-3xl font-semibold leading-none text-primary">
+          Ask Furrow
+        </p>
+        <p
+          className="screen-in mt-1 text-[11px] text-muted-foreground"
+          style={{ "--delay": "0.05s" } as React.CSSProperties}
+        >
+          About Valley Guard 2EC
+        </p>
+        <p
+          className="screen-in ml-auto mt-4 w-fit max-w-[85%] rounded-2xl rounded-br-md bg-primary px-3 py-2 text-xs text-primary-foreground"
+          style={{ "--delay": "0.15s" } as React.CSSProperties}
+        >
+          My gloves ripped. Can I keep working?
+        </p>
+        <p
+          className="screen-in mt-2 max-w-[90%] rounded-2xl rounded-bl-md bg-secondary px-3 py-2 text-xs leading-snug"
+          style={{ "--delay": "0.6s" } as React.CSSProperties}
+        >
+          No. The label says chemical-resistant gloves are required. Stop, wash
+          your hands, and ask your supervisor for a new pair. They have to give
+          you one.
+        </p>
+        <div
+          className="screen-in mt-3 flex flex-wrap gap-1.5"
+          style={{ "--delay": "0.9s" } as React.CSSProperties}
+        >
+          {["Who pays for gloves?", "Can I eat here?"].map((chip) => (
+            <span key={chip} className="rounded-full border bg-card px-2.5 py-1 text-[10px]">
+              {chip}
+            </span>
+          ))}
+        </div>
+      </div>
+      <AppBar active={1} />
+    </>
   );
 }
