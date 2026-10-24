@@ -3,7 +3,7 @@
 Update before ending every task. Keep terse.
 
 ## State
-- Stack: Next 16, TS, Tailwind v4, shadcn, Anthropic SDK. Furrow vertical slice built: `src/app/api/scan/route.ts` (image + language to tool-forced JSON), `src/components/scanner.tsx` (start, reading, result, problem states, language switch, speech), `src/lib/scan.ts` (types, UI copy en/es/pa), `src/lib/samples.ts` (3 samples with cached results in 3 languages), `public/samples/*.svg`. Fonts Fraunces + Public Sans + Noto Sans Gurmukhi, warm palette with green primary in globals.css. Old /api/claude removed.
+- Stack: Next 16, TS, Tailwind v4, shadcn, Gemini free tier via REST (no SDK). Everything must be free. Furrow vertical slice built: `src/app/api/scan/route.ts` (image + language to schema-constrained JSON via Gemini), `src/components/scanner.tsx` (start, reading, result, problem states, language switch, speech), `src/lib/scan.ts` (types, UI copy en/es/pa), `src/lib/samples.ts` (3 samples with cached results in 3 languages), `public/samples/*.svg`. Fonts Fraunces + Public Sans + Noto Sans Gurmukhi, warm palette with green primary in globals.css. Old /api/claude removed.
 - Installed: Node 24, Git 2.56, Python 3.12 (winget, source winget only; msstore has a cert error).
 - Theme: solve a real challenge in agriculture, transportation, education or community in the Central Valley (Manteca, CA). Tracks: Main and Best Use of AI/ML.
 - Rubric (user): Innovation 30, Technical 25, Relevance and Impact 20, Presentation 50 (sums to 125), plus explanation and enjoyability. Submit to Devpost with screenshots, slides, demo video, link.
@@ -13,8 +13,8 @@ Update before ending every task. Keep terse.
 - Tooling, starter, CLAUDE.md, git pushed to origin/main (a3822e5), winning plan approved (plan file in `~/.claude/plans/`).
 
 ## Next
-- User: Devpost account, `ANTHROPIC_API_KEY` in `.env.local` and Vercel env (the pick uses AI), confirm deadline and sponsor credits at check-in, 3 label or sign photos (else I seed samples).
-- Me next: user adds ANTHROPIC_API_KEY then test live scan with the 3 samples and a real photo, check on phone, fix Punjabi quality and any layout issues. Then polish (favicon, logo, spacing), README, Devpost copy, slides outline, demo script.
+- User: Devpost account, free `GEMINI_API_KEY` from aistudio.google.com (no card) in `.env.local` and Vercel env, confirm deadline and sponsor credits at check-in, 3 label or sign photos (else I seed samples).
+- Me next: user adds GEMINI_API_KEY then test live scan with the 3 samples and a real photo, check on phone, fix Punjabi quality and any layout issues. Then polish (favicon, logo, spacing), README, Devpost copy, slides outline, demo script.
 - Not yet verified visually in a browser; lint and build pass.
 
 ## Decisions

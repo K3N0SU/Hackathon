@@ -1,7 +1,4 @@
-import Anthropic from "@anthropic-ai/sdk";
 import { languageNames, type Language, type ScanResult } from "@/lib/scan";
-
-const client = new Anthropic();
 
 export const maxDuration = 60;
 
@@ -18,23 +15,19 @@ Rules:
 - Glossary for Punjabi: re-entry interval = ਵਾਪਸ ਅੰਦਰ ਜਾਣ ਦਾ ਸਮਾਂ, pesticide = ਕੀਟਨਾਸ਼ਕ, herbicide = ਨਦੀਨਨਾਸ਼ਕ, gloves = ਦਸਤਾਨੇ, respirator = ਸਾਹ ਵਾਲਾ ਮਾਸਕ, poison control = ਪੋਇਜ਼ਨ ਕੰਟਰੋਲ.
 - Glossary for Spanish: re-entry interval = intervalo de reingreso, pesticide = pesticida, gloves = guantes, respirator = respirador, poison control = Control de Envenenamientos.`;
 
-const tool: Anthropic.Tool = {
-  name: "report_scan",
-  description: "Report what the label or sign says, in the requested language.",
-  input_schema: {
-    type: "object",
-    properties: {
-      readable: { type: "boolean" },
-      product: { type: "string" },
-      signal: { type: "string", enum: ["caution", "warning", "danger", "unknown"] },
-      reentry: { type: "string" },
-      gear: { type: "array", items: { type: "string" } },
-      firstAid: { type: "array", items: { type: "string" } },
-      summary: { type: "string" },
-      ask: { type: "string" },
-    },
-    required: ["readable", "product", "signal", "reentry", "gear", "firstAid", "summary", "ask"],
+const schema = {
+  type: "OBJECT",
+  properties: {
+    readable: { type: "BOOLEAN" },
+    product: { type: "STRING" },
+    signal: { type: "STRING", format: "enum", enum: ["caution", "warning", "danger", "unknown"] },
+    reentry: { type: "STRING" },
+    gear: { type: "ARRAY", items: { type: "STRING" } },
+    firstAid: { type: "ARRAY", items: { type: "STRING" } },
+    summary: { type: "STRING" },
+    ask: { type: "STRING" },
   },
+  required: ["readable", "product", "signal", "reentry", "gear", "firstAid", "summary", "ask"],
 };
 
 const mediaTypes = ["image/jpeg", "image/png", "image/webp", "image/gif"] as const;
@@ -50,31 +43,42 @@ export async function POST(req: Request) {
   }
 
   try {
-    const message = await client.messages.create({
-      model: process.env.CLAUDE_MODEL ?? "claude-sonnet-5-5",
-      max_tokens: 1500,
-      system,
-      tools: [tool],
-      tool_choice: { type: "tool", name: tool.name },
-      messages: [
-        {
-          role: "user",
-          content: [
-            { type: "image", source: { type: "base64", media_type: mediaType, data: image } },
+    const model = process.env.GEMINI_MODEL ?? "gemini-2.5-flash";
+    const response = await fetch(
+      `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-goog-api-key": process.env.GEMINI_API_KEY ?? "",
+        },
+        body: JSON.stringify({
+          systemInstruction: { parts: [{ text: system }] },
+          contents: [
             {
-              type: "text",
-              text: `Read this photo. Write every text field in ${languageNames[language as Language]}.`,
+              role: "user",
+              parts: [
+                { inlineData: { mimeType: mediaType, data: image } },
+                {
+                  text: `Read this photo. Write every text field in ${languageNames[language as Language]}.`,
+                },
+              ],
             },
           ],
-        },
-      ],
-    });
+          generationConfig: {
+            responseMimeType: "application/json",
+            responseSchema: schema,
+            temperature: 0.2,
+          },
+        }),
+      },
+    );
+    if (!response.ok) return new Response("scan failed", { status: 502 });
 
-    const block = message.content.find((part) => part.type === "tool_use");
-    if (!block || block.type !== "tool_use") {
-      return new Response("no result", { status: 502 });
-    }
-    return Response.json(block.input as ScanResult);
+    const data = await response.json();
+    const raw = data.candidates?.[0]?.content?.parts?.[0]?.text;
+    if (typeof raw !== "string") return new Response("no result", { status: 502 });
+    return Response.json(JSON.parse(raw) as ScanResult);
   } catch {
     return new Response("scan failed", { status: 502 });
   }
