@@ -16,31 +16,49 @@ export async function gemini<T>({
   temperature?: number;
 }): Promise<T> {
   const model = process.env.GEMINI_MODEL ?? "gemini-3.8-flash";
-  const response = await fetch(
-    `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
-    {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        "x-goog-api-key": process.env.GEMINI_API_KEY ?? "",
-      },
-      body: JSON.stringify({
-        systemInstruction: { parts: [{ text: system }] },
-        contents,
-        generationConfig: {
-          responseMimeType: "application/json",
-          ...(schema ? { responseSchema: schema } : {}),
-          temperature,
-          thinkingConfig: { thinkingBudget: 0 },
-        },
-      }),
+  const body = JSON.stringify({
+    systemInstruction: { parts: [{ text: system }] },
+    contents,
+    generationConfig: {
+      responseMimeType: "application/json",
+      ...(schema ? { responseSchema: schema } : {}),
+      temperature,
+      thinkingConfig: { thinkingBudget: 0 },
     },
-  );
-  if (!response.ok) throw new Error(`gemini ${response.status}`);
-  const data = await response.json();
-  const raw = data.candidates?.[0]?.content?.parts?.[0]?.text;
-  if (typeof raw !== "string") throw new Error("gemini empty");
-  return JSON.parse(raw) as T;
+  });
+  let problem: unknown;
+  for (const delay of [0, 700, 1800]) {
+    if (delay) await new Promise((resolve) => setTimeout(resolve, delay));
+    try {
+      const response = await fetch(
+        `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            "x-goog-api-key": process.env.GEMINI_API_KEY ?? "",
+          },
+          body,
+        },
+      );
+      if (!response.ok) {
+        problem = new Error(`gemini ${response.status}`);
+        if (response.status === 400 || response.status === 403) break;
+        continue;
+      }
+      const data = await response.json();
+      const raw = data.candidates?.[0]?.content?.parts?.[0]?.text;
+      if (typeof raw !== "string") {
+        problem = new Error(`gemini empty ${data.candidates?.[0]?.finishReason ?? data.promptFeedback?.blockReason ?? ""}`);
+        continue;
+      }
+      return JSON.parse(raw) as T;
+    } catch (error) {
+      problem = error;
+    }
+  }
+  console.error(problem);
+  throw problem;
 }
 
 export function text(value: string): Turn {
