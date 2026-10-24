@@ -4,7 +4,8 @@ import { Apple, ArrowRight, Check, ImageIcon, Keyboard, Leaf, RotateCcw, ShieldA
 import { useEffect, useRef, useState } from "react";
 import { appCopy } from "@/lib/app-copy";
 import { useCopy } from "@/lib/i18n";
-import { fileToJpeg } from "@/lib/image";
+import { LiveCamera } from "@/components/live-camera";
+import { fileToJpeg, toJpeg } from "@/lib/image";
 import type { Language } from "@/lib/scan";
 import { useSpeaker } from "@/lib/speech";
 import { toolsCopy } from "@/lib/tools-copy";
@@ -44,7 +45,7 @@ export function FoodCheck({ language }: { language: Language }) {
   const [state, setState] = useState<State>({ step: "start" });
   const [allergies, setAllergies] = useState<string[]>([]);
   const [name, setName] = useState("");
-  const camera = useRef<HTMLInputElement>(null);
+  const [cameraOpen, setCameraOpen] = useState(false);
   const gallery = useRef<HTMLInputElement>(null);
   const { speaking, speak } = useSpeaker(language);
 
@@ -69,10 +70,10 @@ export function FoodCheck({ language }: { language: Language }) {
     });
   }
 
-  async function check(file: File) {
+  async function check(source: Promise<string>) {
     let photo: string;
     try {
-      photo = await fileToJpeg(file);
+      photo = await source;
     } catch {
       setState({ step: "problem", message: text.failed });
       return;
@@ -109,25 +110,33 @@ export function FoodCheck({ language }: { language: Language }) {
     }
   }
 
-  const input = (ref: React.RefObject<HTMLInputElement | null>, capture?: "environment") => (
-    <input
-      ref={ref}
-      type="file"
-      accept="image/*"
-      capture={capture}
-      className="hidden"
-      onChange={(event) => {
-        const file = event.target.files?.[0];
-        event.target.value = "";
-        if (file) check(file);
-      }}
-    />
-  );
-
   return (
     <section className="rise pt-6 pb-10">
-      {input(camera, "environment")}
-      {input(gallery)}
+      <input
+        ref={gallery}
+        type="file"
+        accept="image/*"
+        className="hidden"
+        onChange={(event) => {
+          const file = event.target.files?.[0];
+          event.target.value = "";
+          if (file) check(fileToJpeg(file));
+        }}
+      />
+      {cameraOpen && (
+        <LiveCamera
+          language={language}
+          onCapture={(shot) => {
+            setCameraOpen(false);
+            check(toJpeg(shot));
+          }}
+          onFile={(file) => {
+            setCameraOpen(false);
+            check(fileToJpeg(file));
+          }}
+          onClose={() => setCameraOpen(false)}
+        />
+      )}
       <h1 className="font-display text-4xl font-semibold leading-[1.02] text-ink sm:text-5xl">{text.title}</h1>
 
       {(state.step === "start" || state.step === "problem") && (
@@ -160,7 +169,7 @@ export function FoodCheck({ language }: { language: Language }) {
             </p>
           )}
           <button
-            onClick={() => camera.current?.click()}
+            onClick={() => setCameraOpen(true)}
             className="group mt-5 flex h-36 w-full flex-col items-center justify-center gap-3 rounded-3xl bg-leaf text-white shadow-xl shadow-leaf/25 transition-transform active:scale-[0.98]"
           >
             <span className="flex size-14 items-center justify-center rounded-full bg-white text-leaf transition-transform duration-500 [transition-timing-function:var(--ease-spring)] group-hover:scale-110">

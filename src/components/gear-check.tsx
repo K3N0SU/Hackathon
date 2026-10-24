@@ -1,11 +1,12 @@
 "use client";
 
 import { Camera, CheckCircle2, CircleHelp, Shirt, Volume2, VolumeX, XCircle } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { appCopy } from "@/lib/app-copy";
 import { lastScanKey, type LastScan } from "@/lib/exposure";
 import { useCopy } from "@/lib/i18n";
-import { fileToJpeg } from "@/lib/image";
+import { LiveCamera } from "@/components/live-camera";
+import { fileToJpeg, toJpeg } from "@/lib/image";
 import type { Language } from "@/lib/scan";
 import { useSpeaker } from "@/lib/speech";
 import { toolsCopy } from "@/lib/tools-copy";
@@ -42,7 +43,7 @@ export function GearCheck({ language }: { language: Language }) {
   const listen = useCopy(appCopy, language).brief.listen;
   const [state, setState] = useState<State>({ step: "start" });
   const [label, setLabel] = useState<{ product: string; gear: string[] } | null>(null);
-  const input = useRef<HTMLInputElement>(null);
+  const [cameraOpen, setCameraOpen] = useState(false);
   const { speaking, speak } = useSpeaker(language);
 
   useEffect(() => {
@@ -57,10 +58,10 @@ export function GearCheck({ language }: { language: Language }) {
 
   const gear = label?.gear ?? text.defaultGear;
 
-  async function check(file: File) {
+  async function check(source: Promise<string>) {
     let photo: string;
     try {
-      photo = await fileToJpeg(file);
+      photo = await source;
     } catch {
       setState({ step: "problem", message: text.failed });
       return;
@@ -93,18 +94,21 @@ export function GearCheck({ language }: { language: Language }) {
 
   return (
     <section className="rise pt-6 pb-10">
-      <input
-        ref={input}
-        type="file"
-        accept="image/*"
-        capture="user"
-        className="hidden"
-        onChange={(event) => {
-          const file = event.target.files?.[0];
-          event.target.value = "";
-          if (file) check(file);
-        }}
-      />
+      {cameraOpen && (
+        <LiveCamera
+          language={language}
+          facing="user"
+          onCapture={(shot) => {
+            setCameraOpen(false);
+            check(toJpeg(shot));
+          }}
+          onFile={(file) => {
+            setCameraOpen(false);
+            check(fileToJpeg(file));
+          }}
+          onClose={() => setCameraOpen(false)}
+        />
+      )}
       <h1 className="font-display text-4xl font-semibold leading-[1.02] text-primary sm:text-5xl">
         {text.title}
       </h1>
@@ -141,7 +145,7 @@ export function GearCheck({ language }: { language: Language }) {
             </p>
           )}
           <button
-            onClick={() => input.current?.click()}
+            onClick={() => setCameraOpen(true)}
             className="group mt-5 flex h-40 w-full flex-col items-center justify-center gap-3 rounded-3xl bg-primary text-primary-foreground shadow-xl shadow-primary/20 transition-transform active:scale-[0.98]"
           >
             <span className="relative flex size-16 items-center justify-center rounded-full bg-harvest text-harvest-foreground transition-transform duration-500 [transition-timing-function:var(--ease-spring)] group-hover:scale-110">
@@ -215,7 +219,7 @@ export function GearCheck({ language }: { language: Language }) {
               {listen}
             </button>
             <button
-              onClick={() => input.current?.click()}
+              onClick={() => setCameraOpen(true)}
               className="flex h-14 items-center justify-center gap-2 rounded-2xl bg-primary font-semibold text-primary-foreground transition-all active:scale-95"
             >
               <Camera className="size-5" />

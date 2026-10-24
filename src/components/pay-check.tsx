@@ -4,7 +4,8 @@ import { Camera, CheckCircle2, CircleHelp, ImageIcon, Lock, Phone, Volume2, Volu
 import { useRef, useState } from "react";
 import { appCopy } from "@/lib/app-copy";
 import { useCopy } from "@/lib/i18n";
-import { fileToJpeg } from "@/lib/image";
+import { LiveCamera } from "@/components/live-camera";
+import { fileToJpeg, toJpeg } from "@/lib/image";
 import type { Language } from "@/lib/scan";
 import { useSpeaker } from "@/lib/speech";
 import { toolsCopy } from "@/lib/tools-copy";
@@ -47,14 +48,14 @@ export function PayCheck({ language }: { language: Language }) {
   const text = useCopy(toolsCopy, language).pay;
   const listen = useCopy(appCopy, language).brief.listen;
   const [state, setState] = useState<State>({ step: "start" });
-  const camera = useRef<HTMLInputElement>(null);
+  const [cameraOpen, setCameraOpen] = useState(false);
   const gallery = useRef<HTMLInputElement>(null);
   const { speaking, speak } = useSpeaker(language);
 
-  async function read(file: File) {
+  async function read(source: Promise<string>) {
     let photo: string;
     try {
-      photo = await fileToJpeg(file);
+      photo = await source;
     } catch {
       setState({ step: "problem", message: text.failed });
       return;
@@ -79,25 +80,33 @@ export function PayCheck({ language }: { language: Language }) {
     }
   }
 
-  const picker = (ref: React.RefObject<HTMLInputElement | null>, capture?: "environment") => (
-    <input
-      ref={ref}
-      type="file"
-      accept="image/*"
-      capture={capture}
-      className="hidden"
-      onChange={(event) => {
-        const file = event.target.files?.[0];
-        event.target.value = "";
-        if (file) read(file);
-      }}
-    />
-  );
-
   return (
     <section className="rise pt-6 pb-10">
-      {picker(camera, "environment")}
-      {picker(gallery)}
+      <input
+        ref={gallery}
+        type="file"
+        accept="image/*"
+        className="hidden"
+        onChange={(event) => {
+          const file = event.target.files?.[0];
+          event.target.value = "";
+          if (file) read(fileToJpeg(file));
+        }}
+      />
+      {cameraOpen && (
+        <LiveCamera
+          language={language}
+          onCapture={(shot) => {
+            setCameraOpen(false);
+            read(toJpeg(shot));
+          }}
+          onFile={(file) => {
+            setCameraOpen(false);
+            read(fileToJpeg(file));
+          }}
+          onClose={() => setCameraOpen(false)}
+        />
+      )}
       <h1 className="font-display text-4xl font-semibold leading-[1.02] text-primary sm:text-5xl">
         {text.title}
       </h1>
@@ -111,7 +120,7 @@ export function PayCheck({ language }: { language: Language }) {
             </p>
           )}
           <button
-            onClick={() => camera.current?.click()}
+            onClick={() => setCameraOpen(true)}
             className="group mt-6 flex h-36 w-full flex-col items-center justify-center gap-3 rounded-3xl bg-primary text-primary-foreground shadow-xl shadow-primary/20 transition-transform active:scale-[0.98]"
           >
             <span className="flex size-14 items-center justify-center rounded-full bg-harvest text-harvest-foreground transition-transform group-hover:scale-110">

@@ -2,6 +2,7 @@
 
 import { Check, ImageIcon, RefreshCw, RotateCcw, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { appCopy } from "@/lib/app-copy";
 import { useCopy } from "@/lib/i18n";
 import { checkPhoto, type PhotoQuality } from "@/lib/photo-quality";
@@ -13,11 +14,13 @@ export function LiveCamera({
   onCapture,
   onFile,
   onClose,
+  facing: initialFacing = "environment",
 }: {
   language: Language;
   onCapture: (dataUrl: string) => void;
   onFile: (file: File) => void;
   onClose: () => void;
+  facing?: "environment" | "user";
 }) {
   const text = useCopy(cameraCopy, language);
   const coach = useCopy(appCopy, language).coach;
@@ -26,7 +29,7 @@ export function LiveCamera({
   const stream = useRef<MediaStream | null>(null);
   const galleryRef = useRef<HTMLInputElement>(null);
   const appRef = useRef<HTMLInputElement>(null);
-  const [facing, setFacing] = useState<"environment" | "user">("environment");
+  const [facing, setFacing] = useState<"environment" | "user">(initialFacing);
   const [state, setState] = useState<"starting" | "live" | "blocked">(
     "starting",
   );
@@ -114,7 +117,7 @@ export function LiveCamera({
     onFile(file);
   }
 
-  return (
+  return createPortal(
     <div
       role="dialog"
       aria-modal="true"
@@ -266,6 +269,7 @@ export function LiveCamera({
         className="hidden"
         onChange={picked}
       />
-    </div>
+    </div>,
+    document.body,
   );
 }
