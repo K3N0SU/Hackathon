@@ -10,7 +10,7 @@ Run the full path twice in a row before you start. If the live scan is slow, the
 
 Start on the label, before the app. Hold up the printed Valley Guard label. Say: this is what a worker gets before walking into an almond orchard. Small English print. Many of the people working these rows in San Joaquin County read Spanish or Punjabi first.
 
-Open Furrow on the phone, switch to Punjabi, tap Scan, take the photo. While it reads (about five seconds), say: Gemini is reading the photo and returning a fixed set of fields, not a paragraph.
+Open the site on the phone and scroll the landing page for a second, then tap Open Furrow, switch to Punjabi, tap Scan, take the photo. While it reads (about five seconds), say: Gemini is reading the photo and returning a fixed set of fields, not a paragraph.
 
 When the result appears, point at the green box: twelve hours, in Punjabi. Tap Listen if the voice works. Scroll to the gear and first aid. Point at the Call Poison Control button.
 
@@ -30,7 +30,7 @@ Is it accurate? Not yet certified. The translations are machine translations and
 
 ## Screenshots to take (phone, portrait)
 
-First, the start screen in English with the sample list. Second, the result for Valley Guard in Punjabi, scrolled so the green re-entry box and the gear list are both visible. Third, the same result in Spanish. Fourth, the start screen with a red countdown clock under the samples. Fifth, the "can't read this" screen after photographing a non-label. Sixth, the Poison Control button in the first aid section. Take them with a clean status bar, full battery, and no notifications. If you can, also take one of the slides page on a laptop.
+First, the landing page top on the phone. Second, the start screen at /scan in English with the sample list. Third, the result for Valley Guard in Punjabi, scrolled so the green re-entry box and the gear list are both visible. Fourth, the same result in Spanish. Fifth, the start screen with a red countdown clock under the samples. Sixth, the "can't read this" screen after photographing a non-label. Seventh, the Poison Control button in the first aid section. Take them with a clean status bar, full battery, and no notifications. If you can, also take one of the slides page on a laptop.
 
 ## Demo video (60 to 90 seconds, screen recording)
 

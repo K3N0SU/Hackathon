@@ -14,6 +14,8 @@ Update before ending every task. Keep terse.
 - Furrow scan flow, field clocks (src/lib/clocks.ts, src/components/clocks.tsx), remembered language, logo (src/components/mark.tsx, src/app/icon.svg), Poison Control call button, /deck slides (src/components/deck.tsx, print to PDF).
 - README.md, DEVPOST.md, DEMO.md written (script, screenshot list, video plan).
 
+- Landing page redesign at / (src/app/page.tsx, phone.tsx, field-rows.tsx); scanner moved to /scan. Scroll reveal is CSS only in globals.css. Name decision: keep Furrow, Surco is the alternative.
+
 ## Next
 - User: Vercel 404 (check Framework Preset = Next.js, latest deployment Ready, open via Visit; send build log if Error). Delete Downloads/env.local.txt. Devpost account. Confirm deadline and sponsor credits at check-in. Record video and screenshots per DEMO.md. Have a Punjabi reader check the cached Punjabi in src/lib/samples.ts.
 - Me: visual check on phone width (nothing verified in a browser yet), test es/en and other two samples live, then submit-early checklist.

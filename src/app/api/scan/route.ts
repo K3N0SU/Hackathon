@@ -21,7 +21,11 @@ const schema = {
   properties: {
     readable: { type: "BOOLEAN" },
     product: { type: "STRING" },
-    signal: { type: "STRING", format: "enum", enum: ["caution", "warning", "danger", "unknown"] },
+    signal: {
+      type: "STRING",
+      format: "enum",
+      enum: ["caution", "warning", "danger", "unknown"],
+    },
     reentryHours: { type: "NUMBER" },
     reentry: { type: "STRING" },
     gear: { type: "ARRAY", items: { type: "STRING" } },
@@ -29,10 +33,25 @@ const schema = {
     summary: { type: "STRING" },
     ask: { type: "STRING" },
   },
-  required: ["readable", "product", "signal", "reentryHours", "reentry", "gear", "firstAid", "summary", "ask"],
+  required: [
+    "readable",
+    "product",
+    "signal",
+    "reentryHours",
+    "reentry",
+    "gear",
+    "firstAid",
+    "summary",
+    "ask",
+  ],
 };
 
-const mediaTypes = ["image/jpeg", "image/png", "image/webp", "image/gif"] as const;
+const mediaTypes = [
+  "image/jpeg",
+  "image/png",
+  "image/webp",
+  "image/gif",
+] as const;
 
 export async function POST(req: Request) {
   const { image, mediaType, language } = await req.json();
@@ -41,7 +60,9 @@ export async function POST(req: Request) {
     !mediaTypes.includes(mediaType) ||
     !(language in languageNames)
   ) {
-    return new Response("image, mediaType and language required", { status: 400 });
+    return new Response("image, mediaType and language required", {
+      status: 400,
+    });
   }
 
   try {
@@ -80,7 +101,8 @@ export async function POST(req: Request) {
 
     const data = await response.json();
     const raw = data.candidates?.[0]?.content?.parts?.[0]?.text;
-    if (typeof raw !== "string") return new Response("no result", { status: 502 });
+    if (typeof raw !== "string")
+      return new Response("no result", { status: 502 });
     return Response.json(JSON.parse(raw) as ScanResult);
   } catch {
     return new Response("scan failed", { status: 502 });

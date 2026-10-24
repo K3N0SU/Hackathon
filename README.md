@@ -33,7 +33,7 @@ npm install
 npm run dev
 ```
 
-Put the key in `.env.local` as `GEMINI_API_KEY`. The app is at http://localhost:3000 and the slides are at http://localhost:3000/deck (arrow keys to move, print to PDF to export).
+Put the key in `.env.local` as `GEMINI_API_KEY`. The landing page is at http://localhost:3000, the scanner at /scan, and the slides are at http://localhost:3000/deck (arrow keys to move, print to PDF to export).
 
 On Vercel, add the same `GEMINI_API_KEY` under Environment Variables, as a secret, and redeploy.
 
