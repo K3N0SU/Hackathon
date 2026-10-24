@@ -127,3 +127,26 @@
     @apply font-sans;
   }
 }
+@media print {
+  @page {
+    size: 1280px 720px;
+    margin: 0;
+  }
+  .deck {
+    position: static;
+  }
+  .deck .screen,
+  .deck .screen-only {
+    display: none;
+  }
+  .deck .print-all {
+    display: block;
+  }
+  .deck .page {
+    width: 1280px;
+    height: 720px;
+    break-after: page;
+    overflow: hidden;
+    font-size: 20px;
+  }
+}

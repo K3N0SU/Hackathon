@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { Mark } from "@/components/mark";
 import { ClockList, ClockStarter } from "@/components/clocks";
 import { Button } from "@/components/ui/button";
 import { useClocks } from "@/lib/clocks";
@@ -192,8 +193,9 @@ export function Scanner() {
       <header className="flex items-center justify-between">
         <button
           onClick={reset}
-          className="font-heading text-2xl font-semibold text-primary"
+          className="flex items-center gap-2 font-heading text-2xl font-semibold text-primary"
         >
+          <Mark className="size-7" />
           Furrow
         </button>
         <div
@@ -394,6 +396,12 @@ export function Scanner() {
                   <li key={item}>{item}</li>
                 ))}
               </ul>
+              <a
+                href="tel:18002221222"
+                className="mt-3 flex h-12 items-center justify-center rounded-lg border-2 border-primary text-base font-medium text-primary"
+              >
+                {text.callPoison} 1-800-222-1222
+              </a>
             </div>
           )}
 

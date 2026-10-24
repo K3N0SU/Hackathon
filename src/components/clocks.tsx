@@ -79,7 +79,9 @@ export function ClockList({
 
   return (
     <section className="mt-8">
-      <h2 className="text-sm font-medium text-muted-foreground">{text.clocksHeading}</h2>
+      <h2 className="text-sm font-medium text-muted-foreground">
+        {text.clocksHeading}
+      </h2>
       <ul className="mt-3 space-y-3">
         {clocks.map((clock) => {
           const left = timeLeft(clock.endsAt, now);
@@ -87,12 +89,17 @@ export function ClockList({
             <li
               key={clock.id}
               className={`rounded-xl p-4 ${
-                left.done ? "bg-primary text-primary-foreground" : "bg-red-700 text-white"
+                left.done
+                  ? "bg-primary text-primary-foreground"
+                  : "bg-red-700 text-white"
               }`}
             >
               <div className="flex items-start justify-between gap-3">
                 <p className="font-medium">{clock.product}</p>
-                <button onClick={() => onRemove(clock.id)} className="text-sm underline opacity-80">
+                <button
+                  onClick={() => onRemove(clock.id)}
+                  className="text-sm underline opacity-80"
+                >
                   {text.clearClock}
                 </button>
               </div>

@@ -54,6 +54,7 @@ type Copy = {
   minutesUnit: string;
   leftWord: string;
   clearClock: string;
+  callPoison: string;
   signal: Record<Signal, string>;
 };
 
@@ -87,6 +88,7 @@ export const copy: Record<Language, Copy> = {
     minutesUnit: "min",
     leftWord: "left",
     clearClock: "Remove",
+    callPoison: "Call Poison Control",
     signal: { caution: "Caution", warning: "Warning", danger: "Danger", unknown: "Not shown" },
   },
   es: {
@@ -118,6 +120,7 @@ export const copy: Record<Language, Copy> = {
     minutesUnit: "min",
     leftWord: "faltan",
     clearClock: "Quitar",
+    callPoison: "Llamar a Control de Envenenamientos",
     signal: { caution: "Cuidado", warning: "Aviso", danger: "Peligro", unknown: "No indicado" },
   },
   pa: {
@@ -149,6 +152,7 @@ export const copy: Record<Language, Copy> = {
     minutesUnit: "ਮਿੰਟ",
     leftWord: "ਬਾਕੀ",
     clearClock: "ਹਟਾਓ",
+    callPoison: "ਪੋਇਜ਼ਨ ਕੰਟਰੋਲ ਨੂੰ ਕਾਲ ਕਰੋ",
     signal: { caution: "ਸਾਵਧਾਨ", warning: "ਚੇਤਾਵਨੀ", danger: "ਖ਼ਤਰਾ", unknown: "ਦਿਖਾਇਆ ਨਹੀਂ" },
   },
 };

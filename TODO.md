@@ -10,13 +10,13 @@ Update before ending every task. Keep terse.
 - Event: Hack Club lists it as in-person, high school, about 12 hours, small field (~22). Listed date Oct 24 vs user's Oct 25: confirm start and deadline at check-in. Official rubric not reachable online.
 
 ## Done
-- Tooling, starter, CLAUDE.md, git pushed to origin/main (a3822e5), winning plan approved (plan file in `~/.claude/plans/`).
+- Tooling, starter, CLAUDE.md, git, winning plan.
+- Furrow scan flow, field clocks (src/lib/clocks.ts, src/components/clocks.tsx), remembered language, logo (src/components/mark.tsx, src/app/icon.svg), Poison Control call button, /deck slides (src/components/deck.tsx, print to PDF).
+- README.md, DEVPOST.md, DEMO.md written (script, screenshot list, video plan).
 
 ## Next
-- User: Devpost account, free `GEMINI_API_KEY` from aistudio.google.com (no card) in `.env.local` and Vercel env, confirm deadline and sponsor credits at check-in, 3 label or sign photos (else I seed samples).
-- Done: GEMINI_API_KEY in `.env.local` (gitignored), live scan verified in Punjabi on valley-guard sample (about 5s, model gemini-3.8-flash because 2.5 was retired). Dev server may still be running on :3000.
-- Me next: add GEMINI_API_KEY to Vercel (user), test es and en plus the other 2 samples, check layout on phone, fix issues. Then polish (favicon, logo, spacing), README, Devpost copy, slides outline, demo script.
-- Not yet verified visually in a browser; lint and build pass.
+- User: Vercel 404 (check Framework Preset = Next.js, latest deployment Ready, open via Visit; send build log if Error). Delete Downloads/env.local.txt. Devpost account. Confirm deadline and sponsor credits at check-in. Record video and screenshots per DEMO.md. Have a Punjabi reader check the cached Punjabi in src/lib/samples.ts.
+- Me: visual check on phone width (nothing verified in a browser yet), test es/en and other two samples live, then submit-early checklist.
 
 ## Decisions
 - Repo: https://github.com/K3N0SU/Hackathon (branch main), linked to Vercel. Git identity K3N0SU / sefefarg@gmail.com, pushes via Git Credential Manager.
