@@ -44,7 +44,7 @@ export function SiteNav() {
           <Mark className="wiggle-target size-8 text-primary" />
           Milpa
         </Link>
-        <nav className="flex items-center gap-2 text-sm md:gap-7">
+        <nav className="flex items-center gap-2 text-[15px] md:gap-8">
           {links.map((link) => (
             <a
               key={link.href}

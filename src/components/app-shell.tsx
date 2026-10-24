@@ -3,6 +3,7 @@
 import {
   Apple,
   ArrowLeft,
+  ArrowUpRight,
   Banknote,
   Bookmark,
   Check,
@@ -400,12 +401,10 @@ export function AppShell() {
                   <button
                     key={item.id}
                     onClick={() => go("tools", item.id)}
-                    className="rise group card relative flex min-h-36 flex-col items-start justify-between gap-4 overflow-hidden p-4 text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)] active:scale-[0.97]"
+                    className="rise group card relative flex min-h-40 flex-col items-start justify-between gap-5 overflow-hidden p-5 text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[var(--shadow-lift)] active:scale-[0.97]"
                     style={{ animationDelay: `${index * 40}ms` }}
                   >
-                    <span
-                      className={`absolute -right-10 -top-10 size-36 rounded-full opacity-10 transition-transform duration-700 group-hover:scale-150 ${item.tone}`}
-                    />
+                    <ArrowUpRight className="absolute right-4 top-4 size-5 -translate-x-1 translate-y-1 text-muted-foreground opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:text-primary group-hover:opacity-100" />
                     <span
                       className={`relative flex size-11 items-center justify-center rounded-2xl shadow-sm transition-transform duration-500 [transition-timing-function:var(--ease-spring)] group-hover:-rotate-6 group-hover:scale-110 ${item.tone}`}
                     >
