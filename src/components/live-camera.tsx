@@ -1,12 +1,12 @@
 "use client";
 
-import { Check, ImageIcon, RefreshCw, RotateCcw, X } from "lucide-react";
+import { Check, Flashlight, FlashlightOff, ImageIcon, RefreshCw, RotateCcw, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import { appCopy } from "@/lib/app-copy";
 import { useCopy } from "@/lib/i18n";
 import { checkPhoto, type PhotoQuality } from "@/lib/photo-quality";
-import { cameraCopy } from "@/lib/camera-copy";
+import { cameraCopy, type CameraMode } from "@/lib/camera-copy";
 import type { Language } from "@/lib/scan";
 
 export function LiveCamera({
@@ -15,12 +15,14 @@ export function LiveCamera({
   onFile,
   onClose,
   facing: initialFacing = "environment",
+  mode,
 }: {
   language: Language;
   onCapture: (dataUrl: string) => void;
   onFile: (file: File) => void;
   onClose: () => void;
   facing?: "environment" | "user";
+  mode?: CameraMode;
 }) {
   const text = useCopy(cameraCopy, language);
   const coach = useCopy(appCopy, language).coach;
@@ -35,6 +37,21 @@ export function LiveCamera({
   );
   const [shot, setShot] = useState("");
   const [flash, setFlash] = useState(false);
+  const [torch, setTorch] = useState<boolean | null>(null);
+  const hint = mode ? text.modes[mode].hint : text.hint;
+  const use = mode ? text.modes[mode].use : text.use;
+
+  async function toggleTorch() {
+    const track = stream.current?.getVideoTracks()[0];
+    if (!track) return;
+    const next = !torch;
+    try {
+      await track.applyConstraints({ advanced: [{ torch: next } as MediaTrackConstraintSet] });
+      setTorch(next);
+    } catch {
+      setTorch(null);
+    }
+  }
 
   const stop = useCallback(() => {
     stream.current?.getTracks().forEach((track) => track.stop());
@@ -62,6 +79,8 @@ export function LiveCamera({
           return;
         }
         stream.current = media;
+        const capabilities = media.getVideoTracks()[0]?.getCapabilities?.() as { torch?: boolean } | undefined;
+        setTorch(capabilities?.torch ? false : null);
         if (video.current) {
           video.current.srcObject = media;
           await video.current.play().catch(() => {});
@@ -192,10 +211,21 @@ export function LiveCamera({
           </button>
           {state === "live" && !shot && (
             <p className="rounded-full bg-black/40 px-4 py-2 text-sm backdrop-blur">
-              {text.hint}
+              {hint}
             </p>
           )}
-          <span className="size-11" />
+          {torch !== null && state === "live" && !shot ? (
+            <button
+              onClick={toggleTorch}
+              aria-label={text.light}
+              aria-pressed={torch}
+              className={`flex size-11 items-center justify-center rounded-full backdrop-blur ${torch ? "bg-harvest text-harvest-foreground" : "bg-black/40"}`}
+            >
+              {torch ? <Flashlight className="size-5" /> : <FlashlightOff className="size-5" />}
+            </button>
+          ) : (
+            <span className="size-11" />
+          )}
         </div>
       </div>
 
@@ -220,7 +250,7 @@ export function LiveCamera({
               className="flex h-14 items-center gap-2 rounded-full bg-harvest px-7 text-base font-semibold text-harvest-foreground"
             >
               <Check className="size-5" />
-              {quality && (quality.dark || quality.bright || quality.blurry) ? coach.useAnyway : text.use}
+              {quality && (quality.dark || quality.bright || quality.blurry) ? coach.useAnyway : use}
             </button>
           </>
         ) : (

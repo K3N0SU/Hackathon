@@ -138,104 +138,120 @@
    "wrongSite": "Gumagana lang ang Google sign-in sa milpa-cali.vercel.app. Buksan ang Milpa doon, o gamitin ang email mo."
   }
  },
- "1abp38p": {
+ "1m3i1h": {
   "tabs": {
    "home": "Ngayon",
    "scan": "I-scan",
    "ask": "Magtanong",
-   "tools": "Mga Gamit",
+   "tools": "Kagamitan",
    "saved": "Nai-save"
   },
   "home": {
    "morning": "Magandang umaga",
    "afternoon": "Magandang hapon",
    "evening": "Magandang gabi",
-   "tagline": "Alamin muna bago pumasok sa taniman.",
+   "tagline": "Alamin muna bago pumasok.",
    "scan": "Mag-scan ng label",
    "scanBody": "Itutok, pindutin, alamin agad",
-   "talk": "Kausapin si Milpa",
-   "talkBody": "Magsalita lang, kahit anong wika",
-   "clocks": "Oras bago pumasok",
+   "talk": "Kausapin ang Milpa",
+   "talkBody": "Magtanong nang malakas, sa kahit anong wika",
+   "clocks": "Oras ng pagbalik",
    "noClocks": "Walang tumatakbong oras. Mag-scan ng label para magsimula.",
    "heat": "Init ngayon",
-   "feels": "Pakiramdam na init",
-   "high": "Pinakamainit ngayong araw",
+   "feels": "Parang",
+   "high": "Pinakamainit ngayon",
    "levels": {
-    "normal": "Karaniwang araw",
+    "normal": "Normal na araw",
     "shade": "Kailangan ng lilim",
     "high": "Batas sa matinding init"
    },
-   "recent": "Mga kamakailang chat",
-   "noRecent": "Dito lalabas ang mga chat mo kay Milpa.",
+   "risk": "Ngayon sa bukid",
+   "closedOne": "1 ginamot na parte ang sarado pa.",
+   "closedMany": "{n} ginamot na parte ang sarado pa.",
+   "allClear": "Walang saradong parte ngayon.",
+   "advice": {
+    "normal": "Normal na init. Uminom ng tubig kada oras.",
+    "shade": "Higit sa 80°F: dapat may lilim malapit sa grupo.",
+    "high": "Matinding init: 10 minutong pahinga bawat 2 oras, at may dapat magbantay sa grupo."
+   },
+   "safeNow": "Ligtas na ngayon",
+   "recent": "Mga huling chat",
+   "noRecent": "Dito lalabas ang mga chat mo sa Milpa.",
    "last": "Huling label na na-scan mo",
-   "askAbout": "Magtanong tungkol dito",
+   "askAbout": "Itanong ito",
    "seeAll": "Tingnan lahat",
-   "aiTools": "Mga Gamit"
+   "aiTools": "Kagamitan"
   },
   "language": "Wika",
+  "fieldMode": "Field mode: mas malaking letra at mas malinaw sa ilalim ng araw",
   "chooseLanguage": "Piliin ang iyong wika",
   "back": "Bumalik",
-  "toolsTitle": "Mga Gamit",
-  "toolsIntro": "Mga gamit para sa pestisidyo, init, at sahod para sa mga manggagawa sa bukid. Pindutin ang isa.",
+  "toolsTitle": "Kagamitan",
+  "toolGroups": {
+   "pesticides": "Pestisyid",
+   "health": "Init at kalusugan",
+   "work": "Trabaho at sahod"
+  },
+  "toolsIntro": "Tulong sa pestisyid, init, at sahod para sa mga manggagawa sa bukid. Pindutin ang isa.",
   "tools": {
    "heat": {
-    "title": "Silip sa init sa bukid",
-    "body": "Pinakamainit na oras sa bukid ngayong araw at karapatan mo sa lilim at tubig"
+    "title": "Alamin ang init sa bukid",
+    "body": "Pinakamainit na oras ngayon sa bukid at karapatan mo sa lilim at tubig"
    },
    "symptoms": {
-    "title": "Masama ang pakiramdam pagkatapos mag-spray?",
-    "body": "Sintomas ng pestisidyo o init, at kung sino ang tatawagan"
+    "title": "Masama ang pakiramdam pagkatapos magbomba?",
+    "body": "Sintomas mula sa pestisyid o init, at kung sino ang tatawagan"
    },
    "exposed": {
-    "title": "Nalulanan ako ng pestisidyo",
-    "body": "911, 15 minutong timer sa pagbanlaw, at card para sa doktor"
+    "title": "Naligwakan ako ng pestisyid",
+    "body": "911, 15 minutong pampaligo, at sulat para sa doktor"
    },
    "paper": {
-    "title": "Basahin ang papel sa trabaho",
-    "body": "Abiso sa pag-spray, pay stub, at mga porma mula sa may-ari ng bukid"
+    "title": "Magbasa ng papel sa trabaho",
+    "body": "Abiso sa pag-spray, pay stub, at mga papel galing sa may-ari"
    },
    "report": {
-    "title": "Iulat ang lipad ng spray",
-    "body": "Sabihin ang nangyari, kumuha ng ulat sa Ingles para sa county"
+    "title": "I-report ang hangin ng spray",
+    "body": "Sabihin ang nangyari, kumuha ng report sa Ingles para sa county"
    },
    "brief": {
     "title": "Plano sa bukid ngayong araw",
-    "body": "Aling mga lote ang sarado at ang lagay ng init, babasahin nang malakas"
+    "body": "Aling mga parte ang sarado at lagay ng init, babasahin nang malakas"
    },
    "map": {
     "title": "Mapa ng pag-spray",
-    "body": "Bawat na-scan mong label ng pestisidyo, nakatala sa mapa"
+    "body": "Bawat label ng pestisyid na na-scan mo, nakatatak sa mapa"
    },
    "install": {
     "title": "Gamitin ito sa bukid",
-    "body": "Ilagay ang Milpa sa iyong telepono para gumana kahit walang signal"
+    "body": "Ilagay ang Milpa sa telepono mo para gumana kahit walang signal"
    },
    "gear": {
-    "title": "Suriin ang proteksyon sa pag-spray",
-    "body": "Litrato mo, ikukumpara sa proteksyong nasa label ng pestisidyo"
+    "title": "Suriin ang gamit pananggalang",
+    "body": "Litrato mo, ikukumpara sa dapat isuot ayon sa label ng pestisyid"
    },
    "pay": {
     "title": "Suriin ang sahod sa bukid",
-    "body": "Suriin ang pay stub mo ayon sa batas sa sahod sa bukid sa California"
+    "body": "Tingnan ang pay stub ayon sa batas sa sahod sa California"
    },
    "interpret": {
     "title": "Tagasalin para sa grupo",
-    "body": "Kausapin ang mayordomo, nars, o klerk sa sarili mong wika"
+    "body": "Makausap ang mayordomo, nars, o klerk sa sarili mong wika"
    },
    "food": {
-    "title": "Suriin ang pestisidyo sa pagkain",
-    "body": "Mga pestisidyo at allergens sa pagkaing binibili mo"
+    "title": "Suriin ang pestisyid sa pagkain",
+    "body": "Pestisyid at mga nagdudulot ng allergy sa binibili mong pagkain"
    }
   },
   "ask": {
-   "title": "Magtanong kay Milpa",
+   "title": "Magtanong sa Milpa",
    "about": "Tungkol sa",
-   "general": "Magtanong tungkol sa pestisidyo, init, o mga karapatan mo sa trabaho.",
+   "general": "Magtanong tungkol sa pestisyid, init, o mga karapatan mo sa trabaho.",
    "placeholder": "Mag-type o pindutin ang mikropono",
    "send": "Ipadala",
-   "listening": "Nakikinig...",
+   "listening": "Nakinig...",
    "thinking": "Nag-iisip...",
-   "failed": "Hindi makuha ang sagot. Tingnan ang iyong koneksyon at subukan ulit.",
+   "failed": "Hindi nakakuha ng sagot. Tingnan ang koneksyon at subukan ulit.",
    "starters": [
     "Kailan ako puwedeng bumalik sa loob?",
     "Ano ang kailangan kong isuot?",
@@ -245,147 +261,147 @@
    "clear": "Bagong chat",
    "listen": "Makinig",
    "call911": "Tumawag sa 911",
-   "chats": "Mga chat mo",
+   "chats": "Iyong mga chat",
    "noChats": "Dito lalabas ang mga chat mo. Naka-save ang mga ito sa account mo.",
    "remove": "Burahin ang chat",
    "retry": "Subukan ulit",
    "talk": "Magsalita",
-   "talkHint": "Magsalita sa kahit anong wika. Makikinig si Milpa, at sasagot nang malakas.",
+   "talkHint": "Magsalita sa kahit anong wika. Makikinig ang Milpa, tapos sasagot nang malakas.",
    "voiceListening": "Nakikinig",
    "voiceThinking": "Nag-iisip",
    "voiceSpeaking": "Pindutin para pigilin",
    "voiceTap": "Pindutin para magsalita",
-   "voiceBlocked": "Kailangan ni Milpa ang iyong mikropono. Payagan ito sa settings ng browser, tapos subukan ulit.",
-   "voiceFailed": "Hindi pumasok iyon. Pindutin para subukan ulit.",
+   "voiceBlocked": "Kailangan ng Milpa ang mikropono mo. Payagan ito sa settings ng browser, tapos subukan ulit.",
+   "voiceFailed": "Hindi iyon pumasok. Pindutin para subukan ulit.",
    "close": "Isara",
-   "attach": "Magdagdag ng litrato",
+   "attach": "Maglagay ng litrato",
    "removePhoto": "Alisin ang litrato",
-   "photoAsk": "Ano ang masasabi mo sa akin mula sa litratong ito?"
+   "photoAsk": "Ano ang masasabi mo sa litratong ito?"
   },
   "result": {
    "askAbout": "Magtanong tungkol sa label na ito",
    "supervisor": "Ipakita sa aking superbisor",
-   "share": "Ibahagi sa kasamahan",
+   "share": "Ibahagi sa grupo",
    "shared": "Handa nang ibahagi ang link",
-   "copied": "Nakopya na ang link",
+   "copied": "Nakopya ang link",
    "shareFailed": "Hindi makagawa ng link. Subukan ulit.",
-   "howRead": "Paano ito binasa ni Milpa",
+   "howRead": "Paano ito binasa ng Milpa",
    "confidence": {
-    "high": "Malinaw ang pagkabasa",
-    "medium": "Tingnan muna ito",
+    "high": "Malinaw ang pagbasa",
+    "medium": "Tingnan ito",
     "low": "Hindi sigurado"
    },
    "confidenceNote": {
-    "high": "Malinaw ang label at bawat sagot sa ibaba ay nakasulat doon.",
-    "medium": "Maliit o natatakpan ang ilang salita. Tingnan ang label o magtanong.",
-    "low": "Hindi sigurado si Milpa sa bahaging ito. Magtanong sa iyong superbisor."
+    "high": "Malinaw ang label at bawat sagot sa ibaba ay nakasulat dito.",
+    "medium": "Maliit ang ilang salita o medyo natatakpan. Tingnan ang label o magtanong.",
+    "low": "Hindi sigurado ang Milpa sa bahaging ito. Magtanong sa iyong superbisor."
    },
    "fields": {
     "product": "Produkto",
-    "signal": "Salitang babala",
+    "signal": "Babala",
     "reentry": "Pagbalik sa loob",
     "gear": "Dapat isuot",
-    "firstAid": "Pangunang lunas"
+    "firstAid": "Paunang lunas"
    },
-   "others": "Nasa litratong ito rin"
+   "others": "Kasamang nasa litratong ito"
   },
   "supervisorCard": {
    "close": "Isara",
    "intro": "Ipakita ang screen na ito sa iyong superbisor."
   },
   "coach": {
-   "dark": "Masyadong madilim. Lumipat sa may liwanag o magbukas pa ng ilaw.",
-   "bright": "Masyadong maliwanag. Umiwas para hindi matamaan ng araw ang label.",
-   "blurry": "Medyo malabo. Huwag igalaw ang telepono at lumapit pa.",
-   "useAnyway": "Gamitin pa rin ito"
+   "dark": "Masyadong madilim. Lumipat sa may ilaw o buksan ang ilaw.",
+   "bright": "Masyadong maliwanag. Umiwas para hindi masinagan ng araw ang label.",
+   "blurry": "Medyo malabo. Hawakan nang maayos ang telepono at lumapit pa.",
+   "useAnyway": "Gamitin pa rin"
   },
   "symptoms": {
-   "title": "Ano ang pakiramdam mo?",
-   "intro": "Pindutin ang lahat ng nararamdaman mo ngayon. Sasabihin ni Milpa kung sino ang tatawagan.",
+   "title": "Ano ang nararamdaman mo?",
+   "intro": "Pindutin lahat ng nararamdaman mo ngayon. Sasabihin ng Milpa kung sino ang tatawagan.",
    "list": [
     "Sakit ng ulo",
     "Nahihilo",
-    "Nasusuka",
+    "Nasisikmura o naduduwal",
     "Nagsusuka",
-    "Mahapdi ang mata",
+    "Mahapdi ang mga mata",
     "Pantal o mahapding balat",
-    "Labis na pinapawisan",
-    "Nanginginig ang kalamnan",
+    "Labis na pagpapawis",
+    "Nanginginig na kalamnan",
     "Pagod na pagod",
     "Pulikat",
-    "Nahihirapang huminga",
+    "Hirap huminga",
     "Sakit sa dibdib",
-    "Nalilito",
-    "Nawalan ng malay"
+    "Lito ang isip",
+    "Nahimatay"
    ],
-   "note": "May iba pa ba? Sabihin sa sarili mong mga salita.",
-   "check": "Sabihin sa akin ang dapat gawin",
+   "note": "May iba pa ba? Sabihin gamit ang sarili mong mga salita.",
+   "check": "Sabihin sa akin kung ano ang dapat gawin",
    "checking": "Sinusuri...",
    "failed": "Hindi masuri. Kung napakasama ng pakiramdam mo, tumawag sa 911.",
-   "again": "Magsimula muli",
+   "again": "Magsimula ulit",
    "callPoison": "Poison Control"
   },
   "paper": {
    "title": "Magbasa ng papel",
-   "intro": "Kumuha ng litrato ng anumang papel sa trabaho. Ipapaliwanag ito ni Milpa sa iyong wika.",
+   "intro": "Kumuha ng litrato ng anumang papel galing sa trabaho. Ipapaliwanag ito ng Milpa sa iyong wika.",
    "take": "Kumuha ng litrato",
    "choose": "Pumili ng litrato",
    "reading": "Binabasa ang papel...",
-   "failed": "Hindi mabasa. Tingnan ang iyong koneksyon at subukan ulit.",
-   "unreadable": "Hindi namin ito mabasa. Lumapit pa, huwag igalaw ang telepono, at subukan ulit.",
-   "actions": "Ang kailangan mong gawin",
+   "failed": "Hindi mabasa. Tingnan ang koneksyon at subukan ulit.",
+   "unreadable": "Hindi namin mabasa ito. Lumapit pa, hawakan nang maayos at subukan ulit.",
+   "actions": "Mga dapat mong gawin",
    "dates": "Mga petsa at halaga",
    "another": "Magbasa ng isa pang papel"
   },
   "report": {
-   "title": "Mag-ulat ng problema",
-   "intro": "Sabihin ang nangyari sa sarili mong mga salita. Gagawa si Milpa ng malinaw na ulat sa Ingles na maibibigay mo sa may-ari ng bukid o sa county.",
-   "placeholder": "Halimbawa: Nag-spray sila sa katabing bukid habang nag-aani kami at tinangay ito ng hangin sa amin.",
+   "title": "Magsumbong ng problema",
+   "intro": "Sabihin ang nangyari sa sarili mong mga salita. Gagawa ang Milpa ng malinaw na report sa Ingles na maibibigay mo sa may-ari o sa county.",
+   "placeholder": "Halimbawa: Nagbomba sila sa katabing bukid habang namimitas kami at tinangay ito ng hangin sa amin.",
    "when": "Kailan ito nangyari?",
-   "write": "Isulat ang aking ulat",
-   "writing": "Nagsusulat...",
-   "failed": "Hindi maisulat ang ulat. Subukan ulit.",
-   "english": "Ulat sa Ingles",
-   "yourLanguage": "Ang sinasabi nito",
-   "missing": "Idagdag ang mga ito para mas maging malinaw",
+   "write": "Isulat ang aking report",
+   "writing": "Isinusulat...",
+   "failed": "Hindi maisulat ang report. Subukan ulit.",
+   "english": "Report sa Ingles",
+   "yourLanguage": "Ang ibig sabihin nito",
+   "missing": "Idagdag ang mga ito para mas malinaw",
    "copy": "Kopyahin",
    "copied": "Nakopya na",
    "share": "Ipadala",
-   "edit": "Baguhin ang aking salaysay"
+   "edit": "Baguhin ang aking kuwento"
   },
   "brief": {
    "title": "Plano ngayong araw",
-   "intro": "Titingnan ni Milpa ang iyong mga oras at ang init ngayong araw, at babasahin ang plano nang malakas.",
+   "intro": "Tinitingnan ng Milpa ang oras at ang init ngayon, at sasabihin sa iyo ang plano nang malakas.",
    "make": "Sabihin ang plano ngayong araw",
-   "making": "Ginagawa ang iyong plano...",
+   "making": "Ginagawa ang plano...",
    "failed": "Hindi magawa ang plano. Tingnan ang iyong koneksyon.",
    "listen": "Makinig",
    "again": "I-update"
   },
   "map": {
    "title": "Mapa ng pag-spray",
-   "intro": "Bawat label na i-scan mo ay itatala kung saan ka nakatayo noon.",
-   "empty": "Wala pang naitatalang scan. Mag-scan ng label habang bukas ang lokasyon.",
-   "loading": "Kinukuha ang iyong mga na-scan...",
-   "failed": "Hindi makuha ang iyong mga na-scan.",
-   "noPlace": "Walang lokasyon ang mga na-scan na ito."
+   "intro": "Bawat label na i-scan mo ay itatatak kung saan ka nakatayo noon.",
+   "empty": "Wala pang naka-tag na scan. Mag-scan ng label habang nakabukas ang lokasyon.",
+   "loading": "Kinakarga ang mga na-scan mo...",
+   "failed": "Hindi makarga ang mga na-scan mo.",
+   "noPlace": "Walang lokasyon ang mga scan na ito."
   },
   "alarms": {
-   "allow": "I-vibrate ako kapag ligtas na",
-   "on": "Bukas ang alarm",
+   "allow": "Patunugin kapag ligtas na",
+   "on": "Bukas ang alarma",
    "safeTitle": "Ligtas nang bumalik sa loob",
-   "safeBody": "Tapos na ang oras ng paghihintay bago pumasok para sa",
+   "safeBody": "Tapos na ang oras ng paghihintay para sa",
    "waterTitle": "Uminom ng tubig",
-   "waterBody": "Mainit ngayon. Uminom ng mga isang quart bawat oras.",
-   "waterOn": "Ipaalala sa akin na uminom bawat oras",
+   "waterBody": "Mainit ngayon. Uminom ng mga isang litrong tubig bawat oras.",
+   "waterOn": "Paalalahanan akong uminom kada oras",
    "waterOff": "Bukas ang paalala sa tubig"
   },
   "install": {
    "title": "Ilagay ang Milpa sa iyong telepono",
-   "body": "Bubukas ito na parang app, at gagana ang iyong mga nai-save na scan, oras, at hakbang kapag nalulanan kahit walang signal.",
-   "button": "Idagdag sa home screen",
-   "ios": "Sa iPhone: pindutin ang Share, tapos Add to Home Screen.",
-   "done": "Nasa iyong home screen na ang Milpa."
+   "body": "Bubukas ito na parang app, at ang mga na-save mong scan, oras, at hakbang sa pagkalantad ay gagana kahit walang signal.",
+   "button": "Ilagay sa home screen",
+   "ios": "Sa iPhone: pindutin ang Ibahagi, tapos Ilagay sa Home Screen.",
+   "done": "Nasa home screen mo na ang Milpa."
   }
  },
  "1i1pcy3": {
@@ -397,16 +413,35 @@
   "saved": "Nai-save sa iyong history",
   "choose": "Pumili na lang ng litrato"
  },
- "13m2rwo": {
-  "hint": "Ipasok ang buong label sa loob ng frame",
+ "8oypj2": {
+  "hint": "Ikasya ang buong label sa loob ng frame",
   "capture": "Kumuha ng litrato",
-  "retake": "Kumuha ulit",
+  "retake": "Ulitin",
   "use": "Basahin ang label na ito",
   "flip": "Ilipat ang camera",
   "gallery": "Pumili ng litrato",
   "close": "Isara ang camera",
-  "blocked": "Hindi mabuksan ng Milpa ang camera dito. Payagan ang camera sa settings ng browser mo, o gamitin ang camera app ng telepono mo.",
-  "openApp": "Gamitin ang camera app"
+  "blocked": "Hindi mabuksan ng Milpa ang camera dito. Payagan ang access sa camera sa settings ng iyong browser, o gamitin ang camera app ng iyong telepono.",
+  "openApp": "Gamitin ang camera app",
+  "light": "Flashlight",
+  "modes": {
+   "food": {
+    "hint": "Ikasya ang food label o ang pagkain sa loob ng frame",
+    "use": "Suriin ang pagkaing ito"
+   },
+   "me": {
+    "hint": "Umatras para kita ang iyong mga braso, kamay, at paa",
+    "use": "Suriin ang aking gamit"
+   },
+   "stub": {
+    "hint": "Ikasya ang buong pay stub sa loob ng frame",
+    "use": "Suriin ang pay stub na ito"
+   },
+   "paper": {
+    "hint": "Ikasya ang buong papel sa loob ng frame",
+    "use": "Basahin ang papel na ito"
+   }
+  }
  },
  "pyuh1i": {
   "tab": "Naka-save",

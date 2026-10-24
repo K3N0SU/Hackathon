@@ -96,6 +96,7 @@ export function PayCheck({ language }: { language: Language }) {
       {cameraOpen && (
         <LiveCamera
           language={language}
+          mode="stub"
           onCapture={(shot) => {
             setCameraOpen(false);
             read(toJpeg(shot));

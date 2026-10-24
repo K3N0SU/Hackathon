@@ -126,6 +126,7 @@ export function FoodCheck({ language }: { language: Language }) {
       {cameraOpen && (
         <LiveCamera
           language={language}
+          mode="food"
           onCapture={(shot) => {
             setCameraOpen(false);
             check(toJpeg(shot));

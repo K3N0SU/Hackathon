@@ -98,6 +98,7 @@ export function GearCheck({ language }: { language: Language }) {
         <LiveCamera
           language={language}
           facing="user"
+          mode="me"
           onCapture={(shot) => {
             setCameraOpen(false);
             check(toJpeg(shot));

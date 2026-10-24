@@ -81,6 +81,9 @@ function ChatList({
   );
 }
 
+const emergencyWords =
+  /can'?t breathe|cannot breathe|not breathing|hard to breathe|chest pain|passed out|pass out|fainted|seizure|unconscious|throwing up blood|no puedo respirar|no respira|me cuesta respirar|dolor (en el|de) pecho|desmay|convuls|inconsciente/i;
+
 export function AskChat({
   language,
   focus,
@@ -397,6 +400,15 @@ export function AskChat({
                     <p className="rounded-3xl rounded-br-md bg-primary px-4 py-3 text-lg leading-snug text-primary-foreground">
                       {message.text}
                     </p>
+                    {emergencyWords.test(message.text) && (
+                      <a
+                        href="tel:911"
+                        className="pop flex items-center gap-1.5 rounded-full bg-danger px-4 py-2 font-semibold text-white shadow-md"
+                      >
+                        <Phone className="size-4" />
+                        {text.call911}
+                      </a>
+                    )}
                   </div>
                 ) : (
                   <div key={message.id} className="pop flex max-w-[92%] gap-2">

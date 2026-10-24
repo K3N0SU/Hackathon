@@ -7,6 +7,8 @@ import {
   MessageCircle,
   ScanLine,
   Sun,
+  ShieldAlert,
+  ShieldCheck,
   TimerReset,
   type LucideIcon,
 } from "lucide-react";
@@ -34,6 +36,29 @@ const heatTone = {
   shade: "bg-harvest/30 text-harvest-foreground",
   high: "bg-danger text-white",
 };
+
+function ClockRing({ clock, now, done }: { clock: Clock; now: number; done: boolean }) {
+  const sprayedAt = Number(clock.id.split("-")[0]);
+  const span = clock.endsAt - sprayedAt;
+  const progress = done || !(span > 0) ? 1 : Math.min(1, Math.max(0, (now - sprayedAt) / span));
+  const length = 2 * Math.PI * 16;
+  return (
+    <svg viewBox="0 0 40 40" className="size-10 shrink-0 -rotate-90" aria-hidden="true">
+      <circle cx="20" cy="20" r="16" fill="none" strokeWidth="4" className={done ? "stroke-leaf/25" : "stroke-white/25"} />
+      <circle
+        cx="20"
+        cy="20"
+        r="16"
+        fill="none"
+        strokeWidth="4"
+        strokeLinecap="round"
+        strokeDasharray={length}
+        strokeDashoffset={length * (1 - progress)}
+        className={done ? "stroke-leaf" : "stroke-white"}
+      />
+    </svg>
+  );
+}
 
 export function TodayHome({
   language,
@@ -92,8 +117,27 @@ export function TodayHome({
     day: "numeric",
   });
 
+  const closed = clocks.filter((clock) => !timeLeft(clock.endsAt, now).done).length;
+  const risky = closed > 0 || heat?.level === "high";
+  const RiskIcon = risky ? ShieldAlert : ShieldCheck;
+
   return (
     <section className="rise space-y-5 pt-5 pb-10 lg:pt-8">
+      {now > 0 && (
+        <div
+          role="status"
+          className={`flex items-start gap-3 rounded-2xl p-4 ${
+            risky ? "bg-danger text-white" : heat?.level === "shade" ? "bg-harvest text-harvest-foreground" : "bg-leaf/15 text-ink"
+          }`}
+        >
+          <RiskIcon className={`mt-0.5 size-6 shrink-0 ${risky ? "" : heat?.level === "shade" ? "" : "text-leaf"}`} />
+          <p className="leading-snug">
+            <span className="block font-semibold">{text.risk}</span>
+            {closed === 0 ? text.allClear : closed === 1 ? text.closedOne : text.closedMany.replace("{n}", String(closed))}{" "}
+            {heat && text.advice[heat.level]}
+          </p>
+        </div>
+      )}
       <div className="relative overflow-hidden rounded-[2rem] bg-[#f6f0e0] shadow-[var(--shadow-card)] ring-1 ring-black/5">
         <div className="absolute inset-x-0 bottom-0 h-[58%] sm:h-[62%]">
           <PixelFarm />
@@ -166,7 +210,9 @@ export function TodayHome({
                       left.done ? "bg-leaf/15" : "bg-danger text-white"
                     }`}
                   >
-                    <span className="min-w-0">
+                    <span className="flex min-w-0 items-center gap-3">
+                      <ClockRing clock={clock} now={now} done={left.done} />
+                      <span className="min-w-0">
                       <span className="block truncate font-semibold">{clock.product}</span>
                       <span className={`text-sm ${left.done ? "text-leaf" : "text-white/80"}`}>
                         {new Date(clock.endsAt).toLocaleTimeString(speechCode(language), {
@@ -174,9 +220,10 @@ export function TodayHome({
                           minute: "2-digit",
                         })}
                       </span>
+                      </span>
                     </span>
-                    <span className="shrink-0 font-display text-3xl font-semibold tabular-nums">
-                      {left.done ? "0:00" : `${left.hours}:${String(left.minutes).padStart(2, "0")}`}
+                    <span className={`shrink-0 font-display font-semibold tabular-nums ${left.done ? "text-xl text-leaf" : "text-3xl"}`}>
+                      {left.done ? text.safeNow : `${left.hours}:${String(left.minutes).padStart(2, "0")}`}
                     </span>
                   </li>
                 );

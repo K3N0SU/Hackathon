@@ -58,6 +58,7 @@ export function ReadPaper({ language }: { language: Language }) {
       {cameraOpen && (
         <LiveCamera
           language={language}
+          mode="paper"
           onCapture={async (shot) => {
             setCameraOpen(false);
             read(await toJpeg(shot));

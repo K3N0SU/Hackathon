@@ -10,6 +10,7 @@ import {
   ClipboardPen,
   FileText,
   Globe,
+  SunMedium,
   HeartPulse,
   House,
   Languages,
@@ -99,6 +100,12 @@ const toolList: { id: Tool; icon: LucideIcon; tone: string }[] = [
 
 const toolIds = toolList.map((tool) => tool.id);
 
+const toolGroups: { id: "pesticides" | "health" | "work"; tools: Tool[] }[] = [
+  { id: "pesticides", tools: ["gear", "exposed", "report", "map", "food"] },
+  { id: "health", tools: ["heat", "symptoms", "brief"] },
+  { id: "work", tools: ["pay", "paper", "interpret", "install"] },
+];
+
 function readLastResult(): ScanResult | null {
   try {
     const saved: LastScan | null = JSON.parse(localStorage.getItem(lastScanKey) ?? "null");
@@ -114,6 +121,7 @@ export function AppShell() {
   const [chatOpen, setChatOpen] = useState(false);
   const [tool, setTool] = useState<Tool | null>(null);
   const [picker, setPicker] = useState(false);
+  const [fieldMode, setFieldMode] = useState(false);
   const [focus, setFocus] = useState<ScanResult | null>(null);
   const [request, setRequest] = useState<AskRequest | null>(null);
   const { user, ready } = useSession();
@@ -158,6 +166,9 @@ export function AppShell() {
     const start = setTimeout(() => {
       try {
         setFocus(readLastResult());
+        const field = localStorage.getItem("furrow-field-mode") === "on";
+        setFieldMode(field);
+        document.documentElement.classList.toggle("field-mode", field);
         const saved = localStorage.getItem("furrow-language");
         const browser = navigator.language.slice(0, 2);
         const choice = saved ?? (browser === "fil" ? "tl" : browser);
@@ -249,6 +260,34 @@ export function AppShell() {
     );
   }
 
+  function toggleFieldMode() {
+    const next = !fieldMode;
+    setFieldMode(next);
+    document.documentElement.classList.toggle("field-mode", next);
+    navigator.vibrate?.(10);
+    try {
+      localStorage.setItem("furrow-field-mode", next ? "on" : "off");
+    } catch {}
+  }
+
+  const fieldButton = (dark: boolean) => (
+    <button
+      onClick={toggleFieldMode}
+      aria-label={text.fieldMode}
+      aria-pressed={fieldMode}
+      title={text.fieldMode}
+      className={`flex size-10 shrink-0 items-center justify-center rounded-full transition-all active:scale-95 ${
+        fieldMode
+          ? "bg-harvest text-harvest-foreground"
+          : dark
+            ? "bg-white/10 text-ink-foreground hover:bg-white/15"
+            : "border bg-card shadow-sm hover:border-primary"
+      }`}
+    >
+      <SunMedium className="size-5" />
+    </button>
+  );
+
   const languageButton = (dark: boolean) => (
     <button
       onClick={() => setPicker(true)}
@@ -327,7 +366,7 @@ export function AppShell() {
             );
           })}
         </div>
-        <div className="mt-auto shrink-0 px-6 pb-6 pt-8">{languageButton(true)}</div>
+        <div className="mt-auto flex shrink-0 items-center gap-2 px-6 pb-6 pt-8">{languageButton(true)}{fieldButton(true)}</div>
       </aside>
 
       <header className="sticky top-0 z-30 bg-background/85 backdrop-blur-md lg:hidden">
@@ -337,6 +376,7 @@ export function AppShell() {
             <span className="hidden min-[400px]:inline">Milpa</span>
           </Link>
           <div className="flex items-center gap-2">
+            {fieldButton(false)}
             {languageButton(false)}
             <UserMenu language={language} compact />
           </div>
@@ -393,8 +433,12 @@ export function AppShell() {
               {text.toolsTitle}
             </h1>
             <p className="mt-2 text-lg text-muted-foreground">{text.toolsIntro}</p>
-            <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
-              {toolList.map((item, index) => {
+            {toolGroups.map((group, groupIndex) => (
+              <div key={group.id} className="mt-8">
+                <h2 className="text-sm font-semibold text-muted-foreground">{text.toolGroups[group.id]}</h2>
+                <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
+              {group.tools.map((id, index) => {
+                const item = toolList.find((tool) => tool.id === id)!;
                 const Icon = item.icon;
                 const copy = text.tools[item.id];
                 return (
@@ -402,7 +446,7 @@ export function AppShell() {
                     key={item.id}
                     onClick={() => go("tools", item.id)}
                     className="rise group card relative flex min-h-40 flex-col items-start justify-between gap-5 overflow-hidden p-5 text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[var(--shadow-lift)] active:scale-[0.97]"
-                    style={{ animationDelay: `${index * 40}ms` }}
+                    style={{ animationDelay: `${(groupIndex * 4 + index) * 40}ms` }}
                   >
                     <ArrowUpRight className="absolute right-4 top-4 size-5 -translate-x-1 translate-y-1 text-muted-foreground opacity-0 transition-all duration-300 group-hover:translate-x-0 group-hover:translate-y-0 group-hover:text-primary group-hover:opacity-100" />
                     <span
@@ -419,7 +463,9 @@ export function AppShell() {
                   </button>
                 );
               })}
-            </div>
+                </div>
+              </div>
+            ))}
           </section>
         )}
         {tab === "tools" && tool === "heat" && <HeatCheck language={language} />}

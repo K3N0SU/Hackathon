@@ -19,6 +19,12 @@ export type AppCopy = {
     feels: string;
     high: string;
     levels: { normal: string; shade: string; high: string };
+    risk: string;
+    closedOne: string;
+    closedMany: string;
+    allClear: string;
+    advice: { normal: string; shade: string; high: string };
+    safeNow: string;
     recent: string;
     noRecent: string;
     last: string;
@@ -27,9 +33,11 @@ export type AppCopy = {
     aiTools: string;
   };
   language: string;
+  fieldMode: string;
   chooseLanguage: string;
   back: string;
   toolsTitle: string;
+  toolGroups: { pesticides: string; health: string; work: string };
   toolsIntro: string;
   tools: {
     heat: ToolCopy;
@@ -191,6 +199,16 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       feels: "Feels like",
       high: "High today",
       levels: { normal: "Normal day", shade: "Shade required", high: "High heat rules" },
+      risk: "Today in the field",
+      closedOne: "1 treated block is still closed.",
+      closedMany: "{n} treated blocks are still closed.",
+      allClear: "No treated blocks are closed right now.",
+      advice: {
+        normal: "Normal heat. Drink water every hour.",
+        shade: "Over 80°F: shade must be up near your crew.",
+        high: "High heat: a 10-minute cool-down break every 2 hours, and someone must watch the crew.",
+      },
+      safeNow: "Safe now",
       recent: "Recent chats",
       noRecent: "Your chats with Milpa show up here.",
       last: "Last label you scanned",
@@ -199,9 +217,11 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       aiTools: "Tools",
     },
     language: "Language",
+    fieldMode: "Field mode: bigger text and stronger contrast for bright sun",
     chooseLanguage: "Choose your language",
     back: "Back",
     toolsTitle: "Tools",
+    toolGroups: { pesticides: "Pesticides", health: "Heat and health", work: "Work and pay" },
     toolsIntro: "Pesticide, heat and pay tools for farmworkers in the field. Tap one.",
     tools: {
       heat: { title: "Field heat check", body: "Today's hottest hour in the field and your shade and water rights" },
@@ -391,6 +411,16 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       feels: "Se siente como",
       high: "Máxima de hoy",
       levels: { normal: "Día normal", shade: "Sombra obligatoria", high: "Reglas de calor alto" },
+      risk: "Hoy en el campo",
+      closedOne: "1 bloque fumigado sigue cerrado.",
+      closedMany: "{n} bloques fumigados siguen cerrados.",
+      allClear: "No hay bloques fumigados cerrados ahora.",
+      advice: {
+        normal: "Calor normal. Tome agua cada hora.",
+        shade: "Más de 80°F: debe haber sombra cerca de su cuadrilla.",
+        high: "Calor alto: un descanso de 10 minutos cada 2 horas, y alguien debe vigilar a la cuadrilla.",
+      },
+      safeNow: "Ya puede entrar",
       recent: "Conversaciones recientes",
       noRecent: "Aquí aparecen sus conversaciones con Milpa.",
       last: "Última etiqueta escaneada",
@@ -399,9 +429,11 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       aiTools: "Herramientas",
     },
     language: "Idioma",
+    fieldMode: "Modo campo: letra más grande y más contraste para el sol",
     chooseLanguage: "Elija su idioma",
     back: "Atrás",
     toolsTitle: "Herramientas",
+    toolGroups: { pesticides: "Pesticidas", health: "Calor y salud", work: "Trabajo y pago" },
     toolsIntro: "Herramientas de pesticidas, calor y pago para trabajadores del campo. Toque una.",
     tools: {
       heat: { title: "Calor en el campo", body: "La hora más caliente de hoy y su derecho a sombra y agua" },
@@ -591,6 +623,16 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       feels: "ਮਹਿਸੂਸ ਹੁੰਦੀ",
       high: "ਅੱਜ ਸਭ ਤੋਂ ਵੱਧ",
       levels: { normal: "ਆਮ ਦਿਨ", shade: "ਛਾਂ ਲਾਜ਼ਮੀ", high: "ਤੇਜ਼ ਗਰਮੀ ਦੇ ਨਿਯਮ" },
+      risk: "ਅੱਜ ਖੇਤ ਵਿੱਚ",
+      closedOne: "1 ਛਿੜਕਾਅ ਵਾਲਾ ਬਲਾਕ ਅਜੇ ਬੰਦ ਹੈ।",
+      closedMany: "{n} ਛਿੜਕਾਅ ਵਾਲੇ ਬਲਾਕ ਅਜੇ ਬੰਦ ਹਨ।",
+      allClear: "ਇਸ ਵੇਲੇ ਕੋਈ ਛਿੜਕਾਅ ਵਾਲਾ ਬਲਾਕ ਬੰਦ ਨਹੀਂ।",
+      advice: {
+        normal: "ਆਮ ਗਰਮੀ। ਹਰ ਘੰਟੇ ਪਾਣੀ ਪੀਓ।",
+        shade: "80°F ਤੋਂ ਵੱਧ: ਤੁਹਾਡੇ ਅਮਲੇ ਨੇੜੇ ਛਾਂ ਹੋਣੀ ਚਾਹੀਦੀ ਹੈ।",
+        high: "ਤੇਜ਼ ਗਰਮੀ: ਹਰ 2 ਘੰਟੇ 10 ਮਿੰਟ ਦਾ ਆਰਾਮ, ਅਤੇ ਕੋਈ ਅਮਲੇ ਦੀ ਨਿਗਰਾਨੀ ਕਰੇ।",
+      },
+      safeNow: "ਹੁਣ ਸੁਰੱਖਿਅਤ",
       recent: "ਹਾਲੀਆ ਗੱਲਬਾਤਾਂ",
       noRecent: "Milpa ਨਾਲ ਤੁਹਾਡੀਆਂ ਗੱਲਬਾਤਾਂ ਇੱਥੇ ਦਿਖਣਗੀਆਂ।",
       last: "ਆਖਰੀ ਸਕੈਨ ਕੀਤਾ ਲੇਬਲ",
@@ -599,9 +641,11 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       aiTools: "ਟੂਲ",
     },
     language: "ਭਾਸ਼ਾ",
+    fieldMode: "ਖੇਤ ਮੋਡ: ਤੇਜ਼ ਧੁੱਪ ਲਈ ਵੱਡੇ ਅੱਖਰ ਅਤੇ ਗੂੜ੍ਹਾ ਰੰਗ",
     chooseLanguage: "ਆਪਣੀ ਭਾਸ਼ਾ ਚੁਣੋ",
     back: "ਪਿੱਛੇ",
     toolsTitle: "ਟੂਲ",
+    toolGroups: { pesticides: "ਕੀਟਨਾਸ਼ਕ", health: "ਗਰਮੀ ਅਤੇ ਸਿਹਤ", work: "ਕੰਮ ਅਤੇ ਤਨਖਾਹ" },
     toolsIntro: "Milpa ਜੋ ਕੁਝ ਕਰ ਸਕਦਾ ਹੈ। ਇੱਕ ਨੂੰ ਛੂਹੋ।",
     tools: {
       heat: { title: "ਗਰਮੀ ਦੀ ਜਾਂਚ", body: "ਅੱਜ ਦਾ ਸਭ ਤੋਂ ਗਰਮ ਘੰਟਾ ਅਤੇ ਤੁਹਾਡੇ ਹੱਕ" },
