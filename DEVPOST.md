@@ -10,13 +10,45 @@ Point your phone at a pesticide label. Know when it's safe, in your language, an
 
 The Central Valley grows a huge share of the country's fruit and nuts, and the people who pick, prune and irrigate it often think in Spanish, Punjabi, Hmong or Mixteco before English. What keeps them safe is printed on a label and a posted sign in small English print. Summer heat here regularly passes 100°F, pay stubs are confusing, and when someone gets sprayed, the first fifteen minutes matter most. I wanted one free tool, on the phone they already carry, that answers the questions a worker actually has, out loud, in the language they think in.
 
+## Try it yourself (put this at the very top of the story)
+
+Milpa is live and free. Open **https://milpa-california.vercel.app** on your phone or laptop, sign in with Google or an email, and try this in under two minutes:
+
+1. On the scanner, tap **Almond insecticide label**. You don't need a real label. In a few seconds you'll see when it is safe to go back in, what to wear and the first aid, plus the exact words from the label each answer came from. Tap **Start the clock**.
+2. Tap **Ask Milpa** in the corner, then **Talk**, and ask out loud, in any language, "Can I eat lunch between the rows?" It answers out loud in the language you spoke.
+3. Tap the globe and switch to **Español**, **Hmoob** or **العربية**. The whole app changes, and Arabic flips right to left.
+4. Open **Tools** and try **Food pesticide check** (type "strawberries"), **Farm pay check** or **Sick after spraying?**.
+5. Tap the sun button for **Field mode**, the high-contrast setting made for bright sun.
+
 ## What it does
 
-Milpa opens on the scanner. Photograph a pesticide label or a field sign, and in about five seconds you get the signal word, how long to stay out, what to wear and first aid, in plain words, read aloud in a natural voice. A badge says how clearly it read the label, and a drawer shows the exact words each answer came from. Start a countdown for the block and your phone buzzes when it is safe to go back in.
+Milpa is a free web app that keeps California farmworkers safe from pesticides and heat, and helps with the paperwork side of farm work, in 17 languages. It runs in the browser on any phone, installs to the home screen like an app, and the safety steps keep working with no signal.
 
-Then you can talk to it. The Ask Milpa button sits in the corner of every screen. Type, send a photo of a rash or a sign, or tap Talk and just speak, in any language. It writes down what you said, answers out loud, and keeps listening, like a phone call. It answers only from the label you scanned and California's farm safety rules. When the label doesn't say, it tells you who to ask instead of guessing. Every chat is saved to your account.
+**The scanner.** Photograph a pesticide label or a posted field sign, or try one of three sample labels. In about five seconds Milpa gives the signal word, how long to stay out of the field, what to wear and the first aid, in plain words, read aloud in a natural voice. A badge says how clearly it read the label, and a drawer shows the exact words from the label behind every answer, so nothing has to be taken on faith. One tap starts a re-entry countdown for that block, and the phone buzzes when it is safe. A supervisor card shows the label's rules in English to hand to a boss, and crew sharing sends the result to the rest of the crew.
 
-The smaller tools cover the rest of a worker's day. The interpreter lets a worker and a supervisor or nurse take turns talking while Milpa speaks each side in the other's language. On a phone, the top half flips so the person across the table can read it. Gear check looks at a photo of you and says which required gear is on or missing. Food check reads a food label, a produce sticker or the food itself, or takes a typed name when there is no label, and checks it for the family's allergies and says what the label tells you about pesticides. Pay check reads a pay stub and flags anything below minimum wage or missing overtime. There is also a symptom check, an exposure screen with a rinse timer, a heat check, a paper reader, a report writer, a spoken plan for the day, a spray map, a supervisor card and crew sharing. It works in 17 languages, with right-to-left layouts for Arabic, Urdu and Farsi. The Today screen opens with one plain line about the day: how many treated blocks are still closed and what the heat rules are right now, with a ring on each clock showing how close it is to safe. If a worker types something like "he passed out" or "no puedo respirar" into the chat, a 911 button appears before the AI even answers. Field mode makes the text bigger and the contrast stronger for bright sun, and every photo tool opens the camera with a hint that fits it and a flashlight for early mornings.
+**Ask Milpa.** A chat button sits in the corner of every screen. Workers can type, send a photo of a rash, a sign or a label, or tap Talk and just speak, in any language. Voice mode works like a phone call: it hears you, answers out loud and keeps listening. Answers come only from the scanned label and California's farm safety rules, and when the label doesn't say, Milpa tells you who to ask instead of guessing. If someone types words like "he passed out" or "no puedo respirar", a 911 button appears before the AI even answers. Every chat is saved to the worker's account.
+
+**Today.** The home screen opens with one plain line about the day: how many treated blocks are still closed and which heat rules apply right now. Below that sit the re-entry clocks with rings that fill as each block gets closer to safe, the heat right now, the last label scanned and recent chats, over a small animated farm.
+
+**Pesticide tools.**
+- **Spray gear check:** take a photo of yourself, and Milpa checks it against the gear the label requires and says what's missing.
+- **Pesticide got on me:** big 911 and Poison Control buttons, the rinse steps, a 15-minute rinse timer and a card in English for the doctor with the product filled in. It works offline.
+- **Report spray drift:** say what happened in your own language, and Milpa writes a clear report in English for the grower or the county, noting what's missing to make it stronger.
+- **Spray map:** every label you scan is pinned where you were standing.
+- **Food pesticide check:** photograph a food label, a produce sticker or the food itself, or just type its name. Milpa checks it against your family's allergies and explains what it says about pesticides.
+
+**Heat and health tools.**
+- **Field heat check:** uses your location and today's forecast to show the hottest hour and what California requires at that heat: shade above 80°F, cool-down breaks and someone watching the crew at 95°F, and water every hour.
+- **Sick after spraying?:** tap the symptoms you feel, and Milpa says how urgent it is and who to call: 911, Poison Control or a doctor.
+- **Today's field plan:** Gemini looks at your clocks and the heat and tells you the plan for the day, out loud.
+
+**Work and pay tools.**
+- **Farm pay check:** photograph a pay stub, and Milpa checks it against California farmwork pay law, such as minimum wage and overtime after 8 hours, and gives the Labor Commissioner's number if something is off.
+- **Read a work paper:** photograph any notice or form from the grower, and Milpa explains it in your language, with what you need to do and every date and dollar amount.
+- **Crew interpreter:** a worker and a supervisor, nurse or clerk take turns talking, and Milpa says each side out loud in the other's language. The top half flips so the person across the table can read it.
+- **Use it in the field:** add Milpa to the home screen so saved scans, clocks and the exposure steps work with no signal.
+
+**Built for the field.** Every screen and every AI answer works in 17 languages: English, Spanish, Punjabi, Hmong, Tagalog, Hindi, Arabic, Vietnamese, Chinese, Korean, Urdu, Farsi, Armenian, Russian, French, Portuguese and Japanese. Arabic, Urdu and Farsi get full right-to-left layouts. Field mode makes text bigger and contrast stronger for bright sun. Every photo tool opens a live camera with a hint that fits the job and a flashlight for early mornings. Scans, clocks and chats are saved to the worker's account, so they follow them to any phone.
 
 ## What the AI decides
 
@@ -52,5 +84,9 @@ Google Gemini API (gemini-3.8-flash, gemini-3.8-flash-tts), Firebase Authenticat
 
 ## Links
 
-Live site: https://milpa-california.vercel.app
+Live site: https://milpa-california.vercel.app (free, sign in with Google or email)
 Code: https://github.com/K3N0SU/Hackathon
+
+## Closing line (put at the end of the story)
+
+The best way to judge Milpa is to use it. Open https://milpa-california.vercel.app on your phone, tap the sample label, and ask it a question out loud in any language.
