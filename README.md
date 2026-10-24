@@ -2,7 +2,7 @@
 
 Milpa is a free phone app for farmworkers in the Central Valley. Point the camera at a pesticide label and Milpa says, in your language, when it is safe to go back into the field, what to wear, and what to do if it touches your skin. Then you can talk to it out loud, send it a photo, or hand the phone to a supervisor and let it interpret.
 
-The name comes from the milpa, the traditional Mesoamerican field that many farmworker families grew up around. It was built solo at SierraHacks 2026 in Manteca for the Central Valley challenge, entered in the Main track, Best AI/ML and Best Solo. Live at https://milpa-valley.vercel.app.
+The name comes from the milpa, the traditional Mesoamerican field that many farmworker families grew up around. It was built solo at SierraHacks 2026 in Manteca for the Central Valley challenge, entered in the Main track, Best AI/ML and Best Solo. Live at https://milpa-cali.vercel.app.
 
 **What the AI decides, in one sentence:** Milpa looks at a photo or listens to a question and decides, from only what is printed on the label and California's farm safety rules, whether it is safe to enter, what to wear, and who to call, and it says "I don't know" when the label doesn't say.
 
