@@ -1,6 +1,27 @@
 import type { CoreLanguage } from "@/lib/scan";
 
 export type ToolsCopy = {
+  food: {
+    title: string;
+    intro: string;
+    allergiesTitle: string;
+    allergyNames: string[];
+    take: string;
+    choose: string;
+    checking: string;
+    verdict: { safe: string; caution: string; avoid: string };
+    allergens: string;
+    contains: string;
+    may: string;
+    noAllergens: string;
+    yours: string;
+    organic: { yes: string; no: string; unknown: string };
+    pesticides: string;
+    flags: string;
+    notFood: string;
+    failed: string;
+    again: string;
+  };
   gear: {
     title: string;
     intro: string;
@@ -55,6 +76,27 @@ export type ToolsCopy = {
 
 export const toolsCopy: Record<CoreLanguage, ToolsCopy> = {
   en: {
+    food: {
+      title: "Food check",
+      intro: "Take a photo of a food label, a produce sticker or the fruit itself. Milpa checks it for your allergies and tells you what the label says about pesticides.",
+      allergiesTitle: "My allergies",
+      allergyNames: ["Milk", "Eggs", "Fish", "Shellfish", "Tree nuts", "Peanuts", "Wheat", "Soy", "Sesame"],
+      take: "Take a photo of the food",
+      choose: "Choose a photo",
+      checking: "Reading the label...",
+      verdict: { safe: "Looks safe for you", caution: "Check before you eat", avoid: "Do not eat this" },
+      allergens: "Allergens",
+      contains: "Contains",
+      may: "May contain",
+      noAllergens: "No major allergens on the label.",
+      yours: "Has your allergy",
+      organic: { yes: "Certified organic", no: "Not organic", unknown: "Organic not shown" },
+      pesticides: "Pesticides",
+      flags: "Worth knowing",
+      notFood: "That does not look like food or a food label. Try a closer photo.",
+      failed: "Could not check the photo. Check your connection and try again.",
+      again: "Check another",
+    },
     gear: {
       title: "Gear check",
       intro: "Take a photo of yourself before you go in. Milpa checks it against the gear the label asks for.",
@@ -115,6 +157,27 @@ export const toolsCopy: Record<CoreLanguage, ToolsCopy> = {
     },
   },
   es: {
+    food: {
+      title: "Revisar comida",
+      intro: "Tome una foto de la etiqueta, la calcomanía de la fruta o la fruta misma. Milpa revisa sus alergias y le dice lo que dice la etiqueta sobre pesticidas.",
+      allergiesTitle: "Mis alergias",
+      allergyNames: ["Leche", "Huevo", "Pescado", "Mariscos", "Nueces", "Cacahuate", "Trigo", "Soya", "Ajonjolí"],
+      take: "Tomar foto de la comida",
+      choose: "Elegir una foto",
+      checking: "Leyendo la etiqueta...",
+      verdict: { safe: "Se ve segura para usted", caution: "Revise antes de comer", avoid: "No coma esto" },
+      allergens: "Alérgenos",
+      contains: "Contiene",
+      may: "Puede contener",
+      noAllergens: "La etiqueta no muestra alérgenos principales.",
+      yours: "Tiene su alergia",
+      organic: { yes: "Orgánico certificado", no: "No es orgánico", unknown: "No dice si es orgánico" },
+      pesticides: "Pesticidas",
+      flags: "Bueno saber",
+      notFood: "Eso no parece comida ni una etiqueta. Intente con una foto más cerca.",
+      failed: "No se pudo revisar la foto. Revise su conexión e intente de nuevo.",
+      again: "Revisar otra",
+    },
     gear: {
       title: "Revisar equipo",
       intro: "Tómese una foto antes de entrar. Milpa la compara con el equipo que pide la etiqueta.",
@@ -175,6 +238,27 @@ export const toolsCopy: Record<CoreLanguage, ToolsCopy> = {
     },
   },
   pa: {
+    food: {
+      title: "ਖਾਣੇ ਦੀ ਜਾਂਚ",
+      intro: "ਖਾਣੇ ਦੇ ਲੇਬਲ, ਫਲ ਦੇ ਸਟਿੱਕਰ ਜਾਂ ਫਲ ਦੀ ਫ਼ੋਟੋ ਲਓ। Milpa ਤੁਹਾਡੀਆਂ ਐਲਰਜੀਆਂ ਜਾਂਚਦਾ ਹੈ ਅਤੇ ਦੱਸਦਾ ਹੈ ਕਿ ਲੇਬਲ ਕੀਟਨਾਸ਼ਕਾਂ ਬਾਰੇ ਕੀ ਕਹਿੰਦਾ ਹੈ।",
+      allergiesTitle: "ਮੇਰੀਆਂ ਐਲਰਜੀਆਂ",
+      allergyNames: ["ਦੁੱਧ", "ਅੰਡੇ", "ਮੱਛੀ", "ਸ਼ੈੱਲਫ਼ਿਸ਼", "ਸੁੱਕੇ ਮੇਵੇ", "ਮੂੰਗਫਲੀ", "ਕਣਕ", "ਸੋਇਆ", "ਤਿਲ"],
+      take: "ਖਾਣੇ ਦੀ ਫ਼ੋਟੋ ਲਓ",
+      choose: "ਫ਼ੋਟੋ ਚੁਣੋ",
+      checking: "ਲੇਬਲ ਪੜ੍ਹ ਰਿਹਾ ਹੈ...",
+      verdict: { safe: "ਤੁਹਾਡੇ ਲਈ ਠੀਕ ਲੱਗਦਾ ਹੈ", caution: "ਖਾਣ ਤੋਂ ਪਹਿਲਾਂ ਜਾਂਚੋ", avoid: "ਇਹ ਨਾ ਖਾਓ" },
+      allergens: "ਐਲਰਜੀ ਵਾਲੀਆਂ ਚੀਜ਼ਾਂ",
+      contains: "ਇਸ ਵਿੱਚ ਹੈ",
+      may: "ਹੋ ਸਕਦਾ ਹੈ",
+      noAllergens: "ਲੇਬਲ 'ਤੇ ਕੋਈ ਮੁੱਖ ਐਲਰਜੀ ਵਾਲੀ ਚੀਜ਼ ਨਹੀਂ।",
+      yours: "ਤੁਹਾਡੀ ਐਲਰਜੀ ਹੈ",
+      organic: { yes: "ਪ੍ਰਮਾਣਿਤ ਆਰਗੈਨਿਕ", no: "ਆਰਗੈਨਿਕ ਨਹੀਂ", unknown: "ਆਰਗੈਨਿਕ ਨਹੀਂ ਦੱਸਿਆ" },
+      pesticides: "ਕੀਟਨਾਸ਼ਕ",
+      flags: "ਜਾਣਨ ਯੋਗ",
+      notFood: "ਇਹ ਖਾਣਾ ਜਾਂ ਖਾਣੇ ਦਾ ਲੇਬਲ ਨਹੀਂ ਲੱਗਦਾ। ਨੇੜੇ ਤੋਂ ਫ਼ੋਟੋ ਲਓ।",
+      failed: "ਫ਼ੋਟੋ ਜਾਂਚੀ ਨਹੀਂ ਜਾ ਸਕੀ। ਕਨੈਕਸ਼ਨ ਜਾਂਚੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+      again: "ਹੋਰ ਜਾਂਚੋ",
+    },
     gear: {
       title: "ਸਾਮਾਨ ਦੀ ਜਾਂਚ",
       intro: "ਅੰਦਰ ਜਾਣ ਤੋਂ ਪਹਿਲਾਂ ਆਪਣੀ ਫ਼ੋਟੋ ਲਓ। Milpa ਇਸਨੂੰ ਲੇਬਲ ਵਿੱਚ ਮੰਗੇ ਸਾਮਾਨ ਨਾਲ ਮਿਲਾਉਂਦਾ ਹੈ।",

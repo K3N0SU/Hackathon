@@ -691,3 +691,28 @@ p.text-muted-foreground {
 p.text-muted-foreground:hover {
   color: var(--foreground);
 }
+
+.orb { isolation: isolate; background: var(--primary); }
+.orb-layer { border-radius: 42% 58% 63% 37% / 41% 44% 56% 59%; filter: blur(28px); }
+.orb-a { transform: translate(-20%, -12%); opacity: 0.95; }
+.orb-b { transform: translate(24%, 20%); opacity: 0.85; }
+.orb-c { transform: translate(-6%, 34%) scale(0.7); opacity: 0.8; }
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes orb-a { 0% { transform: translate(-20%, -12%) rotate(0deg); } 50% { transform: translate(-4%, -24%) rotate(180deg); } 100% { transform: translate(-20%, -12%) rotate(360deg); } }
+  @keyframes orb-b { 0% { transform: translate(24%, 20%) rotate(0deg); } 50% { transform: translate(8%, 32%) rotate(-180deg); } 100% { transform: translate(24%, 20%) rotate(-360deg); } }
+  @keyframes orb-c { 0% { transform: translate(-6%, 34%) scale(0.7) rotate(0deg); } 50% { transform: translate(18%, 10%) scale(0.85) rotate(160deg); } 100% { transform: translate(-6%, 34%) scale(0.7) rotate(360deg); } }
+  @keyframes orb-talk { from { transform: scale(1); } to { transform: scale(1.07); } }
+  @keyframes orb-breathe { 0%, 100% { transform: scale(0.96); opacity: 0.85; } 50% { transform: scale(1.02); opacity: 1; } }
+  .orb-a { animation: orb-a 14s linear infinite; }
+  .orb-b { animation: orb-b 18s linear infinite; }
+  .orb-c { animation: orb-c 11s linear infinite; }
+  .orb-speaking { animation: orb-talk 0.45s ease-in-out infinite alternate; }
+  .orb-speaking .orb-layer { animation-duration: 3.5s; }
+  .orb-thinking { animation: orb-breathe 1.4s ease-in-out infinite; }
+  .orb-thinking .orb-layer { animation-duration: 2.5s; }
+}
+
+.dots {
+  background-image: radial-gradient(oklch(0.5 0.21 264 / 0.11) 1.3px, transparent 1.4px);
+  background-size: 24px 24px;
+}

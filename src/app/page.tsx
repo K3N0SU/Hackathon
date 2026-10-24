@@ -21,6 +21,7 @@ import {
 } from "lucide-react";
 import { AccountCta } from "@/components/account-cta";
 import { AskDemo } from "@/components/ask-demo";
+import { FieldLines } from "@/components/field-lines";
 import { LabelHighlight } from "@/components/label-highlight";
 import { LabelReader } from "@/components/label-reader";
 import { Magnetic, Odometer, ScrollProgress, Tilt } from "@/components/motion";
@@ -235,7 +236,12 @@ export default function Home() {
       <SectionDots />
       <ScrollReveal />
 
-      <section id="top" className="relative overflow-hidden lg:min-h-svh">
+      <section id="top" className="dots relative overflow-hidden lg:min-h-svh">
+        <div className="zoom-depth pointer-events-none absolute inset-x-0 bottom-0 h-[45%]">
+          <FieldLines className="text-poppy/30" horizon={false} />
+        </div>
+        <div className="pointer-events-none absolute -right-40 top-[40rem] size-[26rem] rounded-full bg-harvest sm:size-[34rem] lg:right-[-6rem] lg:top-1/2 lg:size-[36rem] lg:-translate-y-1/2" />
+        <div className="pointer-events-none absolute right-[30%] top-[68%] hidden size-40 rounded-full bg-poppy lg:block" />
         <div className="zoom-hero relative mx-auto grid max-w-6xl items-center gap-14 px-6 pb-24 pt-32 lg:min-h-svh lg:grid-cols-[1.1fr_0.9fr] lg:pb-16 lg:pt-28">
           <div className="text-center lg:text-left">
             <p
@@ -295,7 +301,7 @@ export default function Home() {
         <LabelHighlight />
       </section>
 
-      <section id="tour" className="relative bg-paper/60 pt-24">
+      <section id="tour" className="relative bg-harvest/20 pt-24">
         <div className="mx-auto max-w-6xl px-6">
           <Eyebrow>How it works</Eyebrow>
           <h2 className="reveal mt-3 max-w-3xl font-display text-5xl font-semibold leading-[0.98] text-ink sm:text-7xl">
@@ -421,7 +427,7 @@ export default function Home() {
         </ul>
       </section>
 
-      <section id="heat" className="zoom-rise relative py-28 lg:py-40">
+      <section id="heat" className="zoom-rise relative bg-poppy/10 py-28 lg:py-40">
         <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20">
           <div className="reveal order-2 lg:order-1">
             <div className="card p-6 sm:p-8">
@@ -462,7 +468,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="honest" className="relative bg-paper/60 py-28 lg:py-40">
+      <section id="honest" className="dots relative py-28 lg:py-40">
         <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20">
           <div className="reveal relative mx-auto w-full max-w-sm">
             <div className="card relative overflow-hidden p-5">

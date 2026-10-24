@@ -65,7 +65,7 @@ export async function POST(req: Request) {
       role: "user",
       parts: [
         { inlineData: { mimeType: "audio/wav", data: audio } },
-        { text: "This recording is my question." },
+        { text: "This recording is my question. We are talking out loud, so answer in at most two short, warm spoken sentences, like a friend on the phone." },
       ],
     });
   }

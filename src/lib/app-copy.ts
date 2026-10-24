@@ -43,6 +43,7 @@ export type AppCopy = {
     gear: ToolCopy;
     pay: ToolCopy;
     interpret: ToolCopy;
+    food: ToolCopy;
   };
   ask: {
     title: string;
@@ -214,6 +215,7 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       gear: { title: "Gear check", body: "A photo of you, checked against the label" },
       pay: { title: "Pay check", body: "Is your pay stub right?" },
       interpret: { title: "Interpreter", body: "Talk with your supervisor or nurse" },
+      food: { title: "Food check", body: "Allergens and pesticides on a food label" },
     },
     ask: {
       title: "Ask Milpa",
@@ -413,6 +415,7 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       gear: { title: "Revisar equipo", body: "Una foto suya, comparada con la etiqueta" },
       pay: { title: "Revisar mi pago", body: "¿Está bien su talón de pago?" },
       interpret: { title: "Intérprete", body: "Hable con su mayordomo o enfermera" },
+      food: { title: "Revisar comida", body: "Alérgenos y pesticidas en la etiqueta" },
     },
     ask: {
       title: "Pregúntele a Milpa",
@@ -612,6 +615,7 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       gear: { title: "ਸਾਮਾਨ ਦੀ ਜਾਂਚ", body: "ਤੁਹਾਡੀ ਫ਼ੋਟੋ, ਲੇਬਲ ਨਾਲ ਮਿਲਾਈ" },
       pay: { title: "ਤਨਖਾਹ ਜਾਂਚ", body: "ਕੀ ਤੁਹਾਡੀ ਤਨਖਾਹ ਪਰਚੀ ਠੀਕ ਹੈ?" },
       interpret: { title: "ਦੁਭਾਸ਼ੀਆ", body: "ਸੁਪਰਵਾਈਜ਼ਰ ਜਾਂ ਨਰਸ ਨਾਲ ਗੱਲ ਕਰੋ" },
+      food: { title: "ਖਾਣੇ ਦੀ ਜਾਂਚ", body: "ਲੇਬਲ 'ਤੇ ਐਲਰਜੀ ਅਤੇ ਕੀਟਨਾਸ਼ਕ" },
     },
     ask: {
       title: "Milpa ਤੋਂ ਪੁੱਛੋ",

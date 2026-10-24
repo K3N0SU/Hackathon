@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Apple,
   ArrowLeft,
   Banknote,
   Bookmark,
@@ -30,6 +31,7 @@ import { AskChat, type AskRequest } from "@/components/ask-chat";
 import { useSession } from "@/components/auth-provider";
 import { DailyBrief } from "@/components/daily-brief";
 import { ExposureHelp } from "@/components/exposure-help";
+import { FoodCheck } from "@/components/food-check";
 import { GearCheck } from "@/components/gear-check";
 import { HeatCheck } from "@/components/heat-check";
 import { InstallCard } from "@/components/install-card";
@@ -72,16 +74,18 @@ type Tool =
   | "install"
   | "gear"
   | "pay"
-  | "interpret";
+  | "interpret"
+  | "food";
 
 const tabIds: Tab[] = ["home", "scan", "tools", "saved"];
 
-const quickIds: Tool[] = ["interpret", "gear", "pay", "symptoms"];
+const quickIds: Tool[] = ["food", "interpret", "gear", "pay"];
 
 const toolList: { id: Tool; icon: LucideIcon; tone: string }[] = [
+  { id: "food", icon: Apple, tone: "bg-leaf text-white" },
   { id: "interpret", icon: Languages, tone: "bg-primary text-primary-foreground" },
   { id: "gear", icon: Shirt, tone: "bg-poppy text-poppy-foreground" },
-  { id: "pay", icon: Banknote, tone: "bg-leaf text-white" },
+  { id: "pay", icon: Banknote, tone: "bg-harvest text-harvest-foreground" },
   { id: "symptoms", icon: Stethoscope, tone: "bg-danger text-white" },
   { id: "exposed", icon: HeartPulse, tone: "bg-danger/10 text-danger" },
   { id: "heat", icon: Sun, tone: "bg-harvest text-harvest-foreground" },
@@ -260,7 +264,7 @@ export function AppShell() {
   );
 
   return (
-    <div className="flex flex-1 flex-col bg-background lg:pl-72">
+    <div className="dots flex flex-1 flex-col bg-background lg:pl-72">
       <aside className="fixed inset-y-0 left-0 z-40 hidden w-72 flex-col overflow-y-auto bg-ink text-ink-foreground [scrollbar-width:none] lg:flex">
         <div className="flex items-center justify-between px-6 pt-6">
           <Link href="/" className="wiggle-hover flex items-center gap-2.5 font-display text-2xl font-semibold">
@@ -430,6 +434,7 @@ export function AppShell() {
         {tab === "tools" && tool === "gear" && <GearCheck language={language} />}
         {tab === "tools" && tool === "pay" && <PayCheck language={language} />}
         {tab === "tools" && tool === "interpret" && <Interpreter language={language} />}
+        {tab === "tools" && tool === "food" && <FoodCheck language={language} />}
       </main>
 
       <AskChat

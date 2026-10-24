@@ -137,7 +137,7 @@
    "notConfigured": "O login ainda não foi configurado neste site."
   }
  },
- "1yj9faa": {
+ "1956lkr": {
   "tabs": {
    "home": "Hoje",
    "scan": "Escanear",
@@ -150,36 +150,36 @@
    "afternoon": "Boa tarde",
    "evening": "Boa noite",
    "tagline": "Saiba antes de entrar.",
-   "scan": "Escanear um rótulo",
-   "scanBody": "Aponte, toque e saiba na hora",
-   "talk": "Falar com Milpa",
+   "scan": "Escanear rótulo",
+   "scanBody": "Aponte, toque e saiba em segundos",
+   "talk": "Falar com o Milpa",
    "talkBody": "Pergunte em voz alta, em qualquer língua",
-   "clocks": "Tempo para reentrar",
-   "noClocks": "Nenhum tempo rodando. Escaneie um rótulo para começar.",
+   "clocks": "Contadores de reentrada",
+   "noClocks": "Nenhum contador ativo. Escaneie um rótulo para começar um.",
    "heat": "Calor agora",
    "feels": "Sensação de",
    "high": "Máxima de hoje",
    "levels": {
     "normal": "Dia normal",
     "shade": "Sombra obrigatória",
-    "high": "Regras para calor forte"
+    "high": "Regras de calor forte"
    },
    "recent": "Conversas recentes",
-   "noRecent": "Suas conversas com Milpa vão aparecer aqui.",
+   "noRecent": "Suas conversas com o Milpa vão aparecer aqui.",
    "last": "Último rótulo escaneado",
    "askAbout": "Perguntar sobre isso",
    "seeAll": "Ver tudo",
    "aiTools": "Ferramentas"
   },
   "language": "Idioma",
-  "chooseLanguage": "Escolha o seu idioma",
+  "chooseLanguage": "Escolha seu idioma",
   "back": "Voltar",
   "toolsTitle": "Ferramentas",
-  "toolsIntro": "Tudo o que Milpa pode fazer. Toque em uma.",
+  "toolsIntro": "Tudo o que o Milpa faz. Toque em uma.",
   "tools": {
    "heat": {
     "title": "Ver o calor",
-    "body": "A hora mais quente de hoje e os seus direitos"
+    "body": "A hora mais quente de hoje e seus direitos"
    },
    "symptoms": {
     "title": "Estou passando mal",
@@ -187,93 +187,97 @@
    },
    "exposed": {
     "title": "Caiu veneno em mim",
-    "body": "911, tempo de lavagem e cartão para o médico"
+    "body": "911, tempo de lavagem e cartão pro médico"
    },
    "paper": {
     "title": "Ler um papel",
-    "body": "Avisos, folhas de pagamento, formulários"
+    "body": "Avisos, holerites e formulários"
    },
    "report": {
-    "title": "Contar um problema",
-    "body": "Fale o que houve e receba um relatório em inglês"
+    "title": "Relatar um problema",
+    "body": "Fale e receba um relatório em inglês"
    },
    "brief": {
     "title": "Plano de hoje",
-    "body": "Seus talhões e o calor, falados para você"
+    "body": "Seus talhões e o calor, em voz alta"
    },
    "map": {
     "title": "Mapa de veneno",
     "body": "Onde você escaneou os rótulos"
    },
    "install": {
-    "title": "Pôr no celular",
-    "body": "Abra Milpa como um aplicativo"
+    "title": "Colocar no celular",
+    "body": "Abra o Milpa como um aplicativo"
    },
    "gear": {
     "title": "Checar proteção",
-    "body": "Uma foto sua para ver se bate com o rótulo"
+    "body": "Uma foto sua comparada com o rótulo"
    },
    "pay": {
-    "title": "Checar pagamento",
-    "body": "Seu contracheque está certo?"
+    "title": "Ver o pagamento",
+    "body": "Seu holerite está certo?"
    },
    "interpret": {
     "title": "Intérprete",
-    "body": "Fale com seu encarregado ou com o médico"
+    "body": "Converse com seu encarregado ou enfermeiro"
+   },
+   "food": {
+    "title": "Checar comida",
+    "body": "Alergênicos e venenos no rótulo da comida"
    }
   },
   "ask": {
    "title": "Pergunte ao Milpa",
    "about": "Sobre",
-   "general": "Pergunte sobre remédios do mato, calor ou direitos no trabalho.",
-   "placeholder": "Escreva ou aperte o microfone",
+   "general": "Pergunte sobre agrotóxicos, calor ou seus direitos no trabalho.",
+   "placeholder": "Digite ou toque no microfone",
    "send": "Enviar",
    "listening": "Ouvindo...",
    "thinking": "Pensando...",
-   "failed": "Não deu para responder. Veja a sua internet e tente de novo.",
+   "failed": "Não deu para responder. Veja sua conexão e tente de novo.",
    "starters": [
-    "Quando posso entrar de novo?",
-    "Que roupa preciso usar?",
+    "Quando posso voltar lá?",
+    "O que preciso vestir?",
     "E se cair na minha pele?",
-    "O patrão pode me mandar entrar antes?"
+    "Meu chefe pode me mandar entrar antes da hora?"
    ],
    "clear": "Nova conversa",
    "listen": "Ouvir",
-   "call911": "Ligar para o 911",
+   "call911": "Ligar para 911",
    "chats": "Suas conversas",
    "noChats": "Suas conversas aparecem aqui. Elas ficam salvas na sua conta.",
    "remove": "Apagar conversa",
    "retry": "Tentar de novo",
    "talk": "Falar",
-   "talkHint": "Fale na sua língua. Milpa escuta e responde em voz alta.",
+   "talkHint": "Fale em qualquer língua. O Milpa escuta e responde em voz alta.",
    "voiceListening": "Ouvindo",
    "voiceThinking": "Pensando",
    "voiceSpeaking": "Toque para interromper",
    "voiceTap": "Toque para falar",
-   "voiceBlocked": "Milpa precisa do seu microfone. Libere nas configurações e tente de novo.",
+   "voiceBlocked": "O Milpa precisa do microfone. Ative nas opções do navegador e tente de novo.",
    "voiceFailed": "Não deu certo. Toque para tentar de novo.",
    "close": "Fechar",
-   "attach": "Pôr uma foto",
+   "attach": "Adicionar foto",
    "removePhoto": "Tirar foto",
-   "photoAsk": "O que você consegue me dizer sobre esta foto?"
+   "photoAsk": "O que você pode me dizer sobre esta foto?"
   },
   "result": {
    "askAbout": "Perguntar sobre este rótulo",
    "supervisor": "Mostrar ao encarregado",
-   "share": "Mandar para a turma",
-   "shared": "Link pronto para mandar",
+   "share": "Mandar pro pessoal",
+   "shared": "Link pronto para enviar",
    "copied": "Link copiado",
    "shareFailed": "Não deu para criar o link. Tente de novo.",
-   "howRead": "Como Milpa leu isso",
+   "howRead": "Como o Milpa leu isto",
    "confidence": {
     "high": "Leitura clara",
-    "medium": "Confira isso",
-    "low": "Não temos certeza"
+    "medium": "Bom conferir",
+    "low": "Com dúvida"
    },
    "confidenceNote": {
-    "high": "A foto estava bem nítida e tudo o que está abaixo veio escrito nela.",
-    "medium": "Algumas letras estavam pequenas ou tapadas. Olhe o rótulo ou pergunte.",
-    "low": "Milpa ficou na dúvida sobre uma parte. Pergunte ao encarregado."
+    "high": "O rótulo estava bem nítido e todas as respostas estavam escritas nele.",
+    "medium": "Algumas letras estavam pequenas ou escondidas. Confira no rótulo ou pergunte.",
+    "low": "O Milpa ficou com dúvida sobre uma parte. Pergunte ao seu encarregado."
    },
    "fields": {
     "product": "Produto",
@@ -282,7 +286,7 @@
     "gear": "O que vestir",
     "firstAid": "Primeiros socorros"
    },
-   "others": "Também está nesta foto"
+   "others": "Também nesta foto"
   },
   "supervisorCard": {
    "close": "Fechar",
@@ -290,97 +294,97 @@
   },
   "coach": {
    "dark": "Muito escuro. Vá para a luz ou acenda uma lâmpada.",
-   "bright": "Muito claro. Mude de posição para o sol não bater no rótulo.",
-   "blurry": "Ficou meio embaçado. Segure o celular parado e chegue mais perto.",
+   "bright": "Muito claro. Mude de lado para tirar o reflexo do sol.",
+   "blurry": "Meio embaçado. Segure o celular parado e chegue mais perto.",
    "useAnyway": "Usar assim mesmo"
   },
   "symptoms": {
-   "title": "O que você está sentindo?",
-   "intro": "Marque tudo o que sente agora. Milpa diz para quem ligar.",
+   "title": "Como você está se sentindo?",
+   "intro": "Toque em tudo o que está sentindo agora. O Milpa diz para quem ligar.",
    "list": [
     "Dor de cabeça",
     "Tontura",
     "Enjoo",
-    "Vômito",
+    "Vomitando",
     "Olhos ardendo",
-    "Pele vermelha ou coçando",
+    "Manchas ou pele ardendo",
     "Suando muito",
     "Músculos tremendo",
-    "Muito cansaço",
+    "Cansaço forte",
     "Cãibras",
     "Falta de ar",
     "Dor no peito",
-    "Meio confuso",
+    "Confuso",
     "Desmaiou"
    ],
-   "note": "Mais alguma coisa? Diga com suas palavras.",
-   "check": "Diga o que eu faço",
+   "note": "Sentindo mais alguma coisa? Conte com suas palavras.",
+   "check": "Me diga o que fazer",
    "checking": "Checando...",
-   "failed": "Não deu para ver. Se estiver muito mal, ligue 911.",
+   "failed": "Não deu para checar. Se estiver muito mal, ligue para 911.",
    "again": "Começar de novo",
-   "callPoison": "Centro de Intoxicação"
+   "callPoison": "Controle de Intoxicações"
   },
   "paper": {
    "title": "Ler um papel",
-   "intro": "Tire foto de qualquer papel do trabalho. Milpa explica na sua língua.",
+   "intro": "Tire uma foto de qualquer papel do trabalho. O Milpa explica na sua língua.",
    "take": "Tirar foto",
    "choose": "Escolher foto",
    "reading": "Lendo o papel...",
-   "failed": "Não deu para ler. Veja a internet e tente de novo.",
-   "unreadable": "Não conseguimos ler. Chegue mais perto, segure firme e tente de novo.",
-   "actions": "O que você precisa fazer",
+   "failed": "Não deu para ler. Veja sua conexão e tente de novo.",
+   "unreadable": "Não deu para ler isto. Chegue mais perto, não mexa o celular e tente de novo.",
+   "actions": "O que você tem que fazer",
    "dates": "Datas e valores",
    "another": "Ler outro papel"
   },
   "report": {
-   "title": "Contar um problema",
-   "intro": "Conte o que houve com suas palavras. Milpa faz um relatório claro em inglês para você entregar ao fazendeiro ou ao condado.",
-   "placeholder": "Exemplo: Jogaram remédio no talhão ao lado enquanto a gente colhia e o vento jogou tudo em cima da gente.",
+   "title": "Relatar um problema",
+   "intro": "Conte o que houve com suas próprias palavras. O Milpa escreve um relato em inglês certinho para você entregar ao fazendeiro ou ao condado.",
+   "placeholder": "Por exemplo: Passaram veneno no campo ao lado enquanto a gente colhia e o vento jogou tudo na gente.",
    "when": "Quando aconteceu?",
-   "write": "Fazer meu relatório",
+   "write": "Escrever meu relato",
    "writing": "Escrevendo...",
-   "failed": "Não deu para fazer o relatório. Tente de novo.",
-   "english": "Relatório em inglês",
+   "failed": "Não deu para escrever o relato. Tente de novo.",
+   "english": "Relato em inglês",
    "yourLanguage": "O que está escrito",
-   "missing": "Coloque isso para ajudar mais",
+   "missing": "Adicione isto para ajudar mais",
    "copy": "Copiar",
    "copied": "Copiado",
    "share": "Enviar",
-   "edit": "Mudar o texto"
+   "edit": "Mudar meu relato"
   },
   "brief": {
    "title": "Plano de hoje",
-   "intro": "Milpa olha os tempos de espera e o calor de hoje e fala o plano para você.",
-   "make": "Me diga o plano de hoje",
-   "making": "Montando o plano...",
-   "failed": "Não deu para fazer o plano. Veja sua internet.",
+   "intro": "O Milpa olha seus tempos e o calor de hoje e te conta o plano em voz alta.",
+   "make": "Diga o plano de hoje",
+   "making": "Montando seu plano...",
+   "failed": "Não deu para criar o plano. Veja sua conexão.",
    "listen": "Ouvir",
    "again": "Atualizar"
   },
   "map": {
    "title": "Mapa de veneno",
-   "intro": "Cada rótulo escaneado fica marcado bem onde você estava.",
-   "empty": "Nenhum rótulo marcado ainda. Escaneie com a localização ligada.",
-   "loading": "Carregando seus locais...",
-   "failed": "Não deu para carregar seus locais.",
-   "noPlace": "Estes rótulos estão sem localização."
+   "intro": "Todo rótulo que você escaneia fica marcado no lugar exato onde você estava.",
+   "empty": "Nenhum rótulo marcado ainda. Escaneie um com a localização ligada.",
+   "loading": "Carregando o que você escaneou...",
+   "failed": "Não deu para carregar o mapa.",
+   "noPlace": "Estes rótulos não têm localização."
   },
   "alarms": {
    "allow": "Me avise quando for seguro entrar",
-   "on": "Aviso ligado",
+   "on": "O alarme está ligado",
    "safeTitle": "Já pode entrar",
-   "safeBody": "Acabou o tempo de espera para",
+   "safeBody": "O tempo de espera terminou para",
    "waterTitle": "Beba água",
-   "waterBody": "Está quente. Beba cerca de 1 litro por hora.",
-   "waterOn": "Me lembre de beber água toda hora",
-   "waterOff": "Avisos de água ligados"
+   "waterBody": "Está muito quente. Beba cerca de um litro por hora.",
+   "waterOn": "Me lembre de beber água a cada hora",
+   "waterOff": "Avisos de beber água ligados"
   },
   "install": {
-   "title": "Coloque Milpa no seu celular",
-   "body": "Abre igual a um app, e os rótulos salvos, os tempos e os passos de emergência funcionam sem sinal de internet.",
-   "button": "Pôr na tela de início",
-   "ios": "No iPhone: toque em Compartilhar e depois em Adicionar à Tela de Início.",
-   "done": "Milpa já está na sua tela de início."
+   "title": "Colocar o Milpa no seu celular",
+   "body": "Ele abre como um aplicativo, e seus rótulos salvos, contadores e passos de emergência funcionam sem sinal.",
+   "button": "Adicionar à tela de início",
+   "ios": "No iPhone: toque em Compartilhar, depois em Adicionar à Tela de Início.",
+   "done": "O Milpa já está na sua tela de início."
   }
  },
  "1i1pcy3": {
@@ -411,46 +415,85 @@
   "failed": "Não deu para carregar suas leituras. Veja se o sinal de internet está bom e tente de novo.",
   "remove": "Apagar"
  },
- "dh7pc1": {
+ "imas55": {
+  "food": {
+   "title": "Verificar comida",
+   "intro": "Tire uma foto do rótulo do alimento, do adesivo da fruta ou da própria fruta. O Milpa confere suas alergias e mostra o que o rótulo diz sobre agrotóxicos.",
+   "allergiesTitle": "Minhas alergias",
+   "allergyNames": [
+    "Leite",
+    "Ovos",
+    "Peixe",
+    "Frutos do mar",
+    "Castanhas",
+    "Amendoim",
+    "Trigo",
+    "Soja",
+    "Gergelim"
+   ],
+   "take": "Tirar foto da comida",
+   "choose": "Escolher uma foto",
+   "checking": "Lendo o rótulo...",
+   "verdict": {
+    "safe": "Parece seguro para você",
+    "caution": "Veja bem antes de comer",
+    "avoid": "Não coma isso"
+   },
+   "allergens": "Alergênicos",
+   "contains": "Contém",
+   "may": "Pode conter",
+   "noAllergens": "Nenhum alergênico comum no rótulo.",
+   "yours": "Tem o que te dá alergia",
+   "organic": {
+    "yes": "Orgânico certificado",
+    "no": "Não é orgânico",
+    "unknown": "Não diz se é orgânico"
+   },
+   "pesticides": "Agrotóxicos",
+   "flags": "Bom saber",
+   "notFood": "Isso não parece comida nem rótulo. Tente tirar a foto mais de perto.",
+   "failed": "Não deu para ver a foto. Veja sua internet e tente de novo.",
+   "again": "Verificar outro"
+  },
   "gear": {
-   "title": "Checagem de equipamento",
-   "intro": "Tire uma foto sua antes de entrar. O Milpa confere se você está usando a roupa certa que o rótulo pede.",
-   "forProduct": "Checando equipamento para",
-   "noLabel": "Nenhum rótulo escaneado ainda, então o Milpa checa o equipamento normal.",
+   "title": "Verificar proteção",
+   "intro": "Tire uma foto sua antes de entrar. O Milpa confere se você está usando a proteção que o rótulo pede.",
+   "forProduct": "Conferindo proteção para",
+   "noLabel": "Nenhum rótulo lido ainda, então o Milpa confere a proteção de sempre.",
    "defaultGear": [
     "Camisa de manga comprida",
     "Calça comprida",
-    "Luvas resistentes a produtos químicos",
+    "Luvas resistentes a químicos",
     "Sapatos e meias"
    ],
    "take": "Tirar uma foto minha",
-   "hint": "Dê um passo para trás para que seus braços, mãos e pés apareçam.",
-   "checking": "Olhando seu equipamento...",
+   "hint": "Dê um passo para trás para mostrar braços, mãos e pés.",
+   "checking": "Olhando sua proteção...",
    "verdict": {
-    "ready": "Tudo pronto com você",
+    "ready": "Tudo pronto",
     "missing": "Arrume isso antes de entrar",
     "unsure": "O Milpa não conseguiu ver tudo"
    },
    "status": {
-    "on": "No corpo",
+    "on": "Usando",
     "missing": "Faltando",
     "unsure": "Não dá para ver"
    },
-   "noPerson": "O Milpa não achou ninguém nessa foto. Dê um passo para trás e tente de novo.",
-   "failed": "Não deu para checar a foto. Veja sua internet e tente de novo.",
-   "again": "Checar de novo"
+   "noPerson": "O Milpa não viu ninguém na foto. Dê um passo para trás e tente de novo.",
+   "failed": "Não deu para ver a foto. Veja sua internet e tente de novo.",
+   "again": "Tentar de novo"
   },
   "pay": {
-   "title": "Checagem de pagamento",
-   "intro": "Tire uma foto do seu contracheque. O Milpa lê a foto e confere com as regras de pagamento da Califórnia.",
-   "take": "Tirar foto do meu contracheque",
+   "title": "Verificar pagamento",
+   "intro": "Tire uma foto do seu holerite. O Milpa lê e confere de acordo com as leis de pagamento da Califórnia.",
+   "take": "Tirar foto do meu holerite",
    "choose": "Escolher uma foto",
-   "reading": "Lendo seu contracheque...",
-   "period": "Período de pagamento",
+   "reading": "Lendo seu holerite...",
+   "period": "Período de trabalho",
    "hours": "Horas",
    "rate": "Valor por hora",
    "gross": "Antes dos descontos",
-   "net": "O que cai na mão",
+   "net": "O que você recebe",
    "verdict": {
     "ok": "Parece certo",
     "ask": "Pergunte sobre isso",
@@ -461,27 +504,27 @@
     "ask": "Pergunte sobre isso",
     "missing": "Não está no papel"
    },
-   "labor": "Ligue para o Comissário do Trabalho",
-   "notStub": "Isso não se parece com um contracheque. Tente tirar uma foto mais nítida.",
+   "labor": "Ligue para o Labor Commissioner",
+   "notStub": "Isso não parece um holerite. Tente tirar uma foto mais nítida.",
    "failed": "Não deu para ler a foto. Veja sua internet e tente de novo.",
-   "again": "Checar outro",
+   "again": "Verificar outro",
    "privacy": "A foto não fica salva em lugar nenhum."
   },
   "interpret": {
    "title": "Intérprete",
-   "intro": "Converse com um supervisor, enfermeiro ou atendente. Cada um toca no seu lado e fala, e o Milpa fala em voz alta na outra língua.",
+   "intro": "Converse com o encarregado, enfermeiro ou atendente. Cada um aperta o seu lado e fala, e o Milpa fala em voz alta na outra língua.",
    "me": "Eu",
    "them": "Eles",
-   "other": "Eles falam",
-   "listening": "Ouvindo... toque para parar",
+   "other": "Língua deles",
+   "listening": "Ouvindo... aperte para parar",
    "translating": "Traduzindo...",
-   "tapToStop": "Toque para parar",
-   "empty": "Toque no seu lado e fale. Passe o celular para o outro quando for a vez dele.",
+   "tapToStop": "Aperte para parar",
+   "empty": "Aperte o seu lado e fale. Passe o celular quando for a vez da outra pessoa.",
    "failed": "Não deu certo. Tente de novo.",
-   "blocked": "O Milpa precisa do seu microfone. Permita o uso nas configurações do seu navegador.",
+   "blocked": "O Milpa precisa do microfone. Permita o uso nas opções do seu navegador.",
    "clear": "Recomeçar",
-   "replay": "Falar de novo",
-   "unsupported": "Este navegador não grava som. Tente usar o Chrome ou o Safari."
+   "replay": "Ouvir de novo",
+   "unsupported": "Este navegador não grava voz. Tente usar o Chrome ou o Safari."
   }
  }
 }

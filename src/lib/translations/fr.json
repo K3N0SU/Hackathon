@@ -137,24 +137,24 @@
    "notConfigured": "La connexion ne marche pas encore sur ce site."
   }
  },
- "1yj9faa": {
+ "1956lkr": {
   "tabs": {
    "home": "Aujourd'hui",
    "scan": "Scanner",
    "ask": "Demander",
    "tools": "Outils",
-   "saved": "Enregistrés"
+   "saved": "Enregistré"
   },
   "home": {
    "morning": "Bonjour",
    "afternoon": "Bon après-midi",
    "evening": "Bonsoir",
-   "tagline": "Sachez tout avant d'entrer.",
+   "tagline": "Sachez avant d'entrer.",
    "scan": "Scanner une étiquette",
    "scanBody": "Visez, touchez, sachez en quelques secondes",
    "talk": "Parler à Milpa",
    "talkBody": "Posez vos questions à voix haute, dans n'importe quelle langue",
-   "clocks": "Comptes à rebours de rentrée",
+   "clocks": "Temps d'attente avant d'entrer",
    "noClocks": "Aucun compte à rebours en cours. Scannez une étiquette pour en lancer un.",
    "heat": "Chaleur en ce moment",
    "feels": "Ressenti",
@@ -162,7 +162,7 @@
    "levels": {
     "normal": "Journée normale",
     "shade": "Ombre obligatoire",
-    "high": "Règles de forte chaleur"
+    "high": "Règles pour forte chaleur"
    },
    "recent": "Discussions récentes",
    "noRecent": "Vos discussions avec Milpa s'affichent ici.",
@@ -175,19 +175,19 @@
   "chooseLanguage": "Choisissez votre langue",
   "back": "Retour",
   "toolsTitle": "Outils",
-  "toolsIntro": "Tout ce que Milpa peut faire. Touchez-en un.",
+  "toolsIntro": "Tout ce que Milpa sait faire. Touchez-en un.",
   "tools": {
    "heat": {
-    "title": "Vérif chaleur",
+    "title": "Vérifier la chaleur",
     "body": "L'heure la plus chaude du jour et vos droits"
    },
    "symptoms": {
-    "title": "Je me sens malade",
+    "title": "Je me sens mal",
     "body": "Savoir qui appeler"
    },
    "exposed": {
-    "title": "Produit renversé ou pulvérisé",
-    "body": "911, minuteur de rinçage, fiche pour le médecin"
+    "title": "Aspergé par un produit",
+    "body": "911, temps de rinçage, carte pour le médecin"
    },
    "paper": {
     "title": "Lire un papier",
@@ -195,10 +195,10 @@
    },
    "report": {
     "title": "Signaler un problème",
-    "body": "Dites-le, obtenez un rapport en anglais"
+    "body": "Dites-le, recevez un rapport en anglais"
    },
    "brief": {
-    "title": "Plan du jour",
+    "title": "Le plan d'aujourd'hui",
     "body": "Vos parcelles et la chaleur, à voix haute"
    },
    "map": {
@@ -207,35 +207,39 @@
    },
    "install": {
     "title": "Ajouter au téléphone",
-    "body": "Ouvrir Milpa comme une appli"
+    "body": "Ouvrir Milpa comme une application"
    },
    "gear": {
-    "title": "Vérif équipement",
+    "title": "Vérifier l'équipement",
     "body": "Une photo de vous, comparée à l'étiquette"
    },
    "pay": {
-    "title": "Vérif paie",
-    "body": "Votre fiche de paie est-elle correcte ?"
+    "title": "Vérifier la paie",
+    "body": "Votre fiche de paie est-elle juste ?"
    },
    "interpret": {
     "title": "Interprète",
-    "body": "Parlez avec votre chef ou l'infirmier"
+    "body": "Parler avec votre chef ou l'infirmier"
+   },
+   "food": {
+    "title": "Vérifier la nourriture",
+    "body": "Allergènes et pesticides sur une étiquette d'aliment"
    }
   },
   "ask": {
    "title": "Demander à Milpa",
-   "about": "À propos",
-   "general": "Posez des questions sur les pesticides, la chaleur ou vos droits au travail.",
+   "about": "À propos de",
+   "general": "Posez vos questions sur les pesticides, la chaleur ou vos droits au travail.",
    "placeholder": "Écrivez ou touchez le micro",
    "send": "Envoyer",
    "listening": "Écoute en cours...",
-   "thinking": "Réflexion...",
-   "failed": "Impossible d'obtenir une réponse. Vérifiez votre connexion et réessayez.",
+   "thinking": "Réflexion en cours...",
+   "failed": "Impossible d'avoir une réponse. Vérifiez votre connexion et réessayez.",
    "starters": [
     "Quand est-ce que je peux retourner dans le champ ?",
     "Qu'est-ce que je dois porter ?",
     "Et si ça touche ma peau ?",
-    "Mon chef peut-il me faire entrer plus tôt ?"
+    "Est-ce que mon patron peut me faire entrer plus tôt ?"
    ],
    "clear": "Nouvelle discussion",
    "listen": "Écouter",
@@ -247,10 +251,10 @@
    "talk": "Parler",
    "talkHint": "Parlez dans n'importe quelle langue. Milpa écoute, puis répond à voix haute.",
    "voiceListening": "Écoute en cours",
-   "voiceThinking": "Réflexion",
+   "voiceThinking": "Réflexion en cours",
    "voiceSpeaking": "Touchez pour interrompre",
    "voiceTap": "Touchez pour parler",
-   "voiceBlocked": "Milpa a besoin de votre micro. Autorisez-le dans les réglages du navigateur, puis réessayez.",
+   "voiceBlocked": "Milpa a besoin de votre micro. Autorisez-le dans les réglages de votre navigateur, puis réessayez.",
    "voiceFailed": "Ça n'a pas marché. Touchez pour réessayer.",
    "close": "Fermer",
    "attach": "Ajouter une photo",
@@ -261,7 +265,7 @@
    "askAbout": "Poser une question sur cette étiquette",
    "supervisor": "Montrer à mon chef",
    "share": "Partager avec l'équipe",
-   "shared": "Lien prêt à être partagé",
+   "shared": "Lien prêt à partager",
    "copied": "Lien copié",
    "shareFailed": "Impossible de créer un lien. Réessayez.",
    "howRead": "Comment Milpa a lu ceci",
@@ -271,14 +275,14 @@
     "low": "Pas sûr"
    },
    "confidenceNote": {
-    "high": "L'étiquette était bien nette et chaque réponse ci-dessous y était imprimée.",
+    "high": "L'étiquette était bien nette et chaque réponse ci-dessous y était écrite.",
     "medium": "Certains mots étaient petits ou un peu cachés. Vérifiez l'étiquette ou demandez.",
-    "low": "Milpa n'est pas sûr d'une partie des infos. Demandez à votre chef."
+    "low": "Milpa n'est pas sûr d'une partie. Demandez à votre chef."
    },
    "fields": {
     "product": "Produit",
-    "signal": "Mot de signalement",
-    "reentry": "Délai de rentrée",
+    "signal": "Mot de mise en garde",
+    "reentry": "Temps d'attente",
     "gear": "Quoi porter",
     "firstAid": "Premiers secours"
    },
@@ -289,9 +293,9 @@
    "intro": "Montrez cet écran à votre chef."
   },
   "coach": {
-   "dark": "Trop sombre. Allez vers la lumière ou allumez une lampe.",
+   "dark": "Trop sombre. Mettez-vous à la lumière ou allumez une lampe.",
    "bright": "Trop lumineux. Tournez-vous pour que le soleil ne tape pas sur l'étiquette.",
-   "blurry": "Un peu flou. Tenez le téléphone sans bouger et approchez-vous.",
+   "blurry": "Un peu flou. Ne bougez pas le téléphone et approchez-vous.",
    "useAnyway": "Utiliser quand même"
   },
   "symptoms": {
@@ -304,82 +308,82 @@
     "Vomissements",
     "Yeux qui brûlent",
     "Boutons ou peau qui brûle",
-    "Beaucoup de sueur",
+    "Grosse transpiration",
     "Muscles qui tressautent",
     "Très fatigué",
     "Crampes",
     "Du mal à respirer",
-    "Douleur à la poitrine",
+    "Douleur dans la poitrine",
     "Perdu ou confus",
     "Évanoui"
    ],
    "note": "Autre chose ? Dites-le avec vos propres mots.",
    "check": "Dis-moi quoi faire",
    "checking": "Vérification en cours...",
-   "failed": "Impossible de vérifier. Si vous êtes très malade, appelez le 911.",
+   "failed": "Impossible de vérifier. Si vous vous sentez très mal, appelez le 911.",
    "again": "Recommencer",
    "callPoison": "Centre antipoison"
   },
   "paper": {
    "title": "Lire un papier",
-   "intro": "Prenez une photo de n'importe quel papier du travail. Milpa l'explique dans votre langue.",
+   "intro": "Prenez une photo de n'importe quel papier du travail. Milpa vous l'explique dans votre langue.",
    "take": "Prendre une photo",
    "choose": "Choisir une photo",
-   "reading": "Lecture du papier en cours...",
+   "reading": "Lecture du papier...",
    "failed": "Impossible de le lire. Vérifiez votre connexion et réessayez.",
-   "unreadable": "Nous n'avons pas pu lire ce papier. Approchez-vous, ne bougez pas et réessayez.",
+   "unreadable": "Nous n'avons pas pu lire ceci. Approchez-vous, ne bougez pas et réessayez.",
    "actions": "Ce que vous devez faire",
    "dates": "Dates et montants",
    "another": "Lire un autre papier"
   },
   "report": {
    "title": "Signaler un problème",
-   "intro": "Racontez ce qui s'est passé avec vos propres mots. Milpa rédige un rapport clair en anglais que vous pouvez donner au patron ou au comté.",
+   "intro": "Racontez ce qui s'est passé avec vos mots. Milpa écrit un rapport clair en anglais à donner au patron ou au comté.",
    "placeholder": "Par exemple : Ils ont traité le champ d'à côté pendant qu'on ramassait et le vent a tout envoyé sur nous.",
    "when": "Quand est-ce arrivé ?",
-   "write": "Rédiger mon rapport",
-   "writing": "Rédaction en cours...",
-   "failed": "Impossible de rédiger le rapport. Réessayez.",
+   "write": "Écrire mon rapport",
+   "writing": "Écriture en cours...",
+   "failed": "Impossible d'écrire le rapport. Réessayez.",
    "english": "Rapport en anglais",
    "yourLanguage": "Ce que ça dit",
-   "missing": "Ajoutez ceci pour le rendre plus solide",
+   "missing": "Ajoutez ceci pour que ce soit plus solide",
    "copy": "Copier",
    "copied": "Copié",
    "share": "Envoyer",
    "edit": "Modifier mon histoire"
   },
   "brief": {
-   "title": "Plan du jour",
-   "intro": "Milpa regarde vos comptes à rebours et la chaleur du jour, et vous donne le plan à voix haute.",
-   "make": "Donne-moi le plan du jour",
-   "making": "Création du plan...",
-   "failed": "Impossible de créer le plan. Vérifiez votre connexion.",
+   "title": "Le plan d'aujourd'hui",
+   "intro": "Milpa regarde vos temps d'attente et la chaleur du jour, et vous dit le plan à voix haute.",
+   "make": "Dis-moi le plan d'aujourd'hui",
+   "making": "Préparation de votre plan...",
+   "failed": "Impossible de faire le plan. Vérifiez votre connexion.",
    "listen": "Écouter",
    "again": "Mettre à jour"
   },
   "map": {
    "title": "Carte des traitements",
-   "intro": "Chaque étiquette scannée est marquée à l'endroit où vous étiez.",
-   "empty": "Aucun scan enregistré pour l'instant. Scannez une étiquette en activant la localisation.",
+   "intro": "Chaque étiquette scannée est marquée là où vous étiez debout.",
+   "empty": "Aucun scan marqué pour le moment. Scannez une étiquette en activant la localisation.",
    "loading": "Chargement de vos scans...",
    "failed": "Impossible de charger vos scans.",
    "noPlace": "Ces scans n'ont pas de lieu enregistré."
   },
   "alarms": {
    "allow": "Fais vibrer mon téléphone quand c'est sans danger",
-   "on": "L'alarme est activée",
-   "safeTitle": "Sans danger d'y retourner",
-   "safeBody": "Le temps d'attente avant rentrée est terminé pour",
+   "on": "L'alarme est allumée",
+   "safeTitle": "Vous pouvez y retourner",
+   "safeBody": "Le temps d'attente est fini pour",
    "waterTitle": "Buvez de l'eau",
-   "waterBody": "Il fait chaud. Buvez environ un litre d'eau par heure.",
-   "waterOn": "Me rappeler de boire toutes les heures",
+   "waterBody": "Il fait chaud. Buvez environ un litre chaque heure.",
+   "waterOn": "Rappelle-moi de boire toutes les heures",
    "waterOff": "Rappels pour boire activés"
   },
   "install": {
-   "title": "Ajouter Milpa sur votre téléphone",
-   "body": "L'appli s'ouvre directement, et vos scans enregistrés, les comptes à rebours et les étapes en cas de contact fonctionnent sans réseau.",
+   "title": "Ajouter Milpa à votre téléphone",
+   "body": "Elle s'ouvre comme une appli, et vos scans enregistrés, vos temps d'attente et les étapes d'urgence marchent sans réseau.",
    "button": "Ajouter à l'écran d'accueil",
-   "ios": "Sur iPhone : appuyez sur Partager, puis sur Sur l'écran d'accueil.",
+   "ios": "Sur iPhone : touchez Partager, puis Sur l'écran d'accueil.",
    "done": "Milpa est sur votre écran d'accueil."
   }
  },
@@ -411,77 +415,116 @@
   "failed": "Impossible de charger vos scans. Vérifiez votre réseau et réessayez.",
   "remove": "Supprimer"
  },
- "dh7pc1": {
+ "imas55": {
+  "food": {
+   "title": "Vérifier la nourriture",
+   "intro": "Prenez une photo de l'étiquette, de l'autocollant ou du fruit lui-même. Milpa vérifie vos allergies et vous dit ce que l'étiquette dit sur les pesticides.",
+   "allergiesTitle": "Mes allergies",
+   "allergyNames": [
+    "Lait",
+    "Œufs",
+    "Poisson",
+    "Fruits de mer",
+    "Fruits à coque",
+    "Arachides",
+    "Blé",
+    "Soja",
+    "Sésame"
+   ],
+   "take": "Prendre une photo de la nourriture",
+   "choose": "Choisir une photo",
+   "checking": "Lecture de l'étiquette...",
+   "verdict": {
+    "safe": "Ça a l'air bon pour vous",
+    "caution": "Vérifiez avant de manger",
+    "avoid": "Ne mangez pas ça"
+   },
+   "allergens": "Allergènes",
+   "contains": "Contient",
+   "may": "Peut contenir",
+   "noAllergens": "Aucun allergène majeur sur l'étiquette.",
+   "yours": "Contient votre allergie",
+   "organic": {
+    "yes": "Certifié biologique",
+    "no": "Non biologique",
+    "unknown": "Bio non indiqué"
+   },
+   "pesticides": "Pesticides",
+   "flags": "Bon à savoir",
+   "notFood": "Cela ne ressemble pas à de la nourriture ou à une étiquette. Essayez de plus près.",
+   "failed": "Impossible de vérifier la photo. Vérifiez votre connexion et réessayez.",
+   "again": "En vérifier un autre"
+  },
   "gear": {
-   "title": "Vérification de l'équipement",
-   "intro": "Prenez-vous en photo avant d'entrer. Milpa regarde si vous portez ce que l'étiquette demande.",
+   "title": "Vérifier l'équipement",
+   "intro": "Prenez-vous en photo avant d'entrer. Milpa vérifie si vous avez bien l'équipement demandé par l'étiquette.",
    "forProduct": "Vérification de l'équipement pour",
-   "noLabel": "Aucune étiquette scannée. Milpa vérifie donc l'équipement habituel.",
+   "noLabel": "Aucune étiquette scannée, Milpa vérifie donc l'équipement habituel.",
    "defaultGear": [
     "Chemise à manches longues",
     "Pantalon long",
-    "Gants qui résistent aux produits chimiques",
+    "Gants résistants aux produits chimiques",
     "Chaussures et chaussettes"
    ],
    "take": "Prendre une photo de moi",
-   "hint": "Reculez un peu pour qu'on voie vos bras, vos mains et vos pieds.",
+   "hint": "Reculez-vous pour que l'on voie vos bras, vos mains et vos pieds.",
    "checking": "Vérification de votre équipement...",
    "verdict": {
-    "ready": "Vous avez l'air prêt",
+    "ready": "Vous semblez prêt",
     "missing": "Réglez ça avant d'entrer",
     "unsure": "Milpa n'a pas pu tout voir"
    },
    "status": {
     "on": "Mis",
     "missing": "Manquant",
-    "unsure": "Pas visible"
+    "unsure": "Non visible"
    },
-   "noPerson": "Milpa n'a vu personne sur la photo. Reculez un peu et réessayez.",
+   "noPerson": "Milpa n'a vu personne sur cette photo. Reculez-vous et réessayez.",
    "failed": "Impossible de vérifier la photo. Vérifiez votre connexion et réessayez.",
-   "again": "Revérifier"
+   "again": "Vérifier à nouveau"
   },
   "pay": {
-   "title": "Vérification de la paie",
-   "intro": "Prenez une photo de votre fiche de paie. Milpa la lit et vérifie si les règles de paie de Californie sont respectées.",
+   "title": "Vérifier la paie",
+   "intro": "Prenez une photo de votre fiche de paie. Milpa la lit et la compare aux règles de paie de Californie.",
    "take": "Prendre une photo de ma fiche de paie",
    "choose": "Choisir une photo",
    "reading": "Lecture de votre fiche de paie...",
    "period": "Période de paie",
    "hours": "Heures",
    "rate": "Taux horaire",
-   "gross": "Avant les retenues",
-   "net": "Montant net en poche",
+   "gross": "Avant déductions",
+   "net": "Ce que vous touchez",
    "verdict": {
-    "ok": "Ça a l'air bon",
+    "ok": "Tout semble correct",
     "ask": "Posez des questions là-dessus",
     "unclear": "Difficile à lire"
    },
    "status": {
     "ok": "Semble correct",
-    "ask": "À clarifier",
+    "ask": "Renseignez-vous",
     "missing": "Pas sur la fiche"
    },
    "labor": "Appeler le commissaire au travail",
-   "notStub": "Ça ne ressemble pas à une fiche de paie. Essayez avec une photo plus nette.",
+   "notStub": "Cela ne ressemble pas à une fiche de paie. Essayez avec une photo plus nette.",
    "failed": "Impossible de lire la photo. Vérifiez votre connexion et réessayez.",
    "again": "En vérifier une autre",
    "privacy": "La photo n'est enregistrée nulle part."
   },
   "interpret": {
    "title": "Interprète",
-   "intro": "Parlez avec un chef, un infirmier ou un employé. Chacun touche son côté et parle, et Milpa le répète à voix haute dans l'autre langue.",
+   "intro": "Parlez avec un chef, une infirmière ou un employé. Chacun appuie sur son côté et parle, et Milpa le répète à voix haute dans l'autre langue.",
    "me": "Moi",
    "them": "Eux",
-   "other": "Leur langue",
-   "listening": "Écoute en cours... touchez pour arrêter",
+   "other": "Ils parlent",
+   "listening": "Écoute en cours... appuyez pour arrêter",
    "translating": "Traduction en cours...",
-   "tapToStop": "Touchez pour arrêter",
-   "empty": "Touchez votre côté et parlez. Passez le téléphone quand c'est à leur tour.",
+   "tapToStop": "Appuyez pour arrêter",
+   "empty": "Appuyez de votre côté et parlez. Donnez le téléphone quand c'est leur tour.",
    "failed": "Ça n'a pas marché. Réessayez.",
-   "blocked": "Milpa a besoin de votre micro. Autorisez-le dans les réglages du navigateur.",
+   "blocked": "Milpa a besoin de votre micro. Autorisez-le dans les réglages de votre navigateur.",
    "clear": "Recommencer",
    "replay": "Répéter",
-   "unsupported": "Ce navigateur ne peut pas enregistrer le son. Essayez avec Chrome ou Safari."
+   "unsupported": "Ce navigateur ne peut pas enregistrer le son. Essayez Chrome ou Safari."
   }
  }
 }
