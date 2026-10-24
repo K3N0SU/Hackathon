@@ -3,22 +3,24 @@
 Update before ending every task. Keep terse.
 
 ## State
-- Live: https://furrow-valley.vercel.app (Vercel 404 resolved). Repo https://github.com/K3N0SU/Hackathon main, auto-deploys.
-- Stack: Next 16, TS, Tailwind v4, shadcn, lucide, Gemini free tier via REST, Open-Meteo (no key). Everything free.
-- User dropped the anti-vibecode visual rules: "just make it look good and work really good".
-- `/` landing (src/app/page.tsx): dusk orchard hero (hero-scene.tsx, CSS parallax, grain, motes), site-nav.tsx, section-dots.tsx, Phone mockup, sections for labels, languages, clock, heat, exposed, honest, FAQ. Display font Barlow Condensed (`font-display`), accent `harvest` amber in globals.css.
-- `/scan` = AppShell (app-shell.tsx): header with language, bottom tabs Labels (scanner.tsx), Heat (heat-check.tsx, src/lib/heat.ts), Exposed (exposure-help.tsx, src/lib/exposure.ts). Hash #heat / #exposed opens a tab. Scanner saves last scan to localStorage `furrow-last-scan` for the doctor card.
-- No slides on the website (user). Slides are C:/Users/sefef/Downloads/Furrow.pptx, built by scratchpad deck.js (pptxgenjs, NODE_PATH=scratchpad/node_modules), checked via PowerPoint COM export.
-- README.md, DEVPOST.md, DEMO.md updated for three tools.
+- Live: https://furrow-valley.vercel.app. Repo https://github.com/K3N0SU/Hackathon main, auto-deploys.
+- Stack: Next 16, TS, Tailwind v4, shadcn, lucide, Gemini free tier via REST, Open-Meteo, Firebase (Auth + Firestore, Spark plan). Everything free.
+- Firebase project `furrow-422fa` (account sefefarg@gmail.com, CLI logged in, global `firebase` installed). Web config hardcoded in src/lib/firebase.ts (public by design). Email/password + Google enabled, authorized domains include furrow-valley.vercel.app and localhost. Rules in firestore.rules (owner + email_verified only), deploy `firebase deploy --only firestore:rules`.
+- Auth: /sign-in, /sign-up (auth-form.tsx), /verify (verify-email.tsx, polls reload, refreshes token), auth-provider.tsx (useSession, useSavedLanguage), user-menu.tsx in site-nav and app header. Copy en/es/pa in src/lib/auth-copy.ts.
+- /scan requires a verified account (app-shell.tsx redirects). Tabs Labels, Heat, Exposed, Saved (saved-scans.tsx). Data in src/lib/cloud.ts: users/{uid} {language, clocks, lastScan}, users/{uid}/scans {createdAt, language, thumb 360px jpeg, result}. clocks.ts syncs to cloud.
+- Live in-app camera: live-camera.tsx (getUserMedia, frame, shutter, retake, flip, gallery, fallback to capture input).
+- Landing `/` remade dark: hero with word-mask headline + HeroDemo phone loop (hero-demo.tsx), crop marquee, ScrollWords story, sticky Tour of 5 tools (tour.tsx, phone-screens.tsx), CountUp numbers, spotlight bento, honest section with orbit ring, FAQ, CTA. No Punjabi script on landing (user). Motion helpers landing-motion.tsx, scroll-reveal.tsx (IntersectionObserver). Section dots ids: top story tour numbers features honest questions.
+- Slides: C:/Users/sefef/Downloads/Furrow.pptx (scratchpad deck.js). Not updated for accounts/camera yet.
+- Screenshots: scratchpad shoot.js (puppeteer-core + installed Chrome): `node shoot.js URL W H prefix stops...`.
 
 ## Next
-- User: record video and screenshots per DEMO.md, upload Furrow.pptx, submit on Devpost early. Delete Downloads/env.local.txt. Punjabi reader check if possible.
-- Me: test a live scan and the heat tab on the deployed site, check landing sections below the hero at phone width, fix anything found.
+- User: sign up once on the live site to confirm the verification email arrives (check spam), then a scan shows in Saved. Record video and screenshots per DEMO.md, submit on Devpost early. Delete Downloads/env.local.txt.
+- Me if asked: refresh Furrow.pptx for accounts + camera; test signed-in /scan on phone.
 
 ## Decisions
-- Name: Furrow (Surco as alternative, not used).
-- Rubric (user): Innovation 30, Technical 25, Relevance 20, Presentation 50.
-- Heat thresholds: 80°F shade, 95°F high heat with 10-minute cool-down every 2 hours for ag, 1 quart water per hour.
+- Name: Furrow. Rubric: Innovation 30, Technical 25, Relevance 20, Presentation 50.
+- Accounts required (user). Photos saved as Firestore thumbnails because Firebase Storage needs Blaze.
+- Heat thresholds: 80°F shade, 95°F high heat, 1 quart water per hour.
 
 ## Notes
-- Windows: bash has no python, use `py`; node patch scripts in scratchpad. Headless Chrome screenshots work (min width ~500px).
+- Windows: bash has no python, use `py`; node patch scripts in scratchpad. Kill stale `next start` before restarting (PowerShell Get-CimInstance filter).

@@ -46,7 +46,9 @@ export function UserMenu({
         }`}
       >
         <UserRound className={compact ? "size-5" : "size-4"} />
-        {!compact && text.signIn}
+        {!compact && (
+          <span className={dark ? "hidden sm:inline" : ""}>{text.signIn}</span>
+        )}
       </Link>
     );
   }

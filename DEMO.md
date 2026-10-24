@@ -2,7 +2,7 @@
 
 ## Before you record or present
 
-Use your phone, not the laptop. Open https://furrow-valley.vercel.app, clear the site's storage so no old clocks show, turn the volume up and turn on Do Not Disturb. Allow location when the heat tab asks, once, before the demo. Have the Valley Guard label printed or open full screen on the laptop so the camera has something real to point at. Tap Listen in Punjabi once to check the phone has a Punjabi voice; if not, use Spanish for the audio moment.
+Use your phone, not the laptop. Open https://furrow-valley.vercel.app and sign in before the demo (Google is fastest) so the app opens straight to the camera. Delete old clocks and saved scans you don't want on screen, turn the volume up and turn on Do Not Disturb. Allow location when the heat tab asks, once, before the demo. Have the Valley Guard label printed or open full screen on the laptop so the camera has something real to point at. Tap Listen in Punjabi once to check the phone has a Punjabi voice; if not, use Spanish for the audio moment.
 
 Run the full path twice before you start. If the live scan is slow, the sample label falls back to a saved answer by itself.
 
@@ -10,7 +10,7 @@ Run the full path twice before you start. If the live scan is slow, the sample l
 
 Start on the label, before the app. Hold up the printed label. Say: this is what a worker gets before walking into an almond orchard. Small English print. Many of the people working these rows in San Joaquin County read Spanish or Punjabi first.
 
-Show the landing page for two seconds, tap Open Furrow, switch to Punjabi, tap the big camera button and photograph the label. While it reads, say: Gemini is reading the photo and returning fixed fields, not a paragraph.
+Show the landing page for two seconds, tap Open Furrow, switch to Punjabi, tap the big camera button, line the label up in the frame and tap the shutter, then Read this label. While it reads, say: Gemini is reading the photo and returning fixed fields, not a paragraph.
 
 When the result appears, point at the green box: twelve hours, in Punjabi. Tap Listen. Tap Start the clock, then tap Another label and show the red countdown on the start screen. Say: reading it once isn't enough, so Furrow keeps the clock.
 
@@ -18,11 +18,13 @@ Tap the Heat tab and Check the heat here. Say: the Valley gets hot, so Furrow te
 
 Tap the Exposed tab. Start the rinse timer. Scroll down and tap Show the doctor a card in English. Say: the product from the last scan is already filled in, and it asks for an interpreter.
 
+Tap the Saved tab and show the scan is already there with its photo. Say: it is saved to the account, so a lost phone loses nothing.
+
 Close with the safety rule if there is time: photograph something that is not a label and show it refuses to guess. Last line: Furrow. Know before you walk in.
 
 ## Rubric, without saying the word rubric
 
-Innovation: three moments a farmworker actually faces, in one free app, and a tool that refuses to guess. Technical: schema-constrained Gemini vision, live weather, client-side image downscale, offline fallback for the demo labels, speech and haptics. Impact: Spanish and Punjabi readers in San Joaquin County, pesticide exposure and heat illness are real dangers. Ease of use: one big button, no account.
+Innovation: three moments a farmworker actually faces, in one free app, and a tool that refuses to guess. Technical: schema-constrained Gemini vision, live weather, client-side image downscale, offline fallback for the demo labels, speech and haptics. Impact: Spanish and Punjabi readers in San Joaquin County, pesticide exposure and heat illness are real dangers. Ease of use: one big button, the camera opens inside the app, and a free account means nothing is ever lost.
 
 ## If the judges ask
 

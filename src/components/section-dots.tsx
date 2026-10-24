@@ -4,11 +4,10 @@ import { useEffect, useState } from "react";
 
 const sections = [
   { id: "top", label: "Top" },
-  { id: "field", label: "Labels" },
-  { id: "languages", label: "Languages" },
-  { id: "clock", label: "The clock" },
-  { id: "heat", label: "Heat" },
-  { id: "exposed", label: "Exposed" },
+  { id: "story", label: "The problem" },
+  { id: "tour", label: "What it does" },
+  { id: "numbers", label: "Numbers" },
+  { id: "features", label: "Details" },
   { id: "honest", label: "When it can't tell" },
   { id: "questions", label: "Questions" },
 ];

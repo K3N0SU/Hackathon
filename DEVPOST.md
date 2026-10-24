@@ -14,11 +14,13 @@ The Central Valley grows a huge share of the country's fruit and nuts, and the p
 
 Furrow has three tools. Labels: photograph a pesticide label or re-entry sign and Furrow gives the warning level, how long to stay out, what to wear, first aid and a plain summary in the worker's language, read aloud. If the label gives a re-entry time, Furrow keeps a countdown clock on the phone, red until it's safe and green after. Heat: it checks the forecast where you are standing, finds the hottest hour, and explains what California requires at that temperature, like shade above 80°F and a 10-minute cool-down every two hours at 95°F, plus the signs of heat illness that mean call 911. Exposed: one tap for 911 or Poison Control, five steps, a 15-minute rinse timer that buzzes when done, and a card in English for the doctor with the last scanned product filled in and a line asking for an interpreter.
 
+Workers sign in with email or Google. The camera opens inside the app with a frame to line up the label, and every scan, with its photo, is saved to the worker's account along with their clocks and language, so a lost or borrowed phone loses nothing.
+
 When a photo is too blurry or a label is ambiguous, Furrow doesn't guess. It marks the warning level unknown and tells the worker to ask a supervisor.
 
 ## How I built it
 
-The front end is Next.js 16, React and Tailwind, hosted on Vercel. A server route sends the photo to the Google Gemini API on the free tier and asks for JSON in a fixed schema, so the app always gets the same fields back and never has to parse prose. The system prompt sets the translation rules: product names and phone numbers stay exactly as printed, units are translated, and an unreadable label sets a flag instead of producing an answer. The heat check calls Open-Meteo, a free weather API, with the phone's location. The browser shrinks photos before upload so scans work on a weak signal, the Web Speech API reads answers aloud, and the Vibration API buzzes when a result arrives or the rinse timer ends. Clocks, language and the last scanned product live in localStorage, so there is no database and nothing to sign up for. The sample labels carry saved answers in all three languages, so the demo works even if the network doesn't.
+The front end is Next.js 16, React and Tailwind, hosted on Vercel. A server route sends the photo to the Google Gemini API on the free tier and asks for JSON in a fixed schema, so the app always gets the same fields back and never has to parse prose. The system prompt sets the translation rules: product names and phone numbers stay exactly as printed, units are translated, and an unreadable label sets a flag instead of producing an answer. The heat check calls Open-Meteo, a free weather API, with the phone's location. The browser shrinks photos before upload so scans work on a weak signal, the Web Speech API reads answers aloud, and the Vibration API buzzes when a result arrives or the rinse timer ends. Accounts run on Firebase Authentication with email verification, password reset and Google sign-in. Scans, photo thumbnails, clocks and language are stored in Cloud Firestore, and the security rules only allow a verified user to touch their own documents. Photos are shrunk to thumbnails so everything stays on Firebase's free plan. The sample labels carry saved answers in all three languages, so the demo works even if the network doesn't.
 
 ## Challenges
 
@@ -38,7 +40,7 @@ Native Punjabi and Spanish speakers and pesticide safety trainers need to check 
 
 ## Built with
 
-Google Gemini API, Open-Meteo, Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Vercel, Web Speech API, Google Fonts
+Google Gemini API, Firebase Authentication, Cloud Firestore, Open-Meteo, Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Vercel, Web Speech API, Google Fonts
 
 ## Links
 

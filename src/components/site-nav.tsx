@@ -6,9 +6,8 @@ import { Mark } from "@/components/mark";
 import { UserMenu } from "@/components/user-menu";
 
 const links = [
-  { href: "#field", label: "Labels" },
-  { href: "#heat", label: "Heat" },
-  { href: "#exposed", label: "Exposed" },
+  { href: "#tour", label: "What it does" },
+  { href: "#features", label: "Details" },
   { href: "#questions", label: "Questions" },
 ];
 
@@ -54,7 +53,7 @@ export function SiteNav() {
           <UserMenu dark />
           <Link
             href="/scan"
-            className="rounded-full bg-harvest px-5 py-2 font-semibold text-harvest-foreground transition-transform hover:-translate-y-0.5 active:translate-y-0"
+            className="whitespace-nowrap rounded-full bg-harvest px-4 py-2 font-semibold text-harvest-foreground sm:px-5 transition-transform hover:-translate-y-0.5 active:translate-y-0"
           >
             Open Furrow
           </Link>
