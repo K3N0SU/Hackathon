@@ -2,8 +2,8 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Furrow",
-    short_name: "Furrow",
+    name: "Rowen",
+    short_name: "Rowen",
     description:
       "Photograph a pesticide label and get the safety details in your language.",
     start_url: "/scan",

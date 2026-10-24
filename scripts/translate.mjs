@@ -23,9 +23,9 @@ function same(a, b) {
 }
 const dictionaries = [
   load("scan.ts").copy, load("heat.ts").heatCopy, load("exposure.ts").exposureCopy, load("auth-copy.ts").authCopy,
-  load("app-copy.ts").appCopy, load("app-copy.ts").scannerCopy, load("camera-copy.ts").cameraCopy, load("saved-copy.ts").savedCopy,
+  load("app-copy.ts").appCopy, load("app-copy.ts").scannerCopy, load("camera-copy.ts").cameraCopy, load("saved-copy.ts").savedCopy, load("tools-copy.ts").toolsCopy,
 ].map((d) => d.en);
-const languages = (process.argv[2] || "hmn,tl,hi,ar,vi").split(",");
+const languages = (process.argv[2] || "hmn,tl,hi,ar,vi,fr,ur,zh,ko,ru,hy,fa,ja,pt").split(",");
 async function translate(language, strings) {
   for (let attempt = 0; attempt < 3; attempt++) {
     const r = await fetch(`${server}/api/translate`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ language, strings }) });

@@ -3,7 +3,29 @@ import type { CoreLanguage } from "@/lib/scan";
 type ToolCopy = { title: string; body: string };
 
 export type AppCopy = {
-  tabs: { scan: string; ask: string; tools: string; saved: string };
+  tabs: { home: string; scan: string; ask: string; tools: string; saved: string };
+  home: {
+    morning: string;
+    afternoon: string;
+    evening: string;
+    tagline: string;
+    scan: string;
+    scanBody: string;
+    talk: string;
+    talkBody: string;
+    clocks: string;
+    noClocks: string;
+    heat: string;
+    feels: string;
+    high: string;
+    levels: { normal: string; shade: string; high: string };
+    recent: string;
+    noRecent: string;
+    last: string;
+    askAbout: string;
+    seeAll: string;
+    aiTools: string;
+  };
   language: string;
   chooseLanguage: string;
   back: string;
@@ -18,6 +40,9 @@ export type AppCopy = {
     brief: ToolCopy;
     map: ToolCopy;
     install: ToolCopy;
+    gear: ToolCopy;
+    pay: ToolCopy;
+    interpret: ToolCopy;
   };
   ask: {
     title: string;
@@ -32,6 +57,22 @@ export type AppCopy = {
     clear: string;
     listen: string;
     call911: string;
+    chats: string;
+    noChats: string;
+    remove: string;
+    retry: string;
+    talk: string;
+    talkHint: string;
+    voiceListening: string;
+    voiceThinking: string;
+    voiceSpeaking: string;
+    voiceTap: string;
+    voiceBlocked: string;
+    voiceFailed: string;
+    close: string;
+    attach: string;
+    removePhoto: string;
+    photoAsk: string;
   };
   result: {
     askAbout: string;
@@ -133,12 +174,34 @@ export type AppCopy = {
 
 export const appCopy: Record<CoreLanguage, AppCopy> = {
   en: {
-    tabs: { scan: "Scan", ask: "Ask", tools: "Tools", saved: "Saved" },
+    tabs: { home: "Today", scan: "Scan", ask: "Ask", tools: "Tools", saved: "Saved" },
+    home: {
+      morning: "Good morning",
+      afternoon: "Good afternoon",
+      evening: "Good evening",
+      tagline: "Know before you walk in.",
+      scan: "Scan a label",
+      scanBody: "Point, tap, know in seconds",
+      talk: "Talk to Rowen",
+      talkBody: "Ask out loud, in any language",
+      clocks: "Re-entry clocks",
+      noClocks: "No clocks running. Scan a label to start one.",
+      heat: "Heat right now",
+      feels: "Feels like",
+      high: "High today",
+      levels: { normal: "Normal day", shade: "Shade required", high: "High heat rules" },
+      recent: "Recent chats",
+      noRecent: "Your chats with Rowen show up here.",
+      last: "Last label you scanned",
+      askAbout: "Ask about it",
+      seeAll: "See all",
+      aiTools: "Tools",
+    },
     language: "Language",
     chooseLanguage: "Choose your language",
     back: "Back",
     toolsTitle: "Tools",
-    toolsIntro: "Everything Furrow can do. Tap one.",
+    toolsIntro: "Everything Rowen can do. Tap one.",
     tools: {
       heat: { title: "Heat check", body: "Today's hottest hour and your rights" },
       symptoms: { title: "I feel sick", body: "Find out who to call" },
@@ -147,10 +210,13 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       report: { title: "Report a problem", body: "Say it, get an English report" },
       brief: { title: "Today's plan", body: "Your blocks and heat, out loud" },
       map: { title: "Spray map", body: "Where you scanned labels" },
-      install: { title: "Add to phone", body: "Open Furrow like an app" },
+      install: { title: "Add to phone", body: "Open Rowen like an app" },
+      gear: { title: "Gear check", body: "A photo of you, checked against the label" },
+      pay: { title: "Pay check", body: "Is your pay stub right?" },
+      interpret: { title: "Interpreter", body: "Talk with your supervisor or nurse" },
     },
     ask: {
-      title: "Ask Furrow",
+      title: "Ask Rowen",
       about: "About",
       general: "Ask about pesticides, heat or your rights at work.",
       placeholder: "Type or tap the mic",
@@ -167,6 +233,22 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       clear: "New chat",
       listen: "Listen",
       call911: "Call 911",
+      chats: "Your chats",
+      noChats: "Your chats show up here. They are saved to your account.",
+      remove: "Delete chat",
+      retry: "Try again",
+      talk: "Talk",
+      talkHint: "Speak in any language. Rowen listens, then answers out loud.",
+      voiceListening: "Listening",
+      voiceThinking: "Thinking",
+      voiceSpeaking: "Tap to interrupt",
+      voiceTap: "Tap to talk",
+      voiceBlocked: "Rowen needs your microphone. Allow it in your browser settings, then try again.",
+      voiceFailed: "That did not go through. Tap to try again.",
+      close: "Close",
+      attach: "Add a photo",
+      removePhoto: "Remove photo",
+      photoAsk: "What can you tell me from this photo?",
     },
     result: {
       askAbout: "Ask about this label",
@@ -175,12 +257,12 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       shared: "Link ready to share",
       copied: "Link copied",
       shareFailed: "Could not make a link. Try again.",
-      howRead: "How Furrow read this",
+      howRead: "How Rowen read this",
       confidence: { high: "Clear read", medium: "Check this", low: "Not sure" },
       confidenceNote: {
         high: "The label was sharp and every answer below was printed on it.",
         medium: "Some words were small or partly hidden. Check the label or ask.",
-        low: "Furrow is not sure about part of this. Ask your supervisor.",
+        low: "Rowen is not sure about part of this. Ask your supervisor.",
       },
       fields: {
         product: "Product",
@@ -203,7 +285,7 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
     },
     symptoms: {
       title: "How do you feel?",
-      intro: "Tap everything you feel right now. Furrow tells you who to call.",
+      intro: "Tap everything you feel right now. Rowen tells you who to call.",
       list: [
         "Headache",
         "Dizzy",
@@ -229,7 +311,7 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
     },
     paper: {
       title: "Read a paper",
-      intro: "Take a photo of any paper from work. Furrow explains it in your language.",
+      intro: "Take a photo of any paper from work. Rowen explains it in your language.",
       take: "Take a photo",
       choose: "Choose a photo",
       reading: "Reading the paper...",
@@ -241,7 +323,7 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
     },
     report: {
       title: "Report a problem",
-      intro: "Say what happened in your own words. Furrow writes a clear report in English you can give to the grower or the county.",
+      intro: "Say what happened in your own words. Rowen writes a clear report in English you can give to the grower or the county.",
       placeholder: "For example: They sprayed the next field while we were picking and the wind blew it on us.",
       when: "When did it happen?",
       write: "Write my report",
@@ -257,7 +339,7 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
     },
     brief: {
       title: "Today's plan",
-      intro: "Furrow looks at your clocks and today's heat and tells you the plan out loud.",
+      intro: "Rowen looks at your clocks and today's heat and tells you the plan out loud.",
       make: "Tell me today's plan",
       making: "Making your plan...",
       failed: "Could not make the plan. Check your connection.",
@@ -283,20 +365,42 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       waterOff: "Water reminders on",
     },
     install: {
-      title: "Add Furrow to your phone",
+      title: "Add Rowen to your phone",
       body: "It opens like an app, and your saved scans, clocks and the exposure steps work with no signal.",
       button: "Add to home screen",
       ios: "On iPhone: tap Share, then Add to Home Screen.",
-      done: "Furrow is on your home screen.",
+      done: "Rowen is on your home screen.",
     },
   },
   es: {
-    tabs: { scan: "Escanear", ask: "Preguntar", tools: "Herramientas", saved: "Guardado" },
+    tabs: { home: "Hoy", scan: "Escanear", ask: "Preguntar", tools: "Herramientas", saved: "Guardado" },
+    home: {
+      morning: "Buenos días",
+      afternoon: "Buenas tardes",
+      evening: "Buenas noches",
+      tagline: "Sepa antes de entrar.",
+      scan: "Escanear etiqueta",
+      scanBody: "Apunte, toque y sepa en segundos",
+      talk: "Hablar con Rowen",
+      talkBody: "Pregunte en voz alta, en cualquier idioma",
+      clocks: "Relojes de reingreso",
+      noClocks: "No hay relojes. Escanee una etiqueta para empezar uno.",
+      heat: "Calor ahora",
+      feels: "Se siente como",
+      high: "Máxima de hoy",
+      levels: { normal: "Día normal", shade: "Sombra obligatoria", high: "Reglas de calor alto" },
+      recent: "Conversaciones recientes",
+      noRecent: "Aquí aparecen sus conversaciones con Rowen.",
+      last: "Última etiqueta escaneada",
+      askAbout: "Preguntar sobre ella",
+      seeAll: "Ver todo",
+      aiTools: "Herramientas",
+    },
     language: "Idioma",
     chooseLanguage: "Elija su idioma",
     back: "Atrás",
     toolsTitle: "Herramientas",
-    toolsIntro: "Todo lo que Furrow puede hacer. Toque una.",
+    toolsIntro: "Todo lo que Rowen puede hacer. Toque una.",
     tools: {
       heat: { title: "Calor de hoy", body: "La hora más caliente y sus derechos" },
       symptoms: { title: "Me siento mal", body: "Sepa a quién llamar" },
@@ -305,10 +409,13 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       report: { title: "Reportar un problema", body: "Dígalo y reciba un reporte en inglés" },
       brief: { title: "Plan de hoy", body: "Sus campos y el calor, en voz alta" },
       map: { title: "Mapa de rociado", body: "Dónde escaneó etiquetas" },
-      install: { title: "Poner en el teléfono", body: "Abra Furrow como una app" },
+      install: { title: "Poner en el teléfono", body: "Abra Rowen como una app" },
+      gear: { title: "Revisar equipo", body: "Una foto suya, comparada con la etiqueta" },
+      pay: { title: "Revisar mi pago", body: "¿Está bien su talón de pago?" },
+      interpret: { title: "Intérprete", body: "Hable con su mayordomo o enfermera" },
     },
     ask: {
-      title: "Pregúntele a Furrow",
+      title: "Pregúntele a Rowen",
       about: "Sobre",
       general: "Pregunte sobre pesticidas, el calor o sus derechos en el trabajo.",
       placeholder: "Escriba o toque el micrófono",
@@ -325,6 +432,22 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       clear: "Nueva conversación",
       listen: "Escuchar",
       call911: "Llamar al 911",
+      chats: "Sus conversaciones",
+      noChats: "Aquí aparecen sus conversaciones. Se guardan en su cuenta.",
+      remove: "Borrar conversación",
+      retry: "Intentar de nuevo",
+      talk: "Hablar",
+      talkHint: "Hable en cualquier idioma. Rowen escucha y le responde en voz alta.",
+      voiceListening: "Escuchando",
+      voiceThinking: "Pensando",
+      voiceSpeaking: "Toque para interrumpir",
+      voiceTap: "Toque para hablar",
+      voiceBlocked: "Rowen necesita su micrófono. Permítalo en la configuración del navegador e intente de nuevo.",
+      voiceFailed: "No se pudo enviar. Toque para intentar de nuevo.",
+      close: "Cerrar",
+      attach: "Agregar foto",
+      removePhoto: "Quitar foto",
+      photoAsk: "¿Qué me puede decir de esta foto?",
     },
     result: {
       askAbout: "Preguntar sobre esta etiqueta",
@@ -333,12 +456,12 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       shared: "Enlace listo para compartir",
       copied: "Enlace copiado",
       shareFailed: "No se pudo crear el enlace. Intente de nuevo.",
-      howRead: "Cómo lo leyó Furrow",
+      howRead: "Cómo lo leyó Rowen",
       confidence: { high: "Lectura clara", medium: "Revise esto", low: "No es seguro" },
       confidenceNote: {
         high: "La etiqueta se veía clara y cada respuesta estaba impresa en ella.",
         medium: "Algunas palabras eran pequeñas o estaban tapadas. Revise la etiqueta o pregunte.",
-        low: "Furrow no está seguro de una parte. Pregunte a su supervisor.",
+        low: "Rowen no está seguro de una parte. Pregunte a su supervisor.",
       },
       fields: {
         product: "Producto",
@@ -361,7 +484,7 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
     },
     symptoms: {
       title: "¿Cómo se siente?",
-      intro: "Toque todo lo que siente ahora. Furrow le dice a quién llamar.",
+      intro: "Toque todo lo que siente ahora. Rowen le dice a quién llamar.",
       list: [
         "Dolor de cabeza",
         "Mareo",
@@ -387,7 +510,7 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
     },
     paper: {
       title: "Leer un papel",
-      intro: "Tome una foto de cualquier papel del trabajo. Furrow se lo explica en su idioma.",
+      intro: "Tome una foto de cualquier papel del trabajo. Rowen se lo explica en su idioma.",
       take: "Tomar foto",
       choose: "Elegir foto",
       reading: "Leyendo el papel...",
@@ -399,7 +522,7 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
     },
     report: {
       title: "Reportar un problema",
-      intro: "Diga lo que pasó con sus palabras. Furrow escribe un reporte claro en inglés para el ranchero o el condado.",
+      intro: "Diga lo que pasó con sus palabras. Rowen escribe un reporte claro en inglés para el ranchero o el condado.",
       placeholder: "Por ejemplo: Rociaron el campo de al lado mientras piscábamos y el viento nos lo echó encima.",
       when: "¿Cuándo pasó?",
       write: "Escribir mi reporte",
@@ -415,7 +538,7 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
     },
     brief: {
       title: "Plan de hoy",
-      intro: "Furrow revisa sus relojes y el calor de hoy y le dice el plan en voz alta.",
+      intro: "Rowen revisa sus relojes y el calor de hoy y le dice el plan en voz alta.",
       make: "Dígame el plan de hoy",
       making: "Preparando su plan...",
       failed: "No se pudo hacer el plan. Revise su conexión.",
@@ -441,20 +564,42 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       waterOff: "Recordatorios de agua prendidos",
     },
     install: {
-      title: "Ponga Furrow en su teléfono",
+      title: "Ponga Rowen en su teléfono",
       body: "Se abre como una app, y sus escaneos, relojes y los pasos de exposición funcionan sin señal.",
       button: "Agregar a la pantalla",
       ios: "En iPhone: toque Compartir y luego Agregar a inicio.",
-      done: "Furrow está en su pantalla de inicio.",
+      done: "Rowen está en su pantalla de inicio.",
     },
   },
   pa: {
-    tabs: { scan: "ਸਕੈਨ", ask: "ਪੁੱਛੋ", tools: "ਟੂਲ", saved: "ਸੰਭਾਲੇ" },
+    tabs: { home: "ਅੱਜ", scan: "ਸਕੈਨ", ask: "ਪੁੱਛੋ", tools: "ਟੂਲ", saved: "ਸੰਭਾਲੇ" },
+    home: {
+      morning: "ਸ਼ੁਭ ਸਵੇਰ",
+      afternoon: "ਸ਼ੁਭ ਦੁਪਹਿਰ",
+      evening: "ਸ਼ੁਭ ਸ਼ਾਮ",
+      tagline: "ਅੰਦਰ ਜਾਣ ਤੋਂ ਪਹਿਲਾਂ ਜਾਣੋ।",
+      scan: "ਲੇਬਲ ਸਕੈਨ ਕਰੋ",
+      scanBody: "ਕੈਮਰਾ ਕਰੋ, ਛੂਹੋ, ਸਕਿੰਟਾਂ ਵਿੱਚ ਜਾਣੋ",
+      talk: "Rowen ਨਾਲ ਗੱਲ ਕਰੋ",
+      talkBody: "ਕਿਸੇ ਵੀ ਭਾਸ਼ਾ ਵਿੱਚ ਬੋਲ ਕੇ ਪੁੱਛੋ",
+      clocks: "ਵਾਪਸੀ ਘੜੀਆਂ",
+      noClocks: "ਕੋਈ ਘੜੀ ਨਹੀਂ ਚੱਲ ਰਹੀ। ਸ਼ੁਰੂ ਕਰਨ ਲਈ ਲੇਬਲ ਸਕੈਨ ਕਰੋ।",
+      heat: "ਹੁਣ ਦੀ ਗਰਮੀ",
+      feels: "ਮਹਿਸੂਸ ਹੁੰਦੀ",
+      high: "ਅੱਜ ਸਭ ਤੋਂ ਵੱਧ",
+      levels: { normal: "ਆਮ ਦਿਨ", shade: "ਛਾਂ ਲਾਜ਼ਮੀ", high: "ਤੇਜ਼ ਗਰਮੀ ਦੇ ਨਿਯਮ" },
+      recent: "ਹਾਲੀਆ ਗੱਲਬਾਤਾਂ",
+      noRecent: "Rowen ਨਾਲ ਤੁਹਾਡੀਆਂ ਗੱਲਬਾਤਾਂ ਇੱਥੇ ਦਿਖਣਗੀਆਂ।",
+      last: "ਆਖਰੀ ਸਕੈਨ ਕੀਤਾ ਲੇਬਲ",
+      askAbout: "ਇਸ ਬਾਰੇ ਪੁੱਛੋ",
+      seeAll: "ਸਭ ਦੇਖੋ",
+      aiTools: "ਟੂਲ",
+    },
     language: "ਭਾਸ਼ਾ",
     chooseLanguage: "ਆਪਣੀ ਭਾਸ਼ਾ ਚੁਣੋ",
     back: "ਪਿੱਛੇ",
     toolsTitle: "ਟੂਲ",
-    toolsIntro: "Furrow ਜੋ ਕੁਝ ਕਰ ਸਕਦਾ ਹੈ। ਇੱਕ ਨੂੰ ਛੂਹੋ।",
+    toolsIntro: "Rowen ਜੋ ਕੁਝ ਕਰ ਸਕਦਾ ਹੈ। ਇੱਕ ਨੂੰ ਛੂਹੋ।",
     tools: {
       heat: { title: "ਗਰਮੀ ਦੀ ਜਾਂਚ", body: "ਅੱਜ ਦਾ ਸਭ ਤੋਂ ਗਰਮ ਘੰਟਾ ਅਤੇ ਤੁਹਾਡੇ ਹੱਕ" },
       symptoms: { title: "ਮੈਂ ਬਿਮਾਰ ਹਾਂ", body: "ਪਤਾ ਕਰੋ ਕਿਸਨੂੰ ਫ਼ੋਨ ਕਰਨਾ ਹੈ" },
@@ -463,10 +608,13 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       report: { title: "ਸਮੱਸਿਆ ਦੱਸੋ", body: "ਬੋਲੋ, ਅੰਗਰੇਜ਼ੀ ਰਿਪੋਰਟ ਲਓ" },
       brief: { title: "ਅੱਜ ਦੀ ਯੋਜਨਾ", body: "ਤੁਹਾਡੇ ਖੇਤ ਅਤੇ ਗਰਮੀ, ਬੋਲ ਕੇ" },
       map: { title: "ਛਿੜਕਾਅ ਨਕਸ਼ਾ", body: "ਜਿੱਥੇ ਤੁਸੀਂ ਲੇਬਲ ਸਕੈਨ ਕੀਤੇ" },
-      install: { title: "ਫ਼ੋਨ ਵਿੱਚ ਪਾਓ", body: "Furrow ਨੂੰ ਐਪ ਵਾਂਗ ਖੋਲ੍ਹੋ" },
+      install: { title: "ਫ਼ੋਨ ਵਿੱਚ ਪਾਓ", body: "Rowen ਨੂੰ ਐਪ ਵਾਂਗ ਖੋਲ੍ਹੋ" },
+      gear: { title: "ਸਾਮਾਨ ਦੀ ਜਾਂਚ", body: "ਤੁਹਾਡੀ ਫ਼ੋਟੋ, ਲੇਬਲ ਨਾਲ ਮਿਲਾਈ" },
+      pay: { title: "ਤਨਖਾਹ ਜਾਂਚ", body: "ਕੀ ਤੁਹਾਡੀ ਤਨਖਾਹ ਪਰਚੀ ਠੀਕ ਹੈ?" },
+      interpret: { title: "ਦੁਭਾਸ਼ੀਆ", body: "ਸੁਪਰਵਾਈਜ਼ਰ ਜਾਂ ਨਰਸ ਨਾਲ ਗੱਲ ਕਰੋ" },
     },
     ask: {
-      title: "Furrow ਤੋਂ ਪੁੱਛੋ",
+      title: "Rowen ਤੋਂ ਪੁੱਛੋ",
       about: "ਬਾਰੇ",
       general: "ਕੀਟਨਾਸ਼ਕ, ਗਰਮੀ ਜਾਂ ਕੰਮ 'ਤੇ ਆਪਣੇ ਹੱਕਾਂ ਬਾਰੇ ਪੁੱਛੋ।",
       placeholder: "ਲਿਖੋ ਜਾਂ ਮਾਈਕ ਛੂਹੋ",
@@ -483,6 +631,22 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       clear: "ਨਵੀਂ ਗੱਲਬਾਤ",
       listen: "ਸੁਣੋ",
       call911: "911 ਨੂੰ ਕਾਲ ਕਰੋ",
+      chats: "ਤੁਹਾਡੀਆਂ ਗੱਲਬਾਤਾਂ",
+      noChats: "ਤੁਹਾਡੀਆਂ ਗੱਲਬਾਤਾਂ ਇੱਥੇ ਦਿਖਣਗੀਆਂ। ਇਹ ਤੁਹਾਡੇ ਖਾਤੇ ਵਿੱਚ ਸੰਭਾਲੀਆਂ ਜਾਂਦੀਆਂ ਹਨ।",
+      remove: "ਗੱਲਬਾਤ ਮਿਟਾਓ",
+      retry: "ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ",
+      talk: "ਬੋਲੋ",
+      talkHint: "ਕਿਸੇ ਵੀ ਭਾਸ਼ਾ ਵਿੱਚ ਬੋਲੋ। Rowen ਸੁਣਦਾ ਹੈ ਅਤੇ ਬੋਲ ਕੇ ਜਵਾਬ ਦਿੰਦਾ ਹੈ।",
+      voiceListening: "ਸੁਣ ਰਿਹਾ ਹੈ",
+      voiceThinking: "ਸੋਚ ਰਿਹਾ ਹੈ",
+      voiceSpeaking: "ਰੋਕਣ ਲਈ ਛੂਹੋ",
+      voiceTap: "ਬੋਲਣ ਲਈ ਛੂਹੋ",
+      voiceBlocked: "Rowen ਨੂੰ ਤੁਹਾਡੇ ਮਾਈਕ ਦੀ ਲੋੜ ਹੈ। ਬ੍ਰਾਊਜ਼ਰ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਇਜਾਜ਼ਤ ਦਿਓ, ਫਿਰ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+      voiceFailed: "ਇਹ ਨਹੀਂ ਭੇਜਿਆ ਗਿਆ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਲਈ ਛੂਹੋ।",
+      close: "ਬੰਦ ਕਰੋ",
+      attach: "ਫ਼ੋਟੋ ਜੋੜੋ",
+      removePhoto: "ਫ਼ੋਟੋ ਹਟਾਓ",
+      photoAsk: "ਇਸ ਫ਼ੋਟੋ ਤੋਂ ਤੁਸੀਂ ਮੈਨੂੰ ਕੀ ਦੱਸ ਸਕਦੇ ਹੋ?",
     },
     result: {
       askAbout: "ਇਸ ਲੇਬਲ ਬਾਰੇ ਪੁੱਛੋ",
@@ -491,12 +655,12 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       shared: "ਲਿੰਕ ਤਿਆਰ ਹੈ",
       copied: "ਲਿੰਕ ਕਾਪੀ ਹੋ ਗਿਆ",
       shareFailed: "ਲਿੰਕ ਨਹੀਂ ਬਣਿਆ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
-      howRead: "Furrow ਨੇ ਇਹ ਕਿਵੇਂ ਪੜ੍ਹਿਆ",
+      howRead: "Rowen ਨੇ ਇਹ ਕਿਵੇਂ ਪੜ੍ਹਿਆ",
       confidence: { high: "ਸਾਫ਼ ਪੜ੍ਹਿਆ", medium: "ਇਸਨੂੰ ਜਾਂਚੋ", low: "ਪੱਕਾ ਨਹੀਂ" },
       confidenceNote: {
         high: "ਲੇਬਲ ਸਾਫ਼ ਸੀ ਅਤੇ ਹੇਠਾਂ ਹਰ ਜਵਾਬ ਉਸ ਉੱਤੇ ਛਪਿਆ ਸੀ।",
         medium: "ਕੁਝ ਸ਼ਬਦ ਛੋਟੇ ਜਾਂ ਲੁਕੇ ਹੋਏ ਸਨ। ਲੇਬਲ ਜਾਂਚੋ ਜਾਂ ਪੁੱਛੋ।",
-        low: "Furrow ਨੂੰ ਇੱਕ ਹਿੱਸੇ ਬਾਰੇ ਪੱਕਾ ਨਹੀਂ। ਸੁਪਰਵਾਈਜ਼ਰ ਤੋਂ ਪੁੱਛੋ।",
+        low: "Rowen ਨੂੰ ਇੱਕ ਹਿੱਸੇ ਬਾਰੇ ਪੱਕਾ ਨਹੀਂ। ਸੁਪਰਵਾਈਜ਼ਰ ਤੋਂ ਪੁੱਛੋ।",
       },
       fields: {
         product: "ਉਤਪਾਦ",
@@ -519,7 +683,7 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
     },
     symptoms: {
       title: "ਤੁਸੀਂ ਕਿਵੇਂ ਮਹਿਸੂਸ ਕਰਦੇ ਹੋ?",
-      intro: "ਜੋ ਕੁਝ ਹੁਣ ਮਹਿਸੂਸ ਹੁੰਦਾ ਹੈ ਸਭ ਨੂੰ ਛੂਹੋ। Furrow ਦੱਸੇਗਾ ਕਿਸਨੂੰ ਫ਼ੋਨ ਕਰਨਾ ਹੈ।",
+      intro: "ਜੋ ਕੁਝ ਹੁਣ ਮਹਿਸੂਸ ਹੁੰਦਾ ਹੈ ਸਭ ਨੂੰ ਛੂਹੋ। Rowen ਦੱਸੇਗਾ ਕਿਸਨੂੰ ਫ਼ੋਨ ਕਰਨਾ ਹੈ।",
       list: [
         "ਸਿਰ ਦਰਦ",
         "ਚੱਕਰ",
@@ -545,7 +709,7 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
     },
     paper: {
       title: "ਕਾਗਜ਼ ਪੜ੍ਹੋ",
-      intro: "ਕੰਮ ਦੇ ਕਿਸੇ ਵੀ ਕਾਗਜ਼ ਦੀ ਫੋਟੋ ਖਿੱਚੋ। Furrow ਤੁਹਾਡੀ ਭਾਸ਼ਾ ਵਿੱਚ ਸਮਝਾਵੇਗਾ।",
+      intro: "ਕੰਮ ਦੇ ਕਿਸੇ ਵੀ ਕਾਗਜ਼ ਦੀ ਫੋਟੋ ਖਿੱਚੋ। Rowen ਤੁਹਾਡੀ ਭਾਸ਼ਾ ਵਿੱਚ ਸਮਝਾਵੇਗਾ।",
       take: "ਫੋਟੋ ਖਿੱਚੋ",
       choose: "ਫੋਟੋ ਚੁਣੋ",
       reading: "ਕਾਗਜ਼ ਪੜ੍ਹ ਰਿਹਾ ਹੈ...",
@@ -557,7 +721,7 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
     },
     report: {
       title: "ਸਮੱਸਿਆ ਦੱਸੋ",
-      intro: "ਜੋ ਹੋਇਆ ਆਪਣੇ ਸ਼ਬਦਾਂ ਵਿੱਚ ਦੱਸੋ। Furrow ਮਾਲਕ ਜਾਂ ਕਾਉਂਟੀ ਲਈ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਸਾਫ਼ ਰਿਪੋਰਟ ਲਿਖੇਗਾ।",
+      intro: "ਜੋ ਹੋਇਆ ਆਪਣੇ ਸ਼ਬਦਾਂ ਵਿੱਚ ਦੱਸੋ। Rowen ਮਾਲਕ ਜਾਂ ਕਾਉਂਟੀ ਲਈ ਅੰਗਰੇਜ਼ੀ ਵਿੱਚ ਸਾਫ਼ ਰਿਪੋਰਟ ਲਿਖੇਗਾ।",
       placeholder: "ਜਿਵੇਂ: ਅਸੀਂ ਤੋੜ ਰਹੇ ਸੀ ਤਾਂ ਨਾਲ ਦੇ ਖੇਤ ਵਿੱਚ ਛਿੜਕਾਅ ਹੋਇਆ ਅਤੇ ਹਵਾ ਸਾਡੇ ਉੱਤੇ ਲੈ ਆਈ।",
       when: "ਇਹ ਕਦੋਂ ਹੋਇਆ?",
       write: "ਮੇਰੀ ਰਿਪੋਰਟ ਲਿਖੋ",
@@ -573,7 +737,7 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
     },
     brief: {
       title: "ਅੱਜ ਦੀ ਯੋਜਨਾ",
-      intro: "Furrow ਤੁਹਾਡੀਆਂ ਘੜੀਆਂ ਅਤੇ ਅੱਜ ਦੀ ਗਰਮੀ ਦੇਖ ਕੇ ਯੋਜਨਾ ਬੋਲ ਕੇ ਦੱਸਦਾ ਹੈ।",
+      intro: "Rowen ਤੁਹਾਡੀਆਂ ਘੜੀਆਂ ਅਤੇ ਅੱਜ ਦੀ ਗਰਮੀ ਦੇਖ ਕੇ ਯੋਜਨਾ ਬੋਲ ਕੇ ਦੱਸਦਾ ਹੈ।",
       make: "ਅੱਜ ਦੀ ਯੋਜਨਾ ਦੱਸੋ",
       making: "ਯੋਜਨਾ ਬਣਾ ਰਿਹਾ ਹੈ...",
       failed: "ਯੋਜਨਾ ਨਹੀਂ ਬਣੀ। ਕਨੈਕਸ਼ਨ ਜਾਂਚੋ।",
@@ -599,11 +763,11 @@ export const appCopy: Record<CoreLanguage, AppCopy> = {
       waterOff: "ਪਾਣੀ ਦੀ ਯਾਦ ਚਾਲੂ ਹੈ",
     },
     install: {
-      title: "Furrow ਨੂੰ ਫ਼ੋਨ ਵਿੱਚ ਪਾਓ",
+      title: "Rowen ਨੂੰ ਫ਼ੋਨ ਵਿੱਚ ਪਾਓ",
       body: "ਇਹ ਐਪ ਵਾਂਗ ਖੁੱਲ੍ਹਦਾ ਹੈ, ਅਤੇ ਤੁਹਾਡੇ ਸਕੈਨ, ਘੜੀਆਂ ਅਤੇ ਬਚਾਅ ਦੇ ਕਦਮ ਬਿਨਾਂ ਸਿਗਨਲ ਚੱਲਦੇ ਹਨ।",
       button: "ਹੋਮ ਸਕਰੀਨ 'ਤੇ ਪਾਓ",
       ios: "iPhone 'ਤੇ: Share ਛੂਹੋ, ਫਿਰ Add to Home Screen।",
-      done: "Furrow ਤੁਹਾਡੀ ਹੋਮ ਸਕਰੀਨ 'ਤੇ ਹੈ।",
+      done: "Rowen ਤੁਹਾਡੀ ਹੋਮ ਸਕਰੀਨ 'ਤੇ ਹੈ।",
     },
   },
 };

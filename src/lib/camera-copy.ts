@@ -23,7 +23,7 @@ export const cameraCopy: Record<
     gallery: "Choose a photo",
     close: "Close camera",
     blocked:
-      "Furrow can't open the camera here. Allow camera access in your browser settings, or use your phone's camera app.",
+      "Rowen can't open the camera here. Allow camera access in your browser settings, or use your phone's camera app.",
     openApp: "Use the camera app",
   },
   es: {
@@ -35,7 +35,7 @@ export const cameraCopy: Record<
     gallery: "Elegir una foto",
     close: "Cerrar cámara",
     blocked:
-      "Furrow no puede abrir la cámara aquí. Permite el acceso a la cámara en tu navegador o usa la app de cámara del teléfono.",
+      "Rowen no puede abrir la cámara aquí. Permite el acceso a la cámara en tu navegador o usa la app de cámara del teléfono.",
     openApp: "Usar la app de cámara",
   },
   pa: {
@@ -47,7 +47,7 @@ export const cameraCopy: Record<
     gallery: "ਫੋਟੋ ਚੁਣੋ",
     close: "ਕੈਮਰਾ ਬੰਦ ਕਰੋ",
     blocked:
-      "Furrow ਇੱਥੇ ਕੈਮਰਾ ਨਹੀਂ ਖੋਲ੍ਹ ਸਕਦਾ। ਬ੍ਰਾਊਜ਼ਰ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਕੈਮਰੇ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ, ਜਾਂ ਫੋਨ ਦੀ ਕੈਮਰਾ ਐਪ ਵਰਤੋ।",
+      "Rowen ਇੱਥੇ ਕੈਮਰਾ ਨਹੀਂ ਖੋਲ੍ਹ ਸਕਦਾ। ਬ੍ਰਾਊਜ਼ਰ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਕੈਮਰੇ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ, ਜਾਂ ਫੋਨ ਦੀ ਕੈਮਰਾ ਐਪ ਵਰਤੋ।",
     openApp: "ਕੈਮਰਾ ਐਪ ਵਰਤੋ",
   },
 };

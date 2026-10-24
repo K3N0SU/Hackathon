@@ -42,7 +42,7 @@ export function SiteNav() {
           className="wiggle-hover flex items-center gap-2.5 font-display text-2xl font-semibold text-primary"
         >
           <Mark className="wiggle-target size-8 text-primary" />
-          Furrow
+          Rowen
         </Link>
         <nav className="flex items-center gap-2 text-sm md:gap-7">
           {links.map((link) => (
@@ -60,7 +60,7 @@ export function SiteNav() {
               href="/scan"
               className="sweep inline-flex h-10 items-center whitespace-nowrap rounded-full bg-primary px-4 text-sm font-semibold text-primary-foreground transition-transform [--sweep-color:var(--harvest)] hover:text-harvest-foreground active:scale-95 sm:px-5"
             >
-              Open Furrow
+              Open Rowen
             </Link>
           </Magnetic>
         </nav>

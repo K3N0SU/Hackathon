@@ -6,7 +6,7 @@ const sections = [
   { id: "top", label: "Top" },
   { id: "problem", label: "The problem" },
   { id: "tour", label: "How it works" },
-  { id: "ask", label: "Ask Furrow" },
+  { id: "ask", label: "Ask Rowen" },
   { id: "numbers", label: "Numbers" },
   { id: "heat", label: "Heat" },
   { id: "honest", label: "When it can't tell" },
@@ -14,14 +14,18 @@ const sections = [
   { id: "questions", label: "Questions" },
 ];
 
+const step = 28;
+
 export function SectionDots() {
-  const [active, setActive] = useState("top");
+  const [active, setActive] = useState(0);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (entry.isIntersecting) setActive(entry.target.id);
+          if (entry.isIntersecting) {
+            setActive(sections.findIndex((section) => section.id === entry.target.id));
+          }
         }
       },
       { rootMargin: "-45% 0px -50% 0px" },
@@ -36,21 +40,37 @@ export function SectionDots() {
   return (
     <nav
       aria-label="Page sections"
-      className="fixed right-5 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-end gap-2.5 xl:flex"
+      className="fixed right-6 top-1/2 z-30 hidden -translate-y-1/2 2xl:block"
+      style={{ height: step * (sections.length - 1) + 12 }}
     >
-      {sections.map((section) => (
+      <span className="absolute inset-y-1.5 right-[5px] w-0.5 rounded-full bg-primary/15" />
+      <span
+        className="absolute right-[5px] top-1.5 w-0.5 rounded-full bg-primary transition-[height] duration-700 [transition-timing-function:var(--ease-out-expo)]"
+        style={{ height: step * active }}
+      />
+      {sections.map((section, index) => (
         <a
           key={section.id}
           href={`#${section.id}`}
           aria-label={section.label}
-          aria-current={active === section.id}
-          className={`group relative h-2 rounded-full transition-all duration-500 [transition-timing-function:var(--ease-spring)] ${
-            active === section.id
-              ? "w-8 bg-primary"
-              : "w-2 bg-primary/25 hover:w-4 hover:bg-primary/60"
-          }`}
+          aria-current={active === index}
+          className="group absolute right-0 flex size-3 items-center justify-center"
+          style={{ top: step * index }}
         >
-          <span className="pointer-events-none absolute right-full top-1/2 mr-3 -translate-y-1/2 whitespace-nowrap rounded-full bg-primary px-2.5 py-1 text-xs font-medium text-primary-foreground opacity-0 transition-opacity group-hover:opacity-100">
+          <span
+            className={`size-3 rounded-full border-2 transition-all duration-500 [transition-timing-function:var(--ease-spring)] ${
+              index === active
+                ? "scale-125 border-primary bg-primary"
+                : index < active
+                  ? "border-primary bg-background"
+                  : "border-primary/25 bg-background group-hover:border-primary/60"
+            }`}
+          />
+          <span
+            className={`pointer-events-none absolute right-6 whitespace-nowrap rounded-full bg-primary px-2.5 py-1 text-xs font-medium text-primary-foreground transition-all duration-300 ${
+              index === active ? "opacity-0" : "translate-x-1 opacity-0 group-hover:translate-x-0 group-hover:opacity-100"
+            }`}
+          >
             {section.label}
           </span>
         </a>

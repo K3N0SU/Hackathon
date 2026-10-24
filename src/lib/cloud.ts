@@ -6,12 +6,17 @@ import {
   getDoc,
   getDocs,
   getFirestore,
+  initializeFirestore,
+  persistentLocalCache,
+  persistentMultipleTabManager,
+  type Firestore,
   limit,
   orderBy,
   query,
   setDoc,
 } from "firebase/firestore";
 import { auth } from "@/lib/firebase";
+import type { Chat } from "@/lib/chats";
 import type { Clock } from "@/lib/clocks";
 import type { LastScan } from "@/lib/exposure";
 import type { Language, ScanResult } from "@/lib/scan";
@@ -32,8 +37,19 @@ export type SavedScan = {
   longitude?: number;
 };
 
+let store: Firestore | undefined;
+
 function db() {
-  return getFirestore(auth().app);
+  if (!store) {
+    try {
+      store = initializeFirestore(auth().app, {
+        localCache: persistentLocalCache({ tabManager: persistentMultipleTabManager() }),
+      });
+    } catch {
+      store = getFirestore(auth().app);
+    }
+  }
+  return store;
 }
 
 function uid() {
@@ -122,4 +138,25 @@ export function thumbnail(src: string): Promise<string> {
     img.onerror = () => reject(new Error("image failed to load"));
     img.src = src;
   });
+}
+
+export async function listChats(): Promise<Chat[]> {
+  const id = uid();
+  if (!id) return [];
+  const snapshot = await getDocs(
+    query(collection(db(), "users", id, "chats"), orderBy("updatedAt", "desc"), limit(50)),
+  );
+  return snapshot.docs.map((item) => ({ ...item.data(), id: item.id }) as Chat);
+}
+
+export async function saveChat(chat: Chat) {
+  const id = uid();
+  if (!id) return;
+  await setDoc(doc(db(), "users", id, "chats", chat.id), JSON.parse(JSON.stringify(chat)));
+}
+
+export async function deleteChat(chatId: string) {
+  const id = uid();
+  if (!id) return;
+  await deleteDoc(doc(db(), "users", id, "chats", chatId));
 }

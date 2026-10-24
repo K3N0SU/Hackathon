@@ -1,0 +1,457 @@
+{
+ "uybgyd": {
+  "headline": "Saiba antes de entrar no campo.",
+  "tagline": "Tire uma foto do rótulo do pesticida ou de uma placa no campo. O Rowen diz, no seu idioma, quando é seguro voltar e como se proteger.",
+  "scan": "Tire foto de um rótulo ou placa",
+  "samples": "Ou teste com um exemplo",
+  "reading": "Lendo o rótulo",
+  "reentry": "Quando você pode voltar",
+  "gear": "O que vestir",
+  "firstAid": "Se você tiver contato com o produto",
+  "summary": "Resumo",
+  "listen": "Ouvir",
+  "stop": "Parar",
+  "another": "Escanear outro",
+  "ask": "Não temos certeza sobre esta parte. Pergunte ao seu supervisor.",
+  "unreadable": "Não conseguimos ler esta foto. Chegue mais perto, segure o telefone firme e tente de novo.",
+  "failed": "Algo deu errado. Verifique sua conexão e tente de novo.",
+  "offline": "Sem conexão. Mostrando um exemplo que já estava salvo.",
+  "noVoice": "Este telefone não tem uma voz para este idioma.",
+  "disclaimer": "Esta é uma ajuda para leitura. Siga sempre o rótulo e o seu supervisor.",
+  "sprayedAt": "Quando foi aplicado?",
+  "startClock": "Iniciar o relógio",
+  "clocksHeading": "Campos no relógio",
+  "safeAt": "Seguro para entrar às",
+  "safeNow": "Seguro para entrar",
+  "hoursUnit": "h",
+  "minutesUnit": "min",
+  "leftWord": "restantes",
+  "clearClock": "Remover",
+  "callPoison": "Ligue para o Controle de Intoxicação",
+  "signal": {
+   "caution": "Cuidado",
+   "warning": "Aviso",
+   "danger": "Perigo",
+   "unknown": "Não informado"
+  }
+ },
+ "1swoxky": {
+  "tab": "Calor",
+  "title": "Calor hoje",
+  "intro": "Veja quanto calor vai fazer onde você está trabalhando e o que a Califórnia exige que seu patrão forneça.",
+  "check": "Ver o calor aqui",
+  "checking": "Verificando o tempo...",
+  "again": "Verificar de novo",
+  "failed": "Não deu para ver o tempo. Confira a sua conexão e tente de novo.",
+  "nearManteca": "A localização está desligada, então este é o tempo em Manteca.",
+  "now": "Agora",
+  "feels": "Sensação de",
+  "high": "Mais quente hoje",
+  "levels": {
+   "normal": {
+    "title": "Calor normal",
+    "body": "Beba água com frequência, mesmo antes de sentir sede. Seu patrão deve fornecer água fresca e de graça perto de onde você trabalha."
+   },
+   "shade": {
+    "title": "A sombra deve estar pronta",
+    "body": "Quando passar de 80°F, a Califórnia exige sombra perto de onde você trabalha, com espaço para todo mundo no descanso. Você pode descansar na sombra sempre que precisar se refrescar."
+   },
+   "high": {
+    "title": "Calor forte",
+    "body": "A partir de 95°F, alguém deve vigiar a equipe para notar sinais de mal-estar pelo calor, e os trabalhadores do campo têm direito a 10 minutos de descanso para se refrescar a cada duas horas. A sombra deve estar pronta."
+   }
+  },
+  "water": "Beba cerca de um quarto de galão de água por hora. Isso dá quatro copos.",
+  "signsTitle": "Peça ajuda na hora se alguém tiver",
+  "signs": [
+   "Confusão ou fala enrolada",
+   "Pele quente e seca, ou suor muito pesado",
+   "Desmaio ou convulsão",
+   "Dor de cabeça forte, enjoo ou vômito"
+  ],
+  "call911": "Ligue para o 911",
+  "rules": "Com base nas regras de calor da Califórnia para o trabalho ao ar livre."
+ },
+ "kkahit": {
+  "tab": "Exposto",
+  "title": "Caiu agrotóxico em você?",
+  "emergency": "Se alguém estiver com falta de ar, desmaiar ou tiver uma convulsão, ligue 911 agora.",
+  "call911": "Ligar para o 911",
+  "steps": [
+   "Saia da área pulverizada e vá para o ar puro.",
+   "Tire as roupas e os sapatos que ficaram molhados com o produto.",
+   "Lave a pele com muita água limpa e sabão por 15 minutos. Se for nos olhos, lave com água limpa por 15 minutos.",
+   "Ligue para o Controle de Intoxicação. É de graça, ninguém vai saber, e eles têm intérpretes.",
+   "Avise seu supervisor qual produto era. Seu patrão tem a obrigação de levar você para receber ajuda médica."
+  ],
+  "rinseStart": "Começar a lavar por 15 minutos",
+  "rinseKeep": "Continue lavando",
+  "rinseDone": "Os 15 minutos acabaram",
+  "rinseAgain": "Começar de novo",
+  "productLabel": "Nome do produto, se souber",
+  "productHint": "Preenchido com base na sua última leitura",
+  "timeLabel": "Quando aconteceu?",
+  "showCard": "Mostrar um cartão em inglês para o médico",
+  "close": "Fechar",
+  "interpreter": ""
+ },
+ "12jsthl": {
+  "signInTitle": "Que bom ter você de volta",
+  "signUpTitle": "Criar uma conta",
+  "intro": "Suas leituras, contagens regressivas e idioma ficam salvos na sua conta, para você usar em qualquer telefone.",
+  "name": "Seu nome",
+  "email": "E-mail",
+  "password": "Senha",
+  "signIn": "Entrar",
+  "signUp": "Criar conta",
+  "google": "Continuar com o Google",
+  "or": "ou",
+  "noAccount": "É novo no Rowen?",
+  "createOne": "Crie uma conta",
+  "haveAccount": "Já tem uma conta?",
+  "signInLink": "Entrar",
+  "forgot": "Esqueceu a senha?",
+  "resetNeedsEmail": "Digite seu e-mail primeiro, depois toque em Esqueceu a senha.",
+  "resetSent": "Enviamos um link para mudar sua senha. Veja seu e-mail.",
+  "working": "Só um momento...",
+  "verifyTitle": "Olhe seu e-mail",
+  "verifyBody": "Enviamos um link para",
+  "verifyNext": "Abra o link para confirmar seu e-mail. Esta página vai mudar sozinha depois que você fizer isso.",
+  "resend": "Enviar o link de novo",
+  "resent": "Enviado. Pode levar um minuto e pode cair no lixo eletrônico.",
+  "verified": "Já abri o link",
+  "notYet": "Ainda não foi confirmado. Abra o link no e-mail e tente de novo.",
+  "useOther": "Usar outro e-mail",
+  "account": "Conta",
+  "signedInAs": "Conectado como",
+  "signOut": "Sair",
+  "errors": {
+   "invalid": "Esse e-mail ou essa senha estão errados.",
+   "inUse": "Esse e-mail já tem uma conta. Tente entrar.",
+   "weak": "Use pelo menos 6 letras ou números para a senha.",
+   "badEmail": "Isso não parece ser um e-mail de verdade.",
+   "popup": "A janela do Google fechou antes de você terminar.",
+   "tooMany": "Muitas tentativas. Espere uns minutinhos e tente de novo.",
+   "network": "Sem sinal de internet. Veja sua conexão e tente de novo.",
+   "generic": "Deu um probleminha. Tente de novo.",
+   "notConfigured": "A entrada ainda não está pronta neste site."
+  }
+ },
+ "1nenh57": {
+  "tabs": {
+   "scan": "Escanear",
+   "ask": "Perguntar",
+   "tools": "Ferramentas",
+   "saved": "Salvos"
+  },
+  "language": "Idioma",
+  "chooseLanguage": "Escolha o seu idioma",
+  "back": "Voltar",
+  "toolsTitle": "Ferramentas",
+  "toolsIntro": "Tudo o que o Rowen pode fazer. Toque em um.",
+  "tools": {
+   "heat": {
+    "title": "Aviso de calor",
+    "body": "A hora mais quente do dia e os seus direitos"
+   },
+   "symptoms": {
+    "title": "Estou passando mal",
+    "body": "Veja para quem ligar"
+   },
+   "exposed": {
+    "title": "Caiu veneno em mim",
+    "body": "911, tempo de lavagem, cartão do médico"
+   },
+   "paper": {
+    "title": "Ler um papel",
+    "body": "Avisos, contracheques, papéis do trabalho"
+   },
+   "report": {
+    "title": "Avisar sobre um problema",
+    "body": "Conte o que houve e receba um texto em inglês"
+   },
+   "brief": {
+    "title": "Plano de hoje",
+    "body": "Seus talhões e o calor, falados para você"
+   },
+   "map": {
+    "title": "Mapa de venenos",
+    "body": "Onde você escaneou os rótulos"
+   },
+   "install": {
+    "title": "Pôr no celular",
+    "body": "Abra o Rowen como um aplicativo"
+   },
+   "gear": {
+    "title": "Conferir proteção",
+    "body": "Uma foto sua, comparada com o rótulo"
+   },
+   "pay": {
+    "title": "Conferir pagamento",
+    "body": "O seu pagamento está certo?"
+   },
+   "interpret": {
+    "title": "Intérprete",
+    "body": "Converse com o encarregado ou enfermeiro"
+   }
+  },
+  "ask": {
+   "title": "Pergunte ao Rowen",
+   "about": "Sobre",
+   "general": "Pergunte sobre agrotóxicos, calor ou seus direitos no trabalho.",
+   "placeholder": "Escreva ou aperte o microfone",
+   "send": "Enviar",
+   "listening": "Ouvindo...",
+   "thinking": "Pensando...",
+   "failed": "Não deu para responder. Veja a sua conexão e tente de novo.",
+   "starters": [
+    "Quando posso entrar de novo?",
+    "O que eu preciso vestir?",
+    "E se cair na minha pele?",
+    "O patrão pode me mandar entrar antes da hora?"
+   ],
+   "clear": "Nova conversa",
+   "listen": "Ouvir",
+   "call911": "Ligar para 911",
+   "chats": "Suas conversas",
+   "noChats": "Suas conversas aparecem aqui. Elas ficam salvas na sua conta.",
+   "remove": "Apagar conversa",
+   "retry": "Tentar de novo",
+   "talk": "Falar",
+   "talkHint": "Fale em qualquer idioma. O Rowen ouve e responde em voz alta.",
+   "voiceListening": "Ouvindo",
+   "voiceThinking": "Pensando",
+   "voiceSpeaking": "Toque para interromper",
+   "voiceTap": "Toque para falar",
+   "voiceBlocked": "O Rowen precisa do seu microfone. Permita nas opções do navegador e tente de novo.",
+   "voiceFailed": "Não deu certo. Toque para tentar de novo.",
+   "close": "Fechar"
+  },
+  "result": {
+   "askAbout": "Pergunte sobre este rótulo",
+   "supervisor": "Mostrar ao encarregado",
+   "share": "Mandar para o pessoal",
+   "shared": "Link pronto para mandar",
+   "copied": "Link copiado",
+   "shareFailed": "Não deu para criar o link. Tente de novo.",
+   "howRead": "Como o Rowen leu isto",
+   "confidence": {
+    "high": "Leitura clara",
+    "medium": "Bom conferir",
+    "low": "Ficou em dúvida"
+   },
+   "confidenceNote": {
+    "high": "O rótulo estava bem nítido e todas as respostas abaixo estavam escritas nele.",
+    "medium": "Algumas letras eram pequenas ou estavam meio escondidas. Olhe o rótulo ou pergunte.",
+    "low": "O Rowen não tem certeza de uma parte disto. Pergunte ao encarregado."
+   },
+   "fields": {
+    "product": "Produto",
+    "signal": "Palavra de aviso",
+    "reentry": "Tempo para entrar de novo",
+    "gear": "O que vestir",
+    "firstAid": "Primeiros socorros"
+   },
+   "others": "Também nesta foto"
+  },
+  "supervisorCard": {
+   "close": "Fechar",
+   "intro": "Mostre esta tela para o seu encarregado."
+  },
+  "coach": {
+   "dark": "Muito escuro. Vá para a luz ou acenda mais luzes.",
+   "bright": "Muito claro. Mude de posição para o sol não bater no rótulo.",
+   "blurry": "Ficou meio embaçado. Segure o celular firme e chegue mais perto.",
+   "useAnyway": "Usar assim mesmo"
+  },
+  "symptoms": {
+   "title": "Como você está se sentindo?",
+   "intro": "Toque em tudo o que está sentindo agora. O Rowen diz para quem ligar.",
+   "list": [
+    "Dor de cabeça",
+    "Tontura",
+    "Enjoo",
+    "Vomitando",
+    "Olhos ardendo",
+    "Manchas ou ardência na pele",
+    "Suando muito",
+    "Músculos tremendo sozinhos",
+    "Muito cansaço",
+    "Cãibras",
+    "Falta de ar",
+    "Dor no peito",
+    "Confuso",
+    "Desmaiou"
+   ],
+   "note": "Mais alguma coisa? Diga com as suas palavras.",
+   "check": "Diga o que devo fazer",
+   "checking": "Conferindo...",
+   "failed": "Não deu para checar. Se estiver passando muito mal, ligue para 911.",
+   "again": "Começar de novo",
+   "callPoison": "Centro de Intoxicação"
+  },
+  "paper": {
+   "title": "Ler um papel",
+   "intro": "Tire foto de qualquer papel do trabalho. O Rowen explica no seu idioma.",
+   "take": "Tirar foto",
+   "choose": "Escolher uma foto",
+   "reading": "Lendo o papel...",
+   "failed": "Não deu para ler. Veja a sua conexão e tente de novo.",
+   "unreadable": "Não deu para ler este papel. Chegue mais perto, segure firme e tente de novo.",
+   "actions": "O que você precisa fazer",
+   "dates": "Datas e valores",
+   "another": "Ler outro papel"
+  },
+  "report": {
+   "title": "Avisar sobre um problema",
+   "intro": "Conte o que houve com as suas palavras. O Rowen escreve um relatório claro em inglês para você dar ao rancheiro ou ao condado.",
+   "placeholder": "Por exemplo: Aplicaram veneno no campo ao lado enquanto a gente colhia e o vento jogou tudo em cima da gente.",
+   "when": "Quando aconteceu?",
+   "write": "Escrever o meu relatório",
+   "writing": "Escrevendo...",
+   "failed": "Não deu para escrever o relatório. Tente de novo.",
+   "english": "Relatório em inglês",
+   "yourLanguage": "O que está escrito",
+   "missing": "Coloque isto para ficar mais completo",
+   "copy": "Copiar",
+   "copied": "Copiado",
+   "share": "Mandar",
+   "edit": "Mudar a história"
+  },
+  "brief": {
+   "title": "Plano de hoje",
+   "intro": "O Rowen olha os seus horários e o calor de hoje e fala o plano para você ouvir.",
+   "make": "Diga o plano de hoje",
+   "making": "Montando o seu plano...",
+   "failed": "Não deu para montar o plano. Veja a sua conexão.",
+   "listen": "Ouvir",
+   "again": "Atualizar"
+  },
+  "map": {
+   "title": "Mapa de venenos",
+   "intro": "Cada rótulo lido fica marcado no lugar exato onde você estava.",
+   "empty": "Nenhum rótulo marcado ainda. Escaneie um rótulo com a localização ligada.",
+   "loading": "Carregando o que você escaneou...",
+   "failed": "Não deu para carregar os seus rótulos.",
+   "noPlace": "Estes rótulos estão sem localização."
+  },
+  "alarms": {
+   "allow": "Me avise quando for seguro",
+   "on": "O alarme está ligado",
+   "safeTitle": "Já pode entrar",
+   "safeBody": "O tempo de espera terminou para",
+   "waterTitle": "Beba água",
+   "waterBody": "Está quente. Beba cerca de 1 litro a cada hora.",
+   "waterOn": "Me lembre de beber água a cada hora",
+   "waterOff": "Avisos de água ligados"
+  },
+  "install": {
+   "title": "Ponha o Rowen no seu celular",
+   "body": "Ele abre como um aplicativo, e os rótulos salvos, os horários e o que fazer se cair veneno funcionam mesmo sem sinal.",
+   "button": "Pôr na tela de início",
+   "ios": "No iPhone: aperte Compartilhar e depois Adicionar à Tela de Início.",
+   "done": "O Rowen já está na sua tela de início."
+  }
+ },
+ "1i1pcy3": {
+  "reading": [
+   "Lendo o rótulo",
+   "Buscando o tempo de reentrada",
+   "Explicando de um jeito simples"
+  ],
+  "saved": "Salvo no seu histórico",
+  "choose": "Escolher uma foto"
+ },
+ "10g6smy": {
+  "hint": "Enquadre todo o rótulo dentro da tela",
+  "capture": "Tirar foto",
+  "retake": "Tirar outra",
+  "use": "Ler este rótulo",
+  "flip": "Trocar de câmera",
+  "gallery": "Escolher uma foto",
+  "close": "Fechar a câmera",
+  "blocked": "O Rowen não consegue abrir a câmera aqui. Permita o acesso à câmera nas configurações do seu navegador ou use o aplicativo de câmera do seu celular.",
+  "openApp": "Usar o aplicativo de câmera"
+ },
+ "pyuh1i": {
+  "tab": "Salvos",
+  "title": "Suas leituras",
+  "intro": "Cada rótulo que você escaneia fica salvo na sua conta, em qualquer celular.",
+  "empty": "Nada salvo ainda. Escaneie um rótulo e ele vai aparecer aqui com a foto dele.",
+  "failed": "Não deu para carregar suas leituras. Veja se o sinal de internet está bom e tente de novo.",
+  "remove": "Apagar"
+ },
+ "1swsqbl": {
+  "gear": {
+   "title": "Checagem do equipamento",
+   "intro": "Tire uma foto sua antes de entrar. O Rowen confere se você está com a proteção que o rótulo pede.",
+   "forProduct": "Checando o equipamento para",
+   "noLabel": "Nenhum rótulo escaneado ainda, então o Rowen vai checar o equipamento de costume.",
+   "defaultGear": [
+    "Camisa de manga comprida",
+    "Calça comprida",
+    "Luvas resistentes a químicos",
+    "Sapatos e meias"
+   ],
+   "take": "Tirar uma foto minha",
+   "hint": "Dê um passo para trás para que seus braços, mãos e pés apareçam.",
+   "checking": "Olhando seu equipamento...",
+   "verdict": {
+    "ready": "Tudo pronto com você",
+    "missing": "Arrume isso antes de entrar",
+    "unsure": "O Rowen não conseguiu ver tudo"
+   },
+   "status": {
+    "on": "No corpo",
+    "missing": "Faltando",
+    "unsure": "Não dá para ver"
+   },
+   "noPerson": "O Rowen não achou ninguém nessa foto. Dê um passo para trás e tente de novo.",
+   "failed": "Não deu para checar a foto. Veja sua conexão e tente de novo.",
+   "again": "Checar de novo"
+  },
+  "pay": {
+   "title": "Checagem do pagamento",
+   "intro": "Tire uma foto do seu contracheque. O Rowen vai ler e conferir com as regras de pagamento da Califórnia.",
+   "take": "Tirar foto do meu contracheque",
+   "choose": "Escolher uma foto",
+   "reading": "Lendo seu contracheque...",
+   "period": "Período de pagamento",
+   "hours": "Horas",
+   "rate": "Valor por hora",
+   "gross": "Antes dos descontos",
+   "net": "O que você leva",
+   "verdict": {
+    "ok": "Parece certo",
+    "ask": "Pergunte sobre isso",
+    "unclear": "Difícil de ler"
+   },
+   "status": {
+    "ok": "Parece certo",
+    "ask": "Pergunte sobre",
+    "missing": "Não está no papel"
+   },
+   "labor": "Ligue para o Comissário do Trabalho",
+   "notStub": "Isso não parece um contracheque. Tente tirar uma foto mais nítida.",
+   "failed": "Não deu para ler a foto. Veja sua conexão e tente de novo.",
+   "again": "Checar outro",
+   "privacy": "A foto não fica salva em lugar nenhum."
+  },
+  "interpret": {
+   "title": "Intérprete",
+   "intro": "Converse com um supervisor, enfermeiro ou atendente. Cada um toca no seu lado e fala, e o Rowen fala em voz alta na outra língua.",
+   "me": "Eu",
+   "them": "Eles",
+   "other": "Eles falam",
+   "listening": "Ouvindo... toque para parar",
+   "translating": "Traduzindo...",
+   "tapToStop": "Toque para parar",
+   "empty": "Toque no seu lado e fale. Passe o telefone quando for a vez da outra pessoa.",
+   "failed": "Não deu certo. Tente de novo.",
+   "blocked": "O Rowen precisa do seu microfone. Dê permissão nas opções do seu navegador.",
+   "clear": "Começar do zero",
+   "replay": "Falar de novo",
+   "unsupported": "Este navegador não grava áudio. Tente usar o Chrome ou o Safari."
+  }
+ }
+}

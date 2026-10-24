@@ -20,7 +20,7 @@ const notoGurmukhi = Noto_Sans_Gurmukhi({
 });
 
 export const metadata: Metadata = {
-  title: "Furrow",
+  title: "Rowen",
   description:
     "Photograph a pesticide label or field sign and get the safety details in Spanish, Punjabi or English.",
 };

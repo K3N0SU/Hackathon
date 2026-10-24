@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AppShell } from "@/components/app-shell";
 
 export const metadata: Metadata = {
-  title: "Furrow",
+  title: "Rowen",
 };
 
 export default function ScanPage() {

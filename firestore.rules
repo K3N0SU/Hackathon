@@ -15,6 +15,13 @@ service cloud.firestore {
         allow create, update: if verified(uid)
           && request.resource.data.size() < 20;
       }
+
+      match /chats/{chatId} {
+        allow read, delete: if verified(uid);
+        allow create, update: if verified(uid)
+          && request.resource.data.size() < 10
+          && request.resource.data.messages.size() <= 60;
+      }
     }
 
     match /shares/{shareId} {

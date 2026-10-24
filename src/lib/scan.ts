@@ -1,6 +1,21 @@
 export type CoreLanguage = "en" | "es" | "pa";
 
-export type Language = CoreLanguage | "hmn" | "tl" | "hi" | "ar" | "vi";
+export type Language =
+  | CoreLanguage
+  | "hmn"
+  | "tl"
+  | "hi"
+  | "ar"
+  | "vi"
+  | "fr"
+  | "ur"
+  | "zh"
+  | "ko"
+  | "ru"
+  | "hy"
+  | "fa"
+  | "ja"
+  | "pt";
 
 export type Signal = "caution" | "warning" | "danger" | "unknown";
 
@@ -44,6 +59,15 @@ export const languages: {
   { code: "hi", name: "हिन्दी", english: "Hindi", speech: "hi-IN" },
   { code: "ar", name: "العربية", english: "Arabic", speech: "ar", rtl: true },
   { code: "vi", name: "Tiếng Việt", english: "Vietnamese", speech: "vi-VN" },
+  { code: "zh", name: "中文", english: "Chinese", speech: "zh-CN" },
+  { code: "ko", name: "한국어", english: "Korean", speech: "ko-KR" },
+  { code: "ur", name: "اردو", english: "Urdu", speech: "ur-PK", rtl: true },
+  { code: "fa", name: "فارسی", english: "Farsi", speech: "fa-IR", rtl: true },
+  { code: "hy", name: "Հայերեն", english: "Armenian", speech: "hy-AM" },
+  { code: "ru", name: "Русский", english: "Russian", speech: "ru-RU" },
+  { code: "fr", name: "Français", english: "French", speech: "fr-FR" },
+  { code: "pt", name: "Português", english: "Portuguese", speech: "pt-BR" },
+  { code: "ja", name: "日本語", english: "Japanese", speech: "ja-JP" },
 ];
 
 export const languageNames: Record<Language, string> = {
@@ -55,6 +79,15 @@ export const languageNames: Record<Language, string> = {
   hi: "Hindi (Devanagari script)",
   ar: "Arabic",
   vi: "Vietnamese",
+  fr: "French",
+  ur: "Urdu (Nastaliq script)",
+  zh: "Simplified Chinese",
+  ko: "Korean",
+  ru: "Russian",
+  hy: "Eastern Armenian",
+  fa: "Farsi (Persian)",
+  ja: "Japanese",
+  pt: "Portuguese",
 };
 
 export function isLanguage(value: unknown): value is Language {
@@ -109,7 +142,7 @@ export const copy: Record<CoreLanguage, Copy> = {
   en: {
     headline: "Know before you enter the field.",
     tagline:
-      "Take a photo of a pesticide label or a field sign. Furrow tells you, in your language, when it is safe to go back in and how to protect yourself.",
+      "Take a photo of a pesticide label or a field sign. Rowen tells you, in your language, when it is safe to go back in and how to protect yourself.",
     scan: "Photograph a label or sign",
     samples: "Or try an example",
     reading: "Reading the label",
@@ -148,7 +181,7 @@ export const copy: Record<CoreLanguage, Copy> = {
   es: {
     headline: "Sepa antes de entrar al campo.",
     tagline:
-      "Tome una foto de una etiqueta de pesticida o de un letrero del campo. Furrow le dice, en su idioma, cuándo es seguro volver a entrar y cómo protegerse.",
+      "Tome una foto de una etiqueta de pesticida o de un letrero del campo. Rowen le dice, en su idioma, cuándo es seguro volver a entrar y cómo protegerse.",
     scan: "Fotografiar etiqueta o letrero",
     samples: "O pruebe un ejemplo",
     reading: "Leyendo la etiqueta",
@@ -187,7 +220,7 @@ export const copy: Record<CoreLanguage, Copy> = {
   pa: {
     headline: "ਖੇਤ ਵਿੱਚ ਜਾਣ ਤੋਂ ਪਹਿਲਾਂ ਜਾਣੋ।",
     tagline:
-      "ਕੀਟਨਾਸ਼ਕ ਲੇਬਲ ਜਾਂ ਖੇਤ ਦੇ ਸਾਈਨ ਦੀ ਫੋਟੋ ਖਿੱਚੋ। Furrow ਤੁਹਾਡੀ ਭਾਸ਼ਾ ਵਿੱਚ ਦੱਸੇਗਾ ਕਿ ਵਾਪਸ ਅੰਦਰ ਜਾਣਾ ਕਦੋਂ ਸੁਰੱਖਿਅਤ ਹੈ ਅਤੇ ਆਪਣਾ ਬਚਾਅ ਕਿਵੇਂ ਕਰਨਾ ਹੈ।",
+      "ਕੀਟਨਾਸ਼ਕ ਲੇਬਲ ਜਾਂ ਖੇਤ ਦੇ ਸਾਈਨ ਦੀ ਫੋਟੋ ਖਿੱਚੋ। Rowen ਤੁਹਾਡੀ ਭਾਸ਼ਾ ਵਿੱਚ ਦੱਸੇਗਾ ਕਿ ਵਾਪਸ ਅੰਦਰ ਜਾਣਾ ਕਦੋਂ ਸੁਰੱਖਿਅਤ ਹੈ ਅਤੇ ਆਪਣਾ ਬਚਾਅ ਕਿਵੇਂ ਕਰਨਾ ਹੈ।",
     scan: "ਲੇਬਲ ਜਾਂ ਸਾਈਨ ਦੀ ਫੋਟੋ ਖਿੱਚੋ",
     samples: "ਜਾਂ ਇੱਕ ਨਮੂਨਾ ਅਜ਼ਮਾਓ",
     reading: "ਲੇਬਲ ਪੜ੍ਹ ਰਿਹਾ ਹੈ",

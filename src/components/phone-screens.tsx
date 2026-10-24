@@ -59,7 +59,7 @@ function Header() {
   return (
     <div className="flex items-center gap-2 px-5 pt-11 font-heading text-lg font-semibold text-primary">
       <Mark className="size-5" />
-      Furrow
+      Rowen
     </div>
   );
 }
@@ -409,7 +409,7 @@ export function AskScreen() {
       <Header />
       <div className="px-5 pt-4">
         <p className="screen-in font-display text-3xl font-semibold leading-none text-primary">
-          Ask Furrow
+          Ask Rowen
         </p>
         <p
           className="screen-in mt-1 text-[11px] text-muted-foreground"

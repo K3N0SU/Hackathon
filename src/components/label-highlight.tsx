@@ -6,7 +6,7 @@ import { useScrollProgress } from "@/components/motion";
 import { samples } from "@/lib/samples";
 
 const story =
-  "Every spray comes with a label. It says how long to stay out of the rows, what to wear, and what to do if it touches your skin. It is printed small, in English, on the back of a drum most workers never see. Furrow puts that label in your pocket, in the language you think in.";
+  "Every spray comes with a label. It says how long to stay out of the rows, what to wear, and what to do if it touches your skin. It is printed small, in English, on the back of a drum most workers never see. Rowen puts that label in your pocket, in the language you think in.";
 
 const regions = [
   { top: 83, height: 7, title: "Re-entry: 12 hours" },

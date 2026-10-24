@@ -1,7 +1,7 @@
 {
  "uybgyd": {
   "headline": "Alamin muna bago pumasok sa bukid.",
-  "tagline": "Kumuha ng litrato ng pesticide label o karatula sa bukid. Sasabihin sa iyo ng Furrow, sa sarili mong wika, kung kailan ligtas bumalik at paano protektahan ang sarili.",
+  "tagline": "Kumuha ng litrato ng pesticide label o karatula sa bukid. Sasabihin sa iyo ng Rowen, sa sarili mong wika, kung kailan ligtas bumalik at paano protektahan ang sarili.",
   "scan": "Litratahan ang label o karatula",
   "samples": "O subukan ang isang halimbawa",
   "reading": "Binabasa ang label",
@@ -106,7 +106,7 @@
   "signUp": "Gumawa ng account",
   "google": "Magpatuloy gamit ang Google",
   "or": "o",
-  "noAccount": "Bago ka ba sa Furrow?",
+  "noAccount": "Bago ka ba sa Rowen?",
   "createOne": "Gumawa ng account",
   "haveAccount": "May account ka na ba?",
   "signInLink": "Mag-sign in",
@@ -137,195 +137,220 @@
    "notConfigured": "Hindi pa naiaayos ang sign in sa site na ito."
   }
  },
- "1moh18d": {
+ "1nenh57": {
   "tabs": {
    "scan": "I-scan",
    "ask": "Magtanong",
-   "tools": "Mga Tool",
+   "tools": "Mga Gamit",
    "saved": "Nai-save"
   },
   "language": "Wika",
   "chooseLanguage": "Piliin ang iyong wika",
   "back": "Bumalik",
-  "toolsTitle": "Mga Tool",
-  "toolsIntro": "Lahat ng kayang gawin ng Furrow. Pindutin ang isa.",
+  "toolsTitle": "Mga Gamit",
+  "toolsIntro": "Lahat ng kayang gawin ng Rowen. Pindutin ang isa.",
   "tools": {
    "heat": {
-    "title": "Tingnan ang init",
+    "title": "Alamin ang init",
     "body": "Pinakamainit na oras ngayon at ang iyong mga karapatan"
    },
    "symptoms": {
     "title": "Masama ang pakiramdam ko",
-    "body": "Alamin kung sino ang tatawagan"
+    "body": "Alamin kung sino ang dapat tawagan"
    },
    "exposed": {
-    "title": "Na-spray-an",
-    "body": "911, oras ng pagbanlaw, card para sa doktor"
+    "title": "Nawisikan o naispreyhan",
+    "body": "911, oras ng paghugas, kard para sa doktor"
    },
    "paper": {
     "title": "Magbasa ng papel",
-    "body": "Mga abiso, pay stub, mga form"
+    "body": "Mga abiso, pay stub, mga pormularyo"
    },
    "report": {
     "title": "Mag-ulat ng problema",
-    "body": "Sabihin ito, kumuha ng ulat sa English"
+    "body": "Sabihin ito, kumuha ng ulat sa Ingles"
    },
    "brief": {
-    "title": "Plano para sa araw na ito",
-    "body": "Iyong mga block at init, papakinggan nang malakas"
+    "title": "Plano ngayong araw",
+    "body": "Ang iyong mga bloke at init, papakinggan mo"
    },
    "map": {
-    "title": "Mapa ng pag-spray",
+    "title": "Mapa ng isprey",
     "body": "Kung saan ka nag-scan ng mga label"
    },
    "install": {
     "title": "Ilagay sa telepono",
-    "body": "Buksan ang Furrow na parang app"
+    "body": "Buksan ang Rowen tulad ng isang app"
+   },
+   "gear": {
+    "title": "Suriin ang suot",
+    "body": "Litrato mo, ikukumpara sa label"
+   },
+   "pay": {
+    "title": "Suriin ang sahod",
+    "body": "Tama ba ang iyong pay stub?"
+   },
+   "interpret": {
+    "title": "Tagasalin",
+    "body": "Kausapin ang iyong superbisor o nars"
    }
   },
   "ask": {
-   "title": "Magtanong sa Furrow",
+   "title": "Magtanong sa Rowen",
    "about": "Tungkol sa",
-   "general": "Magtanong tungkol sa mga pestisidyo, init, o iyong mga karapatan sa trabaho.",
-   "placeholder": "Mag-type o pindutin ang mikropono",
+   "general": "Magtanong tungkol sa pestisidyo, init o iyong mga karapatan sa trabaho.",
+   "placeholder": "Mag-type o pindutin ang mic",
    "send": "Ipadala",
-   "listening": "Nakikinig...",
+   "listening": "Nanonood...",
    "thinking": "Nag-iisip...",
-   "failed": "Hindi makuha ang sagot. Tingnan ang iyong koneksyon at subukan ulit.",
+   "failed": "Hindi makakuha ng sagot. Tingnan ang iyong koneksyon at subukan ulit.",
    "starters": [
-    "Kailan ako puwedeng bumalik sa loob?",
+    "Kailan ako puwedeng pumasok ulit?",
     "Ano ang kailangan kong isuot?",
-    "Paano kung mapunta ito sa balat ko?",
+    "Paano kung malagyan ang balat ko?",
     "Puwede ba akong pilitin ng boss ko na pumasok nang maaga?"
    ],
    "clear": "Bagong chat",
-   "listen": "Makinig",
-   "call911": "Tumawag sa 911"
+   "listen": "Pakinggan",
+   "call911": "Tumawag sa 911",
+   "chats": "Iyong mga chat",
+   "noChats": "Dito lalabas ang mga chat mo. Naka-save ang mga ito sa iyong account.",
+   "remove": "Burahin ang chat",
+   "retry": "Subukan ulit",
+   "talk": "Magsalita",
+   "talkHint": "Magsalita sa anumang wika. Makikinig ang Rowen, tapos sasagot nang malakas.",
+   "voiceListening": "Nakikinig",
+   "voiceThinking": "Nag-iisip",
+   "voiceSpeaking": "Pindutin para pigilin",
+   "voiceTap": "Pindutin para magsalita",
+   "voiceBlocked": "Kailangan ng Rowen ang iyong mikropono. Payagan ito sa mga setting ng browser, tapos subukan ulit.",
+   "voiceFailed": "Hindi iyon pumasok. Pindutin para subukan ulit.",
+   "close": "Isara"
   },
   "result": {
    "askAbout": "Magtanong tungkol sa label na ito",
-   "supervisor": "Ipakita sa aking supervisor",
-   "share": "Ibahagi sa mga kasama sa trabaho",
+   "supervisor": "Ipakita sa aking superbisor",
+   "share": "Ibahagi sa mga kasamahan",
    "shared": "Handa nang ibahagi ang link",
-   "copied": "Nakopya na ang link",
+   "copied": "Nakopya ang link",
    "shareFailed": "Hindi makagawa ng link. Subukan ulit.",
-   "howRead": "Paano ito binasa ng Furrow",
+   "howRead": "Paano ito binasa ng Rowen",
    "confidence": {
-    "high": "Malinaw ang pagbasa",
-    "medium": "Tingnan ito nang mabuti",
+    "high": "Malinaw ang basa",
+    "medium": "Tingnan ito",
     "low": "Hindi sigurado"
    },
    "confidenceNote": {
-    "high": "Malinaw ang label at nakasulat dito ang bawat sagot sa ibaba.",
+    "high": "Malinaw ang label at bawat sagot sa ibaba ay nakasulat doon.",
     "medium": "Maliit o medyo natatakpan ang ilang salita. Tingnan ang label o magtanong.",
-    "low": "Hindi sigurado ang Furrow sa bahaging ito. Magtanong sa iyong supervisor."
+    "low": "Hindi sigurado ang Rowen sa bahaging ito. Magtanong sa iyong superbisor."
    },
    "fields": {
     "product": "Produkto",
     "signal": "Salitang babala",
-    "reentry": "Pagbalik sa loob",
+    "reentry": "Muling pagpasok",
     "gear": "Dapat isuot",
-    "firstAid": "Pangunang lunas"
+    "firstAid": "Paunang lunas"
    },
-   "others": "Nasa litratong ito rin"
+   "others": "Kasamang nasa litratong ito"
   },
   "supervisorCard": {
    "close": "Isara",
-   "intro": "Ipakita ang screen na ito sa iyong supervisor."
+   "intro": "Ipakita ang screen na ito sa iyong superbisor."
   },
   "coach": {
    "dark": "Masyadong madilim. Lumipat sa may liwanag o magbukas ng ilaw.",
-   "bright": "Masyadong maliwanag. Umiwas para hindi masikatan ng araw ang label.",
-   "blurry": "Medyo malabo. Hawakan nang maayos ang telepono at lumapit pa.",
+   "bright": "Masyadong maliwanag. Umiwas para hindi nakatutok ang araw sa label.",
+   "blurry": "Medyo malabo. Huwag igalaw ang telepono at lumapit pa.",
    "useAnyway": "Gamitin pa rin ito"
   },
   "symptoms": {
    "title": "Ano ang nararamdaman mo?",
-   "intro": "Pindutin ang lahat ng nararamdaman mo ngayon. Sasabihin ng Furrow kung sino ang dapat tawagan.",
+   "intro": "Pindutin ang lahat ng nararamdaman mo ngayon. Sasabihin ng Rowen kung sino ang tatawagan.",
    "list": [
     "Sakit ng ulo",
     "Nahihilo",
     "Nasusuka",
     "Nagsusuka",
-    "Mahapdi ang mga mata",
+    "Mahapdi ang mata",
     "Pantal o mahapding balat",
-    "Labis na pinagpapawisan",
-    "Nanginginig ang kalamnan",
-    "Sobrang pagod",
+    "Labis na pagpapawis",
+    "Nanginginig na kalamnan",
+    "Pagod na pagod",
     "Pulikat",
-    "Nahihirapang huminga",
+    "Hirap huminga",
     "Sakit sa dibdib",
     "Nalilito",
     "Nawalan ng malay"
    ],
-   "note": "May iba pa ba? Sabihin gamit ang sarili mong mga salita.",
+   "note": "May iba pa ba? Sabihin ito sa sarili mong mga salita.",
    "check": "Sabihin kung ano ang dapat kong gawin",
    "checking": "Sinusuri...",
-   "failed": "Hindi masuri. Kung masamang-masama ang pakiramdam mo, tumawag sa 911.",
-   "again": "Ulitin mula sa simula",
+   "failed": "Hindi masuri. Kung napakasama ng pakiramdam mo, tumawag sa 911.",
+   "again": "Magsimula ulit",
    "callPoison": "Poison Control"
   },
   "paper": {
    "title": "Magbasa ng papel",
-   "intro": "Kumuha ng litrato ng anumang papel mula sa trabaho. Ipapaliwanag ito ng Furrow sa iyong wika.",
+   "intro": "Kumuha ng litrato ng anumang papel mula sa trabaho. Ipapaliwanag ito ng Rowen sa iyong wika.",
    "take": "Kumuha ng litrato",
    "choose": "Pumili ng litrato",
    "reading": "Binabasa ang papel...",
-   "failed": "Hindi mabasa ito. Tingnan ang iyong koneksyon at subukan ulit.",
-   "unreadable": "Hindi namin ito mabasa. Lumapit pa, huwag igalaw ang telepono, at subukan ulit.",
-   "actions": "Ang kailangan mong gawin",
+   "failed": "Hindi ito mabasa. Tingnan ang iyong koneksyon at subukan ulit.",
+   "unreadable": "Hindi namin ito mabasa. Lumapit pa, huwag igalaw, at subukan ulit.",
+   "actions": "Kailangan mong gawin",
    "dates": "Mga petsa at halaga",
    "another": "Magbasa ng isa pang papel"
   },
   "report": {
    "title": "Mag-ulat ng problema",
-   "intro": "Sabihin ang nangyari sa sarili mong mga salita. Magsusulat ang Furrow ng malinaw na ulat sa English na puwede mong ibigay sa may-ari ng bukid o sa county.",
-   "placeholder": "Halimbawa: Nag-spray sila sa katabing field habang nag-aani kami at tinangay ito ng hangin papunta sa amin.",
+   "intro": "Sabihin ang nangyari gamit ang sarili mong mga salita. Gagawa ang Rowen ng malinaw na ulat sa Ingles na puwede mong ibigay sa may-ari ng bukid o sa county.",
+   "placeholder": "Halimbawa: Nag-isprey sila sa katabing bukid habang namimitas kami at nahipan ito papunta sa amin.",
    "when": "Kailan ito nangyari?",
    "write": "Isulat ang aking ulat",
-   "writing": "Nagsusulat...",
+   "writing": "Isinusulat...",
    "failed": "Hindi maisulat ang ulat. Subukan ulit.",
-   "english": "Ulat sa English",
+   "english": "Ulat sa Ingles",
    "yourLanguage": "Ang sinasabi nito",
-   "missing": "Idagdag ang mga ito para mas maging malinaw",
+   "missing": "Idagdag ang mga ito para mas buo ang ulat",
    "copy": "Kopyahin",
    "copied": "Nakopya na",
    "share": "Ipadala",
-   "edit": "Baguhin ang aking kuwento"
+   "edit": "Baguhin ang kuwento ko"
   },
   "brief": {
-   "title": "Plano para sa araw na ito",
-   "intro": "Tinitingnan ng Furrow ang iyong mga orasan at ang init ngayong araw at malakas na sasabihin sa iyo ang plano.",
-   "make": "Sabihin sa akin ang plano ngayong araw",
+   "title": "Plano ngayong araw",
+   "intro": "Tinitingnan ng Rowen ang iyong mga orasan at ang init ngayon, at sasabihin sa iyo ang plano nang malakas.",
+   "make": "Sabihin ang plano ngayong araw",
    "making": "Ginagawa ang iyong plano...",
    "failed": "Hindi magawa ang plano. Tingnan ang iyong koneksyon.",
-   "listen": "Makinig",
+   "listen": "Pakinggan",
    "again": "I-update"
   },
   "map": {
-   "title": "Mapa ng pag-spray",
-   "intro": "Bawat label na iyong i-scan ay nilalagyan ng marka kung saan ka nakatayo.",
-   "empty": "Wala pang markang mga scan. Mag-scan ng label habang naka-on ang lokasyon.",
-   "loading": "Kinukuha ang iyong mga scan...",
-   "failed": "Hindi makuha ang iyong mga scan.",
+   "title": "Mapa ng isprey",
+   "intro": "Bawat label na i-scan mo ay mamarkahan kung saan ka nakatayo.",
+   "empty": "Wala pang namamarkahang na-scan. Mag-scan ng label habang bukas ang lokasyon.",
+   "loading": "Kinukuha ang iyong mga na-scan...",
+   "failed": "Hindi makuha ang iyong mga na-scan.",
    "noPlace": "Walang lokasyon ang mga scan na ito."
   },
   "alarms": {
    "allow": "I-buzz ako kapag ligtas na",
-   "on": "Naka-on ang alarma",
-   "safeTitle": "Ligtas nang bumalik sa loob",
-   "safeBody": "Tapos na ang oras ng pagbalik sa loob para sa",
+   "on": "Bukas ang alarma",
+   "safeTitle": "Ligtas nang bumalik",
+   "safeBody": "Tapos na ang oras ng paghihintay para sa",
    "waterTitle": "Uminom ng tubig",
    "waterBody": "Mainit ngayon. Uminom ng mga isang quart bawat oras.",
    "waterOn": "Paalalahanan akong uminom bawat oras",
-   "waterOff": "Naka-on ang mga paalala sa tubig"
+   "waterOff": "Bukas ang mga paalala sa tubig"
   },
   "install": {
-   "title": "Ilagay ang Furrow sa iyong telepono",
-   "body": "Bubukas ito na parang app, at gagana ang iyong mga nai-save na scan, orasan, at mga hakbang sa na-spray-an kahit walang signal.",
+   "title": "Ilagay ang Rowen sa iyong telepono",
+   "body": "Bubukas ito tulad ng isang app, at gagana ang iyong mga na-save na scan, mga orasan, at ang mga hakbang kapag nawisikan kahit walang signal.",
    "button": "Idagdag sa home screen",
-   "ios": "Sa iPhone: pindutin ang Ibahagi, pagkatapos ay Idagdag sa Home Screen.",
-   "done": "Nasa iyong home screen na ang Furrow."
+   "ios": "Sa iPhone: pindutin ang Share, tapos Add to Home Screen.",
+   "done": "Nasa home screen mo na ang Rowen."
   }
  },
  "1i1pcy3": {
@@ -345,7 +370,7 @@
   "flip": "Ilipat ang camera",
   "gallery": "Pumili ng litrato",
   "close": "Isara ang camera",
-  "blocked": "Hindi mabuksan ng Furrow ang camera dito. Payagan ang camera sa settings ng iyong browser, o gamitin ang camera app ng iyong telepono.",
+  "blocked": "Hindi mabuksan ng Rowen ang camera dito. Payagan ang camera sa settings ng iyong browser, o gamitin ang camera app ng iyong telepono.",
   "openApp": "Gamitin ang camera app"
  },
  "pyuh1i": {
@@ -355,5 +380,78 @@
   "empty": "Wala pang naka-save. Mag-scan ng label at lalabas ito rito kasama ang litrato nito.",
   "failed": "Hindi ma-load ang mga na-scan mo. Tingnan ang signal mo at subukan ulit.",
   "remove": "Burahin"
+ },
+ "1swsqbl": {
+  "gear": {
+   "title": "Pagsusuri ng gamit",
+   "intro": "Mag-selfie bago ka pumasok. Susuriin ito ng Rowen ayon sa gamit na kailangan sa label.",
+   "forProduct": "Sinusuri ang gamit para sa",
+   "noLabel": "Wala pang na-scan na label, kaya karaniwang gamit ang sinusuri ng Rowen.",
+   "defaultGear": [
+    "Damit na may mahabang manggas",
+    "Mahabang pantalon",
+    "Glafs na panlaban sa kemikal",
+    "Sapatos at medyas"
+   ],
+   "take": "Kunan ako ng litrato",
+   "hint": "Umatras nang kaunti para kita ang iyong mga braso, kamay, at paa.",
+   "checking": "Tinitingnan ang iyong gamit...",
+   "verdict": {
+    "ready": "Mukhang handa ka na",
+    "missing": "Ayusin ito bago ka pumasok",
+    "unsure": "Hindi nakita ng Rowen ang lahat"
+   },
+   "status": {
+    "on": "Nakasout",
+    "missing": "Kulang",
+    "unsure": "Hindi kita"
+   },
+   "noPerson": "Walang nakitang tao ang Rowen sa litrato. Umatras at subukan ulit.",
+   "failed": "Hindi nasuri ang litrato. Tingnan ang iyong koneksyon at subukan ulit.",
+   "again": "Suriin ulit"
+  },
+  "pay": {
+   "title": "Pagsusuri ng sahod",
+   "intro": "Kunan ng litrato ang iyong pay stub. Babasahin ito ng Rowen at susuriin ayon sa mga patakaran sa sahod sa California.",
+   "take": "Kunan ng litrato ang aking pay stub",
+   "choose": "Pumili ng litrato",
+   "reading": "Binabasa ang iyong pay stub...",
+   "period": "Panahon ng suweldo",
+   "hours": "Mga oras",
+   "rate": "Sahod kada oras",
+   "gross": "Bago ang kaltas",
+   "net": "Naiuwi na sahod",
+   "verdict": {
+    "ok": "Mukhang tama ito",
+    "ask": "Itanong ito",
+    "unclear": "Mahirap basahin"
+   },
+   "status": {
+    "ok": "Mukhang tama",
+    "ask": "Itanong ito",
+    "missing": "Wala sa stub"
+   },
+   "labor": "Tawagan ang Labor Commissioner",
+   "notStub": "Hindi iyan mukhang pay stub. Kumuha ng mas malinaw na litrato.",
+   "failed": "Hindi nabasa ang litrato. Tingnan ang iyong koneksyon at subukan ulit.",
+   "again": "Suriin ang iba",
+   "privacy": "Hindi naitatabi kahit saan ang litrato."
+  },
+  "interpret": {
+   "title": "Tagasalin",
+   "intro": "Makisalamuha sa supervisor, nars, o kawani. Pindutin ang inyong bahagi at magsalita, at bibigkasin ito ng Rowen sa kabilang wika.",
+   "me": "Ako",
+   "them": "Sila",
+   "other": "Sila ay nagsasalita",
+   "listening": "Nakikinig... pindutin para ihinto",
+   "translating": "Isinasalin...",
+   "tapToStop": "Pindutin para ihinto",
+   "empty": "Pindutin ang iyong bahagi at magsalita. Iabot ang telepono kapag turn na nila.",
+   "failed": "Hindi pumasok iyon. Subukan ulit.",
+   "blocked": "Kailangan ng Rowen ang iyong mikropono. Payagan ito sa settings ng iyong browser.",
+   "clear": "Umpisahan muli",
+   "replay": "Sabihin itong muli",
+   "unsupported": "Hindi kayang mag-record ng tunog ng browser na ito. Subukan ang Chrome o Safari."
+  }
  }
 }

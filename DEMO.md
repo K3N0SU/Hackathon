@@ -1,4 +1,4 @@
-# Demo plan for Furrow
+# Demo plan for Rowen
 
 ## Before you record or present
 
@@ -10,15 +10,15 @@ Run the full path twice before you start. If the live scan is slow, the sample l
 
 Start on the label, before the app. Hold it up: this is what a worker gets before walking into an almond orchard. Small English print. Many people in these rows read Spanish, Punjabi or Hmong first.
 
-Show the landing page for three seconds while the label animates, tap Open Furrow, tap the language button and pick Español. Tap the big camera button, line up the label and shoot, then tap Read this label. While it reads, say: Gemini is reading the photo and returning fixed fields, with the exact label text behind every answer.
+Show the landing page for three seconds while the label animates, tap Open Rowen, tap the language button and pick Español. Tap the big camera button, line up the label and shoot, then tap Read this label. While it reads, say: Gemini is reading the photo and returning fixed fields, with the exact label text behind every answer.
 
-On the result, point at the green box: twelve hours, in Spanish. Tap the Clear read badge to open How Furrow read this and show the quote from the label. Tap Start the clock, then Buzz me when it is safe.
+On the result, point at the green box: twelve hours, in Spanish. Tap the Clear read badge to open How Rowen read this and show the quote from the label. Tap Start the clock, then Buzz me when it is safe.
 
 Tap Ask about this label. Tap the mic and say, in Spanish if you can, "Can I eat lunch in the rows?" Show the answer and tap Listen. Say: it only answers from the label and California's rules, and says "ask your supervisor" when the label doesn't say.
 
 Tap Tools, then I feel sick. Tap Headache and Dizzy, then Tell me what to do, and show the Poison Control card. Tap Back, then Report a problem, tap the mic and say one sentence about drift; show the English report it writes.
 
-Tap the language button and switch to العربية to show the whole app flip right to left, then back. Close on Saved, with the scan and its photo already there. Last line: Furrow. Know before you walk in.
+Tap the language button and switch to العربية to show the whole app flip right to left, then back. Close on Saved, with the scan and its photo already there. Last line: Rowen. Know before you walk in.
 
 ## Rubric, without saying the word rubric
 
@@ -30,7 +30,7 @@ Is it accurate? Not certified. Every answer shows the label words it came from, 
 
 ## Screenshots
 
-Ten phone screenshots are in `Downloads/Furrow screenshots`, ready for the Devpost gallery. Retake any of them on your own phone if you want a real status bar.
+Ten phone screenshots are in `Downloads/Rowen screenshots`, ready for the Devpost gallery. Retake any of them on your own phone if you want a real status bar.
 
 ## Demo video (90 seconds to 2 minutes)
 
@@ -38,4 +38,4 @@ Record the phone screen with the built-in screen recorder and talk over it, foll
 
 ## Slides
 
-`Furrow.pptx` is in your Downloads folder with speaker notes. Upload it to Devpost as is.
+`Rowen.pptx` is in your Downloads folder with speaker notes. Upload it to Devpost as is.

@@ -23,7 +23,7 @@ export function AccountCta({
     <>
       <Magnetic>
         <Link href={signedIn ? "/scan" : "/sign-up"} className={primaryClass}>
-          {signedIn ? "Open Furrow" : primary}
+          {signedIn ? "Open Rowen" : primary}
           <ArrowRight className="size-5 transition-transform duration-300 group-hover:translate-x-1.5" />
         </Link>
       </Magnetic>

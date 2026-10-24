@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { AuthForm } from "@/components/auth-form";
 
 export const metadata: Metadata = {
-  title: "Make an account | Furrow",
+  title: "Make an account | Rowen",
 };
 
 export default function Page() {

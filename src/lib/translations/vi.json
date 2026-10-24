@@ -1,7 +1,7 @@
 {
  "uybgyd": {
   "headline": "Biết rõ trước khi bạn vào ruộng.",
-  "tagline": "Chụp ảnh nhãn thuốc trừ sâu hoặc biển báo ngoài ruộng. Furrow sẽ chỉ cho bạn, bằng tiếng Việt, khi nào vào lại an toàn và cách tự bảo vệ mình.",
+  "tagline": "Chụp ảnh nhãn thuốc trừ sâu hoặc biển báo ngoài ruộng. Rowen sẽ chỉ cho bạn, bằng tiếng Việt, khi nào vào lại an toàn và cách tự bảo vệ mình.",
   "scan": "Chụp ảnh nhãn hoặc biển báo",
   "samples": "Hoặc thử một ví dụ",
   "reading": "Đang đọc nhãn thuốc",
@@ -106,7 +106,7 @@
   "signUp": "Tạo tài khoản",
   "google": "Tiếp tục với Google",
   "or": "hoặc",
-  "noAccount": "Bạn mới dùng Furrow?",
+  "noAccount": "Bạn mới dùng Rowen?",
   "createOne": "Tạo tài khoản",
   "haveAccount": "Đã có tài khoản rồi?",
   "signInLink": "Đăng nhập",
@@ -137,7 +137,7 @@
    "notConfigured": "Trang này chưa thiết lập tính năng đăng nhập."
   }
  },
- "1moh18d": {
+ "1nenh57": {
   "tabs": {
    "scan": "Quét",
    "ask": "Hỏi",
@@ -148,7 +148,7 @@
   "chooseLanguage": "Chọn ngôn ngữ của bạn",
   "back": "Quay lại",
   "toolsTitle": "Công cụ",
-  "toolsIntro": "Mọi thứ Furrow có thể làm. Bấm vào một mục.",
+  "toolsIntro": "Mọi thứ Rowen có thể làm. Bấm vào một mục.",
   "tools": {
    "heat": {
     "title": "Kiểm tra độ nóng",
@@ -156,74 +156,99 @@
    },
    "symptoms": {
     "title": "Tôi thấy mệt",
-    "body": "Tìm số để gọi trợ giúp"
+    "body": "Tìm xem cần gọi cho ai"
    },
    "exposed": {
-    "title": "Bị dính thuốc",
-    "body": "911, hẹn giờ xả nước, thẻ khám bác sĩ"
+    "title": "Bị dính thuốc xịt",
+    "body": "911, hẹn giờ xối nước, thẻ thông tin cho bác sĩ"
    },
    "paper": {
     "title": "Đọc giấy tờ",
-    "body": "Thông báo, cuống phiếu lương, giấy tờ"
+    "body": "Thông báo, cuống phiếu lương, mẫu đơn"
    },
    "report": {
     "title": "Báo cáo vấn đề",
-    "body": "Nói lại sự việc, nhận bản báo cáo tiếng Anh"
+    "body": "Nói lại sự việc, nhận bản báo cáo bằng tiếng Anh"
    },
    "brief": {
     "title": "Kế hoạch hôm nay",
-    "body": "Lô làm việc và độ nóng, đọc to thành tiếng"
+    "body": "Khu vực làm việc và độ nóng, đọc to thành tiếng"
    },
    "map": {
-    "title": "Bản đồ xịt thuốc",
+    "title": "Bản đồ phun xịt",
     "body": "Nơi bạn đã quét nhãn thuốc"
    },
    "install": {
     "title": "Thêm vào điện thoại",
-    "body": "Mở Furrow như một ứng dụng"
+    "body": "Mở Rowen như một ứng dụng"
+   },
+   "gear": {
+    "title": "Kiểm tra đồ bảo hộ",
+    "body": "Chụp ảnh bạn, so với hướng dẫn trên nhãn"
+   },
+   "pay": {
+    "title": "Kiểm tra tiền lương",
+    "body": "Phiếu lương của bạn có đúng không?"
+   },
+   "interpret": {
+    "title": "Thông dịch viên",
+    "body": "Nói chuyện với người quản lý hoặc y tá"
    }
   },
   "ask": {
-   "title": "Hỏi Furrow",
+   "title": "Hỏi Rowen",
    "about": "Giới thiệu",
-   "general": "Hỏi về thuốc trừ sâu, trời nóng hoặc quyền của bạn khi đi làm.",
-   "placeholder": "Gõ chữ hoặc bấm vào mic",
+   "general": "Hỏi về thuốc trừ sâu, thời tiết nóng hoặc quyền lợi tại nơi làm việc.",
+   "placeholder": "Nhập chữ hoặc bấm vào micrô",
    "send": "Gửi",
    "listening": "Đang lắng nghe...",
    "thinking": "Đang suy nghĩ...",
-   "failed": "Không lấy được câu trả lời. Kiểm tra mạng rồi thử lại nhé.",
+   "failed": "Không lấy được câu trả lời. Vui lòng kiểm tra mạng rồi thử lại.",
    "starters": [
-    "Khi nào tôi được vào lại ruộng?",
-    "Tôi cần mặc đồ bảo hộ gì?",
+    "Khi nào tôi có thể quay lại làm?",
+    "Tôi cần phải mặc đồ gì?",
     "Nếu thuốc dính vào da thì sao?",
     "Chủ có được bắt tôi vào làm sớm không?"
    ],
-   "clear": "Trò chuyện mới",
+   "clear": "Đoạn trò chuyện mới",
    "listen": "Nghe",
-   "call911": "Gọi 911"
+   "call911": "Gọi 911",
+   "chats": "Các đoạn trò chuyện",
+   "noChats": "Các đoạn trò chuyện sẽ hiện ở đây. Chúng được lưu vào tài khoản của bạn.",
+   "remove": "Xóa cuộc trò chuyện",
+   "retry": "Thử lại",
+   "talk": "Nói chuyện",
+   "talkHint": "Nói bằng bất kỳ ngôn ngữ nào. Rowen sẽ lắng nghe rồi trả lời to thành tiếng.",
+   "voiceListening": "Đang lắng nghe",
+   "voiceThinking": "Đang suy nghĩ",
+   "voiceSpeaking": "Chạm để ngắt lời",
+   "voiceTap": "Chạm để nói",
+   "voiceBlocked": "Rowen cần dùng micrô của bạn. Hãy cho phép trong phần cài đặt trình duyệt rồi thử lại.",
+   "voiceFailed": "Chưa gửi được. Hãy chạm để thử lại.",
+   "close": "Đóng"
   },
   "result": {
-   "askAbout": "Hỏi về nhãn thuốc này",
-   "supervisor": "Đưa quản lý xem",
-   "share": "Chia sẻ với nhóm",
-   "shared": "Đã có liên kết để gửi",
+   "askAbout": "Hỏi về nhãn này",
+   "supervisor": "Đưa cho người quản lý xem",
+   "share": "Chia sẻ với nhóm làm chung",
+   "shared": "Đã có liên kết để chia sẻ",
    "copied": "Đã sao chép liên kết",
-   "shareFailed": "Không tạo được liên kết. Thử lại nhé.",
-   "howRead": "Cách Furrow đọc nhãn này",
+   "shareFailed": "Không tạo được liên kết. Thử lại.",
+   "howRead": "Cách Rowen đọc nhãn này",
    "confidence": {
     "high": "Đọc rõ ràng",
-    "medium": "Nên kiểm tra lại",
+    "medium": "Cần kiểm tra lại",
     "low": "Không chắc chắn"
    },
    "confidenceNote": {
-    "high": "Nhãn rất rõ và mọi câu trả lời dưới đây đều có in trên đó.",
-    "medium": "Có chữ nhỏ hoặc bị che một phần. Xem lại nhãn hoặc đi hỏi nhé.",
-    "low": "Furrow không chắc về một phần nội dung này. Hãy hỏi quản lý của bạn."
+    "high": "Nhãn rất rõ và mọi câu trả lời bên dưới đều có in trên nhãn.",
+    "medium": "Có chữ hơi nhỏ hoặc bị che khuất một phần. Hãy xem lại nhãn hoặc hỏi lại.",
+    "low": "Rowen không chắc về một phần nội dung này. Hãy hỏi người quản lý."
    },
    "fields": {
     "product": "Sản phẩm",
     "signal": "Từ cảnh báo",
-    "reentry": "Thời gian vào lại",
+    "reentry": "Thời gian được vào lại",
     "gear": "Đồ cần mặc",
     "firstAid": "Sơ cứu"
    },
@@ -231,101 +256,101 @@
   },
   "supervisorCard": {
    "close": "Đóng",
-   "intro": "Đưa màn hình này cho quản lý của bạn xem."
+   "intro": "Đưa màn hình này cho người quản lý xem."
   },
   "coach": {
-   "dark": "Tối quá. Ra chỗ sáng hơn hoặc bật thêm đèn lên.",
+   "dark": "Tối quá. Ra chỗ sáng hơn hoặc bật thêm đèn.",
    "bright": "Sáng quá. Đổi góc chụp để nắng không chiếu vào nhãn.",
-   "blurry": "Hơi mờ. Cầm chắc tay và đưa lại gần hơn.",
+   "blurry": "Hơi mờ. Cầm chắc điện thoại và lại gần hơn.",
    "useAnyway": "Cứ dùng ảnh này"
   },
   "symptoms": {
    "title": "Bạn thấy trong người thế nào?",
-   "intro": "Bấm vào mọi dấu hiệu bạn đang có. Furrow sẽ chỉ cho bạn biết nên gọi cho ai.",
+   "intro": "Bấm vào mọi dấu hiệu bạn đang có lúc này. Rowen sẽ chỉ bạn cần gọi cho ai.",
    "list": [
     "Đau đầu",
     "Chóng mặt",
     "Buồn nôn",
     "Nôn mửa",
-    "Rát mắt",
+    "Cay mắt",
     "Phát ban hoặc rát da",
-    "Đổ mồ hôi nhiều",
+    "Đổ nhiều mồ hôi",
     "Giật cơ",
     "Rất mệt",
     "Chuột rút",
     "Khó thở",
     "Đau ngực",
-    "Lẫn lộn",
+    "Lơ mơ, lú lẫn",
     "Ngất xỉu"
    ],
-   "note": "Còn gì khác không? Cứ nói theo lời của bạn.",
-   "check": "Chỉ cho tôi cách xử lý",
+   "note": "Còn gì khác không? Hãy nói theo cách của bạn.",
+   "check": "Chỉ tôi việc cần làm",
    "checking": "Đang kiểm tra...",
    "failed": "Không kiểm tra được. Nếu thấy quá mệt, hãy gọi 911.",
-   "again": "Làm lại từ đầu",
-   "callPoison": "Trung tâm Chống độc"
+   "again": "Bắt đầu lại",
+   "callPoison": "Trung tâm Chống độc (Poison Control)"
   },
   "paper": {
    "title": "Đọc giấy tờ",
-   "intro": "Chụp ảnh giấy tờ ở chỗ làm. Furrow sẽ giải thích bằng tiếng của bạn.",
+   "intro": "Chụp ảnh giấy tờ ở chỗ làm. Rowen sẽ giải thích bằng ngôn ngữ của bạn.",
    "take": "Chụp ảnh",
    "choose": "Chọn ảnh",
    "reading": "Đang đọc giấy tờ...",
-   "failed": "Không đọc được. Kiểm tra mạng rồi thử lại nhé.",
-   "unreadable": "Không đọc được giấy này. Hãy lại gần hơn, giữ chắc tay và chụp lại.",
-   "actions": "Việc bạn cần làm",
+   "failed": "Không đọc được. Vui lòng kiểm tra mạng rồi thử lại.",
+   "unreadable": "Không đọc được hình này. Hãy lại gần hơn, giữ yên tay rồi thử lại.",
+   "actions": "Những việc bạn cần làm",
    "dates": "Ngày tháng và số tiền",
-   "another": "Đọc tờ khác"
+   "another": "Đọc giấy khác"
   },
   "report": {
    "title": "Báo cáo vấn đề",
-   "intro": "Kể lại sự việc theo lời của bạn. Furrow sẽ viết một bản báo cáo rõ ràng bằng tiếng Anh để bạn gửi cho chủ vườn hoặc quận.",
-   "placeholder": "Ví dụ: Họ xịt thuốc ở ruộng bên cạnh khi chúng tôi đang hái, gió thổi thuốc bay hết vào người chúng tôi.",
+   "intro": "Kể lại sự việc theo lời của bạn. Rowen sẽ viết bản báo cáo rõ ràng bằng tiếng Anh để bạn đưa cho chủ vườn hoặc cơ quan quận.",
+   "placeholder": "Ví dụ: Họ phun xịt ở đám đất bên cạnh khi chúng tôi đang hái, gió thổi thuốc tạt vào người chúng tôi.",
    "when": "Chuyện xảy ra khi nào?",
    "write": "Viết báo cáo cho tôi",
    "writing": "Đang viết...",
-   "failed": "Không viết được báo cáo. Thử lại nhé.",
+   "failed": "Không viết được báo cáo. Thử lại.",
    "english": "Bản báo cáo bằng tiếng Anh",
-   "yourLanguage": "Nội dung ghi là gì",
-   "missing": "Thêm các mục này để bản báo cáo rõ hơn",
+   "yourLanguage": "Nội dung bản báo cáo",
+   "missing": "Thêm các thông tin này để bản báo cáo rõ hơn",
    "copy": "Sao chép",
    "copied": "Đã sao chép",
-   "share": "Gửi đi",
+   "share": "Gửi",
    "edit": "Sửa lại lời kể"
   },
   "brief": {
    "title": "Kế hoạch hôm nay",
-   "intro": "Furrow xem giờ giấc của bạn cùng mức độ nóng hôm nay rồi đọc to kế hoạch cho bạn nghe.",
-   "make": "Nói cho tôi kế hoạch hôm nay",
+   "intro": "Rowen xem giờ bấm giờ và độ nóng hôm nay rồi đọc kế hoạch thành tiếng cho bạn.",
+   "make": "Nói kế hoạch hôm nay",
    "making": "Đang lập kế hoạch...",
    "failed": "Không lập được kế hoạch. Hãy kiểm tra kết nối mạng.",
    "listen": "Nghe",
    "again": "Cập nhật"
   },
   "map": {
-   "title": "Bản đồ xịt thuốc",
-   "intro": "Mỗi nhãn bạn quét sẽ được ghim đúng nơi bạn đã đứng.",
-   "empty": "Chưa có điểm quét nào được ghim. Hãy quét nhãn và nhớ bật định vị vị trí.",
+   "title": "Bản đồ phun xịt",
+   "intro": "Mỗi nhãn bạn quét sẽ được đánh dấu đúng vị trí bạn đứng lúc đó.",
+   "empty": "Chưa có điểm đánh dấu nào. Hãy bật định vị rồi quét nhãn.",
    "loading": "Đang tải các điểm quét của bạn...",
-   "failed": "Không tải được các điểm đã quét.",
+   "failed": "Không thể tải các điểm đã quét.",
    "noPlace": "Các lượt quét này không có vị trí."
   },
   "alarms": {
-   "allow": "Rung báo cho tôi khi đã an toàn",
+   "allow": "Rung báo khi an toàn",
    "on": "Báo thức đang bật",
-   "safeTitle": "Đã an toàn để vào lại",
-   "safeBody": "Đã hết thời gian cách ly cho",
-   "waterTitle": "Uống nước đi",
-   "waterBody": "Trời đang nóng. Hãy uống khoảng một lít nước mỗi giờ.",
+   "safeTitle": "Đã an toàn để quay lại làm",
+   "safeBody": "Hết thời gian chờ cho",
+   "waterTitle": "Uống nước",
+   "waterBody": "Trời đang nóng. Hãy uống khoảng một lít nước mỗi tiếng.",
    "waterOn": "Nhắc tôi uống nước mỗi tiếng một lần",
-   "waterOff": "Đang bật nhắc uống nước"
+   "waterOff": "Đã bật nhắc nhở uống nước"
   },
   "install": {
-   "title": "Thêm Furrow vào điện thoại",
-   "body": "Mở lên như một ứng dụng, xem được các nhãn đã quét, đồng hồ đếm giờ và các bước xử lý khi dính thuốc ngay cả khi mất sóng.",
+   "title": "Thêm Rowen vào điện thoại",
+   "body": "Mở lên dùng như ứng dụng, và xem lại các nhãn đã lưu, đồng hồ hẹn giờ cùng các bước xử lý khi dính thuốc ngay cả khi mất sóng.",
    "button": "Thêm vào màn hình chính",
-   "ios": "Trên iPhone: bấm Chia sẻ, rồi bấm Thêm vào Màn hình chính.",
-   "done": "Furrow đã có trên màn hình chính của bạn."
+   "ios": "Trên iPhone: bấm nút Chia sẻ, rồi chọn Thêm vào Màn hình chính.",
+   "done": "Rowen đã có trên màn hình chính của bạn."
   }
  },
  "1i1pcy3": {
@@ -345,7 +370,7 @@
   "flip": "Đổi camera",
   "gallery": "Chọn một ảnh",
   "close": "Đóng camera",
-  "blocked": "Furrow không thể mở camera ở đây. Hãy cho phép mở camera trong phần cài đặt trình duyệt, hoặc dùng ứng dụng camera trên điện thoại của bạn.",
+  "blocked": "Rowen không thể mở camera ở đây. Hãy cho phép mở camera trong phần cài đặt trình duyệt, hoặc dùng ứng dụng camera trên điện thoại của bạn.",
   "openApp": "Dùng ứng dụng camera"
  },
  "pyuh1i": {
@@ -355,5 +380,78 @@
   "empty": "Chưa có gì được lưu. Hãy quét một nhãn và nhãn đó sẽ hiện ở đây cùng với ảnh chụp.",
   "failed": "Không tải được các nhãn bạn đã quét. Hãy kiểm tra lại sóng và thử lại nhé.",
   "remove": "Xóa"
+ },
+ "1swsqbl": {
+  "gear": {
+   "title": "Kiểm tra đồ bảo hộ",
+   "intro": "Chụp một tấm hình của bạn trước khi vào làm. Rowen sẽ so lại với đồ bảo hộ ghi trên nhãn thuốc.",
+   "forProduct": "Đang kiểm tra đồ bảo hộ cho",
+   "noLabel": "Chưa quét nhãn nào, nên Rowen kiểm tra đồ bảo hộ thường dùng.",
+   "defaultGear": [
+    "Áo tay dài",
+    "Quần dài",
+    "Găng tay chống hóa chất",
+    "Giày và vớ"
+   ],
+   "take": "Chụp hình tôi",
+   "hint": "Đứng lùi lại để thấy rõ cả tay và chân.",
+   "checking": "Đang xem đồ bảo hộ của bạn...",
+   "verdict": {
+    "ready": "Bạn trông đã sẵn sàng",
+    "missing": "Cần mặc thêm đồ này trước khi vào làm",
+    "unsure": "Rowen không nhìn rõ hết mọi thứ"
+   },
+   "status": {
+    "on": "Có đủ",
+    "missing": "Còn thiếu",
+    "unsure": "Không thấy rõ"
+   },
+   "noPerson": "Rowen không thấy ai trong hình. Hãy đứng lùi lại và chụp lại nha.",
+   "failed": "Không kiểm tra được hình. Coi lại mạng rồi thử lại nha.",
+   "again": "Kiểm tra lại"
+  },
+  "pay": {
+   "title": "Kiểm tra phiếu lương",
+   "intro": "Chụp hình phiếu lương của bạn. Rowen sẽ đọc và so lại với luật trả lương của California.",
+   "take": "Chụp hình phiếu lương",
+   "choose": "Chọn một tấm hình",
+   "reading": "Đang đọc phiếu lương của bạn...",
+   "period": "Kỳ trả lương",
+   "hours": "Số giờ",
+   "rate": "Tiền theo giờ",
+   "gross": "Lương trước khi trừ",
+   "net": "Tiền đem về",
+   "verdict": {
+    "ok": "Mọi thứ có vẻ đúng",
+    "ask": "Nên hỏi lại về chỗ này",
+    "unclear": "Khó đọc quá"
+   },
+   "status": {
+    "ok": "Có vẻ đúng",
+    "ask": "Hỏi lại xem",
+    "missing": "Không có trên phiếu"
+   },
+   "labor": "Gọi cho Ủy viên Lao động",
+   "notStub": "Tấm này nhìn không giống phiếu lương. Chụp lại tấm khác rõ hơn nha.",
+   "failed": "Không đọc được hình. Coi lại mạng rồi thử lại nha.",
+   "again": "Kiểm tra tấm khác",
+   "privacy": "Hình này không được lưu ở đâu cả."
+  },
+  "interpret": {
+   "title": "Thông dịch",
+   "intro": "Nói chuyện với quản lý, y tá hoặc nhân viên. Mỗi người chạm vào phần của mình rồi nói, Rowen sẽ đọc to bằng tiếng kia.",
+   "me": "Tôi",
+   "them": "Họ",
+   "other": "Họ nói tiếng",
+   "listening": "Đang nghe... chạm để dừng",
+   "translating": "Đang dịch...",
+   "tapToStop": "Chạm để dừng",
+   "empty": "Chạm vào phần của bạn rồi nói. Đưa điện thoại cho người ta khi đến lượt họ.",
+   "failed": "Không gửi được. Thử lại nha.",
+   "blocked": "Rowen cần dùng micrô. Cho phép mở micrô trong cài đặt của trình duyệt nha.",
+   "clear": "Bắt đầu lại",
+   "replay": "Đọc lại",
+   "unsupported": "Trình duyệt này không ghi âm được. Dùng Chrome hoặc Safari thử xem."
+  }
  }
 }

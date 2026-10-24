@@ -2,17 +2,20 @@
 
 import {
   ArrowLeft,
+  Banknote,
   Bookmark,
   Check,
   ClipboardPen,
   FileText,
   Globe,
   HeartPulse,
+  House,
+  Languages,
   LayoutGrid,
   LoaderCircle,
   MapPinned,
-  MessageCircleQuestion,
   ScanLine,
+  Shirt,
   Smartphone,
   Stethoscope,
   Sun,
@@ -23,19 +26,24 @@ import {
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
-import { AskChat } from "@/components/ask-chat";
+import { AskChat, type AskRequest } from "@/components/ask-chat";
 import { useSession } from "@/components/auth-provider";
 import { DailyBrief } from "@/components/daily-brief";
 import { ExposureHelp } from "@/components/exposure-help";
+import { GearCheck } from "@/components/gear-check";
 import { HeatCheck } from "@/components/heat-check";
 import { InstallCard } from "@/components/install-card";
+import { Interpreter } from "@/components/interpreter";
 import { Mark } from "@/components/mark";
+import { PayCheck } from "@/components/pay-check";
+import { PixelFarm } from "@/components/pixel-farm";
 import { ReadPaper } from "@/components/read-paper";
 import { ReportWriter } from "@/components/report-writer";
 import { SavedScans } from "@/components/saved-scans";
 import { Scanner } from "@/components/scanner";
 import { SprayMap } from "@/components/spray-map";
 import { SymptomCheck } from "@/components/symptom-check";
+import { TodayHome } from "@/components/today-home";
 import { UserMenu } from "@/components/user-menu";
 import { useClockAlarms } from "@/lib/alarms";
 import { appCopy } from "@/lib/app-copy";
@@ -52,20 +60,36 @@ import {
   type ScanResult,
 } from "@/lib/scan";
 
-type Tab = "scan" | "ask" | "tools" | "saved";
+type Tab = "home" | "scan" | "tools" | "saved";
 
-type Tool = "heat" | "symptoms" | "exposed" | "paper" | "report" | "brief" | "map" | "install";
+type Tool =
+  | "heat"
+  | "symptoms"
+  | "exposed"
+  | "paper"
+  | "report"
+  | "brief"
+  | "map"
+  | "install"
+  | "gear"
+  | "pay"
+  | "interpret";
 
-const tabIds: Tab[] = ["scan", "ask", "tools", "saved"];
+const tabIds: Tab[] = ["home", "scan", "tools", "saved"];
+
+const quickIds: Tool[] = ["interpret", "gear", "pay", "symptoms"];
 
 const toolList: { id: Tool; icon: LucideIcon; tone: string }[] = [
+  { id: "interpret", icon: Languages, tone: "bg-primary text-primary-foreground" },
+  { id: "gear", icon: Shirt, tone: "bg-poppy text-poppy-foreground" },
+  { id: "pay", icon: Banknote, tone: "bg-leaf text-white" },
   { id: "symptoms", icon: Stethoscope, tone: "bg-danger text-white" },
   { id: "exposed", icon: HeartPulse, tone: "bg-danger/10 text-danger" },
   { id: "heat", icon: Sun, tone: "bg-harvest text-harvest-foreground" },
-  { id: "brief", icon: Sunrise, tone: "bg-harvest/25 text-harvest-foreground" },
-  { id: "paper", icon: FileText, tone: "bg-primary text-primary-foreground" },
+  { id: "brief", icon: Sunrise, tone: "bg-poppy/15 text-poppy" },
+  { id: "paper", icon: FileText, tone: "bg-ink text-ink-foreground" },
   { id: "report", icon: ClipboardPen, tone: "bg-primary/10 text-primary" },
-  { id: "map", icon: MapPinned, tone: "bg-sky-700 text-white" },
+  { id: "map", icon: MapPinned, tone: "bg-ink text-ink-foreground" },
   { id: "install", icon: Smartphone, tone: "bg-secondary text-primary" },
 ];
 
@@ -83,14 +107,16 @@ function readLastResult(): ScanResult | null {
 export function AppShell() {
   const [language, setLanguage] = useState<Language>("en");
   const [tab, setTab] = useState<Tab>("scan");
+  const [chatOpen, setChatOpen] = useState(false);
   const [tool, setTool] = useState<Tool | null>(null);
   const [picker, setPicker] = useState(false);
   const [focus, setFocus] = useState<ScanResult | null>(null);
+  const [request, setRequest] = useState<AskRequest | null>(null);
   const { user, ready } = useSession();
   const router = useRouter();
   const verified = Boolean(user?.emailVerified);
   const text = useCopy(appCopy, language);
-  const { clocks, now, add, remove } = useClocks();
+  const { clocks, now, add, remove } = useClocks(user?.uid);
 
   useClockAlarms(clocks, text.alarms);
 
@@ -144,6 +170,21 @@ export function AppShell() {
   }, []);
 
   useEffect(() => {
+    function back() {
+      const hash = window.location.hash.slice(1);
+      if (toolIds.includes(hash as Tool)) {
+        setTab("tools");
+        setTool(hash as Tool);
+      } else {
+        setTab(tabIds.includes(hash as Tab) ? (hash as Tab) : "scan");
+        setTool(null);
+      }
+    }
+    window.addEventListener("popstate", back);
+    return () => window.removeEventListener("popstate", back);
+  }, []);
+
+  useEffect(() => {
     document.documentElement.dir = isRtl(language) ? "rtl" : "ltr";
     return () => {
       document.documentElement.dir = "ltr";
@@ -164,24 +205,36 @@ export function AppShell() {
   function go(next: Tab, nextTool: Tool | null = null) {
     setTab(next);
     setTool(nextTool);
-    window.history.replaceState(null, "", next === "scan" ? " " : `#${nextTool ?? next}`);
+    const url = next === "scan" ? " " : `#${nextTool ?? next}`;
+    if (nextTool) window.history.pushState(null, "", url);
+    else window.history.replaceState(null, "", url);
     window.scrollTo({ top: 0 });
     navigator.vibrate?.(8);
   }
 
   function ask(result: ScanResult) {
     setFocus(result);
-    go("ask");
+    setChatOpen(true);
   }
 
-  const tabs: { id: Tab; label: string; icon: LucideIcon }[] = [
-    { id: "scan", label: text.tabs.scan, icon: ScanLine },
-    { id: "ask", label: text.tabs.ask, icon: MessageCircleQuestion },
+  function openAsk(next: Omit<AskRequest, "at">) {
+    setRequest({ ...next, at: Date.now() });
+    setChatOpen(true);
+  }
+
+  const tabs: { id: Tab; label: string; icon: LucideIcon; tool?: Tool }[] = [
+    { id: "home", label: text.tabs.home, icon: House },
     { id: "tools", label: text.tabs.tools, icon: LayoutGrid },
+    { id: "scan", label: text.tabs.scan, icon: ScanLine },
     { id: "saved", label: text.tabs.saved, icon: Bookmark },
+    { id: "tools", label: text.tools.map.title, icon: MapPinned, tool: "map" },
   ];
+  const sideTabs = [tabs[2], tabs[0], tabs[1], tabs[3], tabs[4]];
+  const isActive = (item: { id: Tab; tool?: Tool }) =>
+    item.tool ? tab === "tools" && tool === item.tool : tab === item.id && !(item.id === "tools" && tool === "map");
 
   const current = languages.find((item) => item.code === language) ?? languages[0];
+  const wide = tab === "home" || (tab === "tools" && (!tool || tool === "interpret"));
 
   if (!verified) {
     return (
@@ -191,33 +244,98 @@ export function AppShell() {
     );
   }
 
+  const languageButton = (dark: boolean) => (
+    <button
+      onClick={() => setPicker(true)}
+      aria-label={text.language}
+      className={`flex h-10 items-center gap-2 rounded-full px-3.5 text-sm font-semibold transition-all active:scale-95 ${
+        dark ? "bg-white/10 text-ink-foreground hover:bg-white/15" : "border bg-card shadow-sm hover:border-primary"
+      }`}
+    >
+      <Globe className={`size-4 ${dark ? "text-poppy" : "text-primary"}`} />
+      {current.name}
+    </button>
+  );
+
   return (
-    <div className="flex flex-1 flex-col bg-background">
-      <header className="sticky top-0 z-30 border-b bg-background/90 backdrop-blur-md">
+    <div className="flex flex-1 flex-col bg-background lg:pl-72">
+      <aside className="fixed inset-y-0 left-0 z-40 hidden w-72 flex-col bg-ink text-ink-foreground lg:flex">
+        <div className="flex items-center justify-between px-6 pt-6">
+          <Link href="/" className="wiggle-hover flex items-center gap-2.5 font-display text-2xl font-semibold">
+            <Mark className="wiggle-target size-8 text-poppy" />
+            Rowen
+          </Link>
+          <UserMenu language={language} compact />
+        </div>
+        <nav aria-label="Sections" className="mt-8 space-y-1 px-3">
+          {sideTabs.map((item) => {
+            const Icon = item.icon;
+            const active = isActive(item);
+            return (
+              <button
+                key={item.tool ?? item.id}
+                onClick={() => go(item.id, item.tool ?? null)}
+                aria-current={active}
+                className={`group relative flex h-12 w-full items-center gap-3 rounded-2xl px-4 text-left font-semibold transition-all active:scale-[0.98] ${
+                  active ? "bg-white text-ink shadow-lg" : "text-ink-foreground/70 hover:bg-white/5 hover:text-ink-foreground"
+                }`}
+              >
+                <Icon
+                  className={`size-5 transition-transform duration-500 [transition-timing-function:var(--ease-spring)] group-hover:scale-110 ${
+                    active ? "text-primary" : ""
+                  }`}
+                />
+                {item.label}
+                {item.id === "scan" && (
+                  <span
+                    className={`ml-auto rounded-full px-2 py-0.5 text-xs font-bold ${
+                      active ? "bg-poppy text-poppy-foreground" : "bg-poppy/20 text-poppy"
+                    }`}
+                  >
+                    5s
+                  </span>
+                )}
+              </button>
+            );
+          })}
+        </nav>
+        <p className="mt-8 px-7 text-xs font-semibold text-ink-foreground/45">{text.home.aiTools}</p>
+        <div className="mt-2 space-y-0.5 overflow-y-auto px-3 [scrollbar-width:none]">
+          {toolList.filter((item) => item.id !== "map").slice(0, 7).map((item) => {
+            const Icon = item.icon;
+            const active = tab === "tools" && tool === item.id;
+            return (
+              <button
+                key={item.id}
+                onClick={() => go("tools", item.id)}
+                className={`flex h-10 w-full items-center gap-3 rounded-xl px-4 text-left text-sm font-medium transition-all ${
+                  active ? "bg-white/10 text-ink-foreground" : "text-ink-foreground/65 hover:bg-white/5 hover:text-ink-foreground"
+                }`}
+              >
+                <span className={`flex size-6 items-center justify-center rounded-lg ${item.tone}`}>
+                  <Icon className="size-3.5" />
+                </span>
+                {text.tools[item.id].title}
+              </button>
+            );
+          })}
+        </div>
+        <div className="mt-auto">
+          <div className="px-6 pb-4">{languageButton(true)}</div>
+          <div className="relative h-28 overflow-hidden">
+            <PixelFarm />
+          </div>
+        </div>
+      </aside>
+
+      <header className="sticky top-0 z-30 bg-background/85 backdrop-blur-md lg:hidden">
         <div className="mx-auto flex max-w-xl items-center justify-between gap-3 px-5 py-3">
-          {tab === "tools" && tool ? (
-            <button
-              onClick={() => go("tools")}
-              className="flex h-10 items-center gap-1.5 rounded-full pr-3 font-semibold text-primary transition-transform active:scale-95"
-            >
-              <ArrowLeft className="size-5 rtl:rotate-180" />
-              {text.back}
-            </button>
-          ) : (
-            <Link href="/" className="wiggle-hover flex items-center gap-2 font-display text-2xl font-semibold text-primary">
-              <Mark className="wiggle-target size-7" />
-              <span className="hidden min-[400px]:inline">Furrow</span>
-            </Link>
-          )}
+          <Link href="/" className="wiggle-hover flex items-center gap-2 font-display text-2xl font-semibold text-ink">
+            <Mark className="wiggle-target size-8 text-primary" />
+            <span className="hidden min-[400px]:inline">Rowen</span>
+          </Link>
           <div className="flex items-center gap-2">
-            <button
-              onClick={() => setPicker(true)}
-              aria-label={text.language}
-              className="flex h-10 items-center gap-2 rounded-full border bg-card px-3.5 text-sm font-semibold shadow-sm transition-all hover:border-primary active:scale-95"
-            >
-              <Globe className="size-4 text-primary" />
-              {current.name}
-            </button>
+            {languageButton(false)}
             <UserMenu language={language} compact />
           </div>
         </div>
@@ -226,8 +344,36 @@ export function AppShell() {
       <main
         lang={language}
         dir={isRtl(language) ? "rtl" : "ltr"}
-        className="mx-auto flex w-full max-w-xl flex-1 flex-col px-5 pb-28"
+        className={`relative mx-auto flex w-full flex-1 flex-col px-5 pb-32 lg:px-10 lg:pb-12 ${
+          wide ? "max-w-xl lg:max-w-6xl" : "max-w-xl lg:max-w-3xl"
+        }`}
       >
+        {tab === "tools" && tool && (
+          <button
+            onClick={() => go("tools")}
+            className="mt-4 flex h-10 w-fit items-center gap-1.5 rounded-full border bg-card pl-3 pr-4 text-sm font-semibold text-primary shadow-sm transition-all hover:border-primary active:scale-95 lg:mt-8"
+          >
+            <ArrowLeft className="size-4 rtl:rotate-180" />
+            {text.back}
+          </button>
+        )}
+        {tab === "home" && (
+          <TodayHome
+            language={language}
+            clocks={clocks}
+            now={now}
+            lastScan={focus}
+            tools={toolList
+              .filter((item) => quickIds.includes(item.id))
+              .map((item) => ({ ...item, ...text.tools[item.id] }))}
+            onScan={() => go("scan")}
+            onTalk={() => openAsk({ voice: true })}
+            onAsk={ask}
+            onOpenChat={(chatId) => openAsk({ chatId })}
+            onTool={(id) => go("tools", id as Tool)}
+            onAllTools={() => go("tools")}
+          />
+        )}
         <div className={tab === "scan" ? "contents" : "hidden"}>
           <Scanner
             language={language}
@@ -238,15 +384,14 @@ export function AppShell() {
             onAsk={ask}
           />
         </div>
-        {tab === "ask" && <AskChat language={language} focus={focus} clocks={clocks} />}
         {tab === "saved" && <SavedScans language={language} />}
         {tab === "tools" && !tool && (
-          <section className="rise pt-6 pb-6">
-            <h1 className="font-display text-4xl font-semibold leading-[1.02] text-primary sm:text-5xl">
+          <section className="rise pt-6 pb-6 lg:pt-10">
+            <h1 className="font-display text-4xl font-semibold leading-[1.02] text-ink sm:text-5xl">
               {text.toolsTitle}
             </h1>
             <p className="mt-2 text-lg text-muted-foreground">{text.toolsIntro}</p>
-            <div className="mt-6 grid grid-cols-2 gap-3">
+            <div className="mt-7 grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-4">
               {toolList.map((item, index) => {
                 const Icon = item.icon;
                 const copy = text.tools[item.id];
@@ -254,16 +399,19 @@ export function AppShell() {
                   <button
                     key={item.id}
                     onClick={() => go("tools", item.id)}
-                    className="rise group card flex min-h-40 flex-col items-start justify-between p-4 text-left transition-all duration-300 hover:-translate-y-1 hover:border-primary/30 hover:shadow-[var(--shadow-lift)] active:scale-[0.97]"
-                    style={{ animationDelay: `${index * 45}ms` }}
+                    className="rise group card relative flex min-h-36 flex-col items-start justify-between gap-4 overflow-hidden p-4 text-left transition-all duration-300 hover:-translate-y-1 hover:shadow-[var(--shadow-lift)] active:scale-[0.97]"
+                    style={{ animationDelay: `${index * 40}ms` }}
                   >
                     <span
-                      className={`flex size-12 items-center justify-center rounded-2xl transition-transform duration-500 [transition-timing-function:var(--ease-spring)] group-hover:-rotate-6 group-hover:scale-110 ${item.tone}`}
+                      className={`absolute -right-10 -top-10 size-36 rounded-full opacity-10 transition-transform duration-700 group-hover:scale-150 ${item.tone}`}
+                    />
+                    <span
+                      className={`relative flex size-11 items-center justify-center rounded-2xl shadow-sm transition-transform duration-500 [transition-timing-function:var(--ease-spring)] group-hover:-rotate-6 group-hover:scale-110 ${item.tone}`}
                     >
                       <Icon className="size-6" />
                     </span>
-                    <span>
-                      <span className="block font-display text-xl font-semibold leading-tight text-primary">
+                    <span className="relative">
+                      <span className="block font-display text-lg font-semibold leading-tight text-ink">
                         {copy.title}
                       </span>
                       <span className="mt-1 block text-sm leading-snug text-muted-foreground">{copy.body}</span>
@@ -282,19 +430,35 @@ export function AppShell() {
         {tab === "tools" && tool === "brief" && <DailyBrief language={language} clocks={clocks} />}
         {tab === "tools" && tool === "map" && <SprayMap language={language} />}
         {tab === "tools" && tool === "install" && <InstallCard language={language} />}
+        {tab === "tools" && tool === "gear" && <GearCheck language={language} />}
+        {tab === "tools" && tool === "pay" && <PayCheck language={language} />}
+        {tab === "tools" && tool === "interpret" && <Interpreter language={language} />}
       </main>
 
+      <AskChat
+        language={language}
+        focus={focus}
+        clocks={clocks}
+        request={request}
+        open={chatOpen}
+        onOpen={() => setChatOpen(true)}
+        onClose={() => setChatOpen(false)}
+      />
+
       {picker && (
-        <div className="fixed inset-0 z-[60] flex items-end justify-center bg-black/40 backdrop-blur-sm sm:items-center" onClick={() => setPicker(false)}>
+        <div
+          className="fixed inset-0 z-[60] flex items-end justify-center bg-ink/50 backdrop-blur-sm sm:items-center"
+          onClick={() => setPicker(false)}
+        >
           <div
             role="dialog"
             aria-modal="true"
             aria-label={text.chooseLanguage}
             onClick={(event) => event.stopPropagation()}
-            className="pop w-full max-w-md rounded-t-[2rem] bg-background p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] shadow-2xl sm:rounded-[2rem]"
+            className="pop flex max-h-[85svh] w-full max-w-2xl flex-col rounded-t-[2rem] bg-background p-6 pb-[max(1.5rem,env(safe-area-inset-bottom))] shadow-2xl sm:rounded-[2rem]"
           >
             <div className="flex items-center justify-between">
-              <p className="font-display text-2xl font-semibold text-primary">{text.chooseLanguage}</p>
+              <p className="font-display text-2xl font-semibold text-ink">{text.chooseLanguage}</p>
               <button
                 onClick={() => setPicker(false)}
                 aria-label={text.back}
@@ -303,7 +467,7 @@ export function AppShell() {
                 <X className="size-5" />
               </button>
             </div>
-            <div className="mt-5 grid grid-cols-2 gap-2.5">
+            <div className="mt-5 grid grid-cols-2 gap-2.5 overflow-y-auto sm:grid-cols-3">
               {languages.map((item, index) => {
                 const on = item.code === language;
                 return (
@@ -311,13 +475,17 @@ export function AppShell() {
                     key={item.code}
                     onClick={() => changeLanguage(item.code)}
                     className={`rise flex min-h-16 items-center justify-between gap-2 rounded-2xl border-2 px-4 py-2 text-left transition-all active:scale-95 ${
-                      on ? "border-primary bg-primary text-primary-foreground" : "border-transparent bg-card shadow-sm hover:border-primary/40"
+                      on
+                        ? "border-primary bg-primary text-primary-foreground"
+                        : "border-transparent bg-card shadow-sm hover:border-primary/40"
                     }`}
-                    style={{ animationDelay: `${index * 35}ms` }}
+                    style={{ animationDelay: `${index * 25}ms` }}
                   >
                     <span>
                       <span className="block text-lg font-semibold leading-tight">{item.name}</span>
-                      <span className={`block text-xs ${on ? "opacity-75" : "text-muted-foreground"}`}>{item.english}</span>
+                      <span className={`block text-xs ${on ? "opacity-75" : "text-muted-foreground"}`}>
+                        {item.english}
+                      </span>
                     </span>
                     {on && <Check className="size-5 shrink-0" />}
                   </button>
@@ -330,33 +498,41 @@ export function AppShell() {
 
       <nav
         aria-label="Sections"
-        className="fixed inset-x-0 bottom-0 z-40 border-t bg-background/95 pb-[env(safe-area-inset-bottom)] backdrop-blur-md"
+        className="fixed inset-x-3 bottom-[max(0.75rem,env(safe-area-inset-bottom))] z-40 mx-auto max-w-md rounded-[1.75rem] bg-ink p-1.5 shadow-[0_24px_48px_-16px_oklch(0.2_0.05_268/0.6)] lg:hidden"
       >
-        <div className="mx-auto grid max-w-xl grid-cols-4">
+        <div className="grid grid-cols-5 items-end">
           {tabs.map((item) => {
             const Icon = item.icon;
-            const active = tab === item.id;
+            const active = isActive(item);
+            if (item.id === "scan") {
+              return (
+                <button
+                  key={item.id}
+                  onClick={() => go(item.id)}
+                  aria-current={active}
+                  className="flex flex-col items-center"
+                >
+                  <span
+                    className={`-mt-7 flex size-16 items-center justify-center rounded-full ring-[5px] ring-background transition-all duration-500 [transition-timing-function:var(--ease-spring)] active:scale-90 ${
+                      active ? "scale-105 bg-primary text-primary-foreground" : "bg-poppy text-poppy-foreground"
+                    }`}
+                  >
+                    <Icon className="size-7" />
+                  </span>
+                  <span className="mt-0.5 pb-1 text-[11px] font-semibold text-ink-foreground/80">{item.label}</span>
+                </button>
+              );
+            }
             return (
               <button
-                key={item.id}
-                onClick={() => go(item.id)}
+                key={item.tool ?? item.id}
+                onClick={() => go(item.id, item.tool ?? null)}
                 aria-current={active}
-                className={`relative flex h-[4.25rem] flex-col items-center justify-center gap-1 text-xs font-semibold transition-colors active:scale-90 ${
-                  active ? "text-primary" : "text-muted-foreground"
+                className={`relative flex h-14 flex-col items-center justify-center gap-0.5 rounded-[1.25rem] text-[11px] font-semibold transition-all duration-300 active:scale-90 ${
+                  active ? "bg-white text-ink" : "text-ink-foreground/60"
                 }`}
               >
-                <span
-                  className={`absolute top-0 h-[3px] rounded-full bg-primary transition-all duration-500 [transition-timing-function:var(--ease-spring)] ${
-                    active ? "w-12" : "w-0"
-                  }`}
-                />
-                <span
-                  className={`flex h-8 w-14 items-center justify-center rounded-full transition-all duration-500 [transition-timing-function:var(--ease-spring)] ${
-                    active ? "scale-110 bg-primary/10" : ""
-                  }`}
-                >
-                  <Icon className="size-6" />
-                </span>
+                <Icon className={`size-5 ${active ? "text-primary" : ""}`} />
                 {item.label}
               </button>
             );

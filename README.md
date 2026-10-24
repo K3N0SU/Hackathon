@@ -1,6 +1,6 @@
-# Furrow
+# Rowen
 
-Furrow is a free phone app for farmworkers in the Central Valley. Point the camera at a pesticide label and Furrow says, in your language, when it is safe to go back into the field, what to wear, and what to do if it touches your skin. Then you can ask it questions out loud.
+Rowen is a free phone app for farmworkers in the Central Valley. Point the camera at a pesticide label and Rowen says, in your language, when it is safe to go back into the field, what to wear, and what to do if it touches your skin. Then you can ask it questions out loud.
 
 It was built solo at SierraHacks in Manteca for the Central Valley challenge, aiming at the main track and Best Use of AI/ML. Live at https://furrow-valley.vercel.app.
 
@@ -8,14 +8,14 @@ It was built solo at SierraHacks in Manteca for the Central Valley challenge, ai
 
 The app opens on the camera. Everything else is one tap away under four tabs: Scan, Ask, Tools and Saved.
 
-- **Scan a label.** Re-entry time, signal word, gear, first aid and a plain summary from one photo. A confidence badge and a "How Furrow read this" drawer show the exact words on the label each answer came from. If the photo holds more than one product, the others are listed too.
+- **Scan a label.** Re-entry time, signal word, gear, first aid and a plain summary from one photo. A confidence badge and a "How Rowen read this" drawer show the exact words on the label each answer came from. If the photo holds more than one product, the others are listed too.
 - **Re-entry clocks and alarms.** Start a countdown for a sprayed block; the phone buzzes and shows a notification when it is safe.
-- **Ask Furrow.** A chat about the label you just scanned, typed or spoken, answered in your language from the label and California's farm safety rules, with suggested follow-up questions and read-aloud.
-- **I feel sick.** Tap symptoms; Furrow sorts urgency into 911, Poison Control, see a doctor, or rest and drink water. Emergency symptoms show a 911 button before the AI even answers.
+- **Ask Rowen.** A chat about the label you just scanned, typed or spoken, answered in your language from the label and California's farm safety rules, with suggested follow-up questions and read-aloud.
+- **I feel sick.** Tap symptoms; Rowen sorts urgency into 911, Poison Control, see a doctor, or rest and drink water. Emergency symptoms show a 911 button before the AI even answers.
 - **Got sprayed.** 911 and Poison Control, five steps, a 15-minute rinse timer and an English card for the doctor.
 - **Heat check.** The hottest hour where you stand, what California requires at that temperature, and hourly water reminders.
 - **Read a paper.** Photograph a notice, pay stub or form for a plain summary, what you need to do, the dates that matter, and a warning if it asks you to sign something unfair.
-- **Report a problem.** Say what happened in your own language; Furrow writes a factual English incident report for the grower, the county or Cal/OSHA.
+- **Report a problem.** Say what happened in your own language; Rowen writes a factual English incident report for the grower, the county or Cal/OSHA.
 - **Today's plan.** A spoken morning brief from your clocks and today's forecast.
 - **Supervisor card.** A full-screen English card with the product, re-entry time and three questions to ask.
 - **Share with crew.** A public link to a scan that a coworker can open without an account and switch into their own language.
@@ -56,4 +56,4 @@ Put the key in `.env.local` as `GEMINI_API_KEY`. The Firebase web config is publ
 
 ## Limits
 
-Translations are by machine and have not been reviewed by native speakers or pesticide safety trainers. Furrow explains a label; it does not replace the label, the training a grower must give, a doctor, or Poison Control at 1-800-222-1222. The heat and rights summaries are plain-language, not legal advice. Alarms only fire while the app or browser is running on the phone. The sample labels are made up for the demo.
+Translations are by machine and have not been reviewed by native speakers or pesticide safety trainers. Rowen explains a label; it does not replace the label, the training a grower must give, a doctor, or Poison Control at 1-800-222-1222. The heat and rights summaries are plain-language, not legal advice. Alarms only fire while the app or browser is running on the phone. The sample labels are made up for the demo.

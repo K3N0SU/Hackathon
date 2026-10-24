@@ -71,7 +71,7 @@ export function AskDemo() {
           <Sprout className="size-4" />
         </span>
         <div>
-          <p className="font-semibold">Ask Furrow</p>
+          <p className="font-semibold">Ask Rowen</p>
           <p className="text-xs text-muted-foreground">
             About: Valley Guard 2EC, scanned 8 hours ago
           </p>

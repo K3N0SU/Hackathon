@@ -57,7 +57,7 @@ const tools = [
   },
   {
     icon: MessageCircleQuestion,
-    title: "Ask Furrow",
+    title: "Ask Rowen",
     body: "Ask anything about the label you scanned, by typing or talking. Answers come only from what is printed.",
   },
   {
@@ -73,7 +73,7 @@ const tools = [
   {
     icon: Stethoscope,
     title: "Symptom check",
-    body: "Tap what you feel. Furrow says whether to call 911, call Poison Control, or rinse and rest.",
+    body: "Tap what you feel. Rowen says whether to call 911, call Poison Control, or rinse and rest.",
   },
   {
     icon: HeartPulse,
@@ -88,7 +88,7 @@ const tools = [
   {
     icon: ClipboardPen,
     title: "Report writer",
-    body: "Say what happened in your language. Furrow writes a clear English report for the grower or Cal/OSHA.",
+    body: "Say what happened in your language. Rowen writes a clear English report for the grower or Cal/OSHA.",
   },
   {
     icon: UserRoundCheck,
@@ -116,12 +116,12 @@ const questions = [
   {
     question: "Is it accurate?",
     answer:
-      "It reads the label in the photo and says what is printed there, and it says so when it can't. Translations are by machine and still need review by native speakers and pesticide safety trainers. Furrow explains a label. It does not replace the label, your training or Poison Control.",
+      "It reads the label in the photo and says what is printed there, and it says so when it can't. Translations are by machine and still need review by native speakers and pesticide safety trainers. Rowen explains a label. It does not replace the label, your training or Poison Control.",
   },
   {
     question: "What can I ask the chat?",
     answer:
-      "Anything about the label you scanned: can I eat here, do I need goggles, what if it gets in my eyes. Furrow answers only from the label and California's rules, and tells you to ask a supervisor or doctor when the label doesn't say.",
+      "Anything about the label you scanned: can I eat here, do I need goggles, what if it gets in my eyes. Rowen answers only from the label and California's rules, and tells you to ask a supervisor or doctor when the label doesn't say.",
   },
   {
     question: "Why do I need an account?",
@@ -149,6 +149,15 @@ function Words({ text, start }: { text: string; start: number }) {
   ));
 }
 
+function Hover({ text }: { text: string }) {
+  return text.split(" ").map((word, index, all) => (
+    <span key={index}>
+      <span className="hover-word">{word}</span>
+      {index < all.length - 1 ? " " : ""}
+    </span>
+  ));
+}
+
 function Eyebrow({ children }: { children: React.ReactNode }) {
   return (
     <p className="reveal font-display text-xl italic text-primary">{children}</p>
@@ -165,22 +174,14 @@ export default function Home() {
 
       <section id="top" className="relative overflow-hidden">
         <div className="parallax absolute inset-0" style={{ "--shift": "120px" } as React.CSSProperties}>
-          <FieldLines className="text-primary/15" horizon={false} />
+          <div className="zoom-depth absolute inset-0">
+            <FieldLines className="text-primary/15" horizon={false} />
+          </div>
         </div>
         <div className="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-background to-transparent" />
-        <div className="relative mx-auto grid max-w-6xl items-center gap-14 px-6 pb-24 pt-32 lg:min-h-svh lg:grid-cols-[1.15fr_0.85fr] lg:pb-16 lg:pt-28">
+        <div className="zoom-hero relative mx-auto grid max-w-6xl items-center gap-14 px-6 pb-24 pt-32 lg:min-h-svh lg:grid-cols-[1.15fr_0.85fr] lg:pb-16 lg:pt-28">
           <div className="text-center lg:text-left">
-            <p
-              className="enter inline-flex items-center gap-2 rounded-full border bg-card px-4 py-1.5 text-sm font-medium text-primary shadow-sm"
-              style={delay("0.1s")}
-            >
-              <span className="relative flex size-2">
-                <span className="absolute inset-0 animate-ping rounded-full bg-harvest" />
-                <span className="relative size-2 rounded-full bg-harvest" />
-              </span>
-              Free for farmworkers, in your language
-            </p>
-            <h1 className="mt-7 font-display text-[clamp(3rem,9vw,5.6rem)] font-semibold leading-[0.95] text-primary lg:text-[clamp(3.5rem,5.6vw,5.2rem)]">
+            <h1 className="font-display text-[clamp(3rem,9vw,5.6rem)] font-semibold leading-[0.95] text-primary lg:text-[clamp(3.5rem,5.6vw,5.2rem)]">
               <span className="block">
                 <Words text="The label says" start={0.2} />
               </span>
@@ -195,7 +196,7 @@ export default function Home() {
               className="enter mx-auto mt-7 max-w-xl text-lg leading-relaxed text-muted-foreground sm:text-xl lg:mx-0"
               style={delay("1s")}
             >
-              Point your phone at a pesticide label. Furrow tells you when it is
+              Point your phone at a pesticide label. Rowen tells you when it is
               safe to go back in, what to wear, and answers your questions out
               loud.
             </p>
@@ -242,7 +243,7 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6">
           <Eyebrow>How it works</Eyebrow>
           <h2 className="reveal mt-3 max-w-3xl font-display text-5xl font-semibold leading-[0.98] text-primary sm:text-7xl">
-            One photo. Every answer you need.
+            <Hover text="One photo. Every answer you need." />
           </h2>
         </div>
         <Tour />
@@ -251,13 +252,13 @@ export default function Home() {
       <section id="ask" className="relative py-28 lg:py-40">
         <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20">
           <div>
-            <Eyebrow>Ask Furrow</Eyebrow>
+            <Eyebrow>Ask Rowen</Eyebrow>
             <h2 className="reveal mt-3 font-display text-5xl font-semibold leading-[0.98] text-primary sm:text-6xl">
-              Ask the label anything.
+              <Hover text="Ask the label anything." />
             </h2>
             <p className="reveal mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground" style={delay("0.1s")}>
               After a scan, ask questions in your own words, typed or spoken.
-              Furrow answers from what the label actually says and from
+              Rowen answers from what the label actually says and from
               California&apos;s farm safety rules, in your language. When the
               label doesn&apos;t say, it tells you who to ask.
             </p>
@@ -288,7 +289,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="numbers" className="relative overflow-hidden bg-ink text-ink-foreground">
+      <section id="numbers" className="zoom-band relative overflow-hidden bg-ink text-ink-foreground">
         <FieldLines className="text-white/[0.07]" draw={false} />
         <ul className="relative mx-auto grid max-w-6xl grid-cols-2 lg:grid-cols-4">
           {numbers.map((item, index) => (
@@ -310,7 +311,7 @@ export default function Home() {
         </ul>
       </section>
 
-      <section id="heat" className="relative py-28 lg:py-40">
+      <section id="heat" className="zoom-rise relative py-28 lg:py-40">
         <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 lg:grid-cols-2 lg:gap-20">
           <div className="reveal order-2 lg:order-1">
             <div className="card p-6 sm:p-8">
@@ -343,10 +344,10 @@ export default function Home() {
           <div className="order-1 lg:order-2">
             <Eyebrow>Heat</Eyebrow>
             <h2 className="reveal mt-3 font-display text-5xl font-semibold leading-[0.98] text-primary sm:text-6xl">
-              Know the hottest hour before it hits.
+              <Hover text="Know the hottest hour before it hits." />
             </h2>
             <p className="reveal mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground" style={delay("0.1s")}>
-              Furrow checks the forecast where you stand and tells you what
+              Rowen checks the forecast where you stand and tells you what
               California requires at that temperature: shade above 80°F,
               cool-down breaks at 95°F, and water every hour. On hot days your
               phone reminds you to drink.
@@ -376,10 +377,10 @@ export default function Home() {
           <div>
             <Eyebrow>Honest by design</Eyebrow>
             <h2 className="reveal mt-3 font-display text-5xl font-semibold leading-[0.98] text-primary sm:text-6xl">
-              When it can&apos;t tell, it says so.
+              <Hover text="When it can’t tell, it says so." />
             </h2>
             <p className="reveal mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground" style={delay("0.1s")}>
-              A wrong re-entry time is worse than none. Furrow checks the photo
+              A wrong re-entry time is worse than none. Rowen checks the photo
               for blur before it sends it, shows exactly which words on the
               label each answer came from, and stops when a detail is unclear.
             </p>
@@ -387,10 +388,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="features" className="mx-auto max-w-6xl px-6 py-28 lg:py-40">
+      <section id="features" className="zoom-rise mx-auto max-w-6xl px-6 py-28 lg:py-40">
         <Eyebrow>Everything in it</Eyebrow>
         <h2 className="reveal mt-3 max-w-3xl font-display text-5xl font-semibold leading-[0.98] text-primary sm:text-6xl">
-          Twelve tools. One free app.
+          <Hover text="Fifteen tools. One free app." />
         </h2>
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {tools.map((tool, index) => {
@@ -418,7 +419,7 @@ export default function Home() {
 
       <section id="questions" className="mx-auto max-w-3xl px-6 pb-28 lg:pb-40">
         <h2 className="reveal font-display text-5xl font-semibold text-primary sm:text-6xl">
-          Questions
+          <Hover text="Questions" />
         </h2>
         <div className="mt-10 space-y-3">
           {questions.map((item, index) => (
@@ -441,7 +442,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="relative overflow-hidden bg-ink text-ink-foreground">
+      <section className="zoom-band relative overflow-hidden bg-ink text-ink-foreground">
         <div className="reveal absolute inset-0">
           <FieldLines className="text-harvest/30" />
         </div>

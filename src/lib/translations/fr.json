@@ -1,0 +1,457 @@
+{
+ "uybgyd": {
+  "headline": "Sachez avant d'entrer dans le champ.",
+  "tagline": "Prenez en photo une étiquette de pesticide ou un panneau dans le champ. Rowen vous dit, dans votre langue, quand vous pouvez entrer sans danger et comment vous protéger.",
+  "scan": "Photographier une étiquette ou un panneau",
+  "samples": "Ou essayez un exemple",
+  "reading": "Lecture de l'étiquette",
+  "reentry": "Quand vous pouvez retourner dans le champ",
+  "gear": "Ce qu'il faut porter",
+  "firstAid": "En cas de contact avec le produit",
+  "summary": "En bref",
+  "listen": "Écouter",
+  "stop": "Arrêter",
+  "another": "Scanner une autre photo",
+  "ask": "Pas sûr pour cette partie. Demandez à votre responsable.",
+  "unreadable": "Impossible de lire cette photo. Approchez-vous, ne bougez pas le téléphone et réessayez.",
+  "failed": "Un problème est survenu. Vérifiez votre connexion et réessayez.",
+  "offline": "Pas de connexion. Affichage d'un exemple enregistré.",
+  "noVoice": "Ce téléphone n'a pas de voix pour cette langue.",
+  "disclaimer": "Ceci est une aide à la lecture. Suivez toujours l'étiquette et les consignes de votre responsable.",
+  "sprayedAt": "Quand le produit a-t-il été appliqué ?",
+  "startClock": "Démarrer le chrono",
+  "clocksHeading": "Champs sous chrono",
+  "safeAt": "Entrée sans danger à",
+  "safeNow": "Entrée sans danger",
+  "hoursUnit": "h",
+  "minutesUnit": "min",
+  "leftWord": "restant",
+  "clearClock": "Effacer",
+  "callPoison": "Appeler le centre antipoison",
+  "signal": {
+   "caution": "Attention",
+   "warning": "Avertissement",
+   "danger": "Danger",
+   "unknown": "Non indiqué"
+  }
+ },
+ "1swoxky": {
+  "tab": "Chaleur",
+  "title": "La chaleur aujourd'hui",
+  "intro": "Regardez la température là où vous travaillez, et ce que la Californie oblige votre patron à vous donner.",
+  "check": "Vérifier la chaleur ici",
+  "checking": "Vérification de la météo...",
+  "again": "Vérifier à nouveau",
+  "failed": "Impossible d'avoir la météo. Vérifiez votre connexion et réessayez.",
+  "nearManteca": "La localisation est coupée, voici donc la météo à Manteca.",
+  "now": "En ce moment",
+  "feels": "Ressenti",
+  "high": "Le plus chaud aujourd'hui",
+  "levels": {
+   "normal": {
+    "title": "Chaleur normale",
+    "body": "Buvez de l'eau souvent, même avant d'avoir soif. Votre patron doit vous donner de l'eau fraîche et gratuite tout près d'où vous travaillez."
+   },
+   "shade": {
+    "title": "L'ombre doit être prête",
+    "body": "Quand il fait plus de 80°F, la Californie oblige à avoir de l'ombre près d'où vous travaillez, avec de la place pour tous ceux en pause. Vous pouvez vous reposer à l'ombre dès que vous avez besoin de vous rafraîchir."
+   },
+   "high": {
+    "title": "Forte chaleur",
+    "body": "À 95°F et plus, quelqu'un doit surveiller l'équipe pour repérer les signes de coup de chaud. Les ouvriers agricoles ont droit à 10 minutes de pause pour se rafraîchir toutes les deux heures. L'ombre doit être prête."
+   }
+  },
+  "water": "Buvez environ un litre d'eau par heure. Ça fait quatre verres.",
+  "signsTitle": "Demandez de l'aide tout de suite si quelqu'un a",
+  "signs": [
+   "La tête confuse ou du mal à parler",
+   "La peau chaude et sèche, ou une très grosse transpiration",
+   "Un évanouissement ou une crise de convulsions",
+   "Un violent mal de tête, des nausées ou des vomissements"
+  ],
+  "call911": "Appelez le 911",
+  "rules": "Basé sur les règles de Californie sur la chaleur pour le travail dehors."
+ },
+ "kkahit": {
+  "tab": "Exposé",
+  "title": "Vous avez reçu des pesticides sur vous ?",
+  "emergency": "Si quelqu'un a du mal à respirer, s'évanouit ou a des convulsions, appelez le 911 tout de suite.",
+  "call911": "Appelez le 911",
+  "steps": [
+   "Éloignez-vous de la zone traitée et allez prendre l'air frais.",
+   "Enlevez les vêtements et les chaussures qui ont été mouillés par le produit.",
+   "Rincez la peau avec beaucoup d'eau propre et du savon pendant 15 minutes. Pour les yeux, rincez à l'eau claire pendant 15 minutes.",
+   "Appelez le centre antipoison. C'est gratuit, privé et ils ont des interprètes.",
+   "Dites à votre responsable de quel produit il s'agit. Votre employeur doit vous emmener voir un médecin."
+  ],
+  "rinseStart": "Commencer le rinçage de 15 minutes",
+  "rinseKeep": "Continuez à rincer",
+  "rinseDone": "15 minutes terminées",
+  "rinseAgain": "Recommencer",
+  "productLabel": "Nom du produit, si vous le connaissez",
+  "productHint": "Rempli d'après votre dernier scan",
+  "timeLabel": "Quand est-ce arrivé ?",
+  "showCard": "Montrer une fiche en anglais au médecin",
+  "close": "Fermer",
+  "interpreter": ""
+ },
+ "12jsthl": {
+  "signInTitle": "Ravi de vous revoir",
+  "signUpTitle": "Créer un compte",
+  "intro": "Vos scans, vos comptes à rebours et votre langue restent sur votre compte, pour vous suivre sur n'importe quel téléphone.",
+  "name": "Votre nom",
+  "email": "E-mail",
+  "password": "Mot de passe",
+  "signIn": "Se connecter",
+  "signUp": "Créer un compte",
+  "google": "Continuer avec Google",
+  "or": "ou",
+  "noAccount": "Nouveau sur Rowen ?",
+  "createOne": "Créer un compte",
+  "haveAccount": "Vous avez déjà un compte ?",
+  "signInLink": "Se connecter",
+  "forgot": "Mot de passe oublié ?",
+  "resetNeedsEmail": "Écrivez d'abord votre e-mail, puis appuyez sur Mot de passe oublié.",
+  "resetSent": "Nous vous avons envoyé un lien pour changer votre mot de passe. Regardez vos e-mails.",
+  "working": "Un instant...",
+  "verifyTitle": "Regardez vos e-mails",
+  "verifyBody": "Nous avons envoyé un lien à",
+  "verifyNext": "Ouvrez-le pour confirmer votre adresse. Cette page changera toute seule dès que c'est fait.",
+  "resend": "Renvoyer le lien",
+  "resent": "C'est envoyé. Ça peut prendre une minute, et ça peut être dans vos spams.",
+  "verified": "J'ai ouvert le lien",
+  "notYet": "Pas encore confirmé. Ouvrez le lien dans l'e-mail, puis réessayez.",
+  "useOther": "Utiliser un autre e-mail",
+  "account": "Compte",
+  "signedInAs": "Connecté en tant que",
+  "signOut": "Se déconnecter",
+  "errors": {
+   "invalid": "Cet e-mail ou ce mot de passe est faux.",
+   "inUse": "Il y a déjà un compte avec cet e-mail. Connectez-vous plutôt.",
+   "weak": "Utilisez au moins 6 caractères pour le mot de passe.",
+   "badEmail": "Ça ne ressemble pas à une adresse e-mail.",
+   "popup": "La fenêtre Google s'est fermée avant la fin.",
+   "tooMany": "Trop d'essais. Attendez quelques minutes et réessayez.",
+   "network": "Pas de réseau. Regardez vos barres et réessayez.",
+   "generic": "Un problème est arrivé. Réessayez.",
+   "notConfigured": "La connexion n'est pas encore prête sur ce site."
+  }
+ },
+ "1nenh57": {
+  "tabs": {
+   "scan": "Scanner",
+   "ask": "Demander",
+   "tools": "Outils",
+   "saved": "Enregistré"
+  },
+  "language": "Langue",
+  "chooseLanguage": "Choisissez votre langue",
+  "back": "Retour",
+  "toolsTitle": "Outils",
+  "toolsIntro": "Tout ce que Rowen peut faire. Touchez-en un.",
+  "tools": {
+   "heat": {
+    "title": "Alerte chaleur",
+    "body": "L'heure la plus chaude aujourd'hui et vos droits"
+   },
+   "symptoms": {
+    "title": "Je me sens malade",
+    "body": "Savoir qui appeler"
+   },
+   "exposed": {
+    "title": "Produit reçu",
+    "body": "911, minuteur de rinçage, fiche pour le médecin"
+   },
+   "paper": {
+    "title": "Lire un papier",
+    "body": "Avis, fiches de paie, formulaires"
+   },
+   "report": {
+    "title": "Signaler un problème",
+    "body": "Racontez, recevez un rapport en anglais"
+   },
+   "brief": {
+    "title": "Plan du jour",
+    "body": "Vos parcelles et la chaleur, à voix haute"
+   },
+   "map": {
+    "title": "Carte des traitements",
+    "body": "Où vous avez scanné les étiquettes"
+   },
+   "install": {
+    "title": "Ajouter au téléphone",
+    "body": "Ouvrez Rowen comme une appli"
+   },
+   "gear": {
+    "title": "Vérifier la tenue",
+    "body": "Une photo de vous, comparée à l'étiquette"
+   },
+   "pay": {
+    "title": "Vérifier la paie",
+    "body": "Votre fiche de paie est-elle juste ?"
+   },
+   "interpret": {
+    "title": "Interprète",
+    "body": "Parlez avec votre chef ou l'infirmier"
+   }
+  },
+  "ask": {
+   "title": "Demander à Rowen",
+   "about": "À propos de",
+   "general": "Posez vos questions sur les pesticides, la chaleur ou vos droits au travail.",
+   "placeholder": "Écrivez ou touchez le micro",
+   "send": "Envoyer",
+   "listening": "Écoute en cours...",
+   "thinking": "Réflexion en cours...",
+   "failed": "Impossible d'avoir une réponse. Vérifiez votre connexion et réessayez.",
+   "starters": [
+    "Quand puis-je retourner dans le champ ?",
+    "Qu'est-ce que je dois porter ?",
+    "Et si ça touche ma peau ?",
+    "Mon chef peut-il me faire entrer plus tôt ?"
+   ],
+   "clear": "Nouvelle discussion",
+   "listen": "Écouter",
+   "call911": "Appeler le 911",
+   "chats": "Vos discussions",
+   "noChats": "Vos discussions s'affichent ici. Elles sont enregistrées sur votre compte.",
+   "remove": "Supprimer la discussion",
+   "retry": "Réessayer",
+   "talk": "Parler",
+   "talkHint": "Parlez dans la langue de votre choix. Rowen écoute, puis répond à voix haute.",
+   "voiceListening": "Écoute en cours",
+   "voiceThinking": "Réflexion en cours",
+   "voiceSpeaking": "Touchez pour couper la parole",
+   "voiceTap": "Touchez pour parler",
+   "voiceBlocked": "Rowen a besoin de votre micro. Autorisez-le dans les réglages du navigateur, puis réessayez.",
+   "voiceFailed": "Ça n'a pas marché. Touchez pour réessayer.",
+   "close": "Fermer"
+  },
+  "result": {
+   "askAbout": "Poser une question sur cette étiquette",
+   "supervisor": "Montrer à mon chef",
+   "share": "Partager avec l'équipe",
+   "shared": "Lien prêt à être partagé",
+   "copied": "Lien copié",
+   "shareFailed": "Impossible de créer un lien. Réessayez.",
+   "howRead": "Comment Rowen a lu ceci",
+   "confidence": {
+    "high": "Lecture claire",
+    "medium": "À vérifier",
+    "low": "Pas sûr"
+   },
+   "confidenceNote": {
+    "high": "L'étiquette était bien nette et chaque réponse ci-dessous y était écrite.",
+    "medium": "Certains mots étaient petits ou cachés en partie. Vérifiez l'étiquette ou demandez.",
+    "low": "Rowen a un doute sur une partie. Demandez à votre chef."
+   },
+   "fields": {
+    "product": "Produit",
+    "signal": "Mot d'avertissement",
+    "reentry": "Délai avant retour",
+    "gear": "Tenue à porter",
+    "firstAid": "Premiers secours"
+   },
+   "others": "Aussi sur cette photo"
+  },
+  "supervisorCard": {
+   "close": "Fermer",
+   "intro": "Montrez cet écran à votre chef."
+  },
+  "coach": {
+   "dark": "Trop sombre. Allez vers la lumière ou allumez une lampe.",
+   "bright": "Trop lumineux. Tournez-vous pour que le soleil ne tape pas sur l'étiquette.",
+   "blurry": "Un peu flou. Ne bougez plus le téléphone et approchez-vous.",
+   "useAnyway": "Utiliser quand même"
+  },
+  "symptoms": {
+   "title": "Comment vous sentez-vous ?",
+   "intro": "Touchez tout ce que vous ressentez maintenant. Rowen vous dit qui appeler.",
+   "list": [
+    "Mal de tête",
+    "Vertiges",
+    "Envie de vomir",
+    "Vomissements",
+    "Yeux qui brûlent",
+    "Boutons ou peau qui brûle",
+    "Beaucoup de sueur",
+    "Muscles qui tressautent",
+    "Très fatigué",
+    "Crampes",
+    "Du mal à respirer",
+    "Douleur dans la poitrine",
+    "Perdu ou confus",
+    "Évanoui"
+   ],
+   "note": "Autre chose ? Dites-le avec vos mots.",
+   "check": "Dis-moi quoi faire",
+   "checking": "Vérification en cours...",
+   "failed": "Impossible de vérifier. Si vous êtes très malade, appelez le 911.",
+   "again": "Recommencer",
+   "callPoison": "Centre antipoison"
+  },
+  "paper": {
+   "title": "Lire un papier",
+   "intro": "Prenez en photo n'importe quel papier du travail. Rowen l'explique dans votre langue.",
+   "take": "Prendre une photo",
+   "choose": "Choisir une photo",
+   "reading": "Lecture du papier en cours...",
+   "failed": "Impossible de lire. Vérifiez votre connexion et réessayez.",
+   "unreadable": "Nous n'avons pas pu lire ceci. Approchez-vous, ne bougez pas et réessayez.",
+   "actions": "Ce que vous devez faire",
+   "dates": "Dates et montants",
+   "another": "Lire un autre papier"
+  },
+  "report": {
+   "title": "Signaler un problème",
+   "intro": "Racontez ce qui s'est passé avec vos mots. Rowen écrit un rapport clair en anglais pour le patron ou le comté.",
+   "placeholder": "Par exemple : Ils ont traité le champ d'à côté pendant qu'on ramassait et le vent a tout envoyé sur nous.",
+   "when": "Quand est-ce arrivé ?",
+   "write": "Écrire mon rapport",
+   "writing": "Écriture en cours...",
+   "failed": "Impossible d'écrire le rapport. Réessayez.",
+   "english": "Rapport en anglais",
+   "yourLanguage": "Ce que ça dit",
+   "missing": "Ajoutez ceci pour le rendre plus solide",
+   "copy": "Copier",
+   "copied": "Copié",
+   "share": "Envoyer",
+   "edit": "Modifier mon histoire"
+  },
+  "brief": {
+   "title": "Plan du jour",
+   "intro": "Rowen regarde vos compteurs et la chaleur d'aujourd'hui et vous dit le plan à voix haute.",
+   "make": "Donne-moi le plan du jour",
+   "making": "Préparation de votre plan...",
+   "failed": "Impossible de faire le plan. Vérifiez votre connexion.",
+   "listen": "Écouter",
+   "again": "Mettre à jour"
+  },
+  "map": {
+   "title": "Carte des traitements",
+   "intro": "Chaque étiquette scannée est marquée à l'endroit où vous étiez.",
+   "empty": "Aucun scan marqué pour l'instant. Scannez une étiquette avec le GPS allumé.",
+   "loading": "Chargement de vos scans...",
+   "failed": "Impossible de charger vos scans.",
+   "noPlace": "Ces scans n'ont pas de lieu."
+  },
+  "alarms": {
+   "allow": "Fais vibrer mon téléphone quand c'est sans danger",
+   "on": "L'alarme est allumée",
+   "safeTitle": "Sans danger pour retourner dans le champ",
+   "safeBody": "Le temps d'attente est fini pour",
+   "waterTitle": "Buvez de l'eau",
+   "waterBody": "Il fait chaud. Buvez environ un litre toutes les heures.",
+   "waterOn": "Rappelle-moi de boire toutes les heures",
+   "waterOff": "Rappels pour boire allumés"
+  },
+  "install": {
+   "title": "Ajouter Rowen à votre téléphone",
+   "body": "L'appli s'ouvre facilement, et vos scans, minuteurs et gestes d'urgence marchent même sans réseau.",
+   "button": "Ajouter à l'écran d'accueil",
+   "ios": "Sur iPhone : touchez Partager, puis Sur l'écran d'accueil.",
+   "done": "Rowen est sur votre écran d'accueil."
+  }
+ },
+ "1i1pcy3": {
+  "reading": [
+   "Lecture de l'étiquette",
+   "Recherche du délai avant de retourner au champ",
+   "Explication avec des mots simples"
+  ],
+  "saved": "Enregistré dans votre historique",
+  "choose": "Choisir plutôt une photo"
+ },
+ "10g6smy": {
+  "hint": "Cadrez toute l'étiquette dans l'image",
+  "capture": "Prendre la photo",
+  "retake": "Recommencer",
+  "use": "Lire cette étiquette",
+  "flip": "Changer de caméra",
+  "gallery": "Choisir une photo",
+  "close": "Fermer la caméra",
+  "blocked": "Rowen ne peut pas ouvrir la caméra ici. Autorisez l'accès à la caméra dans les réglages de votre navigateur, ou utilisez l'appareil photo de votre téléphone.",
+  "openApp": "Utiliser l'appareil photo"
+ },
+ "pyuh1i": {
+  "tab": "Enregistrés",
+  "title": "Vos scans",
+  "intro": "Chaque étiquette que vous scannez est enregistrée sur votre compte, depuis n'importe quel téléphone.",
+  "empty": "Rien d'enregistré pour l'instant. Scannez une étiquette et elle apparaîtra ici avec sa photo.",
+  "failed": "Impossible de charger vos scans. Vérifiez votre réseau et réessayez.",
+  "remove": "Supprimer"
+ },
+ "1swsqbl": {
+  "gear": {
+   "title": "Vérification de l'équipement",
+   "intro": "Prenez-vous en photo avant d'entrer. Rowen vérifie si vous portez ce que l'étiquette demande.",
+   "forProduct": "Vérification de l'équipement pour",
+   "noLabel": "Aucune étiquette scannée pour l'instant, Rowen vérifie donc l'équipement habituel.",
+   "defaultGear": [
+    "Chemise à manches longues",
+    "Pantalon long",
+    "Gants qui résistent aux produits chimiques",
+    "Chaussures et chaussettes"
+   ],
+   "take": "Me prendre en photo",
+   "hint": "Reculez un peu pour qu'on voie vos bras, vos mains et vos pieds.",
+   "checking": "Vérification de votre équipement...",
+   "verdict": {
+    "ready": "Vous avez l'air prêt",
+    "missing": "Réglez ça avant d'entrer",
+    "unsure": "Rowen n'a pas pu tout voir"
+   },
+   "status": {
+    "on": "Mis",
+    "missing": "Manquant",
+    "unsure": "Pas visible"
+   },
+   "noPerson": "Rowen n'a vu personne sur cette photo. Reculez un peu et réessayez.",
+   "failed": "Impossible de vérifier la photo. Vérifiez votre connexion et réessayez.",
+   "again": "Revérifier"
+  },
+  "pay": {
+   "title": "Vérification de la paye",
+   "intro": "Prenez votre fiche de paye en photo. Rowen la lit et vérifie si elle suit les règles de paye de Californie.",
+   "take": "Prendre ma fiche de paye en photo",
+   "choose": "Choisir une photo",
+   "reading": "Lecture de votre fiche de paye...",
+   "period": "Période de paye",
+   "hours": "Heures",
+   "rate": "Taux horaire",
+   "gross": "Avant les retenues",
+   "net": "Ce qui vous revient",
+   "verdict": {
+    "ok": "Ça a l'air bon",
+    "ask": "Renseignez-vous là-dessus",
+    "unclear": "Difficile à lire"
+   },
+   "status": {
+    "ok": "A l'air bon",
+    "ask": "Renseignez-vous",
+    "missing": "Pas sur la fiche"
+   },
+   "labor": "Appeler le commissaire au travail",
+   "notStub": "Ça ne ressemble pas à une fiche de paye. Essayez avec une photo plus nette.",
+   "failed": "Impossible de lire la photo. Vérifiez votre connexion et réessayez.",
+   "again": "En vérifier une autre",
+   "privacy": "La photo n'est enregistrée nulle part."
+  },
+  "interpret": {
+   "title": "Interprète",
+   "intro": "Parlez avec un chef, une infirmière ou un employé. Chacun appuie sur son côté et parle, et Rowen répète à voix haute dans l'autre langue.",
+   "me": "Moi",
+   "them": "Eux",
+   "other": "Ils parlent",
+   "listening": "Écoute en cours... appuyez pour arrêter",
+   "translating": "Traduction...",
+   "tapToStop": "Appuyez pour arrêter",
+   "empty": "Appuyez sur votre côté et parlez. Passez le téléphone quand c'est à leur tour.",
+   "failed": "Ça n'a pas marché. Réessayez.",
+   "blocked": "Rowen a besoin de votre micro. Autorisez-le dans les réglages de votre navigateur.",
+   "clear": "Recommencer",
+   "replay": "Répéter",
+   "unsupported": "Ce navigateur ne peut pas enregistrer le son. Essayez Chrome ou Safari."
+  }
+ }
+}

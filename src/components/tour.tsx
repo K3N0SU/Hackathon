@@ -34,7 +34,7 @@ const steps: Step[] = [
     icon: ScanLine,
     tag: "Labels",
     title: "Point the camera. Get the answer.",
-    body: "Furrow opens the camera right inside the app. Frame the label, tap once, and in about five seconds you see the warning level, how long to stay out, what to wear and what to do if it touches your skin. Tap Listen and it reads it out loud.",
+    body: "Rowen opens the camera right inside the app. Frame the label, tap once, and in about five seconds you see the warning level, how long to stay out, what to wear and what to do if it touches your skin. Tap Listen and it reads it out loud.",
     accent: "text-primary",
     Screen: LabelsScreen,
   },
@@ -42,7 +42,7 @@ const steps: Step[] = [
     icon: TimerReset,
     tag: "Clock",
     title: "A scan tells you once. The clock keeps telling you.",
-    body: "Tell Furrow when the block was sprayed and it counts down the re-entry time. Red means stay out. Green means the time is up. It is still counting when you open your phone at lunch.",
+    body: "Tell Rowen when the block was sprayed and it counts down the re-entry time. Red means stay out. Green means the time is up. It is still counting when you open your phone at lunch.",
     accent: "text-danger",
     Screen: ClockScreen,
   },
@@ -50,7 +50,7 @@ const steps: Step[] = [
     icon: MessageCircleQuestion,
     tag: "Ask",
     title: "Ask it anything, out loud.",
-    body: "Ask follow-up questions in your own words, typed or spoken, in your language. Furrow answers only from the label you scanned and California’s farm safety rules, and tells you who to ask when the label does not say.",
+    body: "Ask follow-up questions in your own words, typed or spoken, in your language. Rowen answers only from the label you scanned and California’s farm safety rules, and tells you who to ask when the label does not say.",
     accent: "text-primary",
     Screen: AskScreen,
   },
@@ -58,7 +58,7 @@ const steps: Step[] = [
     icon: Sun,
     tag: "Heat",
     title: "Know the hottest hour before it hits.",
-    body: "Furrow checks the forecast where you stand and explains what California requires at that temperature: shade above 80°F, cool-down breaks at 95°F, water every hour, and the signs that mean call 911.",
+    body: "Rowen checks the forecast where you stand and explains what California requires at that temperature: shade above 80°F, cool-down breaks at 95°F, water every hour, and the signs that mean call 911.",
     accent: "text-amber-700",
     Screen: HeatScreen,
   },
@@ -155,16 +155,6 @@ export function Tour() {
                 <Current />
               </div>
             </PhoneFrame>
-            <div className="absolute -left-12 top-1/2 flex -translate-y-1/2 flex-col gap-3">
-              {steps.map((step, index) => (
-                <span
-                  key={step.tag}
-                  className={`w-1.5 rounded-full transition-all duration-500 ${
-                    active === index ? "h-10 bg-primary" : "h-1.5 bg-primary/20"
-                  }`}
-                />
-              ))}
-            </div>
           </div>
         </div>
       </div>

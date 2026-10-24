@@ -23,16 +23,25 @@ function save(clocks: Clock[]) {
   saveProfile({ clocks }).catch(() => {});
 }
 
-export function useClocks() {
+export function useClocks(uid?: string) {
   const [clocks, setClocks] = useState<Clock[]>([]);
   const [now, setNow] = useState(0);
 
   useEffect(() => {
-    let active = true;
     const start = setTimeout(() => {
       setClocks(load());
       setNow(Date.now());
     }, 0);
+    const timer = setInterval(() => setNow(Date.now()), 15000);
+    return () => {
+      clearTimeout(start);
+      clearInterval(timer);
+    };
+  }, []);
+
+  useEffect(() => {
+    if (!uid) return;
+    let active = true;
     loadProfile()
       .then((profile) => {
         if (!active || !profile.clocks) return;
@@ -42,13 +51,10 @@ export function useClocks() {
         } catch {}
       })
       .catch(() => {});
-    const timer = setInterval(() => setNow(Date.now()), 15000);
     return () => {
       active = false;
-      clearTimeout(start);
-      clearInterval(timer);
     };
-  }, []);
+  }, [uid]);
 
   const add = useCallback(
     (product: string, sprayedAt: number, hours: number) => {

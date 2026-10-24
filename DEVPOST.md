@@ -1,6 +1,6 @@
-# Devpost copy for Furrow
+# Devpost copy for Rowen
 
-Paste each section into the matching Devpost field. Upload `Furrow.pptx` from your Downloads folder as the slides and the images in `Downloads/Furrow screenshots` to the gallery. Tracks: Main and Best Use of AI/ML.
+Paste each section into the matching Devpost field. Upload `Rowen.pptx` from your Downloads folder as the slides and the images in `Downloads/Rowen screenshots` to the gallery. Tracks: Main and Best Use of AI/ML.
 
 ## Tagline
 
@@ -12,9 +12,9 @@ The Central Valley grows a huge share of the country's fruit and nuts, and the p
 
 ## What it does
 
-Furrow opens straight to the camera. Photograph a pesticide label or a field sign and in about five seconds you get the signal word, how long to stay out, what to wear and first aid, in plain words, read aloud. A badge says how clearly it read the label, and a drawer shows the exact words on the label each answer came from. Start a countdown for the block and your phone buzzes when it is safe to go back in.
+Rowen opens straight to the camera. Photograph a pesticide label or a field sign and in about five seconds you get the signal word, how long to stay out, what to wear and first aid, in plain words, read aloud. A badge says how clearly it read the label, and a drawer shows the exact words on the label each answer came from. Start a countdown for the block and your phone buzzes when it is safe to go back in.
 
-Then you can ask. "Can I eat lunch in the rows?" "My gloves ripped, can I keep working?" Ask Furrow answers by text or voice from the label you scanned and California's farm safety rules, and when the label doesn't say, it tells you who to ask instead of guessing.
+Then you can ask. "Can I eat lunch in the rows?" "My gloves ripped, can I keep working?" Ask Rowen answers by text or voice from the label you scanned and California's farm safety rules, and when the label doesn't say, it tells you who to ask instead of guessing.
 
 The Tools tab holds the rest of a worker's day: a symptom check that sorts urgency into 911, Poison Control, a doctor or rest; an exposure screen with a 15-minute rinse timer and an English card for the doctor; a heat check with hourly water reminders; a paper reader for notices and pay stubs that flags anything unfair; a report writer that turns a spoken story in any language into a factual English incident report; a spoken plan for the day; and a spray map of where you scanned. One tap shows a supervisor card in English, and one more shares the scan with your crew as a link they can open in their own language. It works in eight languages, installs to the home screen, and keeps saved scans, clocks and the exposure steps working with no signal.
 
@@ -22,7 +22,7 @@ The Tools tab holds the rest of a worker's day: a symptom check that sorts urgen
 
 The front end is Next.js 16, React and Tailwind on Vercel. Every AI feature goes through one server helper that calls the Google Gemini API on the free tier with a written system prompt and a response schema the API enforces, so the interface gets typed fields, never prose.
 
-The label reader is told to report only what is printed and returns an evidence array of verbatim quotes plus a confidence level, which is what powers the "How Furrow read this" drawer. The chat is grounded in the scanned result, the worker's clocks and a short block of California facts (re-entry intervals, free protective gear, the heat standard, anti-retaliation, Poison Control); it must lead with yes, no, not yet or I don't know, send emergencies to 911, and never invent label facts. Symptom triage, paper reading, report writing and the daily plan each have their own prompt and schema. On the phone, a Laplacian blur check and a brightness check coach the photo before it is sent. The interface in Hmong, Tagalog, Hindi, Arabic and Vietnamese was translated by Gemini, validated to have exactly the same structure as the English, and bundled so switching is instant; shared scans are translated on the fly for whoever opens them.
+The label reader is told to report only what is printed and returns an evidence array of verbatim quotes plus a confidence level, which is what powers the "How Rowen read this" drawer. The chat is grounded in the scanned result, the worker's clocks and a short block of California facts (re-entry intervals, free protective gear, the heat standard, anti-retaliation, Poison Control); it must lead with yes, no, not yet or I don't know, send emergencies to 911, and never invent label facts. Symptom triage, paper reading, report writing and the daily plan each have their own prompt and schema. On the phone, a Laplacian blur check and a brightness check coach the photo before it is sent. The interface in Hmong, Tagalog, Hindi, Arabic and Vietnamese was translated by Gemini, validated to have exactly the same structure as the English, and bundled so switching is instant; shared scans are translated on the fly for whoever opens them.
 
 Accounts use Firebase Authentication with email verification, password reset and Google. Scans, thumbnails, clocks and language live in Cloud Firestore behind rules that only let a verified user touch their own data, with a public read-only collection for crew links. Open-Meteo provides the forecast and OpenStreetMap the map tiles. The Web Speech API reads answers and takes dictation, and a service worker makes it installable and offline. The sample labels carry saved answers so the demo works even if the network doesn't.
 
