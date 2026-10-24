@@ -36,7 +36,6 @@ import { InstallCard } from "@/components/install-card";
 import { Interpreter } from "@/components/interpreter";
 import { Mark } from "@/components/mark";
 import { PayCheck } from "@/components/pay-check";
-import { PixelFarm } from "@/components/pixel-farm";
 import { ReadPaper } from "@/components/read-paper";
 import { ReportWriter } from "@/components/report-writer";
 import { SavedScans } from "@/components/saved-scans";
@@ -320,12 +319,7 @@ export function AppShell() {
             );
           })}
         </div>
-        <div className="mt-auto">
-          <div className="px-6 pb-4">{languageButton(true)}</div>
-          <div className="relative h-28 overflow-hidden">
-            <PixelFarm />
-          </div>
-        </div>
+        <div className="mt-auto px-6 pb-6">{languageButton(true)}</div>
       </aside>
 
       <header className="sticky top-0 z-30 bg-background/85 backdrop-blur-md lg:hidden">
