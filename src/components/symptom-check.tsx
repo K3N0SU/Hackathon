@@ -108,9 +108,7 @@ export function SymptomCheck({ language }: { language: Language }) {
               className="rise card flex gap-4 p-4"
               style={{ animationDelay: `${100 + index * 80}ms` }}
             >
-              <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary font-display text-lg font-semibold text-primary-foreground">
-                {index + 1}
-              </span>
+              <span className="mt-2 size-2.5 shrink-0 rounded-full bg-primary" />
               <p className="text-lg leading-snug">{step}</p>
             </li>
           ))}

@@ -1,5 +1,6 @@
 import {
   BellRing,
+  Check,
   Camera,
   ClipboardPen,
   FileText,
@@ -187,7 +188,7 @@ export default function Home() {
                 <Words text="12 hours." start={0.42} />
               </span>
               <span className="block italic text-foreground">
-                <Words text="Now you can read it." start={0.6} />
+                <Words text={"Now you can read\u00a0it."} start={0.6} />
               </span>
             </h1>
             <p
@@ -271,8 +272,8 @@ export default function Home() {
                   className="reveal-left flex items-center gap-3 text-lg"
                   style={delay(`${0.15 + index * 0.1}s`)}
                 >
-                  <span className="flex size-7 items-center justify-center rounded-full bg-harvest text-sm font-bold text-harvest-foreground">
-                    {index + 1}
+                  <span className="flex size-7 shrink-0 items-center justify-center rounded-full bg-harvest text-harvest-foreground">
+                    <Check className="size-4" />
                   </span>
                   {item}
                 </li>

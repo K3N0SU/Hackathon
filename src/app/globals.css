@@ -479,24 +479,13 @@
 }
 
 @keyframes callout {
-  0%,
-  36% {
+  from {
     opacity: 0;
-    transform: translate(var(--from-x), var(--from-y)) scale(0.6);
+    transform: translate(var(--from-x, 0), var(--from-y, 16px)) scale(0.96);
   }
-  48% {
-    opacity: 1;
-    transform: translate(0, -10px) scale(1.04);
-  }
-  52%,
-  88% {
+  to {
     opacity: 1;
     transform: none;
-  }
-  96%,
-  100% {
-    opacity: 0;
-    transform: translateY(10px);
   }
 }
 
@@ -623,8 +612,8 @@
   }
 
   .callout {
-    animation: callout 9s var(--ease-spring) infinite;
-    animation-delay: var(--delay, 0s);
+    animation: callout 0.8s var(--ease-spring) both;
+    animation-delay: calc(1.2s + var(--delay, 0s));
   }
 
   .label-shake {

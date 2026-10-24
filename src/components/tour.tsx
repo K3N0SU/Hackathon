@@ -126,7 +126,7 @@ export function Tour() {
                     <Icon className="size-5" />
                   </span>
                   <span className="font-display text-lg italic">
-                    {String(index + 1).padStart(2, "0")} {step.tag}
+                    {step.tag}
                   </span>
                 </p>
                 <h3 className="mt-6 max-w-xl font-display text-4xl font-semibold leading-[1.02] sm:text-5xl">

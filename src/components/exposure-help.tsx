@@ -102,9 +102,7 @@ export function ExposureHelp({ language }: { language: Language }) {
             className="rise flex gap-4 rounded-2xl border bg-card p-4"
             style={{ animationDelay: `${index * 60}ms` }}
           >
-            <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary font-display text-xl font-semibold text-primary-foreground">
-              {index + 1}
-            </span>
+            <span className="mt-2.5 size-2.5 shrink-0 rounded-full bg-primary" />
             <div className="flex-1">
               <p className="text-lg leading-snug">{step}</p>
               {index === 2 && (

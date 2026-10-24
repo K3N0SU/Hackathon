@@ -36,7 +36,7 @@ export function SectionDots() {
   return (
     <nav
       aria-label="Page sections"
-      className="fixed right-5 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-end gap-2.5 lg:flex"
+      className="fixed right-5 top-1/2 z-30 hidden -translate-y-1/2 flex-col items-end gap-2.5 xl:flex"
     >
       {sections.map((section) => (
         <a
