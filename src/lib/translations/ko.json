@@ -135,7 +135,7 @@
    "network": "인터넷이 끊겼어요. 신호 상태를 보고 다시 해보세요.",
    "generic": "문제가 생겼어요. 다시 해보세요.",
    "notConfigured": "이 사이트에서는 아직 로그인을 쓸 수 없어요.",
-   "wrongSite": "Google 로그인은 milpa-cali.vercel.app에서만 돼요. 거기서 Milpa를 열거나 이메일로 로그인하세요."
+   "wrongSite": "Google 로그인은 milpa-california.vercel.app에서만 돼요. 거기서 Milpa를 열거나 이메일로 로그인하세요."
   }
  },
  "1m3i1h": {

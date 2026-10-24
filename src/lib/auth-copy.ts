@@ -43,7 +43,7 @@ export const authCopy = {
       network: "No connection. Check your signal and try again.",
       generic: "Something went wrong. Try again.",
       notConfigured: "Sign in isn't set up on this site yet.",
-      wrongSite: "Google sign-in only works at milpa-cali.vercel.app. Open Milpa there, or use your email.",
+      wrongSite: "Google sign-in only works at milpa-california.vercel.app. Open Milpa there, or use your email.",
     },
   },
   es: {
@@ -91,7 +91,7 @@ export const authCopy = {
       network: "Sin conexión. Revisa tu señal y vuelve a intentar.",
       generic: "Algo salió mal. Vuelve a intentar.",
       notConfigured: "El inicio de sesión todavía no está listo en este sitio.",
-      wrongSite: "Google solo funciona en milpa-cali.vercel.app. Abre Milpa ahí o usa tu correo.",
+      wrongSite: "Google solo funciona en milpa-california.vercel.app. Abre Milpa ahí o usa tu correo.",
     },
   },
   pa: {
@@ -137,7 +137,7 @@ export const authCopy = {
       network: "ਕੁਨੈਕਸ਼ਨ ਨਹੀਂ ਹੈ। ਸਿਗਨਲ ਦੇਖ ਕੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
       generic: "ਕੁਝ ਗਲਤ ਹੋ ਗਿਆ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
       notConfigured: "ਇਸ ਸਾਈਟ ਤੇ ਸਾਈਨ ਇਨ ਅਜੇ ਤਿਆਰ ਨਹੀਂ ਹੈ।",
-      wrongSite: "Google ਸਾਈਨ ਇਨ ਸਿਰਫ਼ milpa-cali.vercel.app ਤੇ ਚੱਲਦਾ ਹੈ। Milpa ਉੱਥੇ ਖੋਲ੍ਹੋ ਜਾਂ ਆਪਣੀ ਈਮੇਲ ਵਰਤੋ।",
+      wrongSite: "Google ਸਾਈਨ ਇਨ ਸਿਰਫ਼ milpa-california.vercel.app ਤੇ ਚੱਲਦਾ ਹੈ। Milpa ਉੱਥੇ ਖੋਲ੍ਹੋ ਜਾਂ ਆਪਣੀ ਈਮੇਲ ਵਰਤੋ।",
     },
   },
 } satisfies Record<CoreLanguage, unknown>;

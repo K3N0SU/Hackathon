@@ -135,7 +135,7 @@
    "network": "没连上网。看看信号然后再试。",
    "generic": "出错了。再试一次吧。",
    "notConfigured": "此网站还没设置好登录功能。",
-   "wrongSite": "Google 登录只能在 milpa-cali.vercel.app 上用。去那里打开 Milpa，或者用邮箱登录。"
+   "wrongSite": "Google 登录只能在 milpa-california.vercel.app 上用。去那里打开 Milpa，或者用邮箱登录。"
   }
  },
  "1m3i1h": {

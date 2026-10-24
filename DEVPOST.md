@@ -52,5 +52,5 @@ Google Gemini API (gemini-3.8-flash, gemini-3.8-flash-tts), Firebase Authenticat
 
 ## Links
 
-Live site: https://milpa-cali.vercel.app
+Live site: https://milpa-california.vercel.app
 Code: https://github.com/K3N0SU/Hackathon

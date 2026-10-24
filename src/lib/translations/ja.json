@@ -135,7 +135,7 @@
    "network": "通信できません。電波のつながりを確認して、もう一度お試しください。",
    "generic": "何かがうまくいきませんでした。もう一度お試しください。",
    "notConfigured": "このサイトではまだログインの設定ができていません。",
-   "wrongSite": "Googleログインは milpa-cali.vercel.app だけで使えます。そちらでMilpaを開くか、メールアドレスを使ってください。"
+   "wrongSite": "Googleログインは milpa-california.vercel.app だけで使えます。そちらでMilpaを開くか、メールアドレスを使ってください。"
   }
  },
  "1m3i1h": {
