@@ -1,4 +1,4 @@
-const version = "furrow-v1";
+const version = "milpa-v2";
 const shell = [
   "/scan",
   "/",
@@ -41,18 +41,32 @@ self.addEventListener("fetch", (event) => {
     );
     return;
   }
+  if (url.pathname.startsWith("/_next/static/")) {
+    event.respondWith(
+      caches.match(request).then(
+        (hit) =>
+          hit ||
+          fetch(request).then((response) => {
+            if (response.ok) {
+              const copy = response.clone();
+              caches.open(version).then((cache) => cache.put(request, copy));
+            }
+            return response;
+          }),
+      ),
+    );
+    return;
+  }
   event.respondWith(
-    caches.match(request).then(
-      (hit) =>
-        hit ||
-        fetch(request).then((response) => {
-          if (response.ok && (url.pathname.startsWith("/_next/static/") || url.pathname.startsWith("/samples/"))) {
-            const copy = response.clone();
-            caches.open(version).then((cache) => cache.put(request, copy));
-          }
-          return response;
-        }),
-    ),
+    fetch(request)
+      .then((response) => {
+        if (response.ok && url.pathname.startsWith("/samples/")) {
+          const copy = response.clone();
+          caches.open(version).then((cache) => cache.put(request, copy));
+        }
+        return response;
+      })
+      .catch(() => caches.match(request)),
   );
 });
 

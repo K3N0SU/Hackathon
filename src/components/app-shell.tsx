@@ -139,7 +139,7 @@ export function AppShell() {
   }, [ready, user, router]);
 
   useEffect(() => {
-    navigator.serviceWorker?.register("/sw.js").catch(() => {});
+    navigator.serviceWorker?.register("/sw.js", { updateViaCache: "none" }).then((registration) => registration.update()).catch(() => {});
   }, []);
 
   useEffect(() => {
