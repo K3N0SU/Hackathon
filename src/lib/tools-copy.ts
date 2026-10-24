@@ -21,6 +21,10 @@ export type ToolsCopy = {
     notFood: string;
     failed: string;
     again: string;
+    typeTitle: string;
+    typePlaceholder: string;
+    typeCheck: string;
+    byName: string;
   };
   gear: {
     title: string;
@@ -96,6 +100,10 @@ export const toolsCopy: Record<CoreLanguage, ToolsCopy> = {
       notFood: "That does not look like food or a food label. Try a closer photo.",
       failed: "Could not check the photo. Check your connection and try again.",
       again: "Check another",
+      typeTitle: "No label or barcode? Type what it is",
+      typePlaceholder: "Strawberries, Takis, tamales...",
+      typeCheck: "Check",
+      byName: "Checked by name. If you have the package, a photo of the label is more exact.",
     },
     gear: {
       title: "Gear check",
@@ -177,6 +185,10 @@ export const toolsCopy: Record<CoreLanguage, ToolsCopy> = {
       notFood: "Eso no parece comida ni una etiqueta. Intente con una foto más cerca.",
       failed: "No se pudo revisar la foto. Revise su conexión e intente de nuevo.",
       again: "Revisar otra",
+      typeTitle: "¿Sin etiqueta ni código? Escribe qué es",
+      typePlaceholder: "Fresas, Takis, tamales...",
+      typeCheck: "Revisar",
+      byName: "Revisado por nombre. Si tienes el paquete, una foto de la etiqueta es más exacta.",
     },
     gear: {
       title: "Revisar equipo",
@@ -258,6 +270,10 @@ export const toolsCopy: Record<CoreLanguage, ToolsCopy> = {
       notFood: "ਇਹ ਖਾਣਾ ਜਾਂ ਖਾਣੇ ਦਾ ਲੇਬਲ ਨਹੀਂ ਲੱਗਦਾ। ਨੇੜੇ ਤੋਂ ਫ਼ੋਟੋ ਲਓ।",
       failed: "ਫ਼ੋਟੋ ਜਾਂਚੀ ਨਹੀਂ ਜਾ ਸਕੀ। ਕਨੈਕਸ਼ਨ ਜਾਂਚੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
       again: "ਹੋਰ ਜਾਂਚੋ",
+      typeTitle: "ਲੇਬਲ ਜਾਂ ਬਾਰਕੋਡ ਨਹੀਂ? ਲਿਖੋ ਇਹ ਕੀ ਹੈ",
+      typePlaceholder: "ਸਟ੍ਰਾਬੇਰੀ, ਸਮੋਸੇ, ਚਿਪਸ...",
+      typeCheck: "ਜਾਂਚੋ",
+      byName: "ਨਾਮ ਨਾਲ ਜਾਂਚਿਆ। ਜੇ ਪੈਕੇਟ ਹੈ ਤਾਂ ਲੇਬਲ ਦੀ ਫ਼ੋਟੋ ਜ਼ਿਆਦਾ ਸਹੀ ਹੈ।",
     },
     gear: {
       title: "ਸਾਮਾਨ ਦੀ ਜਾਂਚ",

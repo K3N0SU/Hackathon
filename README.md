@@ -18,7 +18,7 @@ The tools are smaller jobs a worker runs into during the day:
 
 - Interpreter: two people take turns talking and Milpa says each side out loud in the other's language. On a phone the top half flips so the person across the table can read it.
 - Gear check: a photo of yourself, checked against the gear the scanned label requires.
-- Food check: a photo of a food label or produce sticker, checked against your own allergies, with what the label says about organic growing and pesticides. It never claims to detect residue it can't see.
+- Food check: a photo of a food label, a produce sticker or the food itself, or just its name typed in when there is no label, checked against your own allergies, with what the label says about organic growing and pesticides. It never claims to detect residue it can't see.
 - Pay check: a photo of a pay stub, checked against California's minimum wage, farmworker overtime and pay stub rules.
 - I feel sick, Got sprayed, Heat check, Read a paper, Report a problem, Today's plan, Spray map, Supervisor card and Share with crew.
 

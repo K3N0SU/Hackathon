@@ -15,7 +15,8 @@ Rules:
 - "flags" are short warnings worth knowing: high added sugar or salt if the nutrition label shows it, an expired date, a recall notice, artificial dyes like Red 40. Leave empty if none.
 - "verdict" is "safe" if none of the person's allergies are in it and nothing serious is flagged, "avoid" if one of their allergies is in it, "caution" otherwise.
 - "summary" is one or two short sentences a worker can act on.
-- If the photo is not food or a food label, set "readable" to false and leave the rest empty.`;
+- If the person typed a food name instead of sending a photo, judge from what that food usually contains. Use "may" for allergens that depend on the brand or recipe, set "organic" to "unknown" unless they said organic, and have the summary say to check the package label if there is one.
+- If the photo or name is not food or a food label, set "readable" to false and leave the rest empty.`;
 
 const schema = {
   type: "OBJECT",
@@ -44,9 +45,11 @@ const schema = {
 };
 
 export async function POST(req: Request) {
-  const { image, mediaType, language, allergies } = await req.json();
-  if (!isImage(image, mediaType) || !isLanguage(language)) {
-    return new Response("image, mediaType and language required", { status: 400 });
+  const { image, mediaType, name, language, allergies } = await req.json();
+  const typed = typeof name === "string" ? name.trim().slice(0, 120) : "";
+  const photo = isImage(image, mediaType);
+  if ((!photo && !typed) || !isLanguage(language)) {
+    return new Response("image or name, and language required", { status: 400 });
   }
   const mine = Array.isArray(allergies)
     ? allergies.filter((item): item is string => typeof item === "string").slice(0, 12)
@@ -59,9 +62,9 @@ export async function POST(req: Request) {
         {
           role: "user",
           parts: [
-            { inlineData: { mimeType: mediaType, data: image } },
+            ...(photo ? [{ inlineData: { mimeType: mediaType, data: image } }] : []),
             {
-              text: `My allergies: ${mine.length ? mine.join(", ") : "none"}. Today is ${new Date().toDateString()}. Check this food. Answer in ${languageNames[language]}.`,
+              text: `My allergies: ${mine.length ? mine.join(", ") : "none"}. Today is ${new Date().toDateString()}. ${photo ? "Check this food." : `I have no label, only the name. The food is: ${typed}`} Answer in ${languageNames[language]}.`,
             },
           ],
         },

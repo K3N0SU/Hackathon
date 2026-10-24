@@ -95,10 +95,10 @@
   "close": "Đóng",
   "interpreter": ""
  },
- "arrcil": {
-  "signInTitle": "Mừng bạn quay lại",
+ "180t4jx": {
+  "signInTitle": "Chào mừng bạn quay lại",
   "signUpTitle": "Tạo tài khoản",
-  "intro": "Các lần quét, đồng hồ đếm ngược và ngôn ngữ của bạn được lưu vào tài khoản, nên bạn dùng điện thoại nào cũng có.",
+  "intro": "Lịch sử quét, đồng hồ đếm ngược và ngôn ngữ của bạn được lưu vào tài khoản, nên bạn dùng điện thoại nào cũng có.",
   "name": "Tên của bạn",
   "email": "Email",
   "password": "Mật khẩu",
@@ -112,29 +112,30 @@
   "signInLink": "Đăng nhập",
   "forgot": "Quên mật khẩu?",
   "resetNeedsEmail": "Nhập email của bạn trước, rồi bấm Quên mật khẩu.",
-  "resetSent": "Chúng tôi đã gửi đường dẫn đặt lại mật khẩu. Hãy kiểm tra email.",
+  "resetSent": "Chúng tôi đã gửi liên kết để đặt lại mật khẩu. Hãy kiểm tra email của bạn.",
   "working": "Chờ một chút...",
   "verifyTitle": "Kiểm tra email của bạn",
-  "verifyBody": "Chúng tôi đã gửi đường dẫn đến",
-  "verifyNext": "Mở đường dẫn đó để xác nhận email của bạn. Trang này sẽ tự chuyển tiếp khi bạn làm xong.",
-  "resend": "Gửi lại đường dẫn",
-  "resent": "Đã gửi. Có thể mất một phút, và nhớ kiểm tra cả hòm thư rác.",
-  "verified": "Tôi đã mở đường dẫn",
-  "notYet": "Vẫn chưa xác nhận được. Mở đường dẫn trong email, rồi thử lại nhé.",
+  "verifyBody": "Chúng tôi đã gửi một liên kết tới",
+  "verifyNext": "Mở liên kết để xác nhận email của bạn. Trang này sẽ tự chuyển tiếp sau khi bạn làm xong.",
+  "resend": "Gửi lại liên kết",
+  "resent": "Đã gửi. Có thể mất một phút, và nhớ kiểm tra cả mục thư rác.",
+  "verified": "Tôi đã mở liên kết",
+  "notYet": "Chưa được xác nhận. Hãy mở liên kết trong email, rồi thử lại.",
   "useOther": "Dùng email khác",
   "account": "Tài khoản",
-  "signedInAs": "Đã đăng nhập với tên",
+  "signedInAs": "Đã đăng nhập bằng",
   "signOut": "Đăng xuất",
   "errors": {
    "invalid": "Email hoặc mật khẩu không đúng.",
-   "inUse": "Email đó đã có tài khoản rồi. Hãy đăng nhập nhé.",
+   "inUse": "Email này đã có tài khoản rồi. Hãy đăng nhập nhé.",
    "weak": "Mật khẩu phải có ít nhất 6 ký tự.",
-   "badEmail": "Địa chỉ đó không giống email.",
-   "popup": "Cửa sổ Google đã đóng trước khi bạn hoàn tất.",
-   "tooMany": "Thử quá nhiều lần rồi. Chờ vài phút rồi thử lại nhé.",
-   "network": "Mất mạng rồi. Kiểm tra sóng điện thoại rồi thử lại.",
-   "generic": "Có lỗi xảy ra. Thử lại nhé.",
-   "notConfigured": "Trang web này chưa cài đặt đăng nhập."
+   "badEmail": "Email này trông không đúng.",
+   "popup": "Cửa sổ Google đã bị đóng trước khi bạn làm xong.",
+   "tooMany": "Thử quá nhiều lần. Hãy đợi vài phút rồi thử lại.",
+   "network": "Không có mạng. Kiểm tra sóng rồi thử lại nhé.",
+   "generic": "Có lỗi xảy ra. Hãy thử lại.",
+   "notConfigured": "Trang này chưa cài đặt tính năng đăng nhập.",
+   "wrongSite": "Đăng nhập bằng Google chỉ hoạt động tại furrow-valley.vercel.app. Hãy mở Milpa ở trang đó, hoặc dùng email của bạn."
   }
  },
  "1956lkr": {
@@ -415,11 +416,11 @@
   "failed": "Không tải được các nhãn bạn đã quét. Hãy kiểm tra lại sóng và thử lại nhé.",
   "remove": "Xóa"
  },
- "imas55": {
+ "1tl1wjl": {
   "food": {
    "title": "Kiểm tra đồ ăn",
-   "intro": "Chụp ảnh nhãn đồ ăn, tem dán trên trái cây hoặc chụp chính trái cây đó. Milpa sẽ kiểm tra xem có chất bạn bị dị ứng không và cho biết nhãn ghi gì về thuốc trừ sâu.",
-   "allergiesTitle": "Chất tôi bị dị ứng",
+   "intro": "Chụp hình nhãn đồ ăn, tem dán trên trái cây hoặc chụp thẳng món đó. Milpa sẽ xem bạn có bị dị ứng không và cho biết nhãn ghi gì về thuốc trừ sâu.",
+   "allergiesTitle": "Dị ứng của tôi",
    "allergyNames": [
     "Sữa",
     "Trứng",
@@ -431,100 +432,104 @@
     "Đậu nành",
     "Mè"
    ],
-   "take": "Chụp ảnh đồ ăn",
-   "choose": "Chọn một tấm ảnh",
+   "take": "Chụp hình đồ ăn",
+   "choose": "Chọn một tấm hình",
    "checking": "Đang đọc nhãn...",
    "verdict": {
     "safe": "Có vẻ an toàn cho bạn",
-    "caution": "Hãy kiểm tra trước khi ăn",
+    "caution": "Kiểm tra kỹ trước khi ăn",
     "avoid": "Đừng ăn món này"
    },
    "allergens": "Chất gây dị ứng",
    "contains": "Có chứa",
    "may": "Có thể chứa",
-   "noAllergens": "Nhãn không ghi chất dễ gây dị ứng nào.",
+   "noAllergens": "Không có chất gây dị ứng phổ biến nào trên nhãn.",
    "yours": "Có chất bạn bị dị ứng",
    "organic": {
-    "yes": "Được chứng nhận hữu cơ",
-    "no": "Không phải hữu cơ",
-    "unknown": "Không ghi có phải hữu cơ không"
+    "yes": "Có chứng nhận hữu cơ (organic)",
+    "no": "Không phải đồ hữu cơ",
+    "unknown": "Không ghi rõ hữu cơ hay không"
    },
    "pesticides": "Thuốc trừ sâu",
    "flags": "Điều nên biết",
-   "notFood": "Hình này trông không giống đồ ăn hay nhãn đồ ăn. Hãy thử chụp gần hơn.",
-   "failed": "Không thể kiểm tra ảnh. Hãy kiểm tra kết nối mạng rồi thử lại.",
-   "again": "Kiểm tra món khác"
+   "notFood": "Hình này nhìn không giống đồ ăn hay nhãn đồ ăn. Hãy chụp lại gần hơn.",
+   "failed": "Không kiểm tra được hình này. Xem lại mạng rồi thử lại nhé.",
+   "again": "Kiểm tra món khác",
+   "typeTitle": "Không có nhãn hay mã vạch? Gõ tên món vào đây",
+   "typePlaceholder": "Dâu tây, Takis, bánh tamale...",
+   "typeCheck": "Kiểm tra",
+   "byName": "Đã kiểm tra theo tên. Nếu có bao bì, chụp hình nhãn sẽ đúng hơn."
   },
   "gear": {
    "title": "Kiểm tra đồ bảo hộ",
-   "intro": "Chụp ảnh bạn trước khi vào làm. Milpa sẽ xem bạn đã mặc đúng đồ bảo hộ mà nhãn yêu cầu chưa.",
+   "intro": "Chụp một tấm hình của bạn trước khi vào làm. Milpa sẽ xem bạn mặc đủ đồ như nhãn thuốc yêu cầu chưa.",
    "forProduct": "Đang kiểm tra đồ bảo hộ cho",
-   "noLabel": "Chưa quét nhãn nào, nên Milpa kiểm tra đồ bảo hộ thông thường.",
+   "noLabel": "Chưa quét nhãn thuốc nào, nên Milpa kiểm tra theo đồ bảo hộ thông thường.",
    "defaultGear": [
     "Áo tay dài",
     "Quần dài",
     "Găng tay chống hóa chất",
     "Giày và vớ"
    ],
-   "take": "Chụp ảnh tôi",
-   "hint": "Đứng lùi lại để thấy rõ cả tay và chân.",
+   "take": "Chụp hình tôi",
+   "hint": "Đứng lùi lại để thấy rõ tay, bàn tay và chân nhé.",
    "checking": "Đang xem đồ bảo hộ của bạn...",
    "verdict": {
-    "ready": "Trông bạn đã sẵn sàng",
-    "missing": "Hãy mặc đủ trước khi vào",
-    "unsure": "Milpa không nhìn thấy hết mọi thứ"
+    "ready": "Bạn đã sẵn sàng rồi đó",
+    "missing": "Mặc thêm đồ này trước khi vào làm",
+    "unsure": "Milpa không nhìn rõ hết được"
    },
    "status": {
     "on": "Đã mặc",
     "missing": "Còn thiếu",
     "unsure": "Không thấy rõ"
    },
-   "noPerson": "Milpa không thấy có người trong ảnh. Hãy đứng lùi lại rồi thử lại.",
-   "failed": "Không thể kiểm tra ảnh. Hãy kiểm tra kết nối mạng rồi thử lại.",
+   "noPerson": "Milpa không thấy người trong hình này. Đứng lùi lại rồi chụp lại nhé.",
+   "failed": "Không kiểm tra được hình này. Xem lại mạng rồi thử lại nhé.",
    "again": "Kiểm tra lại"
   },
   "pay": {
-   "title": "Kiểm tra phiếu lương",
-   "intro": "Chụp ảnh phiếu lương của bạn. Milpa sẽ đọc và đối chiếu với luật trả lương của California.",
-   "take": "Chụp ảnh phiếu lương của tôi",
-   "choose": "Chọn một tấm ảnh",
-   "reading": "Đang đọc phiếu lương...",
+   "title": "Kiểm tra cuống lương",
+   "intro": "Chụp hình cuống lương của bạn. Milpa sẽ đọc và kiểm tra theo luật trả lương của California.",
+   "take": "Chụp hình cuống lương của tôi",
+   "choose": "Chọn một tấm hình",
+   "reading": "Đang đọc cuống lương của bạn...",
    "period": "Kỳ trả lương",
    "hours": "Số giờ",
    "rate": "Mức lương",
    "gross": "Lương trước khi trừ",
-   "net": "Thực nhận",
+   "net": "Tiền thực nhận",
    "verdict": {
-    "ok": "Trông có vẻ đúng",
-    "ask": "Nên hỏi lại về điều này",
-    "unclear": "Khó đọc"
+    "ok": "Mọi thứ có vẻ đúng",
+    "ask": "Nên hỏi lại chỗ này",
+    "unclear": "Khó đọc quá"
    },
    "status": {
-    "ok": "Trông đúng",
-    "ask": "Hãy hỏi lại",
-    "missing": "Không có trên phiếu"
+    "ok": "Có vẻ đúng",
+    "ask": "Nên hỏi lại",
+    "missing": "Không có trên cuống lương"
    },
    "labor": "Gọi cho Ủy viên Lao động",
-   "notStub": "Hình này trông không giống phiếu lương. Hãy thử chụp rõ hơn.",
-   "failed": "Không thể đọc ảnh. Hãy kiểm tra kết nối mạng rồi thử lại.",
-   "again": "Kiểm tra phiếu khác",
-   "privacy": "Ảnh này không được lưu ở đâu cả."
+   "notStub": "Hình này nhìn không giống cuống lương. Hãy chụp lại cho rõ hơn.",
+   "failed": "Không đọc được hình này. Xem lại mạng rồi thử lại nhé.",
+   "again": "Kiểm tra tờ khác",
+   "privacy": "Hình chụp không bị lưu ở bất cứ đâu."
   },
   "interpret": {
    "title": "Thông dịch viên",
-   "intro": "Nói chuyện với người quản lý, y tá hoặc nhân viên. Mỗi người bấm vào bên của mình rồi nói, Milpa sẽ đọc to bằng thứ tiếng kia.",
+   "intro": "Nói chuyện với quản lý, y tá hoặc nhân viên. Mỗi người bấm vào bên của mình rồi nói, Milpa sẽ đọc to bằng thứ tiếng kia.",
    "me": "Tôi",
    "them": "Họ",
-   "other": "Họ nói",
+   "other": "Họ nói tiếng",
    "listening": "Đang nghe... bấm để dừng",
    "translating": "Đang dịch...",
    "tapToStop": "Bấm để dừng",
-   "empty": "Bấm vào bên của bạn rồi nói. Đưa điện thoại cho họ khi đến lượt họ.",
-   "failed": "Không gửi được. Hãy thử lại.",
-   "blocked": "Milpa cần dùng micrô. Hãy cho phép trong phần cài đặt trình duyệt.",
+   "empty": "Bấm vào bên của bạn rồi nói. Đưa điện thoại cho người kia khi tới lượt họ.",
+   "failed": "Chưa gửi được. Thử lại nhé.",
+   "blocked": "Milpa cần dùng micro của bạn. Hãy cho phép trong phần cài đặt trình duyệt.",
    "clear": "Bắt đầu lại",
    "replay": "Nói lại lần nữa",
-   "unsupported": "Trình duyệt này không ghi âm được. Hãy dùng thử Chrome hoặc Safari."
+   "unsupported": "Trình duyệt này không thu âm được. Hãy thử dùng Chrome hoặc Safari."
   }
  }
 }

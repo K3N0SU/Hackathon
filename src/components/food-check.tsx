@@ -1,6 +1,6 @@
 "use client";
 
-import { Apple, Camera, Check, ImageIcon, Leaf, ShieldAlert, Sprout, TriangleAlert, Volume2, VolumeX } from "lucide-react";
+import { Apple, ArrowRight, Check, ImageIcon, Keyboard, Leaf, RotateCcw, ShieldAlert, Sprout, TriangleAlert, Volume2, VolumeX } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { appCopy } from "@/lib/app-copy";
 import { useCopy } from "@/lib/i18n";
@@ -26,8 +26,8 @@ type Food = {
 
 type State =
   | { step: "start" }
-  | { step: "checking"; photo: string }
-  | { step: "done"; photo: string; food: Food }
+  | { step: "checking"; photo: string | null; name: string }
+  | { step: "done"; photo: string | null; food: Food }
   | { step: "problem"; message: string };
 
 const verdictStyle = {
@@ -43,6 +43,7 @@ export function FoodCheck({ language }: { language: Language }) {
   const listen = useCopy(appCopy, language).brief.listen;
   const [state, setState] = useState<State>({ step: "start" });
   const [allergies, setAllergies] = useState<string[]>([]);
+  const [name, setName] = useState("");
   const camera = useRef<HTMLInputElement>(null);
   const gallery = useRef<HTMLInputElement>(null);
   const { speaking, speak } = useSpeaker(language);
@@ -76,12 +77,24 @@ export function FoodCheck({ language }: { language: Language }) {
       setState({ step: "problem", message: text.failed });
       return;
     }
-    setState({ step: "checking", photo });
+    setState({ step: "checking", photo, name: "" });
+    await send({ image: photo.split(",")[1], mediaType: "image/jpeg" }, photo);
+  }
+
+  async function checkName(event: React.FormEvent) {
+    event.preventDefault();
+    const typed = name.trim();
+    if (!typed) return;
+    setState({ step: "checking", photo: null, name: typed });
+    await send({ name: typed }, null);
+  }
+
+  async function send(body: Record<string, string>, photo: string | null) {
     try {
       const response = await fetch("/api/food", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ image: photo.split(",")[1], mediaType: "image/jpeg", language, allergies }),
+        body: JSON.stringify({ ...body, language, allergies }),
       });
       if (!response.ok) throw new Error("failed");
       const food: Food = await response.json();
@@ -162,13 +175,47 @@ export function FoodCheck({ language }: { language: Language }) {
             <ImageIcon className="size-5" />
             {text.choose}
           </button>
+          <form onSubmit={checkName} className="card mt-4 p-5">
+            <label htmlFor="food-name" className="flex items-center gap-2 font-semibold">
+              <Keyboard className="size-5 text-leaf" />
+              {text.typeTitle}
+            </label>
+            <div className="mt-3 flex gap-2">
+              <input
+                id="food-name"
+                value={name}
+                onChange={(event) => setName(event.target.value)}
+                placeholder={text.typePlaceholder}
+                maxLength={120}
+                enterKeyHint="go"
+                className="h-12 min-w-0 flex-1 rounded-xl border bg-background px-4 text-base outline-none transition-shadow focus:border-leaf focus:ring-4 focus:ring-leaf/15"
+              />
+              <button
+                type="submit"
+                disabled={!name.trim()}
+                className="flex h-12 shrink-0 items-center gap-1.5 rounded-xl bg-leaf px-5 font-semibold text-white transition-all active:scale-95 disabled:opacity-40"
+              >
+                {text.typeCheck}
+                <ArrowRight className="size-4" />
+              </button>
+            </div>
+          </form>
         </>
       )}
 
       {state.step === "checking" && (
         <div className="mt-6" aria-live="polite">
           <div className="relative mx-auto max-w-xs overflow-hidden rounded-3xl border bg-card shadow-lg">
-            <img src={state.photo} alt="" className="h-80 w-full object-cover" />
+            {state.photo ? (
+              <img src={state.photo} alt="" className="h-80 w-full object-cover" />
+            ) : (
+              <div className="flex h-80 flex-col items-center justify-center gap-4 bg-leaf/10 px-6 text-center">
+                <span className="flex size-16 items-center justify-center rounded-full bg-leaf text-white">
+                  <Apple className="size-8" />
+                </span>
+                <p className="font-display text-2xl font-semibold text-ink">{state.name}</p>
+              </div>
+            )}
             <div className="scan-line absolute inset-x-0 h-24" />
           </div>
           <p className="mt-5 text-center text-lg font-medium">{text.checking}</p>
@@ -181,7 +228,13 @@ export function FoodCheck({ language }: { language: Language }) {
         return (
           <div className="mt-6 space-y-4">
             <div className={`pop flex items-center gap-4 rounded-3xl p-4 shadow-xl ${verdictStyle[food.verdict]}`}>
-              <img src={state.photo} alt="" className="size-24 shrink-0 rounded-2xl object-cover ring-2 ring-white/40" />
+              {state.photo ? (
+                <img src={state.photo} alt="" className="size-24 shrink-0 rounded-2xl object-cover ring-2 ring-white/40" />
+              ) : (
+                <span className="flex size-24 shrink-0 items-center justify-center rounded-2xl bg-white/20 ring-2 ring-white/40">
+                  <Apple className="size-10" />
+                </span>
+              )}
               <div className="min-w-0">
                 <p className="flex items-center gap-2 font-display text-2xl font-semibold leading-tight">
                   <Icon className="size-6 shrink-0" />
@@ -191,6 +244,13 @@ export function FoodCheck({ language }: { language: Language }) {
                 <p className="mt-1 leading-snug opacity-90">{food.summary}</p>
               </div>
             </div>
+
+            {!state.photo && (
+              <p className="flex items-start gap-2 rounded-2xl bg-secondary p-4 text-muted-foreground">
+                <Keyboard className="mt-0.5 size-5 shrink-0" />
+                {text.byName}
+              </p>
+            )}
 
             {food.mine.length > 0 && (
               <div className="rise rounded-2xl border-2 border-danger bg-red-50 p-4 text-red-900">
@@ -262,10 +322,14 @@ export function FoodCheck({ language }: { language: Language }) {
                 {listen}
               </button>
               <button
-                onClick={() => camera.current?.click()}
+                onClick={() => {
+                  setName("");
+                  setState({ step: "start" });
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
                 className="flex h-14 items-center justify-center gap-2 rounded-2xl bg-leaf font-semibold text-white transition-all active:scale-95"
               >
-                <Camera className="size-5" />
+                <RotateCcw className="size-5" />
                 {text.again}
               </button>
             </div>
