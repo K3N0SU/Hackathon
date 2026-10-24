@@ -1,4 +1,4 @@
-import { isLanguage, languageNames } from "@/lib/scan";
+import { isLanguage } from "@/lib/scan";
 
 export const maxDuration = 60;
 
@@ -39,7 +39,7 @@ export async function POST(req: Request) {
           {
             parts: [
               {
-                text: `Read this aloud in ${languageNames[language]}, in a warm, calm and friendly voice, at an easy pace, like a kind coworker explaining something in the field:\n\n${text.slice(0, 1500)}`,
+                text: text.slice(0, 1500),
               },
             ],
           },
