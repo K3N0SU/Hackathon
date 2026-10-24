@@ -1,7 +1,7 @@
 {
  "uybgyd": {
   "headline": "Sachez avant d'entrer dans le champ.",
-  "tagline": "Prenez en photo une étiquette de pesticide ou un panneau dans le champ. Rowen vous dit, dans votre langue, quand vous pouvez entrer sans danger et comment vous protéger.",
+  "tagline": "Prenez en photo une étiquette de pesticide ou un panneau dans le champ. Milpa vous dit, dans votre langue, quand vous pouvez entrer sans danger et comment vous protéger.",
   "scan": "Photographier une étiquette ou un panneau",
   "samples": "Ou essayez un exemple",
   "reading": "Lecture de l'étiquette",
@@ -106,7 +106,7 @@
   "signUp": "Créer un compte",
   "google": "Continuer avec Google",
   "or": "ou",
-  "noAccount": "Nouveau sur Rowen ?",
+  "noAccount": "Nouveau sur Milpa ?",
   "createOne": "Créer un compte",
   "haveAccount": "Vous avez déjà un compte ?",
   "signInLink": "Se connecter",
@@ -148,7 +148,7 @@
   "chooseLanguage": "Choisissez votre langue",
   "back": "Retour",
   "toolsTitle": "Outils",
-  "toolsIntro": "Tout ce que Rowen peut faire. Touchez-en un.",
+  "toolsIntro": "Tout ce que Milpa peut faire. Touchez-en un.",
   "tools": {
    "heat": {
     "title": "Alerte chaleur",
@@ -180,7 +180,7 @@
    },
    "install": {
     "title": "Ajouter au téléphone",
-    "body": "Ouvrez Rowen comme une appli"
+    "body": "Ouvrez Milpa comme une appli"
    },
    "gear": {
     "title": "Vérifier la tenue",
@@ -196,7 +196,7 @@
    }
   },
   "ask": {
-   "title": "Demander à Rowen",
+   "title": "Demander à Milpa",
    "about": "À propos de",
    "general": "Posez vos questions sur les pesticides, la chaleur ou vos droits au travail.",
    "placeholder": "Écrivez ou touchez le micro",
@@ -218,12 +218,12 @@
    "remove": "Supprimer la discussion",
    "retry": "Réessayer",
    "talk": "Parler",
-   "talkHint": "Parlez dans la langue de votre choix. Rowen écoute, puis répond à voix haute.",
+   "talkHint": "Parlez dans la langue de votre choix. Milpa écoute, puis répond à voix haute.",
    "voiceListening": "Écoute en cours",
    "voiceThinking": "Réflexion en cours",
    "voiceSpeaking": "Touchez pour couper la parole",
    "voiceTap": "Touchez pour parler",
-   "voiceBlocked": "Rowen a besoin de votre micro. Autorisez-le dans les réglages du navigateur, puis réessayez.",
+   "voiceBlocked": "Milpa a besoin de votre micro. Autorisez-le dans les réglages du navigateur, puis réessayez.",
    "voiceFailed": "Ça n'a pas marché. Touchez pour réessayer.",
    "close": "Fermer"
   },
@@ -234,7 +234,7 @@
    "shared": "Lien prêt à être partagé",
    "copied": "Lien copié",
    "shareFailed": "Impossible de créer un lien. Réessayez.",
-   "howRead": "Comment Rowen a lu ceci",
+   "howRead": "Comment Milpa a lu ceci",
    "confidence": {
     "high": "Lecture claire",
     "medium": "À vérifier",
@@ -243,7 +243,7 @@
    "confidenceNote": {
     "high": "L'étiquette était bien nette et chaque réponse ci-dessous y était écrite.",
     "medium": "Certains mots étaient petits ou cachés en partie. Vérifiez l'étiquette ou demandez.",
-    "low": "Rowen a un doute sur une partie. Demandez à votre chef."
+    "low": "Milpa a un doute sur une partie. Demandez à votre chef."
    },
    "fields": {
     "product": "Produit",
@@ -266,7 +266,7 @@
   },
   "symptoms": {
    "title": "Comment vous sentez-vous ?",
-   "intro": "Touchez tout ce que vous ressentez maintenant. Rowen vous dit qui appeler.",
+   "intro": "Touchez tout ce que vous ressentez maintenant. Milpa vous dit qui appeler.",
    "list": [
     "Mal de tête",
     "Vertiges",
@@ -292,7 +292,7 @@
   },
   "paper": {
    "title": "Lire un papier",
-   "intro": "Prenez en photo n'importe quel papier du travail. Rowen l'explique dans votre langue.",
+   "intro": "Prenez en photo n'importe quel papier du travail. Milpa l'explique dans votre langue.",
    "take": "Prendre une photo",
    "choose": "Choisir une photo",
    "reading": "Lecture du papier en cours...",
@@ -304,7 +304,7 @@
   },
   "report": {
    "title": "Signaler un problème",
-   "intro": "Racontez ce qui s'est passé avec vos mots. Rowen écrit un rapport clair en anglais pour le patron ou le comté.",
+   "intro": "Racontez ce qui s'est passé avec vos mots. Milpa écrit un rapport clair en anglais pour le patron ou le comté.",
    "placeholder": "Par exemple : Ils ont traité le champ d'à côté pendant qu'on ramassait et le vent a tout envoyé sur nous.",
    "when": "Quand est-ce arrivé ?",
    "write": "Écrire mon rapport",
@@ -320,7 +320,7 @@
   },
   "brief": {
    "title": "Plan du jour",
-   "intro": "Rowen regarde vos compteurs et la chaleur d'aujourd'hui et vous dit le plan à voix haute.",
+   "intro": "Milpa regarde vos compteurs et la chaleur d'aujourd'hui et vous dit le plan à voix haute.",
    "make": "Donne-moi le plan du jour",
    "making": "Préparation de votre plan...",
    "failed": "Impossible de faire le plan. Vérifiez votre connexion.",
@@ -346,11 +346,11 @@
    "waterOff": "Rappels pour boire allumés"
   },
   "install": {
-   "title": "Ajouter Rowen à votre téléphone",
+   "title": "Ajouter Milpa à votre téléphone",
    "body": "L'appli s'ouvre facilement, et vos scans, minuteurs et gestes d'urgence marchent même sans réseau.",
    "button": "Ajouter à l'écran d'accueil",
    "ios": "Sur iPhone : touchez Partager, puis Sur l'écran d'accueil.",
-   "done": "Rowen est sur votre écran d'accueil."
+   "done": "Milpa est sur votre écran d'accueil."
   }
  },
  "1i1pcy3": {
@@ -370,7 +370,7 @@
   "flip": "Changer de caméra",
   "gallery": "Choisir une photo",
   "close": "Fermer la caméra",
-  "blocked": "Rowen ne peut pas ouvrir la caméra ici. Autorisez l'accès à la caméra dans les réglages de votre navigateur, ou utilisez l'appareil photo de votre téléphone.",
+  "blocked": "Milpa ne peut pas ouvrir la caméra ici. Autorisez l'accès à la caméra dans les réglages de votre navigateur, ou utilisez l'appareil photo de votre téléphone.",
   "openApp": "Utiliser l'appareil photo"
  },
  "pyuh1i": {
@@ -384,9 +384,9 @@
  "1swsqbl": {
   "gear": {
    "title": "Vérification de l'équipement",
-   "intro": "Prenez-vous en photo avant d'entrer. Rowen vérifie si vous portez ce que l'étiquette demande.",
+   "intro": "Prenez-vous en photo avant d'entrer. Milpa vérifie si vous portez ce que l'étiquette demande.",
    "forProduct": "Vérification de l'équipement pour",
-   "noLabel": "Aucune étiquette scannée pour l'instant, Rowen vérifie donc l'équipement habituel.",
+   "noLabel": "Aucune étiquette scannée pour l'instant, Milpa vérifie donc l'équipement habituel.",
    "defaultGear": [
     "Chemise à manches longues",
     "Pantalon long",
@@ -399,20 +399,20 @@
    "verdict": {
     "ready": "Vous avez l'air prêt",
     "missing": "Réglez ça avant d'entrer",
-    "unsure": "Rowen n'a pas pu tout voir"
+    "unsure": "Milpa n'a pas pu tout voir"
    },
    "status": {
     "on": "Mis",
     "missing": "Manquant",
     "unsure": "Pas visible"
    },
-   "noPerson": "Rowen n'a vu personne sur cette photo. Reculez un peu et réessayez.",
+   "noPerson": "Milpa n'a vu personne sur cette photo. Reculez un peu et réessayez.",
    "failed": "Impossible de vérifier la photo. Vérifiez votre connexion et réessayez.",
    "again": "Revérifier"
   },
   "pay": {
    "title": "Vérification de la paye",
-   "intro": "Prenez votre fiche de paye en photo. Rowen la lit et vérifie si elle suit les règles de paye de Californie.",
+   "intro": "Prenez votre fiche de paye en photo. Milpa la lit et vérifie si elle suit les règles de paye de Californie.",
    "take": "Prendre ma fiche de paye en photo",
    "choose": "Choisir une photo",
    "reading": "Lecture de votre fiche de paye...",
@@ -439,7 +439,7 @@
   },
   "interpret": {
    "title": "Interprète",
-   "intro": "Parlez avec un chef, une infirmière ou un employé. Chacun appuie sur son côté et parle, et Rowen répète à voix haute dans l'autre langue.",
+   "intro": "Parlez avec un chef, une infirmière ou un employé. Chacun appuie sur son côté et parle, et Milpa répète à voix haute dans l'autre langue.",
    "me": "Moi",
    "them": "Eux",
    "other": "Ils parlent",
@@ -448,7 +448,7 @@
    "tapToStop": "Appuyez pour arrêter",
    "empty": "Appuyez sur votre côté et parlez. Passez le téléphone quand c'est à leur tour.",
    "failed": "Ça n'a pas marché. Réessayez.",
-   "blocked": "Rowen a besoin de votre micro. Autorisez-le dans les réglages de votre navigateur.",
+   "blocked": "Milpa a besoin de votre micro. Autorisez-le dans les réglages de votre navigateur.",
    "clear": "Recommencer",
    "replay": "Répéter",
    "unsupported": "Ce navigateur ne peut pas enregistrer le son. Essayez Chrome ou Safari."

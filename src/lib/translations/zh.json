@@ -1,7 +1,7 @@
 {
  "uybgyd": {
   "headline": "下地前先弄清楚。",
-  "tagline": "给农药标签或田间告示牌拍张照。Rowen 会用您的语言告诉您什么时候可以安全下地，以及怎样保护自己。",
+  "tagline": "给农药标签或田间告示牌拍张照。Milpa 会用您的语言告诉您什么时候可以安全下地，以及怎样保护自己。",
   "scan": "拍标签或告示牌",
   "samples": "或者试试看示例",
   "reading": "正在读取标签",
@@ -106,7 +106,7 @@
   "signUp": "创建账号",
   "google": "通过 Google 继续",
   "or": "或",
-  "noAccount": "第一次用 Rowen？",
+  "noAccount": "第一次用 Milpa？",
   "createOne": "注册账号",
   "haveAccount": "已经有账号了？",
   "signInLink": "登录",
@@ -148,7 +148,7 @@
   "chooseLanguage": "选择你的语言",
   "back": "返回",
   "toolsTitle": "实用工具",
-  "toolsIntro": "Rowen 的全部功能。点一个试试。",
+  "toolsIntro": "Milpa 的全部功能。点一个试试。",
   "tools": {
    "heat": {
     "title": "防暑提醒",
@@ -180,7 +180,7 @@
    },
    "install": {
     "title": "添加到手机",
-    "body": "像普通 App 一样打开 Rowen"
+    "body": "像普通 App 一样打开 Milpa"
    },
    "gear": {
     "title": "防护检查",
@@ -196,7 +196,7 @@
    }
   },
   "ask": {
-   "title": "问问 Rowen",
+   "title": "问问 Milpa",
    "about": "关于",
    "general": "询问有关农药、高温或工作权益的问题。",
    "placeholder": "打字或点击麦克风说话",
@@ -218,12 +218,12 @@
    "remove": "删除对话",
    "retry": "重试",
    "talk": "语音通话",
-   "talkHint": "用任何语言说话都可以。Rowen 听完会大声读出回答。",
+   "talkHint": "用任何语言说话都可以。Milpa 听完会大声读出回答。",
    "voiceListening": "正在听",
    "voiceThinking": "正在思考",
    "voiceSpeaking": "点击打断",
    "voiceTap": "点击说话",
-   "voiceBlocked": "Rowen 需要使用麦克风。请在浏览器设置里允许，然后再试一次。",
+   "voiceBlocked": "Milpa 需要使用麦克风。请在浏览器设置里允许，然后再试一次。",
    "voiceFailed": "没有听清。请点击重试。",
    "close": "关闭"
   },
@@ -234,7 +234,7 @@
    "shared": "链接已准备好分享",
    "copied": "链接已复制",
    "shareFailed": "无法生成链接。请再试一次。",
-   "howRead": "Rowen 是如何识别的",
+   "howRead": "Milpa 是如何识别的",
    "confidence": {
     "high": "清晰识别",
     "medium": "请核对",
@@ -243,7 +243,7 @@
    "confidenceNote": {
     "high": "标签很清楚，下面的每一个答案都是从上面印着的内容识别出来的。",
     "medium": "有些字太小或被挡住了一部分。请核对标签或去问问主管。",
-    "low": "Rowen 对其中一部分拿不准。请去问问主管。"
+    "low": "Milpa 对其中一部分拿不准。请去问问主管。"
    },
    "fields": {
     "product": "产品名称",
@@ -266,7 +266,7 @@
   },
   "symptoms": {
    "title": "你觉得哪里不舒服？",
-   "intro": "勾选你现在的全部感受。Rowen 会告诉你打给谁。",
+   "intro": "勾选你现在的全部感受。Milpa 会告诉你打给谁。",
    "list": [
     "头痛",
     "头晕",
@@ -292,7 +292,7 @@
   },
   "paper": {
    "title": "看懂纸质文件",
-   "intro": "给工作中的任何文件拍张照。Rowen 会用你的母语为你解释。",
+   "intro": "给工作中的任何文件拍张照。Milpa 会用你的母语为你解释。",
    "take": "拍张照片",
    "choose": "选张照片",
    "reading": "正在阅读文件...",
@@ -304,7 +304,7 @@
   },
   "report": {
    "title": "反映问题",
-   "intro": "用你自己的话说出发生了什么。Rowen 会写出一份清楚的英文报告，你可以交给种植主或县政府部门。",
+   "intro": "用你自己的话说出发生了什么。Milpa 会写出一份清楚的英文报告，你可以交给种植主或县政府部门。",
    "placeholder": "例如：我们在采摘时，他们给隔壁地喷药，风把农药吹到了我们身上。",
    "when": "什么时候发生的？",
    "write": "写成报告",
@@ -320,7 +320,7 @@
   },
   "brief": {
    "title": "今日安排",
-   "intro": "Rowen 会结合你的时间表和今天的高温情况，把计划大声读给你听。",
+   "intro": "Milpa 会结合你的时间表和今天的高温情况，把计划大声读给你听。",
    "make": "播报今日安排",
    "making": "正在生成你的计划...",
    "failed": "无法生成计划。请检查网络。",
@@ -346,11 +346,11 @@
    "waterOff": "喝水提醒已开启"
   },
   "install": {
-   "title": "把 Rowen 添加到手机",
+   "title": "把 Milpa 添加到手机",
    "body": "打开它就像普通的 App 一样，没有手机信号时，保存的扫描、时钟和应急步骤也都能正常使用。",
    "button": "添加到主屏幕",
    "ios": "在 iPhone 上：点击“分享”，然后点击“添加到主屏幕”。",
-   "done": "Rowen 已经放到你的主屏幕上了。"
+   "done": "Milpa 已经放到你的主屏幕上了。"
   }
  },
  "1i1pcy3": {
@@ -370,7 +370,7 @@
   "flip": "切换摄像头",
   "gallery": "挑选一张照片",
   "close": "关闭相机",
-  "blocked": "Rowen 没法在这里打开相机。请在浏览器设置里允许使用相机，或者直接用手机的相机应用。",
+  "blocked": "Milpa 没法在这里打开相机。请在浏览器设置里允许使用相机，或者直接用手机的相机应用。",
   "openApp": "使用相机应用"
  },
  "pyuh1i": {
@@ -384,9 +384,9 @@
  "1swsqbl": {
   "gear": {
    "title": "检查防护装备",
-   "intro": "进去前先给自己拍张照。Rowen 会对照农药标签的要求，检查你的装备。",
+   "intro": "进去前先给自己拍张照。Milpa 会对照农药标签的要求，检查你的装备。",
    "forProduct": "正在检查适用的装备：",
-   "noLabel": "还没有扫描标签，所以 Rowen 会检查常用的防护装备。",
+   "noLabel": "还没有扫描标签，所以 Milpa 会检查常用的防护装备。",
    "defaultGear": [
     "长袖衬衫",
     "长裤",
@@ -399,20 +399,20 @@
    "verdict": {
     "ready": "准备好了，看起来没问题",
     "missing": "进去前先把这些穿戴好",
-    "unsure": "Rowen 没有看清全部装备"
+    "unsure": "Milpa 没有看清全部装备"
    },
    "status": {
     "on": "已穿戴",
     "missing": "缺少",
     "unsure": "看不清"
    },
-   "noPerson": "Rowen 在照片里没有找到人。往后站一点再试一次。",
+   "noPerson": "Milpa 在照片里没有找到人。往后站一点再试一次。",
    "failed": "无法检查照片。请检查网络后再试一次。",
    "again": "再检查一次"
   },
   "pay": {
    "title": "核对工资",
-   "intro": "拍一张你的工资单照片。Rowen 会读取内容，并对照加州的工资规定进行核对。",
+   "intro": "拍一张你的工资单照片。Milpa 会读取内容，并对照加州的工资规定进行核对。",
    "take": "拍下我的工资单",
    "choose": "选择一张照片",
    "reading": "正在读取你的工资单……",
@@ -439,7 +439,7 @@
   },
   "interpret": {
    "title": "翻译助手",
-   "intro": "跟主管、护士或办事员说话。大家各自点一下自己那边开始说话，Rowen 会把话大声翻译成对方的语言。",
+   "intro": "跟主管、护士或办事员说话。大家各自点一下自己那边开始说话，Milpa 会把话大声翻译成对方的语言。",
    "me": "我",
    "them": "对方",
    "other": "对方说的是",
@@ -448,7 +448,7 @@
    "tapToStop": "点击停止",
    "empty": "点一下你那边然后说话。轮到对方时，把手机递过去。",
    "failed": "刚才没听清或没连上。再试一次吧。",
-   "blocked": "Rowen 需要用到你的麦克风。请在浏览器设置里允许使用。",
+   "blocked": "Milpa 需要用到你的麦克风。请在浏览器设置里允许使用。",
    "clear": "重新开始",
    "replay": "再读一遍",
    "unsupported": "这个浏览器不能录音。请试试 Chrome 或 Safari。"

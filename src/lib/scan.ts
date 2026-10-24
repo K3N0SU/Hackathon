@@ -142,7 +142,7 @@ export const copy: Record<CoreLanguage, Copy> = {
   en: {
     headline: "Know before you enter the field.",
     tagline:
-      "Take a photo of a pesticide label or a field sign. Rowen tells you, in your language, when it is safe to go back in and how to protect yourself.",
+      "Take a photo of a pesticide label or a field sign. Milpa tells you, in your language, when it is safe to go back in and how to protect yourself.",
     scan: "Photograph a label or sign",
     samples: "Or try an example",
     reading: "Reading the label",
@@ -181,7 +181,7 @@ export const copy: Record<CoreLanguage, Copy> = {
   es: {
     headline: "Sepa antes de entrar al campo.",
     tagline:
-      "Tome una foto de una etiqueta de pesticida o de un letrero del campo. Rowen le dice, en su idioma, cuándo es seguro volver a entrar y cómo protegerse.",
+      "Tome una foto de una etiqueta de pesticida o de un letrero del campo. Milpa le dice, en su idioma, cuándo es seguro volver a entrar y cómo protegerse.",
     scan: "Fotografiar etiqueta o letrero",
     samples: "O pruebe un ejemplo",
     reading: "Leyendo la etiqueta",
@@ -220,7 +220,7 @@ export const copy: Record<CoreLanguage, Copy> = {
   pa: {
     headline: "ਖੇਤ ਵਿੱਚ ਜਾਣ ਤੋਂ ਪਹਿਲਾਂ ਜਾਣੋ।",
     tagline:
-      "ਕੀਟਨਾਸ਼ਕ ਲੇਬਲ ਜਾਂ ਖੇਤ ਦੇ ਸਾਈਨ ਦੀ ਫੋਟੋ ਖਿੱਚੋ। Rowen ਤੁਹਾਡੀ ਭਾਸ਼ਾ ਵਿੱਚ ਦੱਸੇਗਾ ਕਿ ਵਾਪਸ ਅੰਦਰ ਜਾਣਾ ਕਦੋਂ ਸੁਰੱਖਿਅਤ ਹੈ ਅਤੇ ਆਪਣਾ ਬਚਾਅ ਕਿਵੇਂ ਕਰਨਾ ਹੈ।",
+      "ਕੀਟਨਾਸ਼ਕ ਲੇਬਲ ਜਾਂ ਖੇਤ ਦੇ ਸਾਈਨ ਦੀ ਫੋਟੋ ਖਿੱਚੋ। Milpa ਤੁਹਾਡੀ ਭਾਸ਼ਾ ਵਿੱਚ ਦੱਸੇਗਾ ਕਿ ਵਾਪਸ ਅੰਦਰ ਜਾਣਾ ਕਦੋਂ ਸੁਰੱਖਿਅਤ ਹੈ ਅਤੇ ਆਪਣਾ ਬਚਾਅ ਕਿਵੇਂ ਕਰਨਾ ਹੈ।",
     scan: "ਲੇਬਲ ਜਾਂ ਸਾਈਨ ਦੀ ਫੋਟੋ ਖਿੱਚੋ",
     samples: "ਜਾਂ ਇੱਕ ਨਮੂਨਾ ਅਜ਼ਮਾਓ",
     reading: "ਲੇਬਲ ਪੜ੍ਹ ਰਿਹਾ ਹੈ",

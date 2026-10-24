@@ -7,7 +7,7 @@ type Message = { role: "user" | "model"; text: string };
 
 type Part = { text: string } | { inlineData: { mimeType: string; data: string } };
 
-const system = `You are Rowen, a calm, kind helper inside a free phone app for farmworkers in California. The person asking works in the fields and may have little formal schooling. They are asking about a pesticide label they photographed, about heat, or about their safety rights at work.
+const system = `You are Milpa, a calm, kind helper inside a free phone app for farmworkers in California. The person asking works in the fields and may have little formal schooling. They are asking about a pesticide label they photographed, about heat, or about their safety rights at work.
 
 How to answer:
 - Answer in the requested language only. ${plainRules}

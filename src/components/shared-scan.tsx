@@ -65,7 +65,7 @@ export function SharedScanView({ id }: { id: string }) {
         <Mark className="size-14 text-primary" />
         <p className="max-w-sm text-lg">This link has expired or does not exist.</p>
         <Link href="/" className="rounded-full bg-primary px-6 py-3 font-semibold text-primary-foreground">
-          Rowen
+          Milpa
         </Link>
       </div>
     );
@@ -85,7 +85,7 @@ export function SharedScanView({ id }: { id: string }) {
         <div className="mx-auto flex max-w-xl items-center justify-between gap-3 px-5 py-3">
           <Link href="/" className="flex items-center gap-2 font-display text-2xl font-semibold text-primary">
             <Mark className="size-7" />
-            Rowen
+            Milpa
           </Link>
           <label className="flex h-10 items-center gap-2 rounded-full border bg-card px-3 text-sm font-semibold shadow-sm">
             <Globe className="size-4 text-primary" />
@@ -164,7 +164,7 @@ export function SharedScanView({ id }: { id: string }) {
           href="/sign-up"
           className="group mt-8 flex h-14 items-center justify-center gap-2 rounded-2xl bg-primary text-lg font-semibold text-primary-foreground shadow-lg"
         >
-          Rowen
+          Milpa
           <ArrowRight className="size-5 transition-transform group-hover:translate-x-1 rtl:rotate-180" />
         </Link>
       </main>

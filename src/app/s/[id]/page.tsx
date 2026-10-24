@@ -3,7 +3,7 @@ import { Suspense } from "react";
 import { SharedScanView } from "@/components/shared-scan";
 
 export const metadata: Metadata = {
-  title: "Shared label · Rowen",
+  title: "Shared label · Milpa",
 };
 
 type Params = { params: Promise<{ id: string }> };

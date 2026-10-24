@@ -1,7 +1,7 @@
 {
  "uybgyd": {
   "headline": "Alamin muna bago pumasok sa bukid.",
-  "tagline": "Kumuha ng litrato ng pesticide label o karatula sa bukid. Sasabihin sa iyo ng Rowen, sa sarili mong wika, kung kailan ligtas bumalik at paano protektahan ang sarili.",
+  "tagline": "Kumuha ng litrato ng pesticide label o karatula sa bukid. Sasabihin sa iyo ng Milpa, sa sarili mong wika, kung kailan ligtas bumalik at paano protektahan ang sarili.",
   "scan": "Litratahan ang label o karatula",
   "samples": "O subukan ang isang halimbawa",
   "reading": "Binabasa ang label",
@@ -106,7 +106,7 @@
   "signUp": "Gumawa ng account",
   "google": "Magpatuloy gamit ang Google",
   "or": "o",
-  "noAccount": "Bago ka ba sa Rowen?",
+  "noAccount": "Bago ka ba sa Milpa?",
   "createOne": "Gumawa ng account",
   "haveAccount": "May account ka na ba?",
   "signInLink": "Mag-sign in",
@@ -148,7 +148,7 @@
   "chooseLanguage": "Piliin ang iyong wika",
   "back": "Bumalik",
   "toolsTitle": "Mga Gamit",
-  "toolsIntro": "Lahat ng kayang gawin ng Rowen. Pindutin ang isa.",
+  "toolsIntro": "Lahat ng kayang gawin ng Milpa. Pindutin ang isa.",
   "tools": {
    "heat": {
     "title": "Alamin ang init",
@@ -180,7 +180,7 @@
    },
    "install": {
     "title": "Ilagay sa telepono",
-    "body": "Buksan ang Rowen tulad ng isang app"
+    "body": "Buksan ang Milpa tulad ng isang app"
    },
    "gear": {
     "title": "Suriin ang suot",
@@ -196,7 +196,7 @@
    }
   },
   "ask": {
-   "title": "Magtanong sa Rowen",
+   "title": "Magtanong sa Milpa",
    "about": "Tungkol sa",
    "general": "Magtanong tungkol sa pestisidyo, init o iyong mga karapatan sa trabaho.",
    "placeholder": "Mag-type o pindutin ang mic",
@@ -218,12 +218,12 @@
    "remove": "Burahin ang chat",
    "retry": "Subukan ulit",
    "talk": "Magsalita",
-   "talkHint": "Magsalita sa anumang wika. Makikinig ang Rowen, tapos sasagot nang malakas.",
+   "talkHint": "Magsalita sa anumang wika. Makikinig ang Milpa, tapos sasagot nang malakas.",
    "voiceListening": "Nakikinig",
    "voiceThinking": "Nag-iisip",
    "voiceSpeaking": "Pindutin para pigilin",
    "voiceTap": "Pindutin para magsalita",
-   "voiceBlocked": "Kailangan ng Rowen ang iyong mikropono. Payagan ito sa mga setting ng browser, tapos subukan ulit.",
+   "voiceBlocked": "Kailangan ng Milpa ang iyong mikropono. Payagan ito sa mga setting ng browser, tapos subukan ulit.",
    "voiceFailed": "Hindi iyon pumasok. Pindutin para subukan ulit.",
    "close": "Isara"
   },
@@ -234,7 +234,7 @@
    "shared": "Handa nang ibahagi ang link",
    "copied": "Nakopya ang link",
    "shareFailed": "Hindi makagawa ng link. Subukan ulit.",
-   "howRead": "Paano ito binasa ng Rowen",
+   "howRead": "Paano ito binasa ng Milpa",
    "confidence": {
     "high": "Malinaw ang basa",
     "medium": "Tingnan ito",
@@ -243,7 +243,7 @@
    "confidenceNote": {
     "high": "Malinaw ang label at bawat sagot sa ibaba ay nakasulat doon.",
     "medium": "Maliit o medyo natatakpan ang ilang salita. Tingnan ang label o magtanong.",
-    "low": "Hindi sigurado ang Rowen sa bahaging ito. Magtanong sa iyong superbisor."
+    "low": "Hindi sigurado ang Milpa sa bahaging ito. Magtanong sa iyong superbisor."
    },
    "fields": {
     "product": "Produkto",
@@ -266,7 +266,7 @@
   },
   "symptoms": {
    "title": "Ano ang nararamdaman mo?",
-   "intro": "Pindutin ang lahat ng nararamdaman mo ngayon. Sasabihin ng Rowen kung sino ang tatawagan.",
+   "intro": "Pindutin ang lahat ng nararamdaman mo ngayon. Sasabihin ng Milpa kung sino ang tatawagan.",
    "list": [
     "Sakit ng ulo",
     "Nahihilo",
@@ -292,7 +292,7 @@
   },
   "paper": {
    "title": "Magbasa ng papel",
-   "intro": "Kumuha ng litrato ng anumang papel mula sa trabaho. Ipapaliwanag ito ng Rowen sa iyong wika.",
+   "intro": "Kumuha ng litrato ng anumang papel mula sa trabaho. Ipapaliwanag ito ng Milpa sa iyong wika.",
    "take": "Kumuha ng litrato",
    "choose": "Pumili ng litrato",
    "reading": "Binabasa ang papel...",
@@ -304,7 +304,7 @@
   },
   "report": {
    "title": "Mag-ulat ng problema",
-   "intro": "Sabihin ang nangyari gamit ang sarili mong mga salita. Gagawa ang Rowen ng malinaw na ulat sa Ingles na puwede mong ibigay sa may-ari ng bukid o sa county.",
+   "intro": "Sabihin ang nangyari gamit ang sarili mong mga salita. Gagawa ang Milpa ng malinaw na ulat sa Ingles na puwede mong ibigay sa may-ari ng bukid o sa county.",
    "placeholder": "Halimbawa: Nag-isprey sila sa katabing bukid habang namimitas kami at nahipan ito papunta sa amin.",
    "when": "Kailan ito nangyari?",
    "write": "Isulat ang aking ulat",
@@ -320,7 +320,7 @@
   },
   "brief": {
    "title": "Plano ngayong araw",
-   "intro": "Tinitingnan ng Rowen ang iyong mga orasan at ang init ngayon, at sasabihin sa iyo ang plano nang malakas.",
+   "intro": "Tinitingnan ng Milpa ang iyong mga orasan at ang init ngayon, at sasabihin sa iyo ang plano nang malakas.",
    "make": "Sabihin ang plano ngayong araw",
    "making": "Ginagawa ang iyong plano...",
    "failed": "Hindi magawa ang plano. Tingnan ang iyong koneksyon.",
@@ -346,11 +346,11 @@
    "waterOff": "Bukas ang mga paalala sa tubig"
   },
   "install": {
-   "title": "Ilagay ang Rowen sa iyong telepono",
+   "title": "Ilagay ang Milpa sa iyong telepono",
    "body": "Bubukas ito tulad ng isang app, at gagana ang iyong mga na-save na scan, mga orasan, at ang mga hakbang kapag nawisikan kahit walang signal.",
    "button": "Idagdag sa home screen",
    "ios": "Sa iPhone: pindutin ang Share, tapos Add to Home Screen.",
-   "done": "Nasa home screen mo na ang Rowen."
+   "done": "Nasa home screen mo na ang Milpa."
   }
  },
  "1i1pcy3": {
@@ -370,7 +370,7 @@
   "flip": "Ilipat ang camera",
   "gallery": "Pumili ng litrato",
   "close": "Isara ang camera",
-  "blocked": "Hindi mabuksan ng Rowen ang camera dito. Payagan ang camera sa settings ng iyong browser, o gamitin ang camera app ng iyong telepono.",
+  "blocked": "Hindi mabuksan ng Milpa ang camera dito. Payagan ang camera sa settings ng iyong browser, o gamitin ang camera app ng iyong telepono.",
   "openApp": "Gamitin ang camera app"
  },
  "pyuh1i": {
@@ -384,9 +384,9 @@
  "1swsqbl": {
   "gear": {
    "title": "Pagsusuri ng gamit",
-   "intro": "Mag-selfie bago ka pumasok. Susuriin ito ng Rowen ayon sa gamit na kailangan sa label.",
+   "intro": "Mag-selfie bago ka pumasok. Susuriin ito ng Milpa ayon sa gamit na kailangan sa label.",
    "forProduct": "Sinusuri ang gamit para sa",
-   "noLabel": "Wala pang na-scan na label, kaya karaniwang gamit ang sinusuri ng Rowen.",
+   "noLabel": "Wala pang na-scan na label, kaya karaniwang gamit ang sinusuri ng Milpa.",
    "defaultGear": [
     "Damit na may mahabang manggas",
     "Mahabang pantalon",
@@ -399,20 +399,20 @@
    "verdict": {
     "ready": "Mukhang handa ka na",
     "missing": "Ayusin ito bago ka pumasok",
-    "unsure": "Hindi nakita ng Rowen ang lahat"
+    "unsure": "Hindi nakita ng Milpa ang lahat"
    },
    "status": {
     "on": "Nakasout",
     "missing": "Kulang",
     "unsure": "Hindi kita"
    },
-   "noPerson": "Walang nakitang tao ang Rowen sa litrato. Umatras at subukan ulit.",
+   "noPerson": "Walang nakitang tao ang Milpa sa litrato. Umatras at subukan ulit.",
    "failed": "Hindi nasuri ang litrato. Tingnan ang iyong koneksyon at subukan ulit.",
    "again": "Suriin ulit"
   },
   "pay": {
    "title": "Pagsusuri ng sahod",
-   "intro": "Kunan ng litrato ang iyong pay stub. Babasahin ito ng Rowen at susuriin ayon sa mga patakaran sa sahod sa California.",
+   "intro": "Kunan ng litrato ang iyong pay stub. Babasahin ito ng Milpa at susuriin ayon sa mga patakaran sa sahod sa California.",
    "take": "Kunan ng litrato ang aking pay stub",
    "choose": "Pumili ng litrato",
    "reading": "Binabasa ang iyong pay stub...",
@@ -439,7 +439,7 @@
   },
   "interpret": {
    "title": "Tagasalin",
-   "intro": "Makisalamuha sa supervisor, nars, o kawani. Pindutin ang inyong bahagi at magsalita, at bibigkasin ito ng Rowen sa kabilang wika.",
+   "intro": "Makisalamuha sa supervisor, nars, o kawani. Pindutin ang inyong bahagi at magsalita, at bibigkasin ito ng Milpa sa kabilang wika.",
    "me": "Ako",
    "them": "Sila",
    "other": "Sila ay nagsasalita",
@@ -448,7 +448,7 @@
    "tapToStop": "Pindutin para ihinto",
    "empty": "Pindutin ang iyong bahagi at magsalita. Iabot ang telepono kapag turn na nila.",
    "failed": "Hindi pumasok iyon. Subukan ulit.",
-   "blocked": "Kailangan ng Rowen ang iyong mikropono. Payagan ito sa settings ng iyong browser.",
+   "blocked": "Kailangan ng Milpa ang iyong mikropono. Payagan ito sa settings ng iyong browser.",
    "clear": "Umpisahan muli",
    "replay": "Sabihin itong muli",
    "unsupported": "Hindi kayang mag-record ng tunog ng browser na ito. Subukan ang Chrome o Safari."

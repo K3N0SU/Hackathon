@@ -263,7 +263,7 @@ export function AppShell() {
         <div className="flex items-center justify-between px-6 pt-6">
           <Link href="/" className="wiggle-hover flex items-center gap-2.5 font-display text-2xl font-semibold">
             <Mark className="wiggle-target size-8 text-poppy" />
-            Rowen
+            Milpa
           </Link>
           <UserMenu language={language} compact />
         </div>
@@ -332,7 +332,7 @@ export function AppShell() {
         <div className="mx-auto flex max-w-xl items-center justify-between gap-3 px-5 py-3">
           <Link href="/" className="wiggle-hover flex items-center gap-2 font-display text-2xl font-semibold text-ink">
             <Mark className="wiggle-target size-8 text-primary" />
-            <span className="hidden min-[400px]:inline">Rowen</span>
+            <span className="hidden min-[400px]:inline">Milpa</span>
           </Link>
           <div className="flex items-center gap-2">
             {languageButton(false)}

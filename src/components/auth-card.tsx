@@ -18,7 +18,7 @@ export function AuthCard({
           className="wiggle-hover relative flex items-center gap-2.5 font-display text-2xl font-semibold"
         >
           <Mark className="wiggle-target size-8 text-ink-foreground [--background:var(--ink)]" />
-          Rowen
+          Milpa
         </Link>
         <p className="enter relative max-w-md font-display text-5xl font-semibold leading-[1.02]">
           Your scans, clocks and language,{" "}
@@ -31,7 +31,7 @@ export function AuthCard({
           className="enter flex items-center gap-2.5 font-display text-2xl font-semibold text-primary lg:hidden"
         >
           <Mark className="size-8 text-primary" />
-          Rowen
+          Milpa
         </Link>
         <main
           lang={lang}

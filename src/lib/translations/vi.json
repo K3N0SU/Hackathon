@@ -1,7 +1,7 @@
 {
  "uybgyd": {
   "headline": "Biết rõ trước khi bạn vào ruộng.",
-  "tagline": "Chụp ảnh nhãn thuốc trừ sâu hoặc biển báo ngoài ruộng. Rowen sẽ chỉ cho bạn, bằng tiếng Việt, khi nào vào lại an toàn và cách tự bảo vệ mình.",
+  "tagline": "Chụp ảnh nhãn thuốc trừ sâu hoặc biển báo ngoài ruộng. Milpa sẽ chỉ cho bạn, bằng tiếng Việt, khi nào vào lại an toàn và cách tự bảo vệ mình.",
   "scan": "Chụp ảnh nhãn hoặc biển báo",
   "samples": "Hoặc thử một ví dụ",
   "reading": "Đang đọc nhãn thuốc",
@@ -106,7 +106,7 @@
   "signUp": "Tạo tài khoản",
   "google": "Tiếp tục với Google",
   "or": "hoặc",
-  "noAccount": "Bạn mới dùng Rowen?",
+  "noAccount": "Bạn mới dùng Milpa?",
   "createOne": "Tạo tài khoản",
   "haveAccount": "Đã có tài khoản rồi?",
   "signInLink": "Đăng nhập",
@@ -148,7 +148,7 @@
   "chooseLanguage": "Chọn ngôn ngữ của bạn",
   "back": "Quay lại",
   "toolsTitle": "Công cụ",
-  "toolsIntro": "Mọi thứ Rowen có thể làm. Bấm vào một mục.",
+  "toolsIntro": "Mọi thứ Milpa có thể làm. Bấm vào một mục.",
   "tools": {
    "heat": {
     "title": "Kiểm tra độ nóng",
@@ -180,7 +180,7 @@
    },
    "install": {
     "title": "Thêm vào điện thoại",
-    "body": "Mở Rowen như một ứng dụng"
+    "body": "Mở Milpa như một ứng dụng"
    },
    "gear": {
     "title": "Kiểm tra đồ bảo hộ",
@@ -196,7 +196,7 @@
    }
   },
   "ask": {
-   "title": "Hỏi Rowen",
+   "title": "Hỏi Milpa",
    "about": "Giới thiệu",
    "general": "Hỏi về thuốc trừ sâu, thời tiết nóng hoặc quyền lợi tại nơi làm việc.",
    "placeholder": "Nhập chữ hoặc bấm vào micrô",
@@ -218,12 +218,12 @@
    "remove": "Xóa cuộc trò chuyện",
    "retry": "Thử lại",
    "talk": "Nói chuyện",
-   "talkHint": "Nói bằng bất kỳ ngôn ngữ nào. Rowen sẽ lắng nghe rồi trả lời to thành tiếng.",
+   "talkHint": "Nói bằng bất kỳ ngôn ngữ nào. Milpa sẽ lắng nghe rồi trả lời to thành tiếng.",
    "voiceListening": "Đang lắng nghe",
    "voiceThinking": "Đang suy nghĩ",
    "voiceSpeaking": "Chạm để ngắt lời",
    "voiceTap": "Chạm để nói",
-   "voiceBlocked": "Rowen cần dùng micrô của bạn. Hãy cho phép trong phần cài đặt trình duyệt rồi thử lại.",
+   "voiceBlocked": "Milpa cần dùng micrô của bạn. Hãy cho phép trong phần cài đặt trình duyệt rồi thử lại.",
    "voiceFailed": "Chưa gửi được. Hãy chạm để thử lại.",
    "close": "Đóng"
   },
@@ -234,7 +234,7 @@
    "shared": "Đã có liên kết để chia sẻ",
    "copied": "Đã sao chép liên kết",
    "shareFailed": "Không tạo được liên kết. Thử lại.",
-   "howRead": "Cách Rowen đọc nhãn này",
+   "howRead": "Cách Milpa đọc nhãn này",
    "confidence": {
     "high": "Đọc rõ ràng",
     "medium": "Cần kiểm tra lại",
@@ -243,7 +243,7 @@
    "confidenceNote": {
     "high": "Nhãn rất rõ và mọi câu trả lời bên dưới đều có in trên nhãn.",
     "medium": "Có chữ hơi nhỏ hoặc bị che khuất một phần. Hãy xem lại nhãn hoặc hỏi lại.",
-    "low": "Rowen không chắc về một phần nội dung này. Hãy hỏi người quản lý."
+    "low": "Milpa không chắc về một phần nội dung này. Hãy hỏi người quản lý."
    },
    "fields": {
     "product": "Sản phẩm",
@@ -266,7 +266,7 @@
   },
   "symptoms": {
    "title": "Bạn thấy trong người thế nào?",
-   "intro": "Bấm vào mọi dấu hiệu bạn đang có lúc này. Rowen sẽ chỉ bạn cần gọi cho ai.",
+   "intro": "Bấm vào mọi dấu hiệu bạn đang có lúc này. Milpa sẽ chỉ bạn cần gọi cho ai.",
    "list": [
     "Đau đầu",
     "Chóng mặt",
@@ -292,7 +292,7 @@
   },
   "paper": {
    "title": "Đọc giấy tờ",
-   "intro": "Chụp ảnh giấy tờ ở chỗ làm. Rowen sẽ giải thích bằng ngôn ngữ của bạn.",
+   "intro": "Chụp ảnh giấy tờ ở chỗ làm. Milpa sẽ giải thích bằng ngôn ngữ của bạn.",
    "take": "Chụp ảnh",
    "choose": "Chọn ảnh",
    "reading": "Đang đọc giấy tờ...",
@@ -304,7 +304,7 @@
   },
   "report": {
    "title": "Báo cáo vấn đề",
-   "intro": "Kể lại sự việc theo lời của bạn. Rowen sẽ viết bản báo cáo rõ ràng bằng tiếng Anh để bạn đưa cho chủ vườn hoặc cơ quan quận.",
+   "intro": "Kể lại sự việc theo lời của bạn. Milpa sẽ viết bản báo cáo rõ ràng bằng tiếng Anh để bạn đưa cho chủ vườn hoặc cơ quan quận.",
    "placeholder": "Ví dụ: Họ phun xịt ở đám đất bên cạnh khi chúng tôi đang hái, gió thổi thuốc tạt vào người chúng tôi.",
    "when": "Chuyện xảy ra khi nào?",
    "write": "Viết báo cáo cho tôi",
@@ -320,7 +320,7 @@
   },
   "brief": {
    "title": "Kế hoạch hôm nay",
-   "intro": "Rowen xem giờ bấm giờ và độ nóng hôm nay rồi đọc kế hoạch thành tiếng cho bạn.",
+   "intro": "Milpa xem giờ bấm giờ và độ nóng hôm nay rồi đọc kế hoạch thành tiếng cho bạn.",
    "make": "Nói kế hoạch hôm nay",
    "making": "Đang lập kế hoạch...",
    "failed": "Không lập được kế hoạch. Hãy kiểm tra kết nối mạng.",
@@ -346,11 +346,11 @@
    "waterOff": "Đã bật nhắc nhở uống nước"
   },
   "install": {
-   "title": "Thêm Rowen vào điện thoại",
+   "title": "Thêm Milpa vào điện thoại",
    "body": "Mở lên dùng như ứng dụng, và xem lại các nhãn đã lưu, đồng hồ hẹn giờ cùng các bước xử lý khi dính thuốc ngay cả khi mất sóng.",
    "button": "Thêm vào màn hình chính",
    "ios": "Trên iPhone: bấm nút Chia sẻ, rồi chọn Thêm vào Màn hình chính.",
-   "done": "Rowen đã có trên màn hình chính của bạn."
+   "done": "Milpa đã có trên màn hình chính của bạn."
   }
  },
  "1i1pcy3": {
@@ -370,7 +370,7 @@
   "flip": "Đổi camera",
   "gallery": "Chọn một ảnh",
   "close": "Đóng camera",
-  "blocked": "Rowen không thể mở camera ở đây. Hãy cho phép mở camera trong phần cài đặt trình duyệt, hoặc dùng ứng dụng camera trên điện thoại của bạn.",
+  "blocked": "Milpa không thể mở camera ở đây. Hãy cho phép mở camera trong phần cài đặt trình duyệt, hoặc dùng ứng dụng camera trên điện thoại của bạn.",
   "openApp": "Dùng ứng dụng camera"
  },
  "pyuh1i": {
@@ -384,9 +384,9 @@
  "1swsqbl": {
   "gear": {
    "title": "Kiểm tra đồ bảo hộ",
-   "intro": "Chụp một tấm hình của bạn trước khi vào làm. Rowen sẽ so lại với đồ bảo hộ ghi trên nhãn thuốc.",
+   "intro": "Chụp một tấm hình của bạn trước khi vào làm. Milpa sẽ so lại với đồ bảo hộ ghi trên nhãn thuốc.",
    "forProduct": "Đang kiểm tra đồ bảo hộ cho",
-   "noLabel": "Chưa quét nhãn nào, nên Rowen kiểm tra đồ bảo hộ thường dùng.",
+   "noLabel": "Chưa quét nhãn nào, nên Milpa kiểm tra đồ bảo hộ thường dùng.",
    "defaultGear": [
     "Áo tay dài",
     "Quần dài",
@@ -399,20 +399,20 @@
    "verdict": {
     "ready": "Bạn trông đã sẵn sàng",
     "missing": "Cần mặc thêm đồ này trước khi vào làm",
-    "unsure": "Rowen không nhìn rõ hết mọi thứ"
+    "unsure": "Milpa không nhìn rõ hết mọi thứ"
    },
    "status": {
     "on": "Có đủ",
     "missing": "Còn thiếu",
     "unsure": "Không thấy rõ"
    },
-   "noPerson": "Rowen không thấy ai trong hình. Hãy đứng lùi lại và chụp lại nha.",
+   "noPerson": "Milpa không thấy ai trong hình. Hãy đứng lùi lại và chụp lại nha.",
    "failed": "Không kiểm tra được hình. Coi lại mạng rồi thử lại nha.",
    "again": "Kiểm tra lại"
   },
   "pay": {
    "title": "Kiểm tra phiếu lương",
-   "intro": "Chụp hình phiếu lương của bạn. Rowen sẽ đọc và so lại với luật trả lương của California.",
+   "intro": "Chụp hình phiếu lương của bạn. Milpa sẽ đọc và so lại với luật trả lương của California.",
    "take": "Chụp hình phiếu lương",
    "choose": "Chọn một tấm hình",
    "reading": "Đang đọc phiếu lương của bạn...",
@@ -439,7 +439,7 @@
   },
   "interpret": {
    "title": "Thông dịch",
-   "intro": "Nói chuyện với quản lý, y tá hoặc nhân viên. Mỗi người chạm vào phần của mình rồi nói, Rowen sẽ đọc to bằng tiếng kia.",
+   "intro": "Nói chuyện với quản lý, y tá hoặc nhân viên. Mỗi người chạm vào phần của mình rồi nói, Milpa sẽ đọc to bằng tiếng kia.",
    "me": "Tôi",
    "them": "Họ",
    "other": "Họ nói tiếng",
@@ -448,7 +448,7 @@
    "tapToStop": "Chạm để dừng",
    "empty": "Chạm vào phần của bạn rồi nói. Đưa điện thoại cho người ta khi đến lượt họ.",
    "failed": "Không gửi được. Thử lại nha.",
-   "blocked": "Rowen cần dùng micrô. Cho phép mở micrô trong cài đặt của trình duyệt nha.",
+   "blocked": "Milpa cần dùng micrô. Cho phép mở micrô trong cài đặt của trình duyệt nha.",
    "clear": "Bắt đầu lại",
    "replay": "Đọc lại",
    "unsupported": "Trình duyệt này không ghi âm được. Dùng Chrome hoặc Safari thử xem."
