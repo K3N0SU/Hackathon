@@ -155,7 +155,7 @@ export function Tour() {
                 <Current />
               </div>
             </PhoneFrame>
-            <div className="absolute -right-14 top-1/2 flex -translate-y-1/2 flex-col gap-3">
+            <div className="absolute -left-12 top-1/2 flex -translate-y-1/2 flex-col gap-3">
               {steps.map((step, index) => (
                 <span
                   key={step.tag}
