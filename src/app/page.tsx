@@ -22,7 +22,6 @@ import {
 } from "lucide-react";
 import { AccountCta } from "@/components/account-cta";
 import { AskDemo } from "@/components/ask-demo";
-import { FieldLines } from "@/components/field-lines";
 import { LabelHighlight } from "@/components/label-highlight";
 import { LabelReader } from "@/components/label-reader";
 import { Magnetic, Odometer, ScrollProgress, Tilt } from "@/components/motion";
@@ -234,62 +233,73 @@ export default function Home() {
   return (
     <div className="flex-1 overflow-x-clip bg-background">
       <ScrollProgress />
-      <SiteNav />
+      <SiteNav dark />
       <SectionDots />
       <ScrollReveal />
 
-      <section id="top" className="dots relative overflow-hidden lg:min-h-svh">
-        <div className="zoom-depth pointer-events-none absolute inset-x-0 bottom-0 h-[45%]">
-          <FieldLines className="text-poppy/30" horizon={false} />
-        </div>
-        <div className="pointer-events-none absolute -right-40 top-[40rem] size-[26rem] rounded-full bg-harvest sm:size-[34rem] lg:right-[-6rem] lg:top-1/2 lg:size-[36rem] lg:-translate-y-1/2" />
-        <div className="pointer-events-none absolute right-[30%] top-[68%] hidden size-40 rounded-full bg-poppy lg:block" />
-        <div className="zoom-hero relative mx-auto grid max-w-6xl items-center gap-14 px-6 pb-24 pt-32 lg:min-h-svh lg:grid-cols-[1.1fr_0.9fr] lg:pb-16 lg:pt-28">
+      <section id="top" className="relative overflow-hidden bg-ink text-ink-foreground lg:min-h-svh">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.07)_1.5px,transparent_1.6px)] [background-size:28px_28px]" />
+        <div className="zoom-hero relative mx-auto grid max-w-6xl items-center gap-14 px-6 pb-20 pt-32 lg:min-h-svh lg:grid-cols-[1.05fr_0.95fr] lg:pb-16 lg:pt-28">
           <div className="text-center lg:text-left">
             <p
-              className="enter inline-flex items-center gap-2 font-display text-xl italic text-poppy"
+              className="enter inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-ink-foreground/85"
               style={delay("0.1s")}
             >
-              For the people who feed California
+              <span className="size-2 rounded-full bg-leaf" />
+              Free for farmworkers, in 17 languages
             </p>
-            <h1 className="mt-4 font-display text-[clamp(3rem,9vw,5.8rem)] font-semibold leading-[0.93] text-ink lg:text-[clamp(3.6rem,5.8vw,5.6rem)]">
+            <h1 className="mt-6 font-display text-[clamp(3rem,9vw,6rem)] font-semibold leading-[0.92] tracking-tight lg:text-[clamp(3.8rem,6vw,6rem)]">
               <span className="block">
                 <Words text="The label says" start={0.2} />
               </span>
               <span className="block">
                 <Words text="12 hours." start={0.42} />
               </span>
-              <span className="block italic text-primary">
-                <Words text={"Now you can read it."} start={0.6} />
+              <span className="block italic text-harvest">
+                <Words text={"Now you can read it."} start={0.6} />
               </span>
             </h1>
             <p
-              className="enter mx-auto mt-6 max-w-xl text-lg leading-relaxed text-ink/70 sm:text-xl lg:mx-0"
+              className="enter mx-auto mt-7 max-w-xl text-lg leading-relaxed text-ink-foreground/70 sm:text-xl lg:mx-0"
               style={delay("1s")}
             >
               Point your phone at a pesticide label. Milpa tells you when it is safe to go back in and what to wear,
               then answers your questions out loud, in your language.
             </p>
             <div
-              className="enter mt-8 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
+              className="enter mt-9 flex flex-wrap items-center justify-center gap-3 lg:justify-start"
               style={delay("1.15s")}
             >
               <AccountCta
                 primary="Get started free"
-                primaryClass="sweep group flex h-14 items-center gap-2 rounded-full bg-primary px-8 text-lg font-semibold text-primary-foreground shadow-xl shadow-primary/30 [--sweep-color:var(--poppy)] active:scale-95"
+                primaryClass="sweep group flex h-14 items-center gap-2 rounded-full bg-harvest px-8 text-lg font-semibold text-harvest-foreground shadow-xl shadow-black/30 [--sweep-color:var(--ink-foreground)] active:scale-95"
               />
               <Magnetic strength={0.2}>
                 <a
                   href="#ai"
-                  className="sweep flex h-14 items-center rounded-full bg-ink px-7 text-lg font-semibold text-ink-foreground shadow-xl shadow-ink/20 [--sweep-color:var(--primary)] active:scale-95"
+                  className="flex h-14 items-center rounded-full border border-white/25 px-7 text-lg font-semibold text-ink-foreground transition-colors hover:bg-white/10 active:scale-95"
                 >
                   See the AI work
                 </a>
               </Magnetic>
             </div>
+            <dl className="enter mx-auto mt-12 grid max-w-md grid-cols-3 gap-6 border-t border-white/10 pt-6 text-left lg:mx-0" style={delay("1.3s")}>
+              {[
+                ["5 sec", "photo to answer"],
+                ["17", "languages, spoken"],
+                ["$0", "for every worker"],
+              ].map(([value, label]) => (
+                <div key={label}>
+                  <dt className="font-display text-3xl font-semibold text-harvest">{value}</dt>
+                  <dd className="mt-1 text-sm text-ink-foreground/60">{label}</dd>
+                </div>
+              ))}
+            </dl>
           </div>
-          <div className="enter" style={delay("0.5s")}>
-            <LabelReader />
+          <div className="enter relative" style={delay("0.5s")}>
+            <div className="relative rounded-[2rem] border border-white/10 bg-white/[0.04] p-5 sm:p-8">
+              <LabelReader />
+            </div>
           </div>
         </div>
       </section>

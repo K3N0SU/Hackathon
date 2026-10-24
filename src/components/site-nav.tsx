@@ -13,7 +13,7 @@ const links = [
   { href: "#questions", label: "Questions" },
 ];
 
-export function SiteNav() {
+export function SiteNav({ dark = false }: { dark?: boolean }) {
   const [solid, setSolid] = useState(false);
 
   useEffect(() => {
@@ -28,6 +28,8 @@ export function SiteNav() {
     };
   }, []);
 
+  const light = dark && !solid;
+
   return (
     <header
       className={`fixed inset-x-0 top-0 z-40 transition-all duration-500 ${
@@ -39,9 +41,9 @@ export function SiteNav() {
       <div className="mx-auto flex max-w-6xl items-center justify-between px-6 py-3.5">
         <Link
           href="/"
-          className="wiggle-hover flex items-center gap-2.5 font-display text-2xl font-semibold text-primary"
+          className={`wiggle-hover flex items-center gap-2.5 font-display text-2xl font-semibold transition-colors ${light ? "text-ink-foreground" : "text-primary"}`}
         >
-          <Mark className="wiggle-target size-8 text-primary" />
+          <Mark className={`wiggle-target size-8 ${light ? "text-harvest" : "text-primary"}`} />
           Milpa
         </Link>
         <nav className="flex items-center gap-2 text-[15px] md:gap-8">
@@ -49,7 +51,7 @@ export function SiteNav() {
             <a
               key={link.href}
               href={link.href}
-              className="underline-draw hidden font-medium text-foreground/70 transition-colors hover:text-foreground md:inline"
+              className={`underline-draw hidden font-medium transition-colors md:inline ${light ? "text-ink-foreground/75 hover:text-ink-foreground" : "text-foreground/70 hover:text-foreground"}`}
             >
               {link.label}
             </a>
