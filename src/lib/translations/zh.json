@@ -135,7 +135,7 @@
    "network": "没连上网。检查一下信号再试吧。",
    "generic": "出了点问题。请重试。",
    "notConfigured": "这个网站还没弄好登录功能。",
-   "wrongSite": "Google 登录只能在 furrow-valley.vercel.app 上用。去那里打开 Milpa，或者用邮箱登录。"
+   "wrongSite": "Google 登录只能在 milpa-valley.vercel.app 上用。去那里打开 Milpa，或者用邮箱登录。"
   }
  },
  "1956lkr": {

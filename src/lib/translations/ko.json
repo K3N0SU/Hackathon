@@ -135,7 +135,7 @@
    "network": "인터넷이 연결되지 않았어요. 신호를 확인하고 다시 해보세요.",
    "generic": "문제가 생겼어요. 다시 시도해 주세요.",
    "notConfigured": "이 사이트에는 아직 로그인이 설정되지 않았어요.",
-   "wrongSite": "Google 로그인은 furrow-valley.vercel.app에서만 작동해요. 거기서 Milpa를 열거나 이메일로 로그인해 주세요."
+   "wrongSite": "Google 로그인은 milpa-valley.vercel.app에서만 작동해요. 거기서 Milpa를 열거나 이메일로 로그인해 주세요."
   }
  },
  "1956lkr": {

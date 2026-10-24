@@ -135,7 +135,7 @@
    "network": "つながっていません。電波を確認して、もう一度試してください。",
    "generic": "うまくいきませんでした。もう一度試してください。",
    "notConfigured": "このサイトではまだログインの設定ができていません。",
-   "wrongSite": "Googleでのログインは furrow-valley.vercel.app だけで使えます。そちらでMilpaを開くか、メールアドレスを使ってください。"
+   "wrongSite": "Googleでのログインは milpa-valley.vercel.app だけで使えます。そちらでMilpaを開くか、メールアドレスを使ってください。"
   }
  },
  "1956lkr": {
