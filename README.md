@@ -1,25 +1,32 @@
 # Furrow
 
-Furrow reads pesticide labels and field signs for people who don't read English first. A farmworker photographs the label or the re-entry sign, and Furrow says, in English, Spanish or Punjabi, how long to stay out of the field, what to wear, what to do if someone is exposed, and what the label means in a couple of plain sentences. It can read the answer aloud, and it keeps a countdown for each sprayed block so the answer is still there an hour later.
+Furrow is a free phone app for farmworkers in the Central Valley. It does three things, in English, Spanish or Punjabi.
 
-It was built solo at SierraHacks in Manteca for the Central Valley challenge. San Joaquin County grows almonds, walnuts, cherries and grapes, and a lot of the people in those rows read Spanish or Punjabi before English. The details that keep them safe are on a label and a sign, in small print.
+**Labels.** Photograph a pesticide label or a re-entry sign and Furrow says how long to stay out of the field, what to wear, what to do if someone is exposed, and what the label means in plain words. It can read the answer aloud and keeps a countdown clock for each sprayed block.
+
+**Heat.** Furrow checks the forecast where you are standing, finds the hottest hour of the day, and explains what California's outdoor heat rules require at that temperature: water, shade, cool-down breaks, and the signs of heat illness that mean call 911.
+
+**Exposed.** One tap for 911 or Poison Control, five clear steps, a 15-minute rinse timer that buzzes when it is done, and a card in English for the doctor with the last scanned product filled in and a line asking for an interpreter.
+
+It was built solo at SierraHacks in Manteca for the Central Valley challenge. Live at https://furrow-valley.vercel.app.
 
 ## How it works
 
-The browser shrinks the photo to 1600 pixels and sends it to a server route. The route asks the Gemini API to read it and return JSON in a fixed shape: signal word, re-entry interval in hours, a sentence about it, gear, first aid, a short summary, and a line telling the worker to ask a supervisor when the label can't be read with confidence. The response schema is enforced by the API, so the interface never has to guess at the format. The prompt tells the model to keep product names and phone numbers exactly as printed and to translate everything else.
+The browser shrinks the photo to 1600 pixels and sends it to a server route. The route asks the Gemini API to read it and return JSON in a fixed shape: signal word, re-entry interval in hours, a sentence about it, gear, first aid, a short summary, and a line telling the worker to ask a supervisor when the label can't be read with confidence. The response schema is enforced by the API, so the interface never parses prose. The prompt keeps product names and phone numbers exactly as printed and translates everything else.
 
-When the label gives an interval in hours, the result page offers to start a clock. The clock needs the time the block was sprayed, which the label can't know, so the worker enters it. Clocks and the chosen language are stored in the phone's localStorage. There are no accounts and no database.
+The heat check calls Open-Meteo straight from the browser with the phone's location, or Manteca if location is off, and maps the day's high to California's 80°F shade and 95°F high-heat thresholds.
 
-If a photo is blurry, Furrow says so instead of guessing. If the connection fails while scanning one of the three built-in sample labels, it shows a saved answer and says it is saved.
+Clocks, the chosen language and the last scanned product live in the phone's localStorage. There are no accounts and no database. If a photo is blurry, Furrow says so instead of guessing. If the connection fails while scanning one of the three built-in sample labels, it shows a saved answer and says it is saved.
 
 ## Technology
 
 - Google Gemini API, free tier, for vision and structured output (`gemini-3.8-flash`, set with `GEMINI_MODEL`)
-- Next.js 16 with the App Router and TypeScript
-- Tailwind CSS 4 and shadcn/ui
+- Open-Meteo, a free weather API with no key
+- Next.js 16 with the App Router, React 19 and TypeScript
+- Tailwind CSS 4, shadcn/ui and lucide icons
 - Vercel for hosting, deployed from this repository
-- Web Speech API for read-aloud
-- Fraunces, Public Sans and Noto Sans Gurmukhi from Google Fonts
+- Web Speech API for read-aloud, Vibration API for haptics, Geolocation API for the heat check
+- Barlow Condensed, Fraunces, Public Sans and Noto Sans Gurmukhi from Google Fonts
 
 Everything runs on free tiers. No card is needed anywhere.
 
@@ -33,10 +40,8 @@ npm install
 npm run dev
 ```
 
-Put the key in `.env.local` as `GEMINI_API_KEY`. The landing page is at http://localhost:3000, the scanner at /scan, and the slides are at http://localhost:3000/deck (arrow keys to move, print to PDF to export).
-
-On Vercel, add the same `GEMINI_API_KEY` under Environment Variables, as a secret, and redeploy.
+Put the key in `.env.local` as `GEMINI_API_KEY`. The landing page is at http://localhost:3000 and the app at /scan. On Vercel, add the same `GEMINI_API_KEY` under Environment Variables and redeploy.
 
 ## Limits
 
-The Punjabi and Spanish are machine translations and have not been reviewed by native speakers or by anyone who works in pesticide safety. Furrow explains a label; it does not replace the label, the training a grower must give, or Poison Control at 1-800-222-1222. The sample labels are made up for the demo.
+The Punjabi and Spanish are machine translations and have not been reviewed by native speakers or by anyone who works in pesticide safety. Furrow explains a label; it does not replace the label, the training a grower must give, or Poison Control at 1-800-222-1222. The heat rules are a plain summary, not legal advice. The sample labels are made up for the demo.
