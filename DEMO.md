@@ -1,41 +1,19 @@
-# Demo plan for Milpa
+# Demo script, about 2 minutes
 
-## Before you record or present
+Record on a phone or a narrow browser window signed in to the QA account. Keep the sound on, since the voice is part of the demo. Judges score innovation, technical work, design and UX, impact, then presentation, so show the AI working live and keep moving.
 
-The venue wifi blocks vercel.app and github.com, so run the phone on mobile data or a hotspot, and tell judges on the same wifi to do the same. Open https://furrow-valley.vercel.app on your phone and sign in before the demo (Google is fastest) so the app opens straight to the camera. Delete clocks and saved scans you don't want on screen, turn the volume up and turn on Do Not Disturb. Allow location, camera, microphone and notifications once before the demo. Have the Valley Guard label printed or open full screen on the laptop so the camera has something real to point at. Tap Listen in Spanish once to check the phone has the voice.
+**Opening, 10 seconds.** On the landing page, scroll slowly so the pixel farm zooms away. Say: "Farmworkers in the Central Valley are protected by labels printed in small English. Milpa reads them out loud, in their language."
 
-Run the full path twice before you start. If the live scan is slow, the sample label falls back to a saved answer by itself.
+**The scan, 25 seconds.** Open Milpa. It starts on the scanner. Tap the almond insecticide example, or photograph a printed label. Read the result: Caution, 12 hours, the gear. Tap Listen so the natural voice plays. Open "How Milpa read this" to show the quoted words. Start the re-entry clock.
 
-## The 2 minute story
+**Voice, 30 seconds.** Tap the Ask Milpa bubble, then Talk. With the app in English, ask out loud in Spanish: "¿Cuándo puedo volver a entrar al campo?" It writes down what you said and answers in Spanish out loud. Say: "The browser can't understand Hmong or Mixteco, so the audio goes straight to Gemini, which hears any language."
 
-Start on the label, before the app. Hold it up: this is what a worker gets before walking into an almond orchard. Small English print. Many people in these rows read Spanish, Punjabi or Hmong first.
+**A photo in chat, 10 seconds.** Close voice mode, tap the photo button and send a picture of a sign or a paper. Show the answer.
 
-Show the landing page for three seconds while the label animates, tap Open Milpa, tap the language button and pick Español. Tap the big camera button, line up the label and shoot, then tap Read this label. While it reads, say: Gemini is reading the photo and returning fixed fields, with the exact label text behind every answer.
+**Interpreter, 20 seconds.** Tools, then Interpreter. Tap your side and speak Spanish; it says it in English. Tap Them and answer in English; it says it in Spanish. On a phone, point out that the top half is flipped for the person across the table.
 
-On the result, point at the green box: twelve hours, in Spanish. Tap the Clear read badge to open How Milpa read this and show the quote from the label. Tap Start the clock, then Buzz me when it is safe.
+**Gear or pay check, 10 seconds.** Show one result screen.
 
-Tap Ask about this label. Tap the mic and say, in Spanish if you can, "Can I eat lunch in the rows?" Show the answer and tap Listen. Say: it only answers from the label and California's rules, and says "ask your supervisor" when the label doesn't say.
+**Close, 15 seconds.** Switch the language to Punjabi or Arabic from the top bar so the whole interface changes. Say: "17 languages, saved to your account, free for every worker. Milpa decides one thing: whether it's safe, using only what the label says, and it says I don't know when it doesn't."
 
-Tap Tools, then I feel sick. Tap Headache and Dizzy, then Tell me what to do, and show the Poison Control card. Tap Back, then Report a problem, tap the mic and say one sentence about drift; show the English report it writes.
-
-Tap the language button and switch to العربية to show the whole app flip right to left, then back. Close on Saved, with the scan and its photo already there. Last line: Milpa. Know before you walk in.
-
-## Rubric, without saying the word rubric
-
-Innovation: a label you can talk to, grounded so it can't make things up, plus the tools a worker needs the rest of the day in one free app. Technical and AI/ML: six schema-constrained Gemini features with written system prompts, evidence quotes and confidence on every scan, on-device blur detection, an interface machine-translated into five more languages and validated for shape, live translation of shared scans, Firebase auth with locked-down Firestore rules, offline install. Impact: Spanish, Punjabi, Hmong and other speakers in San Joaquin County, pesticide exposure and heat illness are real dangers. Presentation and ease of use: four tabs, the camera first, big buttons, voice in and out, and it works on a phone with one bar.
-
-## If the judges ask
-
-Is it accurate? Not certified. Every answer shows the label words it came from, translations are by machine and need review, and the app says so. Can the chat make things up? It only gets the scanned label, the worker's clocks and a fixed list of California facts, and it is told to say it doesn't know. Why these languages? Spanish, Punjabi, Hmong, Tagalog, Hindi, Arabic and Vietnamese are all spoken in Central Valley farm work. Indigenous languages like Mixteco are next, but machine translation for them isn't good enough yet. No signal? Saved scans, clocks, the exposure steps, rinse timer and sample labels still work. Cost? Nothing, it is all on free tiers.
-
-## Screenshots
-
-Ten phone screenshots are in `Downloads/Milpa screenshots`, ready for the Devpost gallery. Retake any of them on your own phone if you want a real status bar.
-
-## Demo video (90 seconds to 2 minutes)
-
-Record the phone screen with the built-in screen recorder and talk over it, following the story above. Start on the printed label and end on Know before you walk in. Trim, upload to YouTube as unlisted and paste the link into Devpost.
-
-## Slides
-
-`Milpa.pptx` is in your Downloads folder with speaker notes. Upload it to Devpost as is.
+If the wifi is bad, the example labels have saved answers and still work.

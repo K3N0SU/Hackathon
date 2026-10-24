@@ -34,25 +34,70 @@ function sameShape(a: unknown, b: unknown): boolean {
 }
 
 const pending = new Map<string, Promise<unknown>>();
+const bundles = new Map<Language, Record<string, unknown>>();
+const ready = new Map<string, unknown>();
+const prints = new WeakMap<object, string>();
+
+function printOf(strings: unknown) {
+  if (!strings || typeof strings !== "object") return fingerprint(strings);
+  let print = prints.get(strings);
+  if (!print) {
+    print = fingerprint(strings);
+    prints.set(strings, print);
+  }
+  return print;
+}
+
+async function loadBundle(language: Language) {
+  const known = bundles.get(language);
+  if (known) return known;
+  const bundle: Record<string, unknown> = (await import(`./translations/${language}.json`)).default;
+  bundles.set(language, bundle);
+  return bundle;
+}
+
+export function preloadLanguages(languages: Language[]) {
+  for (const language of languages) {
+    if (language !== "en" && !isCore(language)) loadBundle(language).catch(() => {});
+  }
+}
+
+function cached<T>(strings: T, language: Language): T | undefined {
+  const print = printOf(strings);
+  const done = ready.get(`${language}:${print}`);
+  if (done) return done as T;
+  const fromBundle = bundles.get(language)?.[print];
+  if (fromBundle && sameShape(strings, fromBundle)) {
+    ready.set(`${language}:${print}`, fromBundle);
+    return fromBundle as T;
+  }
+  return undefined;
+}
 
 export async function translateStrings<T>(
   strings: T,
   language: Language,
 ): Promise<T> {
   if (language === "en") return strings;
-  const print = fingerprint(strings);
+  const known = cached(strings, language);
+  if (known) return known;
+  const print = printOf(strings);
   try {
-    const bundle: Record<string, unknown> = (
-      await import(`./translations/${language}.json`)
-    ).default;
-    if (sameShape(strings, bundle[print])) return bundle[print] as T;
+    const bundle = await loadBundle(language);
+    if (sameShape(strings, bundle[print])) {
+      ready.set(`${language}:${print}`, bundle[print]);
+      return bundle[print] as T;
+    }
   } catch {}
   const key = `furrow-ui-${language}-${print}`;
   try {
     const cached = localStorage.getItem(key);
     if (cached) {
       const parsed = JSON.parse(cached);
-      if (sameShape(strings, parsed)) return parsed as T;
+      if (sameShape(strings, parsed)) {
+        ready.set(`${language}:${print}`, parsed);
+        return parsed as T;
+      }
     }
   } catch {}
   let request = pending.get(key) as Promise<T> | undefined;
@@ -71,6 +116,7 @@ export async function translateStrings<T>(
         try {
           localStorage.setItem(key, JSON.stringify(translated));
         } catch {}
+        ready.set(`${language}:${print}`, translated);
         return translated;
       })
       .finally(() => pending.delete(key));
@@ -98,7 +144,8 @@ export function useCopy<T>(dictionary: Record<CoreLanguage, T>, language: Langua
   }, [dictionary, language]);
 
   if (isCore(language)) return dictionary[language];
-  return extra?.language === language ? extra.value : dictionary.en;
+  if (extra?.language === language) return extra.value;
+  return cached(dictionary.en, language) ?? dictionary.en;
 }
 
 export function pick<T>(dictionary: Record<CoreLanguage, T>, language: Language) {

@@ -1,28 +1,28 @@
 {
- "uybgyd": {
-  "headline": "Paub ua ntej koj mus rau hauv teb.",
-  "tagline": "Yees duab ntawm cov tshuaj tua kab daim ntawv lo los yog cov paib hauv teb. Milpa yuav qhia koj ua koj hom lus tias thaum twg mam rov qab mus tau thiab yuav tiv thaiv koj tus kheej li cas.",
-  "scan": "Yees duab daim ntawv lo los yog daim paib",
-  "samples": "Los yog sim saib ib qho piv txwv",
-  "reading": "Nyeem ntawv lo",
-  "reentry": "Thaum twg koj rov qab mus tau",
-  "gear": "Koj yuav tsum hnav dab tsi",
-  "firstAid": "Yog koj raug tshuaj",
-  "summary": "Hais luv luv",
+ "r808a3": {
+  "headline": "Paub meej ua ntej koj mus rau hauv teb.",
+  "tagline": "Yees duab ntawm cov tshuaj tua kab daim ntawv lo los sis daim paib hauv teb. Milpa yuav qhia koj ua koj hom lus tias thaum twg thiaj tso siab nkag tau mus rau hauv thiab yuav tiv thaiv koj tus kheej li cas.",
+  "scan": "Yees duab ntawm daim ntawv lo los sis daim paib",
+  "samples": "Los sis sim ib qho ua piv txwv",
+  "reading": "Nyeem daim ntawv lo",
+  "reentry": "Thaum twg thiaj nkag tau rov mus",
+  "gear": "Yuav tsum hnav dab tsi",
+  "firstAid": "Yog tias raug tshuaj",
+  "summary": "Hais kom luv",
   "listen": "Mloog",
   "stop": "Nres",
-  "another": "Yees duab dua ib daim",
-  "ask": "Tsis paub tseeb txog ntu no. Nug koj tus thawj saib xyuas.",
-  "unreadable": "Nyeem tsis tau daim duab no. Txav ze zog, tuav lub xov tooj kom ruaj khov thiab sim dua.",
-  "failed": "Muaj teeb meem lawm. Saib koj lub xov tooj network thiab sim dua.",
-  "offline": "Tsis muaj internet. Qhia cov piv txwv uas tau txais tseg lawm.",
-  "noVoice": "Lub xov tooj no tsis muaj suab hais hom lus no.",
-  "disclaimer": "Qhov no tsuas yog pab nyeem xwb. Ua raws li daim ntawv lo thiab koj tus thawj saib xyuas txhua lub sijhawm.",
+  "another": "Yees ib daim ntxiv",
+  "ask": "Tsis paub meej txog qhov no. Nug koj tus thawj saib xyuas.",
+  "unreadable": "Peb nyeem tsis tau daim duab no. Txav ze zog, tuav lub xov tooj kom ruaj thiab sim dua.",
+  "failed": "Muaj ib qho tsis raug lawm. Saib xyuas koj qhov kev txuas internet thiab sim dua.",
+  "offline": "Tsis muaj internet. Qhia qhov piv txwv uas tau khaws cia.",
+  "noVoice": "Lub xov tooj no tsis muaj suab rau hom lus no.",
+  "disclaimer": "Qhov no yog ib qho pab nyeem xwb. Ua raws li daim ntawv lo thiab koj tus thawj saib xyuas txhua lub sijhawm.",
   "sprayedAt": "Puas yog tshuaj tsuag thaum twg?",
-  "startClock": "Pib suav teev",
-  "clocksHeading": "Cov teb uas tab tom suav teev",
-  "safeAt": "Mus rau tau thaum",
-  "safeNow": "Mus rau tau lawm",
+  "startClock": "Pib lub teev",
+  "clocksHeading": "Cov liaj teb uas tseem suav sijhawm",
+  "safeAt": "Tso siab nkag tau thaum",
+  "safeNow": "Tso siab nkag tau tam sim no",
   "hoursUnit": "h",
   "minutesUnit": "min",
   "leftWord": "tshuav",
@@ -31,7 +31,7 @@
   "signal": {
    "caution": "Ceev faj",
    "warning": "Ceeb toom",
-   "danger": "Kev phom sij",
+   "danger": "Kev phom sij loj",
    "unknown": "Tsis pom muaj"
   }
  },
@@ -95,262 +95,292 @@
   "close": "Kaw",
   "interpreter": ""
  },
- "12jsthl": {
+ "arrcil": {
   "signInTitle": "Zoo siab rov ntsib koj",
-  "signUpTitle": "Tsim ib tus account",
-  "intro": "Tej yam koj scan, cov moos suav sij hawm, thiab hom lus raug cawm rau hauv koj tus account, yog li koj siv tau rau txhua lub xov tooj.",
+  "signUpTitle": "Tsim ib lub account",
+  "intro": "Koj cov scan, cov moos suav rov qab, thiab hom lus raug cawm rau hauv koj lub account, yog li ntawd koj hloov mus siv lub xov tooj twg los tau tag nrho.",
   "name": "Koj lub npe",
   "email": "Email",
   "password": "Lo lus zais",
   "signIn": "Nkag mus",
   "signUp": "Tsim account",
-  "google": "Nrog Google mus ntxiv",
-  "or": "los sis",
-  "noAccount": "Koj nyuam qhuav tuaj tshiab rau Milpa?",
-  "createOne": "Tsim ib tus account",
-  "haveAccount": "Koj puas muaj account lawm?",
+  "google": "Txuas ntxiv nrog Google",
+  "or": "los yog",
+  "noAccount": "Koj puas yog tus tshiab tuaj siv Milpa?",
+  "createOne": "Tsim ib lub account",
+  "haveAccount": "Muaj account lawm lov?",
   "signInLink": "Nkag mus",
-  "forgot": "Puas hnov qab lo lus zais?",
-  "resetNeedsEmail": "Ntaus koj tus email ua ntej, mam nias Hnov qab lo lus zais.",
-  "resetSent": "Peb tau xa ib qho link los hloov koj lo lus zais. Mus saib koj tus email.",
+  "forgot": "Tsis nco qab lo lus zais?",
+  "resetNeedsEmail": "Ntaus koj tus email ua ntej, mam li nias Tsis nco qab lo lus zais.",
+  "resetSent": "Peb xa ib tug link mus hloov koj lo lus zais lawm. Mus xyuas koj tus email.",
   "working": "Tos ib pliag...",
-  "verifyTitle": "Mus saib koj tus email",
-  "verifyBody": "Peb tau xa ib qho link mus rau",
-  "verifyNext": "Qhib qhov link ntawd kom paub meej tias yog koj li. Nplooj ntawv no yuav hloov mus tom ntej tom qab koj qhib nws.",
-  "resend": "Xa qhov link dua",
-  "resent": "Xa tawm lawm. Tej zaum yuav siv sij hawm ib feeb, thiab tej zaum yuav mus nyob rau hauv lub spam.",
+  "verifyTitle": "Xyuas koj tus email",
+  "verifyBody": "Peb tau xa ib tug link mus rau",
+  "verifyNext": "Qhib nws los paub tseeb tias yog koj li email. Nplooj ntawv no mam li hloov mus rau tom ntej tom qab koj qhib tas.",
+  "resend": "Rov xa daim link dua",
+  "resent": "Xa lawm. Tej zaum yuav siv sij hawm ib pliag, thiab tej zaum yuav poob rau hauv koj cov spam.",
   "verified": "Kuv qhib qhov link lawm",
-  "notYet": "Tsis tau pom tseeb. Qhib qhov link hauv email, mam li rov sim dua.",
+  "notYet": "Tsis tau tiav zoo. Qhib qhov link hauv email, mam li sim dua.",
   "useOther": "Siv lwm tus email",
-  "account": "Account",
-  "signedInAs": "Nkag npe ua",
+  "account": "Lub account",
+  "signedInAs": "Nkag npe siv ua",
   "signOut": "Tawm mus",
   "errors": {
-   "invalid": "Tus email lossis lo lus zais ntawd tsis raug.",
-   "inUse": "Tus email ntawd muaj account lawm. Cia li nkag mus xwb.",
-   "weak": "Siv yam tsawg kawg 6 tus tsiaj ntawv rau lo lus zais.",
-   "badEmail": "Qhov ntawd tsis zoo li ib tus email tiag.",
-   "popup": "Lub qhov rai Google kaw ua ntej koj ua tiav.",
-   "tooMany": "Koj sim ntau zaus dhau lawm. Tos ob peb feeb mam sim dua.",
-   "network": "Tsis muaj internet. Saib koj lub teeb liab xov tooj mam sim dua.",
-   "generic": "Muaj ib yam dab tsi tsis raug lawm. Rov sim dua.",
-   "notConfigured": "Qhov chaw no tsis tau teeb tsa kom nkag tau mus rau Milpa."
+   "invalid": "Tus email lossis lo lus zais ntawd tsis yog.",
+   "inUse": "Tus email ntawd muaj lub account lawm. Cia li nkag mus xwb.",
+   "weak": "Siv tsawg kawg 6 tus ntawv rau lo lus zais.",
+   "badEmail": "Qhov no zoo li tsis yog ib tug email tiag.",
+   "popup": "Lub qhov rais Google raug kaw ua ntej koj ua tiav.",
+   "tooMany": "Sim ntau zaus dhau lawm. Tos ob peb feeb mam rov sim dua.",
+   "network": "Tsis muaj internet. Xyuas koj lub teeb liab xov tooj mam li sim dua.",
+   "generic": "Muaj ib yam dab tsi tsis raug. Rov sim dua.",
+   "notConfigured": "Qhov chaw no tsis tau tsim kom nkag tau mus."
   }
  },
- "1nenh57": {
+ "1yj9faa": {
   "tabs": {
-   "scan": "Luam",
+   "home": "Hnub no",
+   "scan": "Yees duab",
    "ask": "Nug",
    "tools": "Cov cuab yeej",
    "saved": "Khaws tseg"
+  },
+  "home": {
+   "morning": "Nyob zoo thaum sawv ntxov",
+   "afternoon": "Nyob zoo thaum tav su",
+   "evening": "Nyob zoo thaum tsaus ntuj",
+   "tagline": "Paub meej ua ntej koj mus rau hauv.",
+   "scan": "Yees daim ntawv npe",
+   "scanBody": "Tsom, nias, paub tam sim ntawd",
+   "talk": "Nrog Milpa tham",
+   "talkBody": "Nug ua suab lus, hais tau txhua yam lus",
+   "clocks": "Sij hawm rov nkag tau",
+   "noClocks": "Tsis muaj teev qhib. Yees daim ntawv npe kom pib suav.",
+   "heat": "Kev kub tam sim no",
+   "feels": "Raws li lub cev hnov",
+   "high": "Kub tshaj hnub no",
+   "levels": {
+    "normal": "Hnub zoo tib yam",
+    "shade": "Yuav tsum muaj qhov ntxoo",
+    "high": "Cai kub siab heev"
+   },
+   "recent": "Cov lus nyuam qhuav sib tham",
+   "noRecent": "Koj cov lus nrog Milpa tham yuav pom ntawm no.",
+   "last": "Daim ntawv npe koj nyuam qhuav yees",
+   "askAbout": "Nug txog qhov no",
+   "seeAll": "Saib tag nrho",
+   "aiTools": "Cov cuab yeej"
   },
   "language": "Lus",
   "chooseLanguage": "Xaiv koj hom lus",
   "back": "Rov qab",
   "toolsTitle": "Cov cuab yeej",
-  "toolsIntro": "Txhua yam uas Milpa ua tau. Kov ib qho.",
+  "toolsIntro": "Txhua yam Milpa ua tau. Nias ib qho.",
   "tools": {
    "heat": {
-    "title": "Kev kub ntxhov",
-    "body": "Hnub no lub caij kub tshaj thiab koj cov cai"
+    "title": "Kev kuaj huab cua kub",
+    "body": "Hnub no lub teev kub tshaj thiab koj tej cai"
    },
    "symptoms": {
     "title": "Kuv tsis xis nyob",
-    "body": "Nrhiav saib yuav hu rau leej twg"
+    "body": "Saib seb yuav hu rau leej twg"
    },
    "exposed": {
-    "title": "Raug tshuaj tsuag",
-    "body": "911, moos ntxuav dej, npav rau kws kho mob"
+    "title": "Tshuaj tsuag raug",
+    "body": "911, teev ntxuav cev, daim npav qhia kws kho mob"
    },
    "paper": {
     "title": "Nyeem ntawv",
-    "body": "Cov ntawv ceeb toom, daim tshev nyiaj, daim ntawv sau"
+    "body": "Cov ntawv ceeb toom, daim npav nyiaj, ntaub ntawv"
    },
    "report": {
     "title": "Qhia txog ib qho teeb meem",
-    "body": "Hais koj cov lus, tau ib daim ntawv Askiv"
+    "body": "Hais qhia, tau ib daim ntawv qhia ua lus Askiv"
    },
    "brief": {
-    "title": "Hnub no lub hom phiaj",
-    "body": "Koj cov thaj chaw thiab huab cua kub, hais tawm suab"
+    "title": "Hnub no lub tswv yim",
+    "body": "Koj cov thaj chaw thiab cua kub, hais tawm suab"
    },
    "map": {
-    "title": "Daim qhia chaw tsuag tshuaj",
-    "body": "Qhov chaw uas koj tau luam cov ntawv lo"
+    "title": "Daim phiaj tshuaj tsuag",
+    "body": "Qhov chaw koj tau yees cov ntawv npe"
    },
    "install": {
     "title": "Muab tso rau hauv xov tooj",
     "body": "Qhib Milpa zoo li ib lub app"
    },
    "gear": {
-    "title": "Xyuas cov khaub ncaws tiv thaiv",
-    "body": "Ib daim duab ntawm koj, muab tshuaj nrog daim ntawv lo"
+    "title": "Kuaj cov khoom tiv thaiv",
+    "body": "Ib daim duab ntawm koj, muab tshuaj xyuas nrog daim ntawv npe"
    },
    "pay": {
-    "title": "Xyuas nyiaj ua hauj lwm",
-    "body": "Koj daim ntawv nyiaj puas yog lawm?"
+    "title": "Kuaj cov nyiaj khwv tau",
+    "body": "Koj daim npav nyiaj puas yog lawm?"
    },
    "interpret": {
-    "title": "Neeg txhais lus",
-    "body": "Nrog koj tus thawj saib xyuas los yog tus kws pab mob tham"
+    "title": "Tus txhais lus",
+    "body": "Nrog koj tus thawj kws saib xyuas los yog tus nais maum tham"
    }
   },
   "ask": {
    "title": "Nug Milpa",
-   "about": "Hais txog",
-   "general": "Nug txog cov tshuaj tua kab, huab cua kub los yog koj cov cai ntawm qhov chaw ua hauj lwm.",
-   "placeholder": "Ntaus ntawv los yog kov lub mic",
+   "about": "Txog",
+   "general": "Nug txog tshuaj tua kab, huab cua kub los yog koj tej cai ntawm hauj lwm.",
+   "placeholder": "Ntaus ntawv los yog nias lub mic",
    "send": "Xa",
    "listening": "Mloog lus...",
-   "thinking": "Xav...",
-   "failed": "Tsis tau lus teb. Xyuas koj lub teeb liab hauv xov tooj thiab sim dua.",
+   "thinking": "Xav txog...",
+   "failed": "Tsis tau lus teb. Saib xyuas koj qhov txuas internet thiab sim dua.",
    "starters": [
-    "Thaum twg kuv mam rov mus rau hauv tau?",
+    "Thaum twg kuv mam li rov nkag tau?",
     "Kuv yuav tsum tau hnav dab tsi?",
-    "Yuav ua li cas yog nws raug kuv daim tawv nqaij?",
-    "Kuv tus thawj puas tuaj yeem yuam kom kuv mus rau hauv ntxov?"
+    "Ua li cas yog tias nws raug kuv daim tawv nqaij?",
+    "Kuv tus thawj puas muaj cai kom kuv nkag mus ntxov?"
    ],
    "clear": "Kev sib tham tshiab",
    "listen": "Mloog",
    "call911": "Hu rau 911",
    "chats": "Koj cov kev sib tham",
-   "noChats": "Koj cov kev sib tham yuav tshwm ntawm no. Lawv raug cawm rau hauv koj tus account.",
-   "remove": "ลบ kev sib tham",
+   "noChats": "Koj cov lus sib tham yuav tshwm ntawm no. Lawv raug khaws rau hauv koj tus account.",
+   "remove": "Rho tawm kev sib tham",
    "retry": "Sim dua",
-   "talk": "Tham",
-   "talkHint": "Hais lus twg los tau. Milpa mloog, ces teb tawm suab.",
+   "talk": "Hais lus",
+   "talkHint": "Hais ua txhua yam lus. Milpa yuav mloog, ces teb tawm suab.",
    "voiceListening": "Mloog lus",
-   "voiceThinking": "Xav",
-   "voiceSpeaking": "Kov kom tsis txhob hais lus",
-   "voiceTap": "Kov kom tham tau",
-   "voiceBlocked": "Milpa xav tau koj lub microphone. Cia siv hauv koj lub browser qhov chaw teeb tsa, ces sim dua.",
-   "voiceFailed": "Qhov ntawd tsis mus txog. Kov kom sim dua.",
-   "close": "Kaw"
+   "voiceThinking": "Xav txog",
+   "voiceSpeaking": "Nias kom nres",
+   "voiceTap": "Nias kom hais lus",
+   "voiceBlocked": "Milpa xav tau koj lub microphone. Tso cai rau nws hauv koj qhov browser settings, ces sim dua.",
+   "voiceFailed": "Qhov ntawd tsis mus txog. Nias kom sim dua.",
+   "close": "Kaw",
+   "attach": "Ntxiv ib daim duab",
+   "removePhoto": "Muab duab tawm",
+   "photoAsk": "Koj qhia tau dab tsi rau kuv los ntawm daim duab no?"
   },
   "result": {
-   "askAbout": "Nug txog daim ntawv lo no",
+   "askAbout": "Nug txog daim ntawv npe no",
    "supervisor": "Qhia rau kuv tus thawj",
-   "share": "Qhia rau cov phooj ywg ua hauj lwm",
-   "shared": "Qhov txuas npaj txhij muab qhia tau",
-   "copied": "Muab qhov txuas theej tau lawm",
-   "shareFailed": "Ua tsis tau qhov txuas. Sim dua.",
+   "share": "Qhia rau pab phooj ywg ua hauj lwm",
+   "shared": "Qhov link npaj txhij muab qhia tau",
+   "copied": "Daim link theej tau lawm",
+   "shareFailed": "Tsim tsis tau link. Sim dua.",
    "howRead": "Milpa nyeem qhov no li cas",
    "confidence": {
     "high": "Nyeem pom tseeb",
-    "medium": "Xyuas qhov no",
-    "low": "Tsis paub tseeb"
+    "medium": "Kuaj qhov no",
+    "low": "Tsis paub meej"
    },
    "confidenceNote": {
-    "high": "Daim ntawv lo pom tseeb heev thiab txhua lo lus teb hauv qab no tau luam tawm rau ntawm daim ntawv.",
-    "medium": "Ib txhia lus me me los yog pom tsis meej. Xyuas daim ntawv lo los yog nug.",
-    "low": "Milpa tsis paub tseeb txog ib feem ntawm qhov no. Nug koj tus thawj saib xyuas."
+    "high": "Daim ntawv npe pom tseeb heev thiab txhua lo lus teb hauv qab no puav leej luam rau ntawm nws.",
+    "medium": "Muaj qee cov lus me me los yog pom tsis tag. Saib daim ntawv npe los yog nug.",
+    "low": "Milpa tsis paub meej txog qee yam ntawm qhov no. Nug koj tus thawj."
    },
    "fields": {
-    "product": "Yam khoom",
+    "product": "Yam tshuaj",
     "signal": "Lo lus ceeb toom",
-    "reentry": "Lub sij hawm rov mus rau hauv",
-    "gear": "Yuav tsum hnav dab tsi",
-    "firstAid": "Kev pab ceev"
+    "reentry": "Sij hawm rov nkag",
+    "gear": "Yam yuav tsum hnav",
+    "firstAid": "Kev pab cawm thaum muaj xwm txheej ceev"
    },
    "others": "Kuj muaj nyob rau hauv daim duab no"
   },
   "supervisorCard": {
    "close": "Kaw",
-   "intro": "Qhia daim npo no rau koj tus thawj saib xyuas."
+   "intro": "Qhia lub vijtsam no rau koj tus thawj."
   },
   "coach": {
-   "dark": "Tsaus heev. Tsiv mus rau qhov pom kev los yog qhib teeb ntxiv.",
-   "bright": "Kuv pom kev heev. Tig kom lub hnub tsis txhob ci rau daim ntawv lo.",
-   "blurry": "Ua plooj me ntsis. Tuav lub xov tooj kom ruaj thiab txav mus ze dua.",
-   "useAnyway": "Siv li qub xwb"
+   "dark": "Tsaus dhau lawm. Tsiv mus rau qhov pom kev los yog qhib teeb ntxiv.",
+   "bright": "Kuv dhau lawm. Tig kom lub hnub tsis txhob ci rau daim ntawv npe.",
+   "blurry": "Muag me ntsis. Tuav lub xov tooj kom ruaj thiab txav mus ze dua.",
+   "useAnyway": "Siv li ntawd xwb"
   },
   "symptoms": {
    "title": "Koj hnov li cas?",
-   "intro": "Kov txhua yam uas koj hnov tam sim no. Milpa yuav qhia rau koj paub tias yuav hu rau leej twg.",
+   "intro": "Nias txhua yam koj hnov tam sim no. Milpa yuav qhia koj seb yuav hu rau leej twg.",
    "list": [
-    "Mob taub hau",
-    "Kiv taub hau",
-    "Xeev siab",
+    "Kev mob taub hau",
+    " Kiv taub hau",
+    "Xav ntuav",
     "Ntuav",
-    "Kub qhov muag",
-    "Pob khaus los yog kub daim tawv nqaij",
+    "Qhov muag kub hnyiab",
+    "Kev khaus los yog daim tawv nqaij kub hnyiab",
     "Tawm hws ntau",
-    "Cov leeg nqaij nti",
+    "Cov leeg leeg nqaij nti",
     "Nkees heev",
-    "Rau tes taw",
+    "Ntshav khov/Mob leeg",
     "Ua pa nyuaj",
     "Mob hauv siab",
-    "Tsis meej pem",
+    "Ntsws tsis meej",
     "Tsis nco qab lawm"
    ],
-   "note": "Puas muaj dab tsi ntxiv? Hais koj cov lus.",
-   "check": "Qhia rau kuv seb yuav ua li cas",
-   "checking": "Tab tom xyuas...",
-   "failed": "Xyuas tsis tau. Yog koj hnov mob heev, hu rau 911.",
-   "again": "Pib dua tshiab",
+   "note": "Puas muaj lwm yam ntxiv? Hais raws li koj cov lus.",
+   "check": "Qhia kuv seb yuav ua li cas",
+   "checking": "Tab tom kuaj...",
+   "failed": "Kuaj tsis tau. Yog tias koj mob hnyav heev, hu rau 911.",
+   "again": "Pib dua",
    "callPoison": "Chaw Tswj Tshuaj Lom"
   },
   "paper": {
    "title": "Nyeem ntawv",
-   "intro": "Yees ib daim duab ntawm tej ntawv los ntawm chaw ua hauj lwm. Milpa yuav piav qhia ua koj hom lus.",
+   "intro": "Yees ib daim duab ntawm txhua daim ntawv ntawm hauj lwm. Milpa yuav piav qhia ua koj hom lus.",
    "take": "Yees ib daim duab",
    "choose": "Xaiv ib daim duab",
    "reading": "Tab tom nyeem daim ntawv...",
-   "failed": "Nyeem tsis tau. Xyuas koj lub teeb liab hauv xov tooj thiab sim dua.",
-   "unreadable": "Peb nyeem qhov no tsis tau. Txav mus ze dua, tuav kom ruaj thiab sim dua.",
-   "actions": "Yam koj yuav tsum tau ua",
-   "dates": "Cov hnub thiab cov nyiaj",
+   "failed": "Nyeem tsis tau. Saib xyuas koj qhov txuas internet thiab sim dua.",
+   "unreadable": "Peb nyeem tsis tau qhov no. Txav mus ze dua, tuav kom ruaj thiab sim dua.",
+   "actions": "Koj yuav tsum tau ua dab tsi",
+   "dates": "Cov hnub thiab cov nqi",
    "another": "Nyeem lwm daim ntawv ntxiv"
   },
   "report": {
    "title": "Qhia txog ib qho teeb meem",
-   "intro": "Hais qhov teeb meem uas tau tshwm sim raws li koj cov lus. Milpa yuav sau ib daim ntawv meej zoo ua lus Askiv uas koj muab tau rau tus tswv teb los yog rau lub nroog.",
-   "placeholder": "Piv txwv li: Lawv tsuag tshuaj rau lub teb nyob ze thaum peb tab tom txiav/sau qoob loo thiab cua ntsawj tuaj rau peb.",
+   "intro": "Hais qhia txog yam tshwm sim raws li koj cov lus. Milpa yuav sau ib daim ntawv qhia ua lus Askiv kom meej uas koj muab tau rau tus tswv teb los yog lub nroog.",
+   "placeholder": "Piv txwv li: Lawv tau tsuag tshuaj rau thaj teb ib sab thaum peb tab tom sau qoob loo thiab cua tau tshuab nws tuaj rau peb.",
    "when": "Nws tshwm sim thaum twg?",
-   "write": "Sau kuv daim ntawv",
+   "write": "Sau kuv daim ntawv qhia",
    "writing": "Tab tom sau...",
-   "failed": "Sau daim ntawv tsis tau. Sim dua.",
+   "failed": "Sau tsis tau daim ntawv qhia. Sim dua.",
    "english": "Daim ntawv qhia ua lus Askiv",
-   "yourLanguage": "Nws hais li cas",
-   "missing": "Ntxiv cov no kom nws muaj zog ntxiv",
+   "yourLanguage": "Nws hais txog dab tsi",
+   "missing": "Ntxiv cov no kom nws muaj zog dua",
    "copy": "Theej",
    "copied": "Theej tau lawm",
    "share": "Xa",
-   "edit": "Kho kuv zaj dab neeg"
+   "edit": "Hloov kuv zaj lus"
   },
   "brief": {
-   "title": "Hnub no lub hom phiaj",
-   "intro": "Milpa saib koj cov moos thiab hnub no huab cua kub ces qhia koj lub hom phiaj tawm suab.",
-   "make": "Qhia kuv hnub no lub hom phiaj",
-   "making": "Tab tom npaj koj lub hom phiaj...",
-   "failed": "Npaj lub hom phiaj tsis tau. Xyuas koj lub teeb liab hauv xov tooj.",
+   "title": "Hnub no lub tswv yim",
+   "intro": "Milpa saib koj cov teev thiab hnub no cov huab cua kub ces qhia koj lub tswv yim ua suab lus.",
+   "make": "Qhia kuv hnub no lub tswv yim",
+   "making": "Tab tom tsim koj lub tswv yim...",
+   "failed": "Tsim tsis tau lub tswv yim. Saib koj qhov txuas internet.",
    "listen": "Mloog",
    "again": "Hloov kho dua tshiab"
   },
   "map": {
-   "title": "Daim qhia chaw tsuag tshuaj",
-   "intro": "Txhua daim ntawv lo uas koj luam yuav muab kos rau qhov chaw uas koj tau sawv.",
-   "empty": "Tsis tau muaj daim luam ntawv uas kos tseg. Luam ib daim ntawv lo nrog qhov chaw teeb meem qhib.",
-   "loading": "Tab tom thauj koj cov ntaub ntawv luam...",
-   "failed": "Thauj koj cov ntaub ntawv luam tsis tau.",
-   "noPlace": "Cov ntaub ntawv luam no tsis muaj chaw nyob."
+   "title": "Daim phiaj tshuaj tsuag",
+   "intro": "Txhua daim ntawv npe koj yees tau raug kos rau qhov chaw koj sawv.",
+   "empty": "Tsis tau muaj cov duab kos tseg. Yees daim ntawv npe nrog qhov chaw qhib.",
+   "loading": "Tab tom thauj koj cov ntawv yees...",
+   "failed": "Thauj tsis tau koj cov ntawv yees.",
+   "noPlace": "Cov ntawv yees no tsis muaj chaw nyob."
   },
   "alarms": {
-   "allow": "Rhais tswb rau kuv thaum nws muaj kev nyab xeeb",
+   "allow": "Ceeb toom kuv thaum nws nyab xeeb lawm",
    "on": "Lub tswb qhib lawm",
-   "safeTitle": "Nyab xeeb rov mus rau hauv tau",
-   "safeBody": "Lub sij hawm rov mus rau hauv tas lawm rau",
+   "safeTitle": "Nyab xeeb rov nkag mus tau",
+   "safeBody": "Sij hawm rov nkag tau tas lawm rau",
    "waterTitle": "Haus dej",
-   "waterBody": "Huab cua kub heev. Haus dej li ntawm ib quart txhua teev.",
+   "waterBody": "Huab cua kub heev. Haus dej kwv yees ib quart txhua teev.",
    "waterOn": "Ceeb toom kom kuv haus dej txhua teev",
    "waterOff": "Kev ceeb toom haus dej qhib lawm"
   },
   "install": {
    "title": "Muab Milpa tso rau hauv koj lub xov tooj",
-   "body": "Nws qhib zoo li ib lub app, thiab koj cov ntaub ntawv luam uas khaws tseg, cov moos thiab cov kauj ruam tiv thaiv tshuaj ua hauj lwm tau thaum tsis muaj teeb liab xov tooj.",
-   "button": "Muab tso rau hauv qhov screen loj",
-   "ios": "Hauv iPhone: kov Share, ces nias Add to Home Screen.",
-   "done": "Milpa nyob rau hauv koj qhov screen loj lawm."
+   "body": "Nws qhib tau zoo li ib lub app, thiab koj cov ntawv yees khaws tseg, cov teev thiab cov kauj ruam thaum raug tshuaj yuav siv tau txawm tias tsis muaj teeb liab xov tooj.",
+   "button": "Ntxiv rau hauv lub home screen",
+   "ios": "Rau hauv iPhone: nias Share, ces nias Add to Home Screen.",
+   "done": "Milpa nyob hauv koj lub home screen lawm."
   }
  },
  "1i1pcy3": {
@@ -362,15 +392,15 @@
   "saved": "Muab ceev tseg rau koj cov ntaub ntawv lawm",
   "choose": "Xaiv ib daim duab xwb zoo dua"
  },
- "10g6smy": {
-  "hint": "Muab daim ntawv lo tag nrho tso rau hauv lub thav duab",
+ "13m2rwo": {
+  "hint": "Muab daim ntawv lo kom haum rau hauv nruab nrab",
   "capture": "Yees duab",
-  "retake": "Yees dua",
-  "use": "Nyeem daim ntawv lo no",
+  "retake": "Rov yees dua",
+  "use": "Nyeem daim ntawv no",
   "flip": "Hloov lub koob yees duab",
   "gallery": "Xaiv ib daim duab",
   "close": "Kaw lub koob yees duab",
-  "blocked": "Milpa qhib tsis tau lub koob yees duab ntawm no. Tso cai rau qhib lub koob yees duab hauv koj lub browser chaw teeb tsa, los sis siv koj lub xov tooj lub koob yees duab.",
+  "blocked": "Milpa qhib tsis tau lub koob yees duab ntawm no. Cia siv lub koob yees duab hauv koj lub browser qhov chaw teeb tsa, los sis siv koj lub xov tooj lub koob yees duab app.",
   "openApp": "Siv lub koob yees duab app"
  },
  "pyuh1i": {
@@ -381,77 +411,77 @@
   "failed": "Thauj tsis tau koj cov ntaub ntawv uas tau luam. Xyuas seb koj puas muaj teeb liab xov tooj zoo ces mam rov sim dua.",
   "remove": "Muab tshem tawm"
  },
- "1swsqbl": {
+ "dh7pc1": {
   "gear": {
-   "title": "Kev kuaj khoom tiv thaiv",
-   "intro": "Yees koj ib daim duab ua ntej koj mus ua haujlwm. Milpa yuav xyuas seb koj puas hnav raws li daim ntawv qhia.",
-   "forProduct": "Kev kuaj khoom tiv thaiv rau",
-   "noLabel": "Tsis tau luam daim ntawv qhia, yog li Milpa tsuas kuaj cov khoom ib txwm siv.",
+   "title": "Kev kuaj tsoos tiv thaiv",
+   "intro": "Coj ib daim duab ntawm koj tus kheej ua ntej koj mus rau hauv. Milpa yuav saib seb puas haum cov tsoos tiv thaiv uas daim ntawv lo sau tseg.",
+   "forProduct": "Kuaj cov tsoos tiv thaiv rau",
+   "noLabel": "Tsis tau luam daim ntawv lo, yog li Milpa tsuas kuaj cov tsoos tiv thaiv ib txwm xwb.",
    "defaultGear": [
     "Tsho tes ntev",
-    "Kausbatais ntev",
+    "Kaus mom ris ntev",
     "Hnab looj tes tiv thaiv tshuaj lom",
     "Khau thiab thom khwm"
    ],
-   "take": "Yees ib daim duab ntawm kuv",
-   "hint": "Sawv deb zog kom pom tag koj txhais tes thiab ob txhais taw.",
-   "checking": "Tab tom saib koj cov khoom...",
+   "take": "Yees ib daim duab txog kuv",
+   "hint": "Sawv deb zog kom pom tag koj ob txhais tes thiab ob txhais taw.",
+   "checking": "Tab tom saib koj cov tsoos tiv thaiv...",
    "verdict": {
-    "ready": "Koj hnav zoo txaus lawm",
-    "missing": "Kho cov no ua ntej koj mam mus",
-    "unsure": "Milpa pom tsis meej txhua yam"
+    "ready": "Koj zoo li npaj txhij lawm",
+    "missing": "Kho cov no ua ntej koj mus rau hauv",
+    "unsure": "Milpa pom tsis tas txhua yam"
    },
    "status": {
     "on": "Hnav lawm",
     "missing": "Tsis pom muaj",
     "unsure": "Saib tsis pom"
    },
-   "noPerson": "Milpa nrhiav tsis pom neeg hauv daim duab ntawd. Sawv deb zog me ntsis mam rov yees dua.",
-   "failed": "Kuaj tsis tau daim duab. Saib xyuas koj qhov internet mam sim dua.",
+   "noPerson": "Milpa tsis pom muaj neeg nyob hauv daim duab ntawd. Sawv deb zog me ntsis ces rov sim dua.",
+   "failed": "Kuaj tsis tau daim duab. Saib xyuas koj qhov txuas hauv internet thiab rov sim dua.",
    "again": "Rov kuaj dua"
   },
   "pay": {
-   "title": "Kev kuaj nyiaj hli",
-   "intro": "Yees ib daim duab ntawm koj daim ntawv them nyiaj (pay stub). Milpa yuav nyeem thiab kuaj seb puas raws California cov cai them nyiaj.",
-   "take": "Yees kuv daim ntawv them nyiaj",
+   "title": "Kev kuaj daim tshev nyiaj",
+   "intro": "Coj ib daim duab ntawm koj daim ntawv nyiaj hli. Milpa yuav nyeem thiab kuaj seb puas raws California cov cai them nyiaj.",
+   "take": "Yees ib daim duab ntawm kuv daim ntawv nyiaj hli",
    "choose": "Xaiv ib daim duab",
-   "reading": "Tab tom nyeem koj daim ntawv them nyiaj...",
+   "reading": "Tab tom nyeem koj daim ntawv nyiaj hli...",
    "period": "Lub caij them nyiaj",
    "hours": "Cov teev ua haujlwm",
-   "rate": "Tus nqi them ib teev",
-   "gross": "Ua ntej txiav se thiab lwm yam",
+   "rate": "Tus nqi them",
+   "gross": "Ua ntej txiav nyiaj",
    "net": "Nyiaj nqa mus tsev",
    "verdict": {
     "ok": "Qhov no zoo li yog lawm",
     "ask": "Nug txog qhov no",
-    "unclear": "Nyeem tsis tshua meej"
+    "unclear": "Nyeem nyuaj heev"
    },
    "status": {
     "ok": "Zoo li yog lawm",
     "ask": "Nug txog nws",
-    "missing": "Tsis pom muaj hauv daim ntawv"
+    "missing": "Tsis muaj nyob hauv daim ntawv"
    },
    "labor": "Hu rau Labor Commissioner",
-   "notStub": "Daim ntawd tsis zoo li daim ntawv them nyiaj. Sim yees ib daim kom meej dua.",
-   "failed": "Nyeem tsis tau daim duab. Saib xyuas koj qhov internet mam sim dua.",
-   "again": "Kuaj ib daim ntxiv",
-   "privacy": "Daim duab yuav tsis muab khaws cia qhov twg li."
+   "notStub": "Daim ntawd zoo li tsis yog daim ntawv nyiaj hli. Sim yees ib daim duab kom pom tseeb dua.",
+   "failed": "Nyeem tsis tau daim duab. Saib xyuas koj qhov txuas hauv internet thiab rov sim dua.",
+   "again": "Kuaj lwm daim",
+   "privacy": "Daim duab yuav tsis muab khaws tseg rau qhov twg li."
   },
   "interpret": {
-   "title": "Tus txhais lus",
-   "intro": "Nrog tus saib xyuas, kws kho mob los sis tus neeg ua haujlwm tham. Nej ib leeg nias nej tog khawm thiab hais lus, ces Milpa yuav pab hais ua lwm hom lus tawm suab tuaj.",
+   "title": "Tus kws txhais lus",
+   "intro": "Nrog tus thawj kws saib xyuas, kws kho mob lossis neeg ua haujlwm tham. Nej ib leeg nias ntawm nej sab ces hais lus, thiab Milpa yuav hais tawm ua lwm hom lus kom nej hnov.",
    "me": "Kuv",
    "them": "Lawv",
    "other": "Lawv hais lus",
    "listening": "Tab tom mloog... nias kom nres",
    "translating": "Tab tom txhais lus...",
    "tapToStop": "Nias kom nres",
-   "empty": "Nias koj tog khawm thiab hais lus. Muab lub xov tooj rau luag thaum txog luag thib.",
-   "failed": "Hais tsis dhau. Sim rov ua dua.",
-   "blocked": "Milpa yuav tsum tau siv lub microphone. Tso cai rau nws hauv qhov chaw teeb tsa ntawm browser.",
-   "clear": "Rov pib dua tshiab",
-   "replay": "Hais dua",
-   "unsupported": "Lub browser no kaw suab tsis tau. Sim siv Chrome los sis Safari."
+   "empty": "Nias koj sab thiab pib hais lus. Muab lub xov tooj rau luag thaum txog luag thib.",
+   "failed": "Qhov ntawd xa tsis tau mus. Rov sim dua.",
+   "blocked": "Milpa xav tau koj lub mic hais lus. Tso cai rau nws hauv koj qhov chaw teeb tsa browser.",
+   "clear": "Pib dua tshiab",
+   "replay": "Rov hais dua",
+   "unsupported": "Lub browser no kaw suab tsis tau. Sim siv Chrome lossis Safari."
   }
  }
 }

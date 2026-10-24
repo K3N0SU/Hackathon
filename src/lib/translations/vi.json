@@ -1,38 +1,38 @@
 {
- "uybgyd": {
-  "headline": "Biết rõ trước khi bạn vào ruộng.",
-  "tagline": "Chụp ảnh nhãn thuốc trừ sâu hoặc biển báo ngoài ruộng. Milpa sẽ chỉ cho bạn, bằng tiếng Việt, khi nào vào lại an toàn và cách tự bảo vệ mình.",
+ "r808a3": {
+  "headline": "Biết trước khi bước vào ruộng.",
+  "tagline": "Chụp ảnh nhãn thuốc trừ sâu hoặc biển báo trên ruộng. Milpa sẽ cho bạn biết, bằng tiếng Việt, khi nào an toàn để vào lại và cách tự bảo vệ mình.",
   "scan": "Chụp ảnh nhãn hoặc biển báo",
   "samples": "Hoặc thử một ví dụ",
-  "reading": "Đang đọc nhãn thuốc",
+  "reading": "Đang đọc nhãn",
   "reentry": "Khi nào bạn có thể vào lại",
-  "gear": "Đồ bảo hộ cần mặc",
+  "gear": "Đồ cần mặc",
   "firstAid": "Nếu bạn bị dính thuốc",
-  "summary": "Tóm tắt nhanh",
+  "summary": "Tóm lại",
   "listen": "Nghe",
   "stop": "Dừng",
   "another": "Quét ảnh khác",
-  "ask": "Chỗ này chưa rõ. Hãy hỏi người giám sát của bạn.",
-  "unreadable": "Không đọc được ảnh này. Hãy lại gần hơn, giữ chắc điện thoại và thử lại.",
-  "failed": "Đã có lỗi xảy ra. Kiểm tra lại mạng và thử lại nhé.",
-  "offline": "Không có mạng. Đang hiện kết quả mẫu đã lưu.",
+  "ask": "Chưa rõ phần này. Hãy hỏi người giám sát của bạn.",
+  "unreadable": "Không đọc được ảnh này. Đến gần hơn, cầm chắc điện thoại và thử lại nhé.",
+  "failed": "Có lỗi xảy ra. Kiểm tra lại mạng rồi thử lại.",
+  "offline": "Không có mạng. Đang hiện kết quả ví dụ đã lưu.",
   "noVoice": "Điện thoại này không có giọng đọc cho ngôn ngữ này.",
   "disclaimer": "Đây chỉ là công cụ hỗ trợ đọc. Luôn làm theo nhãn thuốc và người giám sát của bạn.",
   "sprayedAt": "Đã phun thuốc lúc nào?",
-  "startClock": "Bắt đầu tính giờ",
+  "startClock": "Bắt đầu bấm giờ",
   "clocksHeading": "Các ruộng đang tính giờ",
-  "safeAt": "Vào an toàn lúc",
-  "safeNow": "Đã an toàn để vào",
+  "safeAt": "An toàn để vào lúc",
+  "safeNow": "Bây giờ an toàn để vào",
   "hoursUnit": "giờ",
   "minutesUnit": "phút",
   "leftWord": "còn lại",
   "clearClock": "Xóa",
-  "callPoison": "Gọi Trung tâm Chống Độc",
+  "callPoison": "Gọi Kiểm Soát Chất Độc",
   "signal": {
-   "caution": "Cẩn thận",
+   "caution": "Chú ý",
    "warning": "Cảnh báo",
    "danger": "Nguy hiểm",
-   "unknown": "Không thấy ghi"
+   "unknown": "Không hiển thị"
   }
  },
  "1swoxky": {
@@ -95,10 +95,10 @@
   "close": "Đóng",
   "interpreter": ""
  },
- "12jsthl": {
-  "signInTitle": "Chào mừng bạn quay lại",
+ "arrcil": {
+  "signInTitle": "Mừng bạn quay lại",
   "signUpTitle": "Tạo tài khoản",
-  "intro": "Các mục quét, đồng hồ đếm ngược và ngôn ngữ của bạn được lưu vào tài khoản, nên bạn dùng điện thoại nào cũng có.",
+  "intro": "Các lần quét, đồng hồ đếm ngược và ngôn ngữ của bạn được lưu vào tài khoản, nên bạn dùng điện thoại nào cũng có.",
   "name": "Tên của bạn",
   "email": "Email",
   "password": "Mật khẩu",
@@ -112,71 +112,98 @@
   "signInLink": "Đăng nhập",
   "forgot": "Quên mật khẩu?",
   "resetNeedsEmail": "Nhập email của bạn trước, rồi bấm Quên mật khẩu.",
-  "resetSent": "Chúng tôi đã gửi liên kết để đặt lại mật khẩu. Hãy kiểm tra email của bạn.",
+  "resetSent": "Chúng tôi đã gửi đường dẫn đặt lại mật khẩu. Hãy kiểm tra email.",
   "working": "Chờ một chút...",
   "verifyTitle": "Kiểm tra email của bạn",
-  "verifyBody": "Chúng tôi đã gửi một liên kết tới",
-  "verifyNext": "Mở liên kết để xác nhận email của bạn. Trang này sẽ tự động chuyển tiếp sau khi bạn làm xong.",
-  "resend": "Gửi lại liên kết",
-  "resent": "Đã gửi. Có thể mất một phút, và thư có thể nằm trong mục rác (spam).",
-  "verified": "Tôi đã mở liên kết",
-  "notYet": "Vẫn chưa được xác nhận. Hãy mở liên kết trong email, rồi thử lại.",
+  "verifyBody": "Chúng tôi đã gửi đường dẫn đến",
+  "verifyNext": "Mở đường dẫn đó để xác nhận email của bạn. Trang này sẽ tự chuyển tiếp khi bạn làm xong.",
+  "resend": "Gửi lại đường dẫn",
+  "resent": "Đã gửi. Có thể mất một phút, và nhớ kiểm tra cả hòm thư rác.",
+  "verified": "Tôi đã mở đường dẫn",
+  "notYet": "Vẫn chưa xác nhận được. Mở đường dẫn trong email, rồi thử lại nhé.",
   "useOther": "Dùng email khác",
   "account": "Tài khoản",
-  "signedInAs": "Đã đăng nhập bằng",
+  "signedInAs": "Đã đăng nhập với tên",
   "signOut": "Đăng xuất",
   "errors": {
-   "invalid": "Email hoặc mật khẩu đó không đúng.",
-   "inUse": "Email đó đã có tài khoản rồi. Hãy đăng nhập lại.",
-   "weak": "Dùng ít nhất 6 ký tự cho mật khẩu.",
-   "badEmail": "Đó có vẻ không phải là địa chỉ email.",
+   "invalid": "Email hoặc mật khẩu không đúng.",
+   "inUse": "Email đó đã có tài khoản rồi. Hãy đăng nhập nhé.",
+   "weak": "Mật khẩu phải có ít nhất 6 ký tự.",
+   "badEmail": "Địa chỉ đó không giống email.",
    "popup": "Cửa sổ Google đã đóng trước khi bạn hoàn tất.",
-   "tooMany": "Thử lại quá nhiều lần. Hãy đợi vài phút rồi thử lại.",
-   "network": "Không có mạng. Kiểm tra lại sóng rồi thử lại.",
-   "generic": "Có lỗi xảy ra. Hãy thử lại.",
-   "notConfigured": "Trang này chưa thiết lập tính năng đăng nhập."
+   "tooMany": "Thử quá nhiều lần rồi. Chờ vài phút rồi thử lại nhé.",
+   "network": "Mất mạng rồi. Kiểm tra sóng điện thoại rồi thử lại.",
+   "generic": "Có lỗi xảy ra. Thử lại nhé.",
+   "notConfigured": "Trang web này chưa cài đặt đăng nhập."
   }
  },
- "1nenh57": {
+ "1yj9faa": {
   "tabs": {
+   "home": "Hôm nay",
    "scan": "Quét",
    "ask": "Hỏi",
    "tools": "Công cụ",
    "saved": "Đã lưu"
   },
+  "home": {
+   "morning": "Chào buổi sáng",
+   "afternoon": "Chào buổi chiều",
+   "evening": "Chào buổi tối",
+   "tagline": "Biết rõ trước khi bước vào.",
+   "scan": "Quét nhãn",
+   "scanBody": "Chỉ máy ảnh, chạm, biết ngay sau vài giây",
+   "talk": "Nói chuyện với Milpa",
+   "talkBody": "Hỏi bằng lời nói, bằng bất kỳ ngôn ngữ nào",
+   "clocks": "Đồng hồ chờ vào lại",
+   "noClocks": "Chưa có đồng hồ nào chạy. Hãy quét nhãn để bắt đầu.",
+   "heat": "Nhiệt độ lúc này",
+   "feels": "Cảm giác như",
+   "high": "Cao nhất hôm nay",
+   "levels": {
+    "normal": "Ngày bình thường",
+    "shade": "Bắt buộc có bóng mát",
+    "high": "Quy định khi trời quá nóng"
+   },
+   "recent": "Trò chuyện gần đây",
+   "noRecent": "Các cuộc trò chuyện với Milpa sẽ hiện ở đây.",
+   "last": "Nhãn bạn vừa quét gần nhất",
+   "askAbout": "Hỏi về nhãn này",
+   "seeAll": "Xem tất cả",
+   "aiTools": "Công cụ"
+  },
   "language": "Ngôn ngữ",
   "chooseLanguage": "Chọn ngôn ngữ của bạn",
   "back": "Quay lại",
   "toolsTitle": "Công cụ",
-  "toolsIntro": "Mọi thứ Milpa có thể làm. Bấm vào một mục.",
+  "toolsIntro": "Tất cả những gì Milpa có thể làm. Bấm vào một mục.",
   "tools": {
    "heat": {
     "title": "Kiểm tra độ nóng",
-    "body": "Giờ nóng nhất hôm nay và quyền lợi của bạn"
+    "body": "Giờ nóng nhất hôm nay và quyền của bạn"
    },
    "symptoms": {
-    "title": "Tôi thấy mệt",
-    "body": "Tìm xem cần gọi cho ai"
+    "title": "Tôi thấy trong người không khỏe",
+    "body": "Biết cần gọi cho ai"
    },
    "exposed": {
-    "title": "Bị dính thuốc xịt",
-    "body": "911, hẹn giờ xối nước, thẻ thông tin cho bác sĩ"
+    "title": "Bị dính thuốc",
+    "body": "911, hẹn giờ xả nước, thẻ cho bác sĩ"
    },
    "paper": {
     "title": "Đọc giấy tờ",
-    "body": "Thông báo, cuống phiếu lương, mẫu đơn"
+    "body": "Thông báo, cuống phiếu lương, giấy tờ"
    },
    "report": {
     "title": "Báo cáo vấn đề",
-    "body": "Nói lại sự việc, nhận bản báo cáo bằng tiếng Anh"
+    "body": "Nói ra, nhận bản báo cáo tiếng Anh"
    },
    "brief": {
     "title": "Kế hoạch hôm nay",
-    "body": "Khu vực làm việc và độ nóng, đọc to thành tiếng"
+    "body": "Khu làm việc và độ nóng, đọc to cho bạn nghe"
    },
    "map": {
-    "title": "Bản đồ phun xịt",
-    "body": "Nơi bạn đã quét nhãn thuốc"
+    "title": "Bản đồ xịt thuốc",
+    "body": "Những nơi bạn đã quét nhãn"
    },
    "install": {
     "title": "Thêm vào điện thoại",
@@ -184,7 +211,7 @@
    },
    "gear": {
     "title": "Kiểm tra đồ bảo hộ",
-    "body": "Chụp ảnh bạn, so với hướng dẫn trên nhãn"
+    "body": "Chụp ảnh bạn, so với nhãn thuốc"
    },
    "pay": {
     "title": "Kiểm tra tiền lương",
@@ -192,63 +219,66 @@
    },
    "interpret": {
     "title": "Thông dịch viên",
-    "body": "Nói chuyện với người quản lý hoặc y tá"
+    "body": "Nói chuyện với người giám sát hoặc y tá"
    }
   },
   "ask": {
    "title": "Hỏi Milpa",
-   "about": "Giới thiệu",
-   "general": "Hỏi về thuốc trừ sâu, thời tiết nóng hoặc quyền lợi tại nơi làm việc.",
-   "placeholder": "Nhập chữ hoặc bấm vào micrô",
+   "about": "Về",
+   "general": "Hỏi về thuốc trừ sâu, trời nóng hoặc quyền của bạn khi đi làm.",
+   "placeholder": "Nhập chữ hoặc chạm vào micrô",
    "send": "Gửi",
    "listening": "Đang lắng nghe...",
    "thinking": "Đang suy nghĩ...",
-   "failed": "Không lấy được câu trả lời. Vui lòng kiểm tra mạng rồi thử lại.",
+   "failed": "Không lấy được câu trả lời. Hãy kiểm tra kết nối mạng và thử lại.",
    "starters": [
-    "Khi nào tôi có thể quay lại làm?",
-    "Tôi cần phải mặc đồ gì?",
-    "Nếu thuốc dính vào da thì sao?",
+    "Khi nào tôi mới được vào lại?",
+    "Tôi cần mặc đồ bảo hộ gì?",
+    "Nếu thuốc dính vào da thì làm sao?",
     "Chủ có được bắt tôi vào làm sớm không?"
    ],
-   "clear": "Đoạn trò chuyện mới",
+   "clear": "Trò chuyện mới",
    "listen": "Nghe",
    "call911": "Gọi 911",
-   "chats": "Các đoạn trò chuyện",
-   "noChats": "Các đoạn trò chuyện sẽ hiện ở đây. Chúng được lưu vào tài khoản của bạn.",
+   "chats": "Các cuộc trò chuyện của bạn",
+   "noChats": "Các cuộc trò chuyện sẽ hiện ở đây. Chúng được lưu vào tài khoản của bạn.",
    "remove": "Xóa cuộc trò chuyện",
    "retry": "Thử lại",
-   "talk": "Nói chuyện",
-   "talkHint": "Nói bằng bất kỳ ngôn ngữ nào. Milpa sẽ lắng nghe rồi trả lời to thành tiếng.",
-   "voiceListening": "Đang lắng nghe",
-   "voiceThinking": "Đang suy nghĩ",
+   "talk": "Nói",
+   "talkHint": "Nói bằng bất kỳ ngôn ngữ nào. Milpa lắng nghe, rồi trả lời to cho bạn.",
+   "voiceListening": "Đang nghe",
+   "voiceThinking": "Đang nghĩ",
    "voiceSpeaking": "Chạm để ngắt lời",
    "voiceTap": "Chạm để nói",
-   "voiceBlocked": "Milpa cần dùng micrô của bạn. Hãy cho phép trong phần cài đặt trình duyệt rồi thử lại.",
-   "voiceFailed": "Chưa gửi được. Hãy chạm để thử lại.",
-   "close": "Đóng"
+   "voiceBlocked": "Milpa cần dùng micrô của bạn. Hãy cho phép trong cài đặt trình duyệt, rồi thử lại.",
+   "voiceFailed": "Chưa gửi được. Chạm để thử lại.",
+   "close": "Đóng",
+   "attach": "Thêm ảnh",
+   "removePhoto": "Xóa ảnh",
+   "photoAsk": "Bạn có thể cho tôi biết gì từ bức ảnh này?"
   },
   "result": {
    "askAbout": "Hỏi về nhãn này",
-   "supervisor": "Đưa cho người quản lý xem",
+   "supervisor": "Đưa cho người giám sát xem",
    "share": "Chia sẻ với nhóm làm chung",
-   "shared": "Đã có liên kết để chia sẻ",
-   "copied": "Đã sao chép liên kết",
-   "shareFailed": "Không tạo được liên kết. Thử lại.",
+   "shared": "Đã có đường dẫn để chia sẻ",
+   "copied": "Đã chép đường dẫn",
+   "shareFailed": "Không tạo được đường dẫn. Hãy thử lại.",
    "howRead": "Cách Milpa đọc nhãn này",
    "confidence": {
     "high": "Đọc rõ ràng",
-    "medium": "Cần kiểm tra lại",
+    "medium": "Nên kiểm tra lại",
     "low": "Không chắc chắn"
    },
    "confidenceNote": {
-    "high": "Nhãn rất rõ và mọi câu trả lời bên dưới đều có in trên nhãn.",
-    "medium": "Có chữ hơi nhỏ hoặc bị che khuất một phần. Hãy xem lại nhãn hoặc hỏi lại.",
-    "low": "Milpa không chắc về một phần nội dung này. Hãy hỏi người quản lý."
+    "high": "Nhãn rất rõ nét và mọi câu trả lời bên dưới đều có in trên đó.",
+    "medium": "Một số chữ hơi nhỏ hoặc bị che một phần. Hãy xem lại nhãn hoặc hỏi lại.",
+    "low": "Milpa không chắc về một phần nội dung này. Hãy hỏi người giám sát của bạn."
    },
    "fields": {
     "product": "Sản phẩm",
     "signal": "Từ cảnh báo",
-    "reentry": "Thời gian được vào lại",
+    "reentry": "Thời gian vào lại",
     "gear": "Đồ cần mặc",
     "firstAid": "Sơ cứu"
    },
@@ -256,100 +286,100 @@
   },
   "supervisorCard": {
    "close": "Đóng",
-   "intro": "Đưa màn hình này cho người quản lý xem."
+   "intro": "Đưa màn hình này cho người giám sát của bạn xem."
   },
   "coach": {
-   "dark": "Tối quá. Ra chỗ sáng hơn hoặc bật thêm đèn.",
-   "bright": "Sáng quá. Đổi góc chụp để nắng không chiếu vào nhãn.",
-   "blurry": "Hơi mờ. Cầm chắc điện thoại và lại gần hơn.",
+   "dark": "Tối quá. Hãy ra chỗ sáng hơn hoặc bật thêm đèn.",
+   "bright": "Sáng quá. Xoay người lại để mặt trời không chiếu thẳng vào nhãn.",
+   "blurry": "Hơi mờ. Giữ yên điện thoại và đưa lại gần hơn.",
    "useAnyway": "Cứ dùng ảnh này"
   },
   "symptoms": {
-   "title": "Bạn thấy trong người thế nào?",
-   "intro": "Bấm vào mọi dấu hiệu bạn đang có lúc này. Milpa sẽ chỉ bạn cần gọi cho ai.",
+   "title": "Bạn cảm thấy thế nào?",
+   "intro": "Chạm vào tất cả những gì bạn đang cảm thấy. Milpa sẽ cho bạn biết nên gọi ai.",
    "list": [
     "Đau đầu",
     "Chóng mặt",
     "Buồn nôn",
     "Nôn mửa",
-    "Cay mắt",
+    "Rát mắt",
     "Phát ban hoặc rát da",
-    "Đổ nhiều mồ hôi",
+    "Đổ mồ hôi nhiều",
     "Giật cơ",
     "Rất mệt",
     "Chuột rút",
     "Khó thở",
     "Đau ngực",
-    "Lơ mơ, lú lẫn",
-    "Ngất xỉu"
+    "Lú lẫn",
+    "Bất tỉnh"
    ],
-   "note": "Còn gì khác không? Hãy nói theo cách của bạn.",
-   "check": "Chỉ tôi việc cần làm",
+   "note": "Còn gì khác không? Hãy nói theo lời của bạn.",
+   "check": "Cho tôi biết phải làm gì",
    "checking": "Đang kiểm tra...",
-   "failed": "Không kiểm tra được. Nếu thấy quá mệt, hãy gọi 911.",
+   "failed": "Không kiểm tra được. Nếu bạn thấy rất mệt, hãy gọi 911.",
    "again": "Bắt đầu lại",
-   "callPoison": "Trung tâm Chống độc (Poison Control)"
+   "callPoison": "Trung tâm Chống độc"
   },
   "paper": {
    "title": "Đọc giấy tờ",
-   "intro": "Chụp ảnh giấy tờ ở chỗ làm. Milpa sẽ giải thích bằng ngôn ngữ của bạn.",
+   "intro": "Chụp ảnh bất kỳ giấy tờ nào từ chỗ làm. Milpa sẽ giải thích bằng tiếng của bạn.",
    "take": "Chụp ảnh",
    "choose": "Chọn ảnh",
    "reading": "Đang đọc giấy tờ...",
-   "failed": "Không đọc được. Vui lòng kiểm tra mạng rồi thử lại.",
-   "unreadable": "Không đọc được hình này. Hãy lại gần hơn, giữ yên tay rồi thử lại.",
+   "failed": "Không đọc được. Hãy kiểm tra kết nối mạng và thử lại.",
+   "unreadable": "Chúng tôi không đọc được giấy này. Hãy lại gần hơn, giữ yên máy và thử lại.",
    "actions": "Những việc bạn cần làm",
    "dates": "Ngày tháng và số tiền",
-   "another": "Đọc giấy khác"
+   "another": "Đọc giấy tờ khác"
   },
   "report": {
    "title": "Báo cáo vấn đề",
-   "intro": "Kể lại sự việc theo lời của bạn. Milpa sẽ viết bản báo cáo rõ ràng bằng tiếng Anh để bạn đưa cho chủ vườn hoặc cơ quan quận.",
-   "placeholder": "Ví dụ: Họ phun xịt ở đám đất bên cạnh khi chúng tôi đang hái, gió thổi thuốc tạt vào người chúng tôi.",
+   "intro": "Kể lại sự việc theo lời của bạn. Milpa sẽ viết một bản báo cáo rõ ràng bằng tiếng Anh để bạn đưa cho chủ vườn hoặc quận hạt.",
+   "placeholder": "Ví dụ: Họ xịt thuốc ở đám ruộng bên cạnh khi chúng tôi đang hái và gió thổi thuốc tạt vào người chúng tôi.",
    "when": "Chuyện xảy ra khi nào?",
    "write": "Viết báo cáo cho tôi",
    "writing": "Đang viết...",
-   "failed": "Không viết được báo cáo. Thử lại.",
+   "failed": "Không viết được báo cáo. Hãy thử lại.",
    "english": "Bản báo cáo bằng tiếng Anh",
    "yourLanguage": "Nội dung bản báo cáo",
-   "missing": "Thêm các thông tin này để bản báo cáo rõ hơn",
+   "missing": "Thêm các chi tiết này để bản báo cáo rõ hơn",
    "copy": "Sao chép",
    "copied": "Đã sao chép",
-   "share": "Gửi",
+   "share": "Gửi đi",
    "edit": "Sửa lại lời kể"
   },
   "brief": {
    "title": "Kế hoạch hôm nay",
-   "intro": "Milpa xem giờ bấm giờ và độ nóng hôm nay rồi đọc kế hoạch thành tiếng cho bạn.",
-   "make": "Nói kế hoạch hôm nay",
+   "intro": "Milpa xem các đồng hồ chờ và độ nóng hôm nay rồi đọc kế hoạch cho bạn nghe.",
+   "make": "Cho tôi biết kế hoạch hôm nay",
    "making": "Đang lập kế hoạch...",
    "failed": "Không lập được kế hoạch. Hãy kiểm tra kết nối mạng.",
    "listen": "Nghe",
    "again": "Cập nhật"
   },
   "map": {
-   "title": "Bản đồ phun xịt",
-   "intro": "Mỗi nhãn bạn quét sẽ được đánh dấu đúng vị trí bạn đứng lúc đó.",
-   "empty": "Chưa có điểm đánh dấu nào. Hãy bật định vị rồi quét nhãn.",
+   "title": "Bản đồ xịt thuốc",
+   "intro": "Mỗi nhãn bạn quét sẽ được ghim ngay tại chỗ bạn đang đứng.",
+   "empty": "Chưa có điểm quét nào được ghim. Hãy quét nhãn và nhớ bật định vị.",
    "loading": "Đang tải các điểm quét của bạn...",
-   "failed": "Không thể tải các điểm đã quét.",
+   "failed": "Không tải được các điểm quét.",
    "noPlace": "Các lượt quét này không có vị trí."
   },
   "alarms": {
-   "allow": "Rung báo khi an toàn",
+   "allow": "Rung báo khi đã an toàn",
    "on": "Báo thức đang bật",
-   "safeTitle": "Đã an toàn để quay lại làm",
-   "safeBody": "Hết thời gian chờ cho",
+   "safeTitle": "Đã an toàn để vào lại",
+   "safeBody": "Đã hết thời gian chờ vào lại cho",
    "waterTitle": "Uống nước",
-   "waterBody": "Trời đang nóng. Hãy uống khoảng một lít nước mỗi tiếng.",
-   "waterOn": "Nhắc tôi uống nước mỗi tiếng một lần",
-   "waterOff": "Đã bật nhắc nhở uống nước"
+   "waterBody": "Trời đang nóng. Hãy uống khoảng một lít nước mỗi giờ.",
+   "waterOn": "Nhắc tôi uống nước mỗi giờ",
+   "waterOff": "Đang bật nhắc uống nước"
   },
   "install": {
-   "title": "Thêm Milpa vào điện thoại",
-   "body": "Mở lên dùng như ứng dụng, và xem lại các nhãn đã lưu, đồng hồ hẹn giờ cùng các bước xử lý khi dính thuốc ngay cả khi mất sóng.",
+   "title": "Thêm Milpa vào điện thoại của bạn",
+   "body": "Ứng dụng mở nhanh chóng, xem lại các nhãn đã lưu, đồng hồ và các bước xử lý khi dính thuốc ngay cả khi mất sóng.",
    "button": "Thêm vào màn hình chính",
-   "ios": "Trên iPhone: bấm nút Chia sẻ, rồi chọn Thêm vào Màn hình chính.",
+   "ios": "Trên iPhone: chạm vào Chia sẻ, rồi chọn Thêm vào Màn hình chính.",
    "done": "Milpa đã có trên màn hình chính của bạn."
   }
  },
@@ -362,16 +392,16 @@
   "saved": "Đã lưu vào lịch sử của bạn",
   "choose": "Chọn ảnh khác thay thế"
  },
- "10g6smy": {
-  "hint": "Để trọn cả nhãn vào trong khung",
+ "13m2rwo": {
+  "hint": "Căn chỉnh toàn bộ nhãn vào trong khung hình",
   "capture": "Chụp ảnh",
   "retake": "Chụp lại",
   "use": "Đọc nhãn này",
-  "flip": "Đổi camera",
+  "flip": "Đổi máy ảnh",
   "gallery": "Chọn một ảnh",
-  "close": "Đóng camera",
-  "blocked": "Milpa không thể mở camera ở đây. Hãy cho phép mở camera trong phần cài đặt trình duyệt, hoặc dùng ứng dụng camera trên điện thoại của bạn.",
-  "openApp": "Dùng ứng dụng camera"
+  "close": "Đóng máy ảnh",
+  "blocked": "Milpa không thể mở máy ảnh ở đây. Hãy cho phép dùng máy ảnh trong cài đặt trình duyệt, hoặc dùng ứng dụng máy ảnh trên điện thoại.",
+  "openApp": "Dùng ứng dụng máy ảnh"
  },
  "pyuh1i": {
   "tab": "Đã lưu",
@@ -381,12 +411,12 @@
   "failed": "Không tải được các nhãn bạn đã quét. Hãy kiểm tra lại sóng và thử lại nhé.",
   "remove": "Xóa"
  },
- "1swsqbl": {
+ "dh7pc1": {
   "gear": {
    "title": "Kiểm tra đồ bảo hộ",
-   "intro": "Chụp một tấm hình của bạn trước khi vào làm. Milpa sẽ so lại với đồ bảo hộ ghi trên nhãn thuốc.",
+   "intro": "Chụp một tấm hình của bạn trước khi vào làm. Milpa sẽ xem đồ bạn mặc có đúng như trên nhãn yêu cầu không.",
    "forProduct": "Đang kiểm tra đồ bảo hộ cho",
-   "noLabel": "Chưa quét nhãn nào, nên Milpa kiểm tra đồ bảo hộ thường dùng.",
+   "noLabel": "Chưa quét nhãn nào, nên Milpa sẽ kiểm tra các món đồ bảo hộ thông thường.",
    "defaultGear": [
     "Áo tay dài",
     "Quần dài",
@@ -394,33 +424,33 @@
     "Giày và vớ"
    ],
    "take": "Chụp hình tôi",
-   "hint": "Đứng lùi lại để thấy rõ cả tay và chân.",
+   "hint": "Đứng lùi lại để thấy rõ cả tay và chân nhé.",
    "checking": "Đang xem đồ bảo hộ của bạn...",
    "verdict": {
-    "ready": "Bạn trông đã sẵn sàng",
+    "ready": "Bạn đã sẵn sàng rồi",
     "missing": "Cần mặc thêm đồ này trước khi vào làm",
     "unsure": "Milpa không nhìn rõ hết mọi thứ"
    },
    "status": {
-    "on": "Có đủ",
+    "on": "Đã mặc",
     "missing": "Còn thiếu",
-    "unsure": "Không thấy rõ"
+    "unsure": "Không nhìn rõ"
    },
-   "noPerson": "Milpa không thấy ai trong hình. Hãy đứng lùi lại và chụp lại nha.",
-   "failed": "Không kiểm tra được hình. Coi lại mạng rồi thử lại nha.",
+   "noPerson": "Milpa không thấy ai trong hình này cả. Hãy đứng lùi lại rồi chụp lại nhé.",
+   "failed": "Không kiểm tra được hình. Vui lòng kiểm tra lại mạng và thử lại.",
    "again": "Kiểm tra lại"
   },
   "pay": {
-   "title": "Kiểm tra phiếu lương",
-   "intro": "Chụp hình phiếu lương của bạn. Milpa sẽ đọc và so lại với luật trả lương của California.",
-   "take": "Chụp hình phiếu lương",
+   "title": "Kiểm tra cuống phiếu lương",
+   "intro": "Chụp hình cuống phiếu lương của bạn. Milpa sẽ đọc và đối chiếu với luật lương bổng của California.",
+   "take": "Chụp hình cuống phiếu lương của tôi",
    "choose": "Chọn một tấm hình",
-   "reading": "Đang đọc phiếu lương của bạn...",
+   "reading": "Đang đọc cuống phiếu lương của bạn...",
    "period": "Kỳ trả lương",
    "hours": "Số giờ",
-   "rate": "Tiền theo giờ",
+   "rate": "Mức lương",
    "gross": "Lương trước khi trừ",
-   "net": "Tiền đem về",
+   "net": "Tiền thực lãnh",
    "verdict": {
     "ok": "Mọi thứ có vẻ đúng",
     "ask": "Nên hỏi lại về chỗ này",
@@ -428,30 +458,30 @@
    },
    "status": {
     "ok": "Có vẻ đúng",
-    "ask": "Hỏi lại xem",
-    "missing": "Không có trên phiếu"
+    "ask": "Hãy hỏi lại",
+    "missing": "Không có trên cuống phiếu"
    },
    "labor": "Gọi cho Ủy viên Lao động",
-   "notStub": "Tấm này nhìn không giống phiếu lương. Chụp lại tấm khác rõ hơn nha.",
-   "failed": "Không đọc được hình. Coi lại mạng rồi thử lại nha.",
-   "again": "Kiểm tra tấm khác",
-   "privacy": "Hình này không được lưu ở đâu cả."
+   "notStub": "Hình này trông không giống cuống phiếu lương. Bạn thử chụp hình khác rõ hơn xem.",
+   "failed": "Không đọc được hình chụp. Vui lòng kiểm tra lại mạng và thử lại.",
+   "again": "Kiểm tra cái khác",
+   "privacy": "Hình chụp không được lưu ở bất cứ đâu."
   },
   "interpret": {
-   "title": "Thông dịch",
-   "intro": "Nói chuyện với quản lý, y tá hoặc nhân viên. Mỗi người chạm vào phần của mình rồi nói, Milpa sẽ đọc to bằng tiếng kia.",
+   "title": "Thông dịch viên",
+   "intro": "Nói chuyện với người giám sát, y tá hoặc nhân viên. Mỗi người chạm vào phần của mình rồi nói, Milpa sẽ đọc to bằng thứ tiếng kia.",
    "me": "Tôi",
    "them": "Họ",
    "other": "Họ nói tiếng",
    "listening": "Đang nghe... chạm để dừng",
    "translating": "Đang dịch...",
    "tapToStop": "Chạm để dừng",
-   "empty": "Chạm vào phần của bạn rồi nói. Đưa điện thoại cho người ta khi đến lượt họ.",
-   "failed": "Không gửi được. Thử lại nha.",
-   "blocked": "Milpa cần dùng micrô. Cho phép mở micrô trong cài đặt của trình duyệt nha.",
+   "empty": "Chạm vào phần của bạn rồi nói. Đưa điện thoại cho người kia khi tới lượt họ.",
+   "failed": "Chưa gửi được. Hãy thử lại nhé.",
+   "blocked": "Milpa cần dùng micrô của bạn. Hãy cho phép trong phần cài đặt của trình duyệt.",
    "clear": "Bắt đầu lại",
-   "replay": "Đọc lại",
-   "unsupported": "Trình duyệt này không ghi âm được. Dùng Chrome hoặc Safari thử xem."
+   "replay": "Nói lại lần nữa",
+   "unsupported": "Trình duyệt này không thu âm được. Bạn thử dùng Chrome hoặc Safari xem."
   }
  }
 }

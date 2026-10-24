@@ -3,28 +3,21 @@
 Update before ending every task. Keep terse.
 
 ## State
-- Live: https://furrow-valley.vercel.app. Repo https://github.com/K3N0SU/Hackathon (public) main, auto-deploys.
-- Venue wifi DNS blocks vercel.app, github.com, netlify.app, github.io (resolve to 10.251.253.61). Push with `git -c http.curloptResolve=github.com:443:140.82.112.3 push origin main`. Test site with `curl --resolve furrow-valley.vercel.app:443:76.76.21.21`. Demo on mobile data.
-- Stack: Next 16, TS, Tailwind v4, lucide, Gemini free tier via REST (src/lib/gemini.ts helper), Firebase Auth + Firestore (Spark), Open-Meteo, OSM tiles. npm registry also blocked on this wifi (motion/lenis not installed; motion helpers hand-written in src/components/motion.tsx).
-- Design: light "field card" (cream, ink green, amber, Fraunces display, Public Sans). Tokens + motion CSS in globals.css (sweep, sheen, lift, tilt, reveal/reveal-left/reveal-pop, seen, stamp, heat-flip, draw, label-scan, callout).
-- Landing src/app/page.tsx: hero LabelReader, marquee, LabelHighlight (#problem), Tour 6 steps (#tour), AskDemo (#ask), numbers Odometer (#numbers), heat (#heat), Stamp (#honest), 12 tools (#features), FAQ, closing. AccountCta swaps sign-up CTAs to Open Milpa when signed in.
-- App /scan (app-shell.tsx): tabs Scan, Ask, Tools, Saved; Tools = symptoms, exposed, heat (+water reminders), brief, paper, report, map, install. Language picker sheet, 8 languages (en es pa hmn tl hi ar vi), RTL for ar.
-- AI routes: /api/scan (evidence, confidence, others), /api/ask, /api/symptoms, /api/read, /api/report, /api/brief, /api/translate.
-- i18n: core en/es/pa static; others via useCopy -> bundled src/lib/translations/*.json (keyed by fingerprint of en dict) -> localStorage -> /api/translate. After changing any copy: run server, `FURROW_URL=http://localhost:3100 npm run translate`.
-- Data: users/{uid} {language, clocks, lastScan{result}}, users/{uid}/scans {+latitude,longitude}, shares/{id} public get (/s/[id] page translates live). Rules deployed.
-- PWA: src/app/manifest.ts, public/sw.js, icons in public; alarms src/lib/alarms.ts.
-- QA account furrow-qa@example.com (verified, password in scratchpad qa.json). Scratchpad: app.js/gallery.js/lang.js puppeteer flows, deck2.js slides, translate-all.js.
-- Submission assets: Downloads/Milpa.pptx (11 slides, new design), Downloads/Milpa screenshots (01-11 png). DEVPOST.md, DEMO.md, README.md updated.
+- Name: Milpa (renamed from Furrow, briefly Rowen/Fieldwise). Storage keys still `furrow-*`, Firebase project `furrow-422fa`, Vercel URL furrow-valley.vercel.app (user said Vercel works fine, keep it).
+- Live: https://furrow-valley.vercel.app. Repo https://github.com/K3N0SU/Hackathon (public) main, auto-deploys. Push with `git -c http.curloptResolve=github.com:443:140.82.112.3 push origin main`.
+- Hackathon facts: Downloads/IntroSlides.pdf, summarized in memory judging-rubric. Submissions close 6:30 PM Oct 24. Official weights: innovation 30, technical 25, design/UX 20, impact 15, presentation 10. Tracks to enter: Main, Best AI/ML, Best Solo.
+- Design: vibrant palette in globals.css (cobalt primary, poppy accent, sunflower harvest, leaf, ink navy, warm white). Fraunces + Public Sans. Pixel farm canvas src/components/pixel-farm.tsx (landing hero, landing closing, Today hero). Scroll zoom classes zoom-hero/zoom-depth/zoom-band/zoom-rise (KAWAKAWA = user wants it removed). hover-word effect on headings.
+- Landing src/app/page.tsx: pixel farm hero + LabelReader, language/crop marquees, problem, tour, #ai bento (8 AI jobs with model chips), ask, numbers (cobalt band), heat, honest, 15 tools, FAQ, pixel closing. Section rail 2xl only.
+- App /scan app-shell.tsx: scanner is default tab; Today (today-home.tsx), Tools (compact grid), Saved, Spray map; dark sidebar on lg, floating pill nav with raised Scan on mobile. Ask Milpa is a floating bubble + panel (ask-chat.tsx): saved multi-chats (src/lib/chats.ts, Firestore users/{uid}/chats, rules deployed), photo attach, voice mode (voice-chat.tsx), retry.
+- New AI: /api/speak (gemini-3.8-flash-tts, WAV), /api/ask accepts audio + image, /api/interpret, /api/gear, /api/pay. Speech helpers src/lib/speech.ts (useSpeaker natural voice + browser fallback, recordUtterance with silence detection, 16k WAV).
+- Tools: interpret, gear, pay, symptoms, exposed, heat, brief, paper, report, map, install. Copy in app-copy.ts + tools-copy.ts.
+- 17 languages (scan.ts): en es pa hmn tl hi ar vi zh ko ur fa hy ru fr pt ja; RTL ar ur fa. i18n in-memory cache + preload on language button hover. After copy changes: dev server on 3100, `FURROW_URL=http://localhost:3100 node scripts/translate.mjs`.
+- QA account in scratchpad qa.json. Screenshot scripts: scratchpad app2.js (app), shoot.js (landing).
 
 ## Next
-- User: check live site on mobile data after deploy, record demo video per DEMO.md, submit on Devpost (tracks Main + Best Use of AI/ML), delete Downloads/env.local.txt.
+- Retake screenshots and rebuild slides for Milpa (old Downloads/Furrow.pptx and Furrow screenshots are outdated).
+- User: record demo per DEMO.md, submit on Devpost (Main, Best AI/ML, Best Solo), delete Downloads/env.local.txt.
 
 ## Decisions
-- Name: Milpa. Rubric: Innovation 30, Technical 25, Relevance 20, Presentation 50.
-- Accounts required (user). Photos saved as Firestore thumbnails (Storage needs Blaze).
-- No Punjabi script on landing (user). Mixteco skipped (MT quality).
-- Heat thresholds: 80°F shade, 95°F high heat, 1 quart water per hour.
-
-## Notes
-- Windows: bash has no python, use `py`; kill stale `next start` via PowerShell Get-CimInstance before rebuild. Slides render via PowerPoint COM export.
-- Tour step dots moved left of the phone (they crossed the fixed section dots on xl screens).
+- Accounts required. No Punjabi script on landing. Pay check facts: CA min wage $16.90 (2026), ag overtime after 8h/day or 40h/week, double after 12h. Labor Commissioner 1-833-526-4636.
+- Scanner is the main feature; everything else is a sub-tool. Chat is a bubble, not a tab.

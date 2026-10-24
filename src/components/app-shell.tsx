@@ -49,7 +49,7 @@ import { appCopy } from "@/lib/app-copy";
 import { useClocks } from "@/lib/clocks";
 import { loadProfile, saveProfile } from "@/lib/cloud";
 import { lastScanKey, type LastScan } from "@/lib/exposure";
-import { translateStrings, useCopy } from "@/lib/i18n";
+import { preloadLanguages, translateStrings, useCopy } from "@/lib/i18n";
 import {
   isCore,
   isLanguage,
@@ -184,6 +184,7 @@ export function AppShell() {
   }, []);
 
   useEffect(() => {
+    preloadLanguages([language]);
     document.documentElement.dir = isRtl(language) ? "rtl" : "ltr";
     return () => {
       document.documentElement.dir = "ltr";
@@ -246,6 +247,8 @@ export function AppShell() {
   const languageButton = (dark: boolean) => (
     <button
       onClick={() => setPicker(true)}
+      onPointerEnter={() => preloadLanguages(languages.map((item) => item.code))}
+      onFocus={() => preloadLanguages(languages.map((item) => item.code))}
       aria-label={text.language}
       className={`flex h-10 items-center gap-2 rounded-full px-3.5 text-sm font-semibold transition-all active:scale-95 ${
         dark ? "bg-white/10 text-ink-foreground hover:bg-white/15" : "border bg-card shadow-sm hover:border-primary"
@@ -258,7 +261,7 @@ export function AppShell() {
 
   return (
     <div className="flex flex-1 flex-col bg-background lg:pl-72">
-      <aside className="fixed inset-y-0 left-0 z-40 hidden w-72 flex-col bg-ink text-ink-foreground lg:flex">
+      <aside className="fixed inset-y-0 left-0 z-40 hidden w-72 flex-col overflow-y-auto bg-ink text-ink-foreground [scrollbar-width:none] lg:flex">
         <div className="flex items-center justify-between px-6 pt-6">
           <Link href="/" className="wiggle-hover flex items-center gap-2.5 font-display text-2xl font-semibold">
             <Mark className="wiggle-target size-8 text-poppy" />
@@ -298,8 +301,8 @@ export function AppShell() {
             );
           })}
         </nav>
-        <p className="mt-8 px-7 text-xs font-semibold text-ink-foreground/45">{text.home.aiTools}</p>
-        <div className="mt-2 space-y-0.5 overflow-y-auto px-3 [scrollbar-width:none]">
+        <p className="mt-8 px-7 text-sm font-semibold text-ink-foreground/50">{text.home.aiTools}</p>
+        <div className="mt-2 space-y-1 px-3">
           {toolList.filter((item) => item.id !== "map").slice(0, 7).map((item) => {
             const Icon = item.icon;
             const active = tab === "tools" && tool === item.id;
@@ -307,19 +310,19 @@ export function AppShell() {
               <button
                 key={item.id}
                 onClick={() => go("tools", item.id)}
-                className={`flex h-10 w-full items-center gap-3 rounded-xl px-4 text-left text-sm font-medium transition-all ${
+                className={`group flex h-12 w-full shrink-0 items-center gap-3 rounded-2xl px-4 text-left text-[15px] font-medium transition-all ${
                   active ? "bg-white/10 text-ink-foreground" : "text-ink-foreground/65 hover:bg-white/5 hover:text-ink-foreground"
                 }`}
               >
-                <span className={`flex size-6 items-center justify-center rounded-lg ${item.tone}`}>
-                  <Icon className="size-3.5" />
+                <span className={`flex size-8 shrink-0 items-center justify-center rounded-xl transition-transform duration-500 [transition-timing-function:var(--ease-spring)] group-hover:scale-110 ${item.tone}`}>
+                  <Icon className="size-4" />
                 </span>
                 {text.tools[item.id].title}
               </button>
             );
           })}
         </div>
-        <div className="mt-auto px-6 pb-6">{languageButton(true)}</div>
+        <div className="mt-auto shrink-0 px-6 pb-6 pt-8">{languageButton(true)}</div>
       </aside>
 
       <header className="sticky top-0 z-30 bg-background/85 backdrop-blur-md lg:hidden">

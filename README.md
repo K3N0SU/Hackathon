@@ -1,50 +1,52 @@
 # Milpa
 
-Milpa is a free phone app for farmworkers in the Central Valley. Point the camera at a pesticide label and Milpa says, in your language, when it is safe to go back into the field, what to wear, and what to do if it touches your skin. Then you can ask it questions out loud.
+Milpa is a free phone app for farmworkers in the Central Valley. Point the camera at a pesticide label and Milpa says, in your language, when it is safe to go back into the field, what to wear, and what to do if it touches your skin. Then you can talk to it out loud, send it a photo, or hand the phone to a supervisor and let it interpret.
 
-It was built solo at SierraHacks in Manteca for the Central Valley challenge, aiming at the main track and Best Use of AI/ML. Live at https://furrow-valley.vercel.app.
+The name comes from the milpa, the traditional Mesoamerican field that many farmworker families grew up around. It was built solo at SierraHacks 2026 in Manteca for the Central Valley challenge, entered in the Main track, Best AI/ML and Best Solo. Live at https://furrow-valley.vercel.app.
+
+**What the AI decides, in one sentence:** Milpa looks at a photo or listens to a question and decides, from only what is printed on the label and California's farm safety rules, whether it is safe to enter, what to wear, and who to call, and it says "I don't know" when the label doesn't say.
 
 ## What's in it
 
-The app opens on the camera. Everything else is one tap away under four tabs: Scan, Ask, Tools and Saved.
+The app opens on the scanner, which is the heart of it. A floating "Ask Milpa" button sits in the corner of every screen, and the rest lives under Today, Tools and Saved.
 
-- **Scan a label.** Re-entry time, signal word, gear, first aid and a plain summary from one photo. A confidence badge and a "How Milpa read this" drawer show the exact words on the label each answer came from. If the photo holds more than one product, the others are listed too.
-- **Re-entry clocks and alarms.** Start a countdown for a sprayed block; the phone buzzes and shows a notification when it is safe.
-- **Ask Milpa.** A chat about the label you just scanned, typed or spoken, answered in your language from the label and California's farm safety rules, with suggested follow-up questions and read-aloud.
-- **I feel sick.** Tap symptoms; Milpa sorts urgency into 911, Poison Control, see a doctor, or rest and drink water. Emergency symptoms show a 911 button before the AI even answers.
-- **Got sprayed.** 911 and Poison Control, five steps, a 15-minute rinse timer and an English card for the doctor.
-- **Heat check.** The hottest hour where you stand, what California requires at that temperature, and hourly water reminders.
-- **Read a paper.** Photograph a notice, pay stub or form for a plain summary, what you need to do, the dates that matter, and a warning if it asks you to sign something unfair.
-- **Report a problem.** Say what happened in your own language; Milpa writes a factual English incident report for the grower, the county or Cal/OSHA.
-- **Today's plan.** A spoken morning brief from your clocks and today's forecast.
-- **Supervisor card.** A full-screen English card with the product, re-entry time and three questions to ask.
-- **Share with crew.** A public link to a scan that a coworker can open without an account and switch into their own language.
-- **Spray map.** Every scan is pinned where you stood.
-- **Photo coach.** Checks the photo for blur and light on the phone before it is sent.
-- **Eight languages.** English, Spanish, Punjabi, Hmong, Tagalog, Hindi, Arabic (right to left) and Vietnamese.
-- **Installable and offline.** Add to home screen; saved scans, clocks, exposure steps and sample labels work with no signal.
+The scanner reads a label or field sign in about five seconds and gives the re-entry time, signal word, gear, first aid and a plain summary, read aloud. A confidence badge and a "How Milpa read this" drawer show the exact words each answer came from. A countdown for the sprayed block buzzes when it is safe to go back in.
+
+Ask Milpa is a chat you can type into, talk to, or send photos to. Voice mode works like a phone call: you speak in any language, it writes down what you said, answers out loud in a natural voice, and keeps listening. Every chat is saved to your account and you can start new ones.
+
+The tools are smaller jobs a worker runs into during the day:
+
+- Interpreter: two people take turns talking and Milpa says each side out loud in the other's language. On a phone the top half flips so the person across the table can read it.
+- Gear check: a photo of yourself, checked against the gear the scanned label requires.
+- Pay check: a photo of a pay stub, checked against California's minimum wage, farmworker overtime and pay stub rules.
+- I feel sick, Got sprayed, Heat check, Read a paper, Report a problem, Today's plan, Spray map, Supervisor card and Share with crew.
+
+It works in 17 languages: English, Spanish, Punjabi, Hmong, Tagalog, Hindi, Urdu, Arabic, Farsi, Vietnamese, Chinese, Korean, Armenian, Russian, French, Portuguese and Japanese, with right-to-left layouts for Arabic, Urdu and Farsi. It installs to the home screen and keeps saved scans and clocks working offline.
 
 ## How the AI is used
 
-Every Gemini call goes through one server helper (`src/lib/gemini.ts`) with a written system prompt and, where the output feeds the interface, a response schema the API enforces, so the app never parses prose.
+Every model call goes through one server helper (`src/lib/gemini.ts`) with a written system prompt and a response schema the API enforces, so the interface gets typed fields, never prose.
 
-The label reader returns fixed fields plus an `evidence` array of verbatim quotes from the label and a `confidence` level, and is told to report only what is printed. The chat gets the scanned result, the worker's clocks and a block of California facts (re-entry intervals, free PPE, the heat standard, anti-retaliation, Poison Control) and is told to lead with yes, no, not yet or I don't know, to send emergencies to 911, and never to invent label facts. The symptom triage, paper reader, report writer and daily brief each have their own prompt and schema. The interface for Hmong, Tagalog, Hindi, Arabic and Vietnamese is translated by Gemini once, checked to have exactly the same shape as the English, and bundled in `src/lib/translations`; a shared scan is translated on the fly into the viewer's language. Blur and brightness are checked on the phone with a Laplacian variance before any photo is uploaded.
+- **Label reading** (`/api/scan`): Gemini 3.8 Flash vision returns fixed fields plus verbatim evidence quotes and a confidence level, and is told to report only what is printed.
+- **Chat, photos and voice** (`/api/ask`): the same model gets the scanned label, the worker's clocks and a block of California facts. It accepts a photo or a 16 kHz WAV recording, writes down what it heard, and answers in the language the worker spoke.
+- **Interpreter** (`/api/interpret`): audio in, transcript and translation out, then spoken.
+- **Natural voice** (`/api/speak`): Gemini 3.8 Flash TTS, with the browser's best voice as a fallback.
+- **Gear check, pay check, symptom triage, paper reader, report writer, daily plan and translation** each have their own prompt and schema.
+
+The phone does work too. A Laplacian blur check and a brightness check coach the photo before upload. A silence detector built on the Web Audio API ends a voice turn when you stop talking.
 
 ## Technology
 
-- Google Gemini API, free tier (`gemini-3.8-flash`, set with `GEMINI_MODEL`)
-- Firebase Authentication (email and password with verification and reset, Google) and Cloud Firestore, free Spark plan
-- Open-Meteo weather API and OpenStreetMap tiles, both free with no key
-- Next.js 16 App Router, React 19, TypeScript, Tailwind CSS 4, shadcn/ui, lucide icons
-- Vercel hosting, deployed from this repository
-- Web Speech API for read-aloud and dictation, Notifications and Vibration APIs for alarms, Geolocation, Media Capture for the in-app camera, a service worker and web manifest for install and offline
-- Fraunces, Public Sans and Noto Sans Gurmukhi from Google Fonts
+- Google Gemini API: `gemini-3.8-flash` for vision, audio and text, and `gemini-3.8-flash-tts` for speech
+- Firebase Authentication and Cloud Firestore, with offline persistence
+- Open-Meteo weather and OpenStreetMap tiles
+- Next.js 16, React 19, TypeScript, Tailwind CSS 4, shadcn/ui, lucide icons, on Vercel
+- Browser APIs: MediaRecorder, Web Audio, Web Speech, Notifications, Vibration, Geolocation, Canvas for the pixel-art farm, and a service worker
+- Fonts: Fraunces, Public Sans and Noto Sans Gurmukhi
 
-Everything runs on free tiers. No card is needed anywhere.
+Nothing here was written outside the event except the libraries above. AI coding help came from Claude Code.
 
 ## Run it
-
-Get a free key at aistudio.google.com, then:
 
 ```
 copy .env.example .env.local
@@ -52,8 +54,8 @@ npm install
 npm run dev
 ```
 
-Put the key in `.env.local` as `GEMINI_API_KEY`. The Firebase web config is public by design and lives in `src/lib/firebase.ts`; Firestore rules are in `firestore.rules` and deploy with `firebase deploy --only firestore:rules`. On Vercel, add `GEMINI_API_KEY` under Environment Variables. After changing any interface text, run `npm run translate` while the dev server is running to regenerate the bundled translations.
+Put a Gemini key in `.env.local` as `GEMINI_API_KEY`. Firestore rules are in `firestore.rules` and deploy with `firebase deploy --only firestore:rules`. After changing interface text, run `npm run translate` with the dev server running to regenerate the bundled translations.
 
 ## Limits
 
-Translations are by machine and have not been reviewed by native speakers or pesticide safety trainers. Milpa explains a label; it does not replace the label, the training a grower must give, a doctor, or Poison Control at 1-800-222-1222. The heat and rights summaries are plain-language, not legal advice. Alarms only fire while the app or browser is running on the phone. The sample labels are made up for the demo.
+Translations are by machine and have not been reviewed by native speakers or pesticide safety trainers. Milpa explains a label; it does not replace the label, the training a grower must give, a doctor, or Poison Control at 1-800-222-1222. The pay and rights checks are plain language, not legal advice. The sample labels are made up for the demo.

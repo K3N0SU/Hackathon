@@ -1,50 +1,54 @@
 # Devpost copy for Milpa
 
-Paste each section into the matching Devpost field. Upload `Milpa.pptx` from your Downloads folder as the slides and the images in `Downloads/Milpa screenshots` to the gallery. Tracks: Main and Best Use of AI/ML.
+Paste each section into the matching Devpost field. Upload the slides and the screenshots from your Downloads folder. Tracks: Main, Best AI/ML, Best Solo.
 
 ## Tagline
 
-Point your phone at a pesticide label. Know when it's safe, in your language, and ask it anything.
+Point your phone at a pesticide label. Know when it's safe, in your language, and talk to it out loud.
 
 ## Inspiration
 
-The Central Valley grows a huge share of the country's fruit and nuts, and the people who pick, prune and irrigate it often read Spanish, Punjabi, Hmong or another language before English. What keeps them safe is printed on a label and a posted sign in small English print. Summer heat here regularly passes 100°F, and when someone does get sprayed, the first fifteen minutes matter most. I wanted one free tool on the phone they already carry that answers the questions a worker actually has, out loud, in the language they think in.
+The Central Valley grows a huge share of the country's fruit and nuts, and the people who pick, prune and irrigate it often think in Spanish, Punjabi, Hmong or Mixteco before English. What keeps them safe is printed on a label and a posted sign in small English print. Summer heat here regularly passes 100°F, pay stubs are confusing, and when someone gets sprayed, the first fifteen minutes matter most. I wanted one free tool, on the phone they already carry, that answers the questions a worker actually has, out loud, in the language they think in.
 
 ## What it does
 
-Milpa opens straight to the camera. Photograph a pesticide label or a field sign and in about five seconds you get the signal word, how long to stay out, what to wear and first aid, in plain words, read aloud. A badge says how clearly it read the label, and a drawer shows the exact words on the label each answer came from. Start a countdown for the block and your phone buzzes when it is safe to go back in.
+Milpa opens on the scanner. Photograph a pesticide label or a field sign, and in about five seconds you get the signal word, how long to stay out, what to wear and first aid, in plain words, read aloud in a natural voice. A badge says how clearly it read the label, and a drawer shows the exact words each answer came from. Start a countdown for the block and your phone buzzes when it is safe to go back in.
 
-Then you can ask. "Can I eat lunch in the rows?" "My gloves ripped, can I keep working?" Ask Milpa answers by text or voice from the label you scanned and California's farm safety rules, and when the label doesn't say, it tells you who to ask instead of guessing.
+Then you can talk to it. The Ask Milpa button sits in the corner of every screen. Type, send a photo of a rash or a sign, or tap Talk and just speak, in any language. It writes down what you said, answers out loud, and keeps listening, like a phone call. It answers only from the label you scanned and California's farm safety rules. When the label doesn't say, it tells you who to ask instead of guessing. Every chat is saved to your account.
 
-The Tools tab holds the rest of a worker's day: a symptom check that sorts urgency into 911, Poison Control, a doctor or rest; an exposure screen with a 15-minute rinse timer and an English card for the doctor; a heat check with hourly water reminders; a paper reader for notices and pay stubs that flags anything unfair; a report writer that turns a spoken story in any language into a factual English incident report; a spoken plan for the day; and a spray map of where you scanned. One tap shows a supervisor card in English, and one more shares the scan with your crew as a link they can open in their own language. It works in eight languages, installs to the home screen, and keeps saved scans, clocks and the exposure steps working with no signal.
+The smaller tools cover the rest of a worker's day. The interpreter lets a worker and a supervisor or nurse take turns talking while Milpa speaks each side in the other's language. On a phone, the top half flips so the person across the table can read it. Gear check looks at a photo of you and says which required gear is on or missing. Pay check reads a pay stub and flags anything below minimum wage or missing overtime. There is also a symptom check, an exposure screen with a rinse timer, a heat check, a paper reader, a report writer, a spoken plan for the day, a spray map, a supervisor card and crew sharing. It works in 17 languages, with right-to-left layouts for Arabic, Urdu and Farsi.
+
+## What the AI decides
+
+In one sentence: Milpa looks at a photo or listens to a question and decides, using only what is printed on the label and California's rules, whether it is safe to go in, what to wear and who to call, and it says "I don't know" when the label doesn't say.
 
 ## How I built it
 
-The front end is Next.js 16, React and Tailwind on Vercel. Every AI feature goes through one server helper that calls the Google Gemini API on the free tier with a written system prompt and a response schema the API enforces, so the interface gets typed fields, never prose.
+The front end is Next.js 16, React and Tailwind on Vercel. Every AI feature goes through one server helper that calls Google's Gemini API with a written system prompt and a response schema the API enforces, so the interface always gets typed fields.
 
-The label reader is told to report only what is printed and returns an evidence array of verbatim quotes plus a confidence level, which is what powers the "How Milpa read this" drawer. The chat is grounded in the scanned result, the worker's clocks and a short block of California facts (re-entry intervals, free protective gear, the heat standard, anti-retaliation, Poison Control); it must lead with yes, no, not yet or I don't know, send emergencies to 911, and never invent label facts. Symptom triage, paper reading, report writing and the daily plan each have their own prompt and schema. On the phone, a Laplacian blur check and a brightness check coach the photo before it is sent. The interface in Hmong, Tagalog, Hindi, Arabic and Vietnamese was translated by Gemini, validated to have exactly the same structure as the English, and bundled so switching is instant; shared scans are translated on the fly for whoever opens them.
+Gemini 3.8 Flash does the seeing, hearing and reasoning. The label reader returns verbatim evidence quotes and a confidence level. The chat accepts text, a photo or a voice recording, which the phone captures with MediaRecorder, cuts off with a Web Audio silence detector, and resamples to 16 kHz WAV. It is grounded in the scanned label, the worker's re-entry clocks and a fixed block of California facts. Gear check, pay check, triage, the interpreter, the paper reader and the report writer each have their own prompt and schema. Gemini 3.8 Flash TTS turns answers into a warm, natural voice, and the browser's best local voice is the fallback.
 
-Accounts use Firebase Authentication with email verification, password reset and Google. Scans, thumbnails, clocks and language live in Cloud Firestore behind rules that only let a verified user touch their own data, with a public read-only collection for crew links. Open-Meteo provides the forecast and OpenStreetMap the map tiles. The Web Speech API reads answers and takes dictation, and a service worker makes it installable and offline. The sample labels carry saved answers so the demo works even if the network doesn't.
+Accounts and saved scans and chats use Firebase Authentication and Cloud Firestore, behind rules that only let a verified user read their own data. The interface was translated by Gemini once, checked to match the English structure exactly, and bundled, so switching languages is instant. The animated pixel-art farm is drawn on a canvas at low resolution and scaled up, with parallax layers for clouds, an almond orchard, crop rows and a tractor.
 
 ## Challenges
 
-Getting Punjabi to come out fully in Punjabi took several rounds; early answers left units like hours in English. Making the chat useful without letting it make things up was the real design problem, and the answer was to give it the label, the clock and a fixed set of facts, and to make "I don't know, ask your supervisor" an acceptable answer. Translating the whole interface live took almost 30 seconds per language, so I moved it to a one-time step whose output is checked for shape before it is bundled.
+Making the chat useful without letting it make things up was the real design problem. The fix was to give it the label, the clock and a fixed set of facts, and to treat "I don't know, ask your supervisor" as a good answer. Voice in any language was the next one. The browser's speech recognition doesn't know Hmong or Mixteco, so I send the audio straight to the model instead, and it writes down what it heard in whatever language was spoken.
 
 ## Accomplishments
 
-It works end to end on a real phone, in eight languages including right-to-left Arabic, and it refuses to answer when it shouldn't. Every answer about a label can be traced to the words printed on it.
+It works end to end on a real phone. You can ask a question in Spanish while the app is set to English, and it hears you and answers in Spanish out loud. Every answer about a label can be traced to the words printed on it.
 
 ## What I learned
 
-Structured output makes a language model feel like an ordinary API, and grounding plus a written list of facts does more for safety than any amount of clever wording. The most important design question was never the translation; it was when the app should say "I don't know."
+Structured output makes a language model feel like an ordinary API, and grounding plus a written list of facts does more for safety than clever wording. The hardest design question was never the translation. It was when the app should say "I don't know."
 
 ## What's next
 
-Native speakers and pesticide safety trainers need to check every phrase, and I want to put it in front of crew leaders and workers before anyone relies on it. After that: Mixteco and other Indigenous languages spoken in the fields, push alarms that fire with the browser closed, and offline label reading.
+Native speakers and pesticide safety trainers need to check every phrase, and I want to put it in front of crew leaders and workers before anyone relies on it. After that: Mixteco, Zapoteco and Triqui, push alarms that fire with the browser closed, and offline label reading.
 
 ## Built with
 
-Google Gemini API, Firebase Authentication, Cloud Firestore, Open-Meteo, OpenStreetMap, Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Vercel, Web Speech API, Service Workers, Google Fonts
+Google Gemini API (gemini-3.8-flash, gemini-3.8-flash-tts), Firebase Authentication, Cloud Firestore, Open-Meteo, OpenStreetMap, Next.js, React, TypeScript, Tailwind CSS, shadcn/ui, Vercel, MediaRecorder, Web Audio API, Web Speech API, Canvas, Service Workers, Google Fonts. Coding help from Claude Code.
 
 ## Links
 
