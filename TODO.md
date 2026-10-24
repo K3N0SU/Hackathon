@@ -27,3 +27,4 @@ Update before ending every task. Keep terse.
 
 ## Notes
 - Windows: bash has no python, use `py`; kill stale `next start` via PowerShell Get-CimInstance before rebuild. Slides render via PowerPoint COM export.
+- Tour step dots moved left of the phone (they crossed the fixed section dots on xl screens).
