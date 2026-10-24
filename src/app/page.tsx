@@ -241,14 +241,7 @@ export default function Home() {
         <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(rgba(255,255,255,0.07)_1.5px,transparent_1.6px)] [background-size:28px_28px]" />
         <div className="zoom-hero relative mx-auto grid max-w-6xl items-center gap-14 px-6 pb-20 pt-32 lg:min-h-svh lg:grid-cols-[1.05fr_0.95fr] lg:pb-16 lg:pt-28">
           <div className="text-center lg:text-left">
-            <p
-              className="enter inline-flex items-center gap-2.5 rounded-full border border-white/15 bg-white/5 px-4 py-2 text-sm font-medium text-ink-foreground/85"
-              style={delay("0.1s")}
-            >
-              <span className="size-2 rounded-full bg-leaf" />
-              Free for farmworkers, in 17 languages
-            </p>
-            <h1 className="mt-6 font-display text-[clamp(3rem,9vw,6rem)] font-semibold leading-[0.92] tracking-tight lg:text-[clamp(3.8rem,6vw,6rem)]">
+            <h1 className="font-display text-[clamp(3rem,9vw,6rem)] font-semibold leading-[0.92] tracking-tight lg:text-[clamp(3.8rem,6vw,6rem)]">
               <span className="block">
                 <Words text="The label says" start={0.2} />
               </span>
