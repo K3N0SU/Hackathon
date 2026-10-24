@@ -23,7 +23,11 @@ export const samples: Sample[] = [
         signal: "caution",
         reentryHours: 12,
         reentry: "Do not enter treated areas for 12 hours after spraying.",
-        gear: ["Long-sleeved shirt and long pants", "Chemical-resistant gloves", "Shoes and socks"],
+        gear: [
+          "Long-sleeved shirt and long pants",
+          "Chemical-resistant gloves",
+          "Shoes and socks",
+        ],
         firstAid: [
           "Skin: take off dirty clothes and wash with soap and water for 15 to 20 minutes.",
           "Eyes: rinse with clean water for 15 to 20 minutes.",
@@ -38,8 +42,13 @@ export const samples: Sample[] = [
         product: "Insecticida Valley Guard 2EC",
         signal: "caution",
         reentryHours: 12,
-        reentry: "No entre a las áreas tratadas durante 12 horas después de la aplicación.",
-        gear: ["Camisa de manga larga y pantalón largo", "Guantes resistentes a químicos", "Zapatos y calcetines"],
+        reentry:
+          "No entre a las áreas tratadas durante 12 horas después de la aplicación.",
+        gear: [
+          "Camisa de manga larga y pantalón largo",
+          "Guantes resistentes a químicos",
+          "Zapatos y calcetines",
+        ],
         firstAid: [
           "Piel: quítese la ropa sucia y lávese con agua y jabón durante 15 a 20 minutos.",
           "Ojos: enjuague con agua limpia durante 15 a 20 minutos.",
@@ -55,7 +64,11 @@ export const samples: Sample[] = [
         signal: "caution",
         reentryHours: 12,
         reentry: "ਛਿੜਕਾਅ ਤੋਂ ਬਾਅਦ 12 ਘੰਟੇ ਤੱਕ ਛਿੜਕੇ ਹੋਏ ਖੇਤਰ ਵਿੱਚ ਨਾ ਜਾਓ।",
-        gear: ["ਪੂਰੀ ਬਾਹਾਂ ਵਾਲੀ ਕਮੀਜ਼ ਅਤੇ ਲੰਮੀ ਪੈਂਟ", "ਰਸਾਇਣਾਂ ਤੋਂ ਬਚਾਉਣ ਵਾਲੇ ਦਸਤਾਨੇ", "ਜੁੱਤੀਆਂ ਅਤੇ ਜੁਰਾਬਾਂ"],
+        gear: [
+          "ਪੂਰੀ ਬਾਹਾਂ ਵਾਲੀ ਕਮੀਜ਼ ਅਤੇ ਲੰਮੀ ਪੈਂਟ",
+          "ਰਸਾਇਣਾਂ ਤੋਂ ਬਚਾਉਣ ਵਾਲੇ ਦਸਤਾਨੇ",
+          "ਜੁੱਤੀਆਂ ਅਤੇ ਜੁਰਾਬਾਂ",
+        ],
         firstAid: [
           "ਚਮੜੀ: ਗੰਦੇ ਕੱਪੜੇ ਉਤਾਰੋ ਅਤੇ 15 ਤੋਂ 20 ਮਿੰਟ ਸਾਬਣ ਤੇ ਪਾਣੀ ਨਾਲ ਧੋਵੋ।",
           "ਅੱਖਾਂ: 15 ਤੋਂ 20 ਮਿੰਟ ਸਾਫ਼ ਪਾਣੀ ਨਾਲ ਧੋਵੋ।",
@@ -78,10 +91,17 @@ export const samples: Sample[] = [
         product: "Pesticide warning sign, almond block 14",
         signal: "danger",
         reentryHours: 0,
-        reentry: "Do not enter until Oct 26 at 6:30 AM. The block was sprayed Oct 24 at 6:30 AM.",
-        gear: ["Only trained workers may enter early, wearing a respirator and chemical-resistant coveralls"],
-        firstAid: [`If you are exposed, call Poison Control at ${poison}.`, "Tell your supervisor right away."],
-        summary: "Block 14 was sprayed and is closed for 48 hours. Do not go in until Oct 26 at 6:30 AM.",
+        reentry:
+          "Do not enter until Oct 26 at 6:30 AM. The block was sprayed Oct 24 at 6:30 AM.",
+        gear: [
+          "Only trained workers may enter early, wearing a respirator and chemical-resistant coveralls",
+        ],
+        firstAid: [
+          `If you are exposed, call Poison Control at ${poison}.`,
+          "Tell your supervisor right away.",
+        ],
+        summary:
+          "Block 14 was sprayed and is closed for 48 hours. Do not go in until Oct 26 at 6:30 AM.",
         ask: "",
       },
       es: {
@@ -89,10 +109,17 @@ export const samples: Sample[] = [
         product: "Letrero de aviso de pesticidas, bloque de almendros 14",
         signal: "danger",
         reentryHours: 0,
-        reentry: "No entre hasta el 26 de octubre a las 6:30 a. m. El bloque se roció el 24 de octubre a las 6:30 a. m.",
-        gear: ["Solo los trabajadores capacitados pueden entrar antes, con respirador y overol resistente a químicos"],
-        firstAid: [`Si se expone, llame al Control de Envenenamientos al ${poison}.`, "Avise a su supervisor de inmediato."],
-        summary: "El bloque 14 se roció y está cerrado por 48 horas. No entre hasta el 26 de octubre a las 6:30 a. m.",
+        reentry:
+          "No entre hasta el 26 de octubre a las 6:30 a. m. El bloque se roció el 24 de octubre a las 6:30 a. m.",
+        gear: [
+          "Solo los trabajadores capacitados pueden entrar antes, con respirador y overol resistente a químicos",
+        ],
+        firstAid: [
+          `Si se expone, llame al Control de Envenenamientos al ${poison}.`,
+          "Avise a su supervisor de inmediato.",
+        ],
+        summary:
+          "El bloque 14 se roció y está cerrado por 48 horas. No entre hasta el 26 de octubre a las 6:30 a. m.",
         ask: "",
       },
       pa: {
@@ -102,9 +129,15 @@ export const samples: Sample[] = [
         reentryHours: 0,
         reentry:
           "26 ਅਕਤੂਬਰ ਨੂੰ ਸਵੇਰੇ 6:30 ਵਜੇ ਤੱਕ ਅੰਦਰ ਨਾ ਜਾਓ। ਇਸ ਬਲਾਕ ਵਿੱਚ 24 ਅਕਤੂਬਰ ਨੂੰ ਸਵੇਰੇ 6:30 ਵਜੇ ਛਿੜਕਾਅ ਹੋਇਆ ਸੀ।",
-        gear: ["ਸਿਰਫ਼ ਸਿਖਲਾਈ ਪ੍ਰਾਪਤ ਕਾਮੇ ਪਹਿਲਾਂ ਅੰਦਰ ਜਾ ਸਕਦੇ ਹਨ, ਸਾਹ ਵਾਲਾ ਮਾਸਕ ਅਤੇ ਰਸਾਇਣਾਂ ਤੋਂ ਬਚਾਉਣ ਵਾਲਾ ਪੂਰਾ ਸੂਟ ਪਾ ਕੇ"],
-        firstAid: [`ਜੇ ਜ਼ਹਿਰ ਲੱਗ ਜਾਵੇ ਤਾਂ ਪੋਇਜ਼ਨ ਕੰਟਰੋਲ ਨੂੰ ${poison} 'ਤੇ ਫ਼ੋਨ ਕਰੋ।`, "ਤੁਰੰਤ ਆਪਣੇ ਸੁਪਰਵਾਈਜ਼ਰ ਨੂੰ ਦੱਸੋ।"],
-        summary: "ਬਲਾਕ 14 ਵਿੱਚ ਛਿੜਕਾਅ ਹੋਇਆ ਹੈ ਅਤੇ ਇਹ 48 ਘੰਟੇ ਬੰਦ ਹੈ। 26 ਅਕਤੂਬਰ ਨੂੰ ਸਵੇਰੇ 6:30 ਵਜੇ ਤੱਕ ਅੰਦਰ ਨਾ ਜਾਓ।",
+        gear: [
+          "ਸਿਰਫ਼ ਸਿਖਲਾਈ ਪ੍ਰਾਪਤ ਕਾਮੇ ਪਹਿਲਾਂ ਅੰਦਰ ਜਾ ਸਕਦੇ ਹਨ, ਸਾਹ ਵਾਲਾ ਮਾਸਕ ਅਤੇ ਰਸਾਇਣਾਂ ਤੋਂ ਬਚਾਉਣ ਵਾਲਾ ਪੂਰਾ ਸੂਟ ਪਾ ਕੇ",
+        ],
+        firstAid: [
+          `ਜੇ ਜ਼ਹਿਰ ਲੱਗ ਜਾਵੇ ਤਾਂ ਪੋਇਜ਼ਨ ਕੰਟਰੋਲ ਨੂੰ ${poison} 'ਤੇ ਫ਼ੋਨ ਕਰੋ।`,
+          "ਤੁਰੰਤ ਆਪਣੇ ਸੁਪਰਵਾਈਜ਼ਰ ਨੂੰ ਦੱਸੋ।",
+        ],
+        summary:
+          "ਬਲਾਕ 14 ਵਿੱਚ ਛਿੜਕਾਅ ਹੋਇਆ ਹੈ ਅਤੇ ਇਹ 48 ਘੰਟੇ ਬੰਦ ਹੈ। 26 ਅਕਤੂਬਰ ਨੂੰ ਸਵੇਰੇ 6:30 ਵਜੇ ਤੱਕ ਅੰਦਰ ਨਾ ਜਾਓ।",
         ask: "",
       },
     },
@@ -141,7 +174,8 @@ export const samples: Sample[] = [
         product: "Herbicida Rowkill 4L",
         signal: "warning",
         reentryHours: 24,
-        reentry: "No entre a las áreas tratadas durante 24 horas después de la aplicación.",
+        reentry:
+          "No entre a las áreas tratadas durante 24 horas después de la aplicación.",
         gear: [
           "Overol sobre camisa de manga larga y pantalón largo",
           "Guantes resistentes a químicos",

@@ -1,10 +1,21 @@
 import type { Metadata, Viewport } from "next";
-import { Fraunces, Noto_Sans_Gurmukhi, Public_Sans } from "next/font/google";
+import {
+  Barlow_Condensed,
+  Fraunces,
+  Noto_Sans_Gurmukhi,
+  Public_Sans,
+} from "next/font/google";
 import "./globals.css";
 
 const publicSans = Public_Sans({
   variable: "--font-public-sans",
   subsets: ["latin"],
+});
+
+const barlow = Barlow_Condensed({
+  variable: "--font-barlow",
+  subsets: ["latin"],
+  weight: ["700", "800"],
 });
 
 const fraunces = Fraunces({
@@ -31,7 +42,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${publicSans.variable} ${fraunces.variable} ${notoGurmukhi.variable} h-full antialiased`}
+      className={`${publicSans.variable} ${fraunces.variable} ${barlow.variable} ${notoGurmukhi.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

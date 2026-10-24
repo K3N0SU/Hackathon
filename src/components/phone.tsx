@@ -9,7 +9,7 @@ export function Phone({ className }: { className?: string }) {
   return (
     <div
       lang="pa"
-      className={`w-[19rem] rounded-[2.75rem] border-[10px] border-[#14231a] bg-background p-4 shadow-2xl shadow-black/30 ${className ?? ""}`}
+      className={`w-[19rem] rounded-[2.75rem] border-[10px] border-[#14231a] bg-background p-4 text-foreground shadow-2xl shadow-black/30 ${className ?? ""}`}
     >
       <div className="mx-auto h-1.5 w-16 rounded-full bg-[#14231a]/20" />
       <div className="mt-3 flex items-center gap-2 font-heading text-lg font-semibold text-primary">

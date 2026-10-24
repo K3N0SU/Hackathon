@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Scanner } from "@/components/scanner";
+import { AppShell } from "@/components/app-shell";
 
 export const metadata: Metadata = {
-  title: "Scan a label",
+  title: "Furrow",
 };
 
 export default function ScanPage() {
-  return <Scanner />;
+  return <AppShell />;
 }

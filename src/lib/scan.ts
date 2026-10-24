@@ -74,11 +74,13 @@ export const copy: Record<Language, Copy> = {
     stop: "Stop",
     another: "Scan another",
     ask: "Not sure about this part. Ask your supervisor.",
-    unreadable: "We could not read this photo. Move closer, hold the phone steady and try again.",
+    unreadable:
+      "We could not read this photo. Move closer, hold the phone steady and try again.",
     failed: "Something went wrong. Check your connection and try again.",
     offline: "No connection. Showing a saved example result.",
     noVoice: "This phone has no voice for this language.",
-    disclaimer: "This is a reading aid. Always follow the label and your supervisor.",
+    disclaimer:
+      "This is a reading aid. Always follow the label and your supervisor.",
     sprayedAt: "When was it sprayed?",
     startClock: "Start the clock",
     clocksHeading: "Fields on the clock",
@@ -89,7 +91,12 @@ export const copy: Record<Language, Copy> = {
     leftWord: "left",
     clearClock: "Remove",
     callPoison: "Call Poison Control",
-    signal: { caution: "Caution", warning: "Warning", danger: "Danger", unknown: "Not shown" },
+    signal: {
+      caution: "Caution",
+      warning: "Warning",
+      danger: "Danger",
+      unknown: "Not shown",
+    },
   },
   es: {
     headline: "Sepa antes de entrar al campo.",
@@ -106,11 +113,13 @@ export const copy: Record<Language, Copy> = {
     stop: "Detener",
     another: "Escanear otro",
     ask: "No estoy seguro de esta parte. Pregunte a su supervisor.",
-    unreadable: "No pudimos leer esta foto. Acérquese, sostenga el teléfono firme e intente de nuevo.",
+    unreadable:
+      "No pudimos leer esta foto. Acérquese, sostenga el teléfono firme e intente de nuevo.",
     failed: "Algo salió mal. Revise su conexión e intente de nuevo.",
     offline: "Sin conexión. Mostrando un resultado de ejemplo guardado.",
     noVoice: "Este teléfono no tiene voz para este idioma.",
-    disclaimer: "Esto es una ayuda de lectura. Siga siempre la etiqueta y a su supervisor.",
+    disclaimer:
+      "Esto es una ayuda de lectura. Siga siempre la etiqueta y a su supervisor.",
     sprayedAt: "¿Cuándo se roció?",
     startClock: "Iniciar el reloj",
     clocksHeading: "Campos en el reloj",
@@ -121,7 +130,12 @@ export const copy: Record<Language, Copy> = {
     leftWord: "faltan",
     clearClock: "Quitar",
     callPoison: "Llamar a Control de Envenenamientos",
-    signal: { caution: "Cuidado", warning: "Aviso", danger: "Peligro", unknown: "No indicado" },
+    signal: {
+      caution: "Cuidado",
+      warning: "Aviso",
+      danger: "Peligro",
+      unknown: "No indicado",
+    },
   },
   pa: {
     headline: "ਖੇਤ ਵਿੱਚ ਜਾਣ ਤੋਂ ਪਹਿਲਾਂ ਜਾਣੋ।",
@@ -138,11 +152,13 @@ export const copy: Record<Language, Copy> = {
     stop: "ਰੋਕੋ",
     another: "ਹੋਰ ਸਕੈਨ ਕਰੋ",
     ask: "ਇਸ ਹਿੱਸੇ ਬਾਰੇ ਪੱਕਾ ਨਹੀਂ ਹਾਂ। ਆਪਣੇ ਸੁਪਰਵਾਈਜ਼ਰ ਤੋਂ ਪੁੱਛੋ।",
-    unreadable: "ਇਹ ਫੋਟੋ ਪੜ੍ਹੀ ਨਹੀਂ ਗਈ। ਨੇੜੇ ਜਾਓ, ਫ਼ੋਨ ਸਥਿਰ ਰੱਖੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+    unreadable:
+      "ਇਹ ਫੋਟੋ ਪੜ੍ਹੀ ਨਹੀਂ ਗਈ। ਨੇੜੇ ਜਾਓ, ਫ਼ੋਨ ਸਥਿਰ ਰੱਖੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
     failed: "ਕੁਝ ਗਲਤ ਹੋ ਗਿਆ। ਆਪਣਾ ਕਨੈਕਸ਼ਨ ਜਾਂਚੋ ਅਤੇ ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
     offline: "ਕਨੈਕਸ਼ਨ ਨਹੀਂ ਹੈ। ਸੰਭਾਲਿਆ ਹੋਇਆ ਨਮੂਨਾ ਨਤੀਜਾ ਦਿਖਾ ਰਿਹਾ ਹੈ।",
     noVoice: "ਇਸ ਫ਼ੋਨ ਵਿੱਚ ਇਸ ਭਾਸ਼ਾ ਦੀ ਆਵਾਜ਼ ਨਹੀਂ ਹੈ।",
-    disclaimer: "ਇਹ ਪੜ੍ਹਨ ਵਿੱਚ ਮਦਦ ਹੈ। ਹਮੇਸ਼ਾ ਲੇਬਲ ਅਤੇ ਆਪਣੇ ਸੁਪਰਵਾਈਜ਼ਰ ਦੀ ਗੱਲ ਮੰਨੋ।",
+    disclaimer:
+      "ਇਹ ਪੜ੍ਹਨ ਵਿੱਚ ਮਦਦ ਹੈ। ਹਮੇਸ਼ਾ ਲੇਬਲ ਅਤੇ ਆਪਣੇ ਸੁਪਰਵਾਈਜ਼ਰ ਦੀ ਗੱਲ ਮੰਨੋ।",
     sprayedAt: "ਛਿੜਕਾਅ ਕਦੋਂ ਹੋਇਆ?",
     startClock: "ਘੜੀ ਚਲਾਓ",
     clocksHeading: "ਘੜੀ 'ਤੇ ਖੇਤ",
@@ -153,6 +169,11 @@ export const copy: Record<Language, Copy> = {
     leftWord: "ਬਾਕੀ",
     clearClock: "ਹਟਾਓ",
     callPoison: "ਪੋਇਜ਼ਨ ਕੰਟਰੋਲ ਨੂੰ ਕਾਲ ਕਰੋ",
-    signal: { caution: "ਸਾਵਧਾਨ", warning: "ਚੇਤਾਵਨੀ", danger: "ਖ਼ਤਰਾ", unknown: "ਦਿਖਾਇਆ ਨਹੀਂ" },
+    signal: {
+      caution: "ਸਾਵਧਾਨ",
+      warning: "ਚੇਤਾਵਨੀ",
+      danger: "ਖ਼ਤਰਾ",
+      unknown: "ਦਿਖਾਇਆ ਨਹੀਂ",
+    },
   },
 };
