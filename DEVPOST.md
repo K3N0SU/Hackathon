@@ -1,6 +1,6 @@
 # Devpost copy for Milpa
 
-Paste each section into the matching Devpost field. Upload the slides and the screenshots from your Downloads folder. Tracks: Main, Best AI/ML, Best Solo.
+Paste each section into the matching Devpost field. Upload the slides and the screenshots from your Downloads folder. Tracks: Main, Best Solo, Best Use of AI/ML, Best Beginner, Best Middle School.
 
 ## Tagline
 

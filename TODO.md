@@ -20,7 +20,7 @@ Update before ending every task. Keep terse.
 - Devpost media done: Downloads/media/images (30: 17 square posters + 13 desktop shots), Downloads/media/videos (desktop showcase reels 1-6 + 0-full-showcase, browser frame, title cards, sped-up AI waits; scratchpad showcase.js records, compose3.js edits), Downloads/Milpa.pptx (20 slides, notes). Generators in scratchpad: cap.js (captures), poster.js, panel.js, deck3.js (run with NODE_PATH=scratchpad/node_modules), videos.js (CDP frame recorder, fake mic qes.wav), compose.js (ffmpeg via imageio-ffmpeg).
 
 ## Next
-- User: submit on Devpost (Main, Best AI/ML, Best Solo) with media folder + Milpa.pptx, optionally add voiceover to videos, delete Downloads/env.local.txt. Suggestions list: Downloads/Milpa-500-ideas.md (section A = before deadline). If Google sign-in still fails, read the new on-screen message (likely wrong site URL).
+- User: submit on Devpost (Main, Best Solo, Best AI/ML, Best Beginner, Best Middle School) with media folder + Milpa.pptx, optionally add voiceover to videos, delete Downloads/env.local.txt. Suggestions list: Downloads/Milpa-500-ideas.md (section A = before deadline). If Google sign-in still fails, read the new on-screen message (likely wrong site URL).
 
 ## Decisions
 - Accounts required. No Punjabi script on landing. Pay check facts: CA min wage $16.90 (2026), ag overtime after 8h/day or 40h/week, double after 12h. Labor Commissioner 1-833-526-4636.
