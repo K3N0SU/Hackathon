@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useState } from "react";
+import { loadProfile, saveProfile } from "@/lib/cloud";
 
 export type Clock = { id: string; product: string; endsAt: number };
 
@@ -19,6 +20,7 @@ function save(clocks: Clock[]) {
   try {
     localStorage.setItem(storageKey, JSON.stringify(clocks));
   } catch {}
+  saveProfile({ clocks }).catch(() => {});
 }
 
 export function useClocks() {
@@ -26,12 +28,23 @@ export function useClocks() {
   const [now, setNow] = useState(0);
 
   useEffect(() => {
+    let active = true;
     const start = setTimeout(() => {
       setClocks(load());
       setNow(Date.now());
     }, 0);
+    loadProfile()
+      .then((profile) => {
+        if (!active || !profile.clocks) return;
+        setClocks(profile.clocks);
+        try {
+          localStorage.setItem(storageKey, JSON.stringify(profile.clocks));
+        } catch {}
+      })
+      .catch(() => {});
     const timer = setInterval(() => setNow(Date.now()), 15000);
     return () => {
+      active = false;
       clearTimeout(start);
       clearInterval(timer);
     };

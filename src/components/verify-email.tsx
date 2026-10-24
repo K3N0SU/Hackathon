@@ -30,7 +30,10 @@ export function VerifyEmail() {
     const poll = setInterval(async () => {
       try {
         await user.reload();
-        if (auth().currentUser?.emailVerified) router.replace("/scan");
+        if (auth().currentUser?.emailVerified) {
+          await user.getIdToken(true);
+          router.replace("/scan");
+        }
       } catch {}
     }, 4000);
     return () => clearInterval(poll);
@@ -54,6 +57,7 @@ export function VerifyEmail() {
     try {
       await user.reload();
       if (auth().currentUser?.emailVerified) {
+        await user.getIdToken(true);
         router.replace("/scan");
         return;
       }

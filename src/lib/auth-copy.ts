@@ -4,7 +4,8 @@ export const authCopy = {
   en: {
     signInTitle: "Welcome back",
     signUpTitle: "Make an account",
-    intro: "Optional. Every tool in Furrow works without an account.",
+    intro:
+      "Your scans, countdown clocks and language are saved to your account, so they follow you to any phone.",
     name: "Your name",
     email: "Email",
     password: "Password",
@@ -20,7 +21,6 @@ export const authCopy = {
     resetNeedsEmail: "Type your email first, then tap Forgot password.",
     resetSent: "We sent a link to reset your password. Check your email.",
     working: "One moment...",
-    skip: "Use Furrow without an account",
     verifyTitle: "Check your email",
     verifyBody: "We sent a link to",
     verifyNext:
@@ -49,7 +49,7 @@ export const authCopy = {
     signInTitle: "Bienvenido de nuevo",
     signUpTitle: "Crea una cuenta",
     intro:
-      "Es opcional. Todas las herramientas de Furrow funcionan sin cuenta.",
+      "Tus escaneos, relojes y tu idioma se guardan en tu cuenta y te siguen a cualquier teléfono.",
     name: "Tu nombre",
     email: "Correo electrónico",
     password: "Contraseña",
@@ -67,7 +67,6 @@ export const authCopy = {
     resetSent:
       "Te enviamos un enlace para cambiar tu contraseña. Revisa tu correo.",
     working: "Un momento...",
-    skip: "Usar Furrow sin cuenta",
     verifyTitle: "Revisa tu correo",
     verifyBody: "Enviamos un enlace a",
     verifyNext:
@@ -96,7 +95,8 @@ export const authCopy = {
   pa: {
     signInTitle: "ਜੀ ਆਇਆਂ ਨੂੰ",
     signUpTitle: "ਖਾਤਾ ਬਣਾਓ",
-    intro: "ਇਹ ਲਾਜ਼ਮੀ ਨਹੀਂ ਹੈ। Furrow ਦੇ ਸਾਰੇ ਟੂਲ ਖਾਤੇ ਤੋਂ ਬਿਨਾਂ ਵੀ ਚੱਲਦੇ ਹਨ।",
+    intro:
+      "ਤੁਹਾਡੇ ਸਕੈਨ, ਘੜੀਆਂ ਅਤੇ ਭਾਸ਼ਾ ਤੁਹਾਡੇ ਖਾਤੇ ਵਿੱਚ ਸੰਭਾਲੇ ਜਾਂਦੇ ਹਨ, ਕਿਸੇ ਵੀ ਫੋਨ ਤੇ।",
     name: "ਤੁਹਾਡਾ ਨਾਮ",
     email: "ਈਮੇਲ",
     password: "ਪਾਸਵਰਡ",
@@ -112,7 +112,6 @@ export const authCopy = {
     resetNeedsEmail: "ਪਹਿਲਾਂ ਆਪਣੀ ਈਮੇਲ ਲਿਖੋ, ਫਿਰ ਪਾਸਵਰਡ ਭੁੱਲ ਗਏ ਤੇ ਦਬਾਓ।",
     resetSent: "ਪਾਸਵਰਡ ਬਦਲਣ ਲਈ ਲਿੰਕ ਭੇਜ ਦਿੱਤਾ ਹੈ। ਆਪਣੀ ਈਮੇਲ ਦੇਖੋ।",
     working: "ਇੱਕ ਪਲ...",
-    skip: "ਖਾਤੇ ਤੋਂ ਬਿਨਾਂ Furrow ਵਰਤੋ",
     verifyTitle: "ਆਪਣੀ ਈਮੇਲ ਦੇਖੋ",
     verifyBody: "ਅਸੀਂ ਇਸ ਪਤੇ ਤੇ ਲਿੰਕ ਭੇਜਿਆ ਹੈ:",
     verifyNext:

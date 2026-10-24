@@ -1,10 +1,19 @@
 "use client";
 
-import { Camera, ImageIcon, Phone, Volume2, VolumeX } from "lucide-react";
+import {
+  Camera,
+  CloudCheck,
+  ImageIcon,
+  Phone,
+  Volume2,
+  VolumeX,
+} from "lucide-react";
 import { useEffect, useEffectEvent, useRef, useState } from "react";
 import { ClockList, ClockStarter } from "@/components/clocks";
+import { LiveCamera } from "@/components/live-camera";
 import { Button } from "@/components/ui/button";
 import { useClocks } from "@/lib/clocks";
+import { saveProfile, saveScan, thumbnail } from "@/lib/cloud";
 import { lastScanKey } from "@/lib/exposure";
 import { samples } from "@/lib/samples";
 import { copy, type Language, type ScanResult, type Signal } from "@/lib/scan";
@@ -40,6 +49,12 @@ const readingSteps: Record<Language, string[]> = {
     "ਵਾਪਸ ਜਾਣ ਦਾ ਸਮਾਂ ਲੱਭ ਰਹੇ ਹਾਂ",
     "ਸੌਖੇ ਸ਼ਬਦਾਂ ਵਿੱਚ ਲਿਖ ਰਹੇ ਹਾਂ",
   ],
+};
+
+const savedNote: Record<Language, string> = {
+  en: "Saved to your history",
+  es: "Guardado en tu historial",
+  pa: "ਤੁਹਾਡੇ ਇਤਿਹਾਸ ਵਿੱਚ ਸੰਭਾਲਿਆ ਗਿਆ",
 };
 
 const choosePhoto: Record<Language, string> = {
@@ -106,7 +121,8 @@ export function Scanner({ language }: { language: Language }) {
   const [view, setView] = useState<View>({ step: "start" });
   const [speaking, setSpeaking] = useState(false);
   const [voiceMissing, setVoiceMissing] = useState(false);
-  const cameraRef = useRef<HTMLInputElement>(null);
+  const [cameraOpen, setCameraOpen] = useState(false);
+  const [stored, setStored] = useState(false);
   const galleryRef = useRef<HTMLInputElement>(null);
   const latestRun = useRef(0);
   const { clocks, now, add, remove } = useClocks();
@@ -117,10 +133,11 @@ export function Scanner({ language }: { language: Language }) {
     setSpeaking(false);
   }
 
-  async function run(photo: Photo, nextLanguage: Language) {
+  async function run(photo: Photo, nextLanguage: Language, fresh = true) {
     const id = ++latestRun.current;
     stopSpeaking();
     setVoiceMissing(false);
+    setStored(false);
     setView({ step: "reading", photo });
     let next: View;
     try {
@@ -153,20 +170,35 @@ export function Scanner({ language }: { language: Language }) {
     setView(next);
     if (next.step === "result") {
       navigator.vibrate?.(25);
+      const lastScan = {
+        product: next.result.product,
+        signal: next.result.signal,
+      };
       try {
-        localStorage.setItem(
-          lastScanKey,
-          JSON.stringify({
-            product: next.result.product,
-            signal: next.result.signal,
-          }),
-        );
+        localStorage.setItem(lastScanKey, JSON.stringify(lastScan));
       } catch {}
+      saveProfile({ lastScan }).catch(() => {});
+      if (fresh) {
+        const result = next.result;
+        thumbnail(photo.dataUrl)
+          .then((thumb) =>
+            saveScan({
+              createdAt: Date.now(),
+              language: nextLanguage,
+              thumb,
+              result,
+            }),
+          )
+          .then(() => {
+            if (id === latestRun.current) setStored(true);
+          })
+          .catch(() => {});
+      }
     }
   }
 
   const rerun = useEffectEvent((next: Language) => {
-    if (view.step !== "start") run(view.photo, next);
+    if (view.step !== "start") run(view.photo, next, false);
   });
 
   useEffect(() => {
@@ -186,6 +218,11 @@ export function Scanner({ language }: { language: Language }) {
         reason: "unreadable",
       });
     }
+  }
+
+  async function scanShot(dataUrl: string) {
+    setCameraOpen(false);
+    await run({ dataUrl: await toJpeg(dataUrl) }, language);
   }
 
   async function scanSample(id: string, image: string) {
@@ -232,6 +269,17 @@ export function Scanner({ language }: { language: Language }) {
 
   return (
     <>
+      {cameraOpen && (
+        <LiveCamera
+          language={language}
+          onCapture={scanShot}
+          onFile={(file) => {
+            setCameraOpen(false);
+            scanFile(file);
+          }}
+          onClose={() => setCameraOpen(false)}
+        />
+      )}
       {view.step === "start" && (
         <section className="rise mt-8 flex flex-1 flex-col">
           <h1 className="font-display text-5xl font-extrabold uppercase leading-[0.95]">
@@ -241,7 +289,7 @@ export function Scanner({ language }: { language: Language }) {
             {text.tagline}
           </p>
           <button
-            onClick={() => cameraRef.current?.click()}
+            onClick={() => setCameraOpen(true)}
             className="group relative mt-8 flex h-40 w-full flex-col items-center justify-center gap-3 overflow-hidden rounded-3xl bg-primary text-primary-foreground shadow-xl shadow-primary/25 transition-transform active:scale-[0.98]"
           >
             <span className="pulse-ring absolute size-24 rounded-full border-2 border-primary-foreground/30" />
@@ -257,14 +305,6 @@ export function Scanner({ language }: { language: Language }) {
             <ImageIcon className="size-5" />
             {choosePhoto[language]}
           </button>
-          <input
-            ref={cameraRef}
-            type="file"
-            accept="image/*"
-            capture="environment"
-            className="hidden"
-            onChange={onPicked}
-          />
           <input
             ref={galleryRef}
             type="file"
@@ -442,6 +482,13 @@ export function Scanner({ language }: { language: Language }) {
             <div className="mt-6 rounded-2xl border-2 border-amber-400 bg-amber-50 p-4 text-lg leading-snug text-amber-950">
               <p>{view.result.ask}</p>
             </div>
+          )}
+
+          {stored && (
+            <p className="rise mt-6 flex items-center gap-2 text-sm font-medium text-primary">
+              <CloudCheck className="size-4" />
+              {savedNote[language]}
+            </p>
           )}
 
           <p className="mt-8 text-sm text-muted-foreground">

@@ -264,14 +264,6 @@ export function AuthForm({ mode }: { mode: Mode }) {
           {signUp ? text.signInLink : text.createOne}
         </Link>
       </p>
-      <p className="mt-3 text-center text-sm">
-        <Link
-          href="/scan"
-          className="text-muted-foreground underline underline-offset-4 hover:text-foreground"
-        >
-          {text.skip}
-        </Link>
-      </p>
     </AuthCard>
   );
 }

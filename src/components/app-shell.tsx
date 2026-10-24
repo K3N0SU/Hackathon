@@ -1,18 +1,30 @@
 "use client";
 
-import { HeartPulse, ScanLine, Sun } from "lucide-react";
+import {
+  Bookmark,
+  HeartPulse,
+  LoaderCircle,
+  ScanLine,
+  Sun,
+} from "lucide-react";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
+import { useSession } from "@/components/auth-provider";
 import { ExposureHelp } from "@/components/exposure-help";
 import { HeatCheck } from "@/components/heat-check";
 import { Mark } from "@/components/mark";
+import { SavedScans, savedCopy } from "@/components/saved-scans";
 import { Scanner } from "@/components/scanner";
 import { UserMenu } from "@/components/user-menu";
-import { exposureCopy } from "@/lib/exposure";
+import { loadProfile, saveProfile } from "@/lib/cloud";
+import { exposureCopy, lastScanKey } from "@/lib/exposure";
 import { heatCopy } from "@/lib/heat";
 import { languages, type Language } from "@/lib/scan";
 
-type Tab = "labels" | "heat" | "exposed";
+type Tab = "labels" | "heat" | "exposed" | "saved";
+
+const tabIds: Tab[] = ["labels", "heat", "exposed", "saved"];
 
 const labelsTab: Record<Language, string> = {
   en: "Labels",
@@ -23,6 +35,34 @@ const labelsTab: Record<Language, string> = {
 export function AppShell() {
   const [language, setLanguage] = useState<Language>("en");
   const [tab, setTab] = useState<Tab>("labels");
+  const { user, ready } = useSession();
+  const router = useRouter();
+  const verified = Boolean(user?.emailVerified);
+
+  useEffect(() => {
+    if (!ready) return;
+    if (!user) router.replace("/sign-in");
+    else if (!user.emailVerified) router.replace("/verify");
+  }, [ready, user, router]);
+
+  useEffect(() => {
+    if (!verified) return;
+    let active = true;
+    loadProfile()
+      .then((profile) => {
+        if (!active) return;
+        if (profile.language) setLanguage(profile.language);
+        if (profile.lastScan) {
+          try {
+            localStorage.setItem(lastScanKey, JSON.stringify(profile.lastScan));
+          } catch {}
+        }
+      })
+      .catch(() => {});
+    return () => {
+      active = false;
+    };
+  }, [verified]);
 
   useEffect(() => {
     const start = setTimeout(() => {
@@ -32,7 +72,8 @@ export function AppShell() {
         const pick = languages.find((item) => item.code === (saved ?? browser));
         if (pick) setLanguage(pick.code);
         const hash = window.location.hash.slice(1);
-        if (hash === "heat" || hash === "exposed") setTab(hash);
+        const match = tabIds.find((id) => id === hash);
+        if (match) setTab(match);
       } catch {}
     }, 0);
     return () => clearTimeout(start);
@@ -43,6 +84,7 @@ export function AppShell() {
     try {
       localStorage.setItem("furrow-language", next);
     } catch {}
+    saveProfile({ language: next }).catch(() => {});
   }
 
   function changeTab(next: Tab) {
@@ -59,7 +101,16 @@ export function AppShell() {
       label: exposureCopy[language].tab,
       icon: HeartPulse,
     },
+    { id: "saved" as const, label: savedCopy[language].tab, icon: Bookmark },
   ];
+
+  if (!verified) {
+    return (
+      <div className="flex flex-1 items-center justify-center bg-background">
+        <LoaderCircle className="size-10 animate-spin text-primary" />
+      </div>
+    );
+  }
 
   return (
     <div className="flex flex-1 flex-col bg-background">
@@ -107,13 +158,14 @@ export function AppShell() {
         </div>
         {tab === "heat" && <HeatCheck language={language} />}
         {tab === "exposed" && <ExposureHelp language={language} />}
+        {tab === "saved" && <SavedScans language={language} />}
       </main>
 
       <nav
         aria-label="Sections"
         className="fixed inset-x-0 bottom-0 z-40 border-t bg-card/95 pb-[env(safe-area-inset-bottom)] backdrop-blur"
       >
-        <div className="mx-auto grid max-w-xl grid-cols-3">
+        <div className="mx-auto grid max-w-xl grid-cols-4">
           {tabs.map((item) => {
             const Icon = item.icon;
             const active = tab === item.id;
