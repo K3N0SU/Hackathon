@@ -24,7 +24,6 @@ import { AskDemo } from "@/components/ask-demo";
 import { LabelHighlight } from "@/components/label-highlight";
 import { LabelReader } from "@/components/label-reader";
 import { Magnetic, Odometer, ScrollProgress, Tilt } from "@/components/motion";
-import { PixelFarm } from "@/components/pixel-farm";
 import { ScrollReveal } from "@/components/scroll-reveal";
 import { SectionDots } from "@/components/section-dots";
 import { SiteNav } from "@/components/site-nav";
@@ -236,11 +235,8 @@ export default function Home() {
       <SectionDots />
       <ScrollReveal />
 
-      <section id="top" className="relative overflow-hidden bg-[#f6f0e0] lg:min-h-svh">
-        <div className="zoom-depth absolute inset-x-0 bottom-0 h-[46%] sm:h-[52%]">
-          <PixelFarm />
-        </div>
-        <div className="zoom-hero relative mx-auto grid max-w-6xl items-start gap-12 px-6 pb-[52vh] pt-32 sm:pb-[56vh] lg:grid-cols-[1.1fr_0.9fr] lg:items-center lg:pb-[50vh] lg:pt-36">
+      <section id="top" className="relative overflow-hidden lg:min-h-svh">
+        <div className="zoom-hero relative mx-auto grid max-w-6xl items-center gap-14 px-6 pb-24 pt-32 lg:min-h-svh lg:grid-cols-[1.1fr_0.9fr] lg:pb-16 lg:pt-28">
           <div className="text-center lg:text-left">
             <p
               className="enter inline-flex items-center gap-2 font-display text-xl italic text-poppy"
@@ -550,12 +546,9 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="zoom-band relative overflow-hidden bg-[#f6f0e0]">
-        <div className="absolute inset-x-0 bottom-0 h-[55%]">
-          <PixelFarm />
-        </div>
-        <div className="relative mx-auto max-w-6xl px-6 pb-[40vh] pt-28 text-center">
-          <h2 className="font-display text-[clamp(3rem,9vw,7.5rem)] font-semibold leading-[0.92] text-ink">
+      <section className="zoom-band relative overflow-hidden bg-ink text-ink-foreground">
+        <div className="relative mx-auto max-w-6xl px-6 pb-36 pt-32 text-center">
+          <h2 className="font-display text-[clamp(3rem,9vw,7.5rem)] font-semibold leading-[0.92]">
             <span className="reveal block">Know before</span>
             <span className="reveal block italic text-poppy" style={delay("0.12s")}>
               you walk in.
@@ -566,13 +559,13 @@ export default function Home() {
               primary="Make a free account"
               primaryClass="sweep group flex h-14 items-center gap-2 rounded-full bg-primary px-9 text-lg font-semibold text-primary-foreground shadow-xl shadow-primary/30 [--sweep-color:var(--poppy)] active:scale-95"
               secondary={{ label: "I already have one", href: "/sign-in" }}
-              secondaryClass="flex h-14 items-center rounded-full bg-ink px-8 text-lg font-semibold text-ink-foreground shadow-xl transition-colors hover:bg-ink/90 active:scale-95"
+              secondaryClass="flex h-14 items-center rounded-full border-2 border-white/25 px-8 text-lg font-semibold transition-colors hover:border-white/60 hover:bg-white/10 active:scale-95"
             />
           </div>
         </div>
       </section>
 
-      <footer className="bg-ink text-sm text-ink-foreground/70">
+      <footer className="border-t border-white/10 bg-ink text-sm text-ink-foreground/70">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-8">
           <p>Built at SierraHacks 2026 in Manteca, California.</p>
           <a href="tel:18002221222" className="underline-draw font-medium text-ink-foreground">
