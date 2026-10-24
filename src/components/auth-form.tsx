@@ -2,6 +2,7 @@
 
 import {
   createUserWithEmailAndPassword,
+  getRedirectResult,
   GoogleAuthProvider,
   sendEmailVerification,
   sendPasswordResetEmail,
@@ -24,6 +25,13 @@ import { auth } from "@/lib/firebase";
 type Mode = "sign-in" | "sign-up";
 
 const field = "h-12 rounded-xl px-4 text-base md:text-base";
+
+const redirectCodes = [
+  "auth/popup-blocked",
+  "auth/internal-error",
+  "auth/operation-not-supported-in-this-environment",
+  "auth/web-storage-unsupported",
+];
 
 function GoogleMark() {
   return (
@@ -66,6 +74,13 @@ export function AuthForm({ mode }: { mode: Mode }) {
       router.replace(user.emailVerified ? "/scan" : "/verify");
     }
   }, [ready, user, busy, router]);
+
+  useEffect(() => {
+    getRedirectResult(auth()).catch((problem) => {
+      console.error("google redirect", problem);
+      setError(authError(problem));
+    });
+  }, []);
 
   async function attempt(action: () => Promise<void>) {
     setBusy(true);
@@ -117,7 +132,8 @@ export function AuthForm({ mode }: { mode: Mode }) {
           typeof problem === "object" && problem && "code" in problem
             ? problem.code
             : "";
-        if (code === "auth/popup-blocked") {
+        console.error("google sign-in", code, problem);
+        if (redirectCodes.includes(String(code))) {
           await signInWithRedirect(auth(), provider);
           return;
         }
