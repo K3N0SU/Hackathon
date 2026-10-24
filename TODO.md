@@ -23,4 +23,5 @@ Update before ending every task. Keep terse.
 - Heat thresholds: 80°F shade, 95°F high heat, 1 quart water per hour.
 
 ## Notes
+- Local wifi DNS blocks vercel.app, netlify.app, github.io (resolve to 10.251.253.61, ERR_CONNECTION_CLOSED). Site is up (200 via 76.76.21.21). Use cellular/hotspot to demo. *.web.app resolves fine.
 - Windows: bash has no python, use `py`; node patch scripts in scratchpad. Kill stale `next start` before restarting (PowerShell Get-CimInstance filter).

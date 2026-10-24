@@ -58,7 +58,7 @@ export function HeatCheck({ language }: { language: Language }) {
 
   return (
     <section className="rise mt-8">
-      <h1 className="font-display text-5xl font-extrabold uppercase leading-[0.95]">
+      <h1 className="font-display text-4xl font-semibold leading-[1.02] sm:text-5xl">
         {text.title}
       </h1>
       <p className="mt-3 text-lg leading-relaxed text-muted-foreground">
@@ -98,7 +98,7 @@ export function HeatCheck({ language }: { language: Language }) {
               },
             ].map((item) => (
               <div key={item.label} className="px-2 py-4">
-                <p className="font-display text-4xl font-extrabold tabular-nums">
+                <p className="font-display text-4xl font-semibold tabular-nums">
                   {item.value}°
                 </p>
                 <p className="mt-1 text-xs leading-tight text-muted-foreground">
@@ -117,7 +117,7 @@ export function HeatCheck({ language }: { language: Language }) {
             className={`rise rounded-2xl p-5 ${levelStyle[state.heat.level]}`}
             style={{ animationDelay: "80ms" }}
           >
-            <p className="font-display text-3xl font-extrabold uppercase">
+            <p className="font-display text-3xl font-semibold">
               {text.levels[state.heat.level].title}
             </p>
             <p className="mt-2 text-lg leading-snug">

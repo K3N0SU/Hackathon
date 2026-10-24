@@ -70,7 +70,7 @@ export function ExposureHelp({ language }: { language: Language }) {
 
   return (
     <section className="rise mt-8">
-      <h1 className="font-display text-5xl font-extrabold uppercase leading-[0.95]">
+      <h1 className="font-display text-4xl font-semibold leading-[1.02] sm:text-5xl">
         {text.title}
       </h1>
 
@@ -100,7 +100,7 @@ export function ExposureHelp({ language }: { language: Language }) {
             className="rise flex gap-4 rounded-2xl border bg-card p-4"
             style={{ animationDelay: `${index * 60}ms` }}
           >
-            <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary font-display text-xl font-extrabold text-primary-foreground">
+            <span className="flex size-9 shrink-0 items-center justify-center rounded-full bg-primary font-display text-xl font-semibold text-primary-foreground">
               {index + 1}
             </span>
             <div className="flex-1">
@@ -115,7 +115,7 @@ export function ExposureHelp({ language }: { language: Language }) {
                   </div>
                   <div className="mt-3 flex items-center justify-between gap-3">
                     <p
-                      className="font-display text-4xl font-extrabold tabular-nums"
+                      className="font-display text-4xl font-semibold tabular-nums"
                       aria-live="polite"
                     >
                       {rinsed
@@ -196,7 +196,7 @@ export function ExposureHelp({ language }: { language: Language }) {
                 {text.close}
               </Button>
             </div>
-            <p className="mt-6 font-display text-6xl font-extrabold uppercase leading-[0.9]">
+            <p className="mt-6 font-display text-6xl font-semibold leading-[0.9]">
               Pesticide exposure
             </p>
             <p className="mt-6 text-2xl leading-snug">

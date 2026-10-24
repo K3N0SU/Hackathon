@@ -33,7 +33,7 @@ const steps: Step[] = [
     tag: "Labels",
     title: "Point the camera. Get the answer.",
     body: "Furrow opens the camera right inside the app. Frame the label, tap once, and in about five seconds you see the warning level, how long to stay out, what to wear and what to do if it touches your skin. Tap Listen and it reads it out loud.",
-    accent: "text-harvest",
+    accent: "text-primary",
     Screen: LabelsScreen,
   },
   {
@@ -41,7 +41,7 @@ const steps: Step[] = [
     tag: "Clock",
     title: "A scan tells you once. The clock keeps telling you.",
     body: "Tell Furrow when the block was sprayed and it counts down the re-entry time. Red means stay out. Green means the time is up. It is still counting when you open your phone at lunch.",
-    accent: "text-red-400",
+    accent: "text-danger",
     Screen: ClockScreen,
   },
   {
@@ -49,7 +49,7 @@ const steps: Step[] = [
     tag: "Heat",
     title: "Know the hottest hour before it hits.",
     body: "Furrow checks the forecast where you stand and explains what California requires at that temperature: shade above 80°F, cool-down breaks at 95°F, water every hour, and the signs that mean call 911.",
-    accent: "text-amber-300",
+    accent: "text-amber-700",
     Screen: HeatScreen,
   },
   {
@@ -57,7 +57,7 @@ const steps: Step[] = [
     tag: "Exposed",
     title: "When it goes wrong, every minute counts.",
     body: "Big buttons for 911 and Poison Control, five clear steps, a 15-minute rinse timer that buzzes when you are done, and a card in English for the doctor with the product already filled in.",
-    accent: "text-red-400",
+    accent: "text-danger",
     Screen: ExposedScreen,
   },
   {
@@ -65,7 +65,7 @@ const steps: Step[] = [
     tag: "Saved",
     title: "Everything you scan stays with you.",
     body: "Sign in with email or Google and every scan, photo, clock and language choice is saved to your account. Lose your phone or borrow one, sign in, and it is all there.",
-    accent: "text-emerald-300",
+    accent: "text-emerald-700",
     Screen: SavedScreen,
   },
 ];
@@ -107,22 +107,22 @@ export function Tour() {
               className="flex flex-col justify-center py-14 lg:min-h-svh lg:py-16"
             >
               <div
-                className={`transition-all duration-700 lg:origin-left ${on ? "opacity-100" : "lg:scale-[0.97] lg:opacity-25"}`}
+                className={`transition-all duration-700 lg:origin-left ${on ? "opacity-100" : "lg:scale-[0.97] lg:opacity-30"}`}
               >
                 <p
                   className={`flex items-center gap-3 text-sm font-semibold ${step.accent}`}
                 >
-                  <span className="flex size-10 items-center justify-center rounded-full bg-white/5 ring-1 ring-white/10">
+                  <span className="flex size-10 items-center justify-center rounded-full bg-primary/5 ring-1 ring-primary/15">
                     <Icon className="size-5" />
                   </span>
-                  <span className="font-display text-lg uppercase tracking-wider">
+                  <span className="font-display text-lg italic">
                     {String(index + 1).padStart(2, "0")} {step.tag}
                   </span>
                 </p>
-                <h3 className="mt-6 max-w-xl font-display text-5xl font-extrabold uppercase leading-[0.92] sm:text-6xl">
+                <h3 className="mt-6 max-w-xl font-display text-4xl font-semibold leading-[1.02] sm:text-5xl">
                   {step.title}
                 </h3>
-                <p className="mt-6 max-w-lg text-lg leading-relaxed text-white/65">
+                <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
                   {step.body}
                 </p>
               </div>
@@ -139,7 +139,7 @@ export function Tour() {
       <div className="relative hidden lg:block">
         <div className="sticky top-0 flex h-svh items-center">
           <div className="relative">
-            <div className="absolute -inset-16 rounded-full bg-[radial-gradient(circle,oklch(0.82_0.15_80/0.22),transparent_65%)] blur-2xl" />
+            <div className="absolute -inset-16 rounded-full bg-[radial-gradient(circle,oklch(0.82_0.15_80/0.35),transparent_65%)] blur-2xl" />
             <PhoneFrame>
               <div key={active} className="absolute inset-0">
                 <Current />
@@ -150,7 +150,7 @@ export function Tour() {
                 <span
                   key={step.tag}
                   className={`w-1.5 rounded-full transition-all duration-500 ${
-                    active === index ? "h-10 bg-harvest" : "h-1.5 bg-white/25"
+                    active === index ? "h-10 bg-primary" : "h-1.5 bg-primary/20"
                   }`}
                 />
               ))}

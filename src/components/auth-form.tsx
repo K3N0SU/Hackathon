@@ -142,7 +142,7 @@ export function AuthForm({ mode }: { mode: Mode }) {
 
   return (
     <AuthCard lang={language}>
-      <h1 className="font-display text-5xl font-extrabold uppercase leading-[0.95] text-primary">
+      <h1 className="font-display text-4xl font-semibold leading-[1.02] sm:text-5xl text-primary">
         {signUp ? text.signUpTitle : text.signInTitle}
       </h1>
       <p className="mt-3 text-muted-foreground">{text.intro}</p>

@@ -5,7 +5,7 @@ import { useEffect } from "react";
 export function ScrollReveal() {
   useEffect(() => {
     const root = document.documentElement;
-    const items = document.querySelectorAll(".reveal");
+    const items = document.querySelectorAll(".reveal, .reveal-left, .reveal-pop");
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
@@ -13,11 +13,11 @@ export function ScrollReveal() {
           const item = entry.target;
           const settle = (event: Event) => {
             if (event.target !== item) return;
-            item.classList.remove("reveal", "shown");
+            item.classList.remove("reveal", "reveal-left", "reveal-pop", "shown");
             item.removeEventListener("transitionend", settle);
           };
           item.addEventListener("transitionend", settle);
-          item.classList.add("shown");
+          item.classList.add("shown", "seen");
           observer.unobserve(entry.target);
         }
       },

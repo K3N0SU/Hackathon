@@ -79,7 +79,7 @@ export function VerifyEmail() {
         <span className="pulse-ring absolute inset-0 rounded-full bg-harvest/50" />
         <MailCheck className="relative size-8" />
       </span>
-      <h1 className="mt-6 font-display text-5xl font-extrabold uppercase leading-[0.95] text-primary">
+      <h1 className="mt-6 font-display text-4xl font-semibold leading-[1.02] sm:text-5xl text-primary">
         {text.verifyTitle}
       </h1>
       <p className="mt-4 text-lg">

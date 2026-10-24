@@ -1,10 +1,5 @@
 import type { Metadata, Viewport } from "next";
-import {
-  Barlow_Condensed,
-  Fraunces,
-  Noto_Sans_Gurmukhi,
-  Public_Sans,
-} from "next/font/google";
+import { Fraunces, Noto_Sans_Gurmukhi, Public_Sans } from "next/font/google";
 import { AuthProvider } from "@/components/auth-provider";
 import "./globals.css";
 
@@ -13,15 +8,10 @@ const publicSans = Public_Sans({
   subsets: ["latin"],
 });
 
-const barlow = Barlow_Condensed({
-  variable: "--font-barlow",
-  subsets: ["latin"],
-  weight: ["700", "800"],
-});
-
 const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin"],
+  axes: ["opsz", "SOFT", "WONK"],
 });
 
 const notoGurmukhi = Noto_Sans_Gurmukhi({
@@ -36,14 +26,14 @@ export const metadata: Metadata = {
 };
 
 export const viewport: Viewport = {
-  themeColor: "#f6f2e9",
+  themeColor: "#f8f5ec",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${publicSans.variable} ${fraunces.variable} ${barlow.variable} ${notoGurmukhi.variable} h-full antialiased`}
+      className={`${publicSans.variable} ${fraunces.variable} ${notoGurmukhi.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
         <AuthProvider>{children}</AuthProvider>

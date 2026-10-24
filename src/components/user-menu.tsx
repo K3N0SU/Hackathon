@@ -11,11 +11,9 @@ import type { Language } from "@/lib/scan";
 
 export function UserMenu({
   language = "en",
-  dark = false,
   compact = false,
 }: {
   language?: Language;
-  dark?: boolean;
   compact?: boolean;
 }) {
   const { user, ready } = useSession();
@@ -39,16 +37,10 @@ export function UserMenu({
       <Link
         href="/sign-in"
         aria-label={text.signIn}
-        className={`flex h-9 shrink-0 items-center gap-1.5 rounded-full px-3 text-sm font-medium transition-colors ${
-          dark
-            ? "opacity-85 hover:bg-white/10 hover:opacity-100"
-            : "text-primary hover:bg-secondary"
-        }`}
+        className="flex h-9 shrink-0 items-center gap-1.5 rounded-full px-3 text-sm font-medium text-primary transition-colors hover:bg-secondary active:scale-95"
       >
         <UserRound className={compact ? "size-5" : "size-4"} />
-        {!compact && (
-          <span className={dark ? "hidden sm:inline" : ""}>{text.signIn}</span>
-        )}
+        {!compact && <span className="hidden sm:inline">{text.signIn}</span>}
       </Link>
     );
   }

@@ -282,7 +282,7 @@ export function Scanner({ language }: { language: Language }) {
       )}
       {view.step === "start" && (
         <section className="rise mt-8 flex flex-1 flex-col">
-          <h1 className="font-display text-5xl font-extrabold uppercase leading-[0.95]">
+          <h1 className="font-display text-4xl font-semibold leading-[1.02] sm:text-5xl">
             {text.headline}
           </h1>
           <p className="mt-4 text-lg leading-relaxed text-muted-foreground">

@@ -92,7 +92,7 @@ export function ScrollWords({
       {words.map((word, index) => (
         <span
           key={index}
-          className={`transition-colors duration-300 ${index < lit ? "text-[#f3efe4]" : "text-white/15"}`}
+          className={`transition-colors duration-300 ${index < lit ? "text-foreground" : "text-foreground/15"}`}
         >
           {word}{" "}
         </span>

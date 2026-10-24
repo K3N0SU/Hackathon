@@ -158,7 +158,7 @@ export function ClockScreen() {
     <>
       <Header />
       <div className="px-5 pt-4">
-        <p className="screen-in font-display text-3xl font-extrabold uppercase leading-none">
+        <p className="screen-in font-display text-3xl font-semibold leading-none">
           Your blocks
         </p>
         <div
@@ -200,7 +200,7 @@ export function HeatScreen() {
     <>
       <Header />
       <div className="px-5 pt-4">
-        <p className="screen-in font-display text-3xl font-extrabold uppercase leading-none">
+        <p className="screen-in font-display text-3xl font-semibold leading-none">
           {heat.title}
         </p>
         <div
@@ -213,7 +213,7 @@ export function HeatScreen() {
             { value: "99°", label: "4 PM" },
           ].map((item) => (
             <div key={item.label} className="px-1 py-3">
-              <p className="font-display text-3xl font-extrabold">
+              <p className="font-display text-3xl font-semibold">
                 {item.value}
               </p>
               <p className="text-[10px] text-muted-foreground">{item.label}</p>
@@ -224,7 +224,7 @@ export function HeatScreen() {
           className="screen-in mt-3 rounded-xl bg-red-700 p-4 text-white"
           style={{ "--delay": "0.22s" } as React.CSSProperties}
         >
-          <p className="font-display text-xl font-extrabold uppercase">
+          <p className="font-display text-xl font-semibold">
             {heat.levels.high.title}
           </p>
           <p className="mt-1 text-xs leading-snug">{heat.levels.high.body}</p>
@@ -266,7 +266,7 @@ export function ExposedScreen() {
           style={{ "--delay": "0.12s" } as React.CSSProperties}
         >
           <div className="flex items-center gap-2">
-            <span className="flex size-7 items-center justify-center rounded-full bg-primary font-display text-base font-extrabold text-primary-foreground">
+            <span className="flex size-7 items-center justify-center rounded-full bg-primary font-display text-base font-semibold text-primary-foreground">
               3
             </span>
             <p className="text-sm font-medium">Rinse for 15 minutes</p>
@@ -275,7 +275,7 @@ export function ExposedScreen() {
             <div className="fill-bar h-full w-2/3 rounded-full bg-sky-600" />
           </div>
           <div className="mt-2 flex items-center justify-between">
-            <p className="font-display text-2xl font-extrabold tabular-nums">
+            <p className="font-display text-2xl font-semibold tabular-nums">
               4:52
             </p>
             <span className="flex items-center gap-1.5 rounded-lg border px-3 py-1.5 text-xs font-medium">
@@ -288,7 +288,7 @@ export function ExposedScreen() {
           className="screen-in mt-3 rounded-xl bg-white p-3.5 text-neutral-950 shadow-lg ring-1 ring-black/5"
           style={{ "--delay": "0.24s" } as React.CSSProperties}
         >
-          <p className="font-display text-xl font-extrabold uppercase">
+          <p className="font-display text-xl font-semibold">
             Pesticide exposure
           </p>
           <p className="mt-1 text-xs">Product: {result.product}</p>
@@ -312,7 +312,7 @@ export function SavedScreen() {
     <>
       <Header />
       <div className="px-5 pt-4">
-        <p className="screen-in font-display text-3xl font-extrabold uppercase leading-none">
+        <p className="screen-in font-display text-3xl font-semibold leading-none">
           Your scans
         </p>
         <ul className="mt-4 space-y-2.5">

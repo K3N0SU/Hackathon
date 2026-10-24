@@ -87,7 +87,7 @@ export function SavedScans({ language }: { language: Language }) {
 
   return (
     <section className="rise mt-8">
-      <h1 className="font-display text-5xl font-extrabold uppercase leading-[0.95]">
+      <h1 className="font-display text-4xl font-semibold leading-[1.02] sm:text-5xl">
         {text.title}
       </h1>
       <p className="mt-3 text-lg text-muted-foreground">{text.intro}</p>
