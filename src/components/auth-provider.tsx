@@ -2,7 +2,7 @@
 
 import { onAuthStateChanged, type User } from "firebase/auth";
 import { createContext, useContext, useEffect, useState } from "react";
-import { auth, firebaseReady } from "@/lib/firebase";
+import { auth } from "@/lib/firebase";
 import { languages, type Language } from "@/lib/scan";
 
 type Session = { user: User | null; ready: boolean };
@@ -16,13 +16,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   });
 
   useEffect(() => {
-    if (!firebaseReady) {
-      const start = setTimeout(
-        () => setSession({ user: null, ready: true }),
-        0,
-      );
-      return () => clearTimeout(start);
-    }
     return onAuthStateChanged(auth(), (user) =>
       setSession({ user, ready: true }),
     );

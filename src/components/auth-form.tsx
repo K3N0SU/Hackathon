@@ -18,7 +18,7 @@ import { AuthCard } from "@/components/auth-card";
 import { useSavedLanguage, useSession } from "@/components/auth-provider";
 import { Input } from "@/components/ui/input";
 import { authCopy, authError, type AuthError } from "@/lib/auth-copy";
-import { auth, firebaseReady } from "@/lib/firebase";
+import { auth } from "@/lib/firebase";
 
 type Mode = "sign-in" | "sign-up";
 
@@ -67,10 +67,6 @@ export function AuthForm({ mode }: { mode: Mode }) {
   }, [ready, user, busy, router]);
 
   async function attempt(action: () => Promise<void>) {
-    if (!firebaseReady) {
-      setError("notConfigured");
-      return;
-    }
     setBusy(true);
     setError(null);
     setNotice("");
