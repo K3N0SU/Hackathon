@@ -7,6 +7,7 @@ import { ExposureHelp } from "@/components/exposure-help";
 import { HeatCheck } from "@/components/heat-check";
 import { Mark } from "@/components/mark";
 import { Scanner } from "@/components/scanner";
+import { UserMenu } from "@/components/user-menu";
 import { exposureCopy } from "@/lib/exposure";
 import { heatCopy } from "@/lib/heat";
 import { languages, type Language } from "@/lib/scan";
@@ -69,27 +70,30 @@ export function AppShell() {
             className="flex items-center gap-2 font-heading text-2xl font-semibold text-primary"
           >
             <Mark className="size-7" />
-            Furrow
+            <span className="hidden min-[400px]:inline">Furrow</span>
           </Link>
-          <div
-            className="flex rounded-full bg-secondary p-1"
-            role="group"
-            aria-label="Language"
-          >
-            {languages.map((item) => (
-              <button
-                key={item.code}
-                onClick={() => changeLanguage(item.code)}
-                aria-pressed={item.code === language}
-                className={`rounded-full px-3 py-1.5 text-sm font-medium transition-all ${
-                  item.code === language
-                    ? "bg-card text-foreground shadow-sm"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {item.name}
-              </button>
-            ))}
+          <div className="flex items-center gap-2">
+            <div
+              className="flex rounded-full bg-secondary p-1"
+              role="group"
+              aria-label="Language"
+            >
+              {languages.map((item) => (
+                <button
+                  key={item.code}
+                  onClick={() => changeLanguage(item.code)}
+                  aria-pressed={item.code === language}
+                  className={`rounded-full px-2.5 py-1.5 text-sm font-medium transition-all sm:px-3 ${
+                    item.code === language
+                      ? "bg-card text-foreground shadow-sm"
+                      : "text-muted-foreground hover:text-foreground"
+                  }`}
+                >
+                  {item.name}
+                </button>
+              ))}
+            </div>
+            <UserMenu language={language} compact />
           </div>
         </div>
       </header>

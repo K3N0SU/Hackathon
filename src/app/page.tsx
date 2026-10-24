@@ -8,6 +8,7 @@ import {
 import Link from "next/link";
 import { HeroScene } from "@/components/hero-scene";
 import { Phone } from "@/components/phone";
+import { ScrollReveal } from "@/components/scroll-reveal";
 import { SectionDots } from "@/components/section-dots";
 import { SiteNav } from "@/components/site-nav";
 import { heatCopy } from "@/lib/heat";
@@ -43,7 +44,7 @@ const questions = [
   {
     question: "Do I need an account?",
     answer:
-      "No. Furrow opens in the phone's browser and keeps your language and your countdown clocks on the phone itself. Nothing is saved on a server.",
+      "No. Every tool works without one, and your language and countdown clocks stay on the phone itself. If you want, you can make an account with your email or sign in with Google.",
   },
   {
     question: "What if I have no signal?",
@@ -67,6 +68,7 @@ export default function Home() {
     <div className="flex-1 overflow-x-clip">
       <SiteNav />
       <SectionDots />
+      <ScrollReveal />
 
       <section
         id="top"
@@ -122,7 +124,7 @@ export default function Home() {
             <li
               key={item.figure}
               className="reveal py-8 pr-4"
-              style={{ animationDelay: `${index * 80}ms` }}
+              style={delay(`${index * 90}ms`)}
             >
               <p className="font-display text-4xl font-extrabold uppercase text-harvest sm:text-5xl">
                 {item.figure}
@@ -155,7 +157,10 @@ export default function Home() {
             Scan a label
           </Link>
         </div>
-        <div className="flex justify-center lg:justify-end">
+        <div
+          className="reveal flex justify-center lg:justify-end"
+          style={delay("0.15s")}
+        >
           <Phone className="floating" />
         </div>
       </section>
@@ -173,7 +178,10 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-14 grid items-center gap-10 lg:grid-cols-[0.8fr_1.2fr]">
-            <div className="reveal relative overflow-hidden rounded-2xl border bg-card p-4 shadow-sm">
+            <div
+              className="reveal relative overflow-hidden rounded-2xl border bg-card p-4 shadow-sm"
+              style={delay("0.1s")}
+            >
               <img
                 src={label.image}
                 alt="A pesticide label in small English print"
@@ -185,10 +193,11 @@ export default function Home() {
               </p>
             </div>
             <ul className="space-y-4">
-              {answers.map((answer) => (
+              {answers.map((answer, index) => (
                 <li
                   key={answer.lang}
                   lang={answer.lang}
+                  style={delay(`${0.2 + index * 0.15}s`)}
                   className="reveal rounded-2xl border bg-card p-6 shadow-sm transition-transform hover:-translate-y-1"
                 >
                   <p className="text-sm font-medium text-primary">
@@ -217,8 +226,11 @@ export default function Home() {
               browser and open it again at lunch.
             </p>
           </div>
-          <div className="reveal space-y-4">
-            <div className="rounded-2xl bg-red-700 p-6 text-white shadow-2xl shadow-red-950/50">
+          <div className="space-y-4">
+            <div
+              className="reveal rounded-2xl bg-red-700 p-6 text-white shadow-2xl shadow-red-950/50"
+              style={delay("0.1s")}
+            >
               <p className="font-medium">Valley Guard 2EC, north block</p>
               <p className="mt-1 font-heading text-4xl font-semibold tabular-nums">
                 7 h 18 min left
@@ -227,7 +239,10 @@ export default function Home() {
                 {copy.en.safeAt} 4:30 PM
               </p>
             </div>
-            <div className="rounded-2xl bg-primary p-6 text-primary-foreground ring-1 ring-white/15">
+            <div
+              className="reveal rounded-2xl bg-primary p-6 text-primary-foreground ring-1 ring-white/15"
+              style={delay("0.25s")}
+            >
               <p className="font-medium">Rowkill, east block</p>
               <p className="mt-1 font-heading text-4xl font-semibold">
                 {copy.en.safeNow}
@@ -258,8 +273,11 @@ export default function Home() {
               heat illness that mean call 911.
             </p>
           </div>
-          <div className="reveal space-y-4">
-            <div className="grid grid-cols-3 divide-x divide-[#2a1606]/15 rounded-2xl bg-white/70 text-center shadow-xl backdrop-blur">
+          <div className="space-y-4">
+            <div
+              style={delay("0.1s")}
+              className="reveal grid grid-cols-3 divide-x divide-[#2a1606]/15 rounded-2xl bg-white/70 text-center shadow-xl backdrop-blur"
+            >
               {[
                 { value: "91°", label: heatCopy.en.now },
                 { value: "96°", label: heatCopy.en.feels },
@@ -273,7 +291,10 @@ export default function Home() {
                 </div>
               ))}
             </div>
-            <div className="rounded-2xl bg-red-700 p-6 text-white shadow-xl">
+            <div
+              className="reveal rounded-2xl bg-red-700 p-6 text-white shadow-xl"
+              style={delay("0.25s")}
+            >
               <p className="font-display text-3xl font-extrabold uppercase">
                 {heatCopy.en.levels.high.title}
               </p>
@@ -281,7 +302,10 @@ export default function Home() {
                 {heatCopy.en.levels.high.body}
               </p>
             </div>
-            <div className="flex gap-3 rounded-2xl bg-white/70 p-5 shadow-xl backdrop-blur">
+            <div
+              className="reveal flex gap-3 rounded-2xl bg-white/70 p-5 shadow-xl backdrop-blur"
+              style={delay("0.4s")}
+            >
               <Droplets className="mt-0.5 size-6 shrink-0 text-sky-700" />
               <p className="leading-snug">{heatCopy.en.water}</p>
             </div>
@@ -291,8 +315,8 @@ export default function Home() {
 
       <section id="exposed" className="bg-background">
         <div className="mx-auto grid max-w-6xl items-center gap-14 px-6 py-24 lg:grid-cols-2 lg:py-36">
-          <div className="reveal order-2 space-y-3 lg:order-1">
-            <div className="rounded-2xl bg-red-700 p-5 text-white shadow-xl">
+          <div className="order-2 space-y-3 lg:order-1">
+            <div className="reveal rounded-2xl bg-red-700 p-5 text-white shadow-xl">
               <p className="font-medium">
                 Trouble breathing, passed out or a seizure? Call 911 now.
               </p>
@@ -306,7 +330,10 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            <div className="rounded-2xl border bg-card p-5 shadow-sm">
+            <div
+              className="reveal rounded-2xl border bg-card p-5 shadow-sm"
+              style={delay("0.15s")}
+            >
               <div className="flex items-center gap-3">
                 <span className="flex size-9 items-center justify-center rounded-full bg-primary font-display text-xl font-extrabold text-primary-foreground">
                   3
@@ -326,7 +353,10 @@ export default function Home() {
                 </span>
               </div>
             </div>
-            <div className="rounded-2xl bg-white p-5 text-neutral-950 shadow-xl ring-1 ring-black/5">
+            <div
+              className="reveal rounded-2xl bg-white p-5 text-neutral-950 shadow-xl ring-1 ring-black/5"
+              style={delay("0.3s")}
+            >
               <p className="font-display text-3xl font-extrabold uppercase">
                 Pesticide exposure
               </p>
@@ -362,7 +392,7 @@ export default function Home() {
               {copy.en.unreadable}
             </p>
           </div>
-          <div className="reveal">
+          <div className="reveal" style={delay("0.15s")}>
             <h2 className={heading}>When it can&apos;t tell, it says so.</h2>
             <p className="mt-6 max-w-lg text-lg leading-relaxed text-muted-foreground">
               A blurry photo or an unclear label never gets a guess about
@@ -376,8 +406,12 @@ export default function Home() {
       <section id="questions" className="mx-auto max-w-3xl px-6 py-24 lg:py-36">
         <h2 className={`reveal ${heading}`}>Questions</h2>
         <div className="mt-8 divide-y border-y">
-          {questions.map((item) => (
-            <details key={item.question} className="group py-5">
+          {questions.map((item, index) => (
+            <details
+              key={item.question}
+              className="reveal group py-5"
+              style={delay(`${index * 0.08}s`)}
+            >
               <summary className="flex cursor-pointer list-none items-center justify-between gap-4 text-lg font-medium">
                 {item.question}
                 <span className="text-2xl text-primary transition-transform group-open:rotate-45">
@@ -400,7 +434,8 @@ export default function Home() {
           </h2>
           <Link
             href="/scan"
-            className="button-glow mt-10 inline-block rounded-full bg-harvest px-10 py-4 text-lg font-semibold text-harvest-foreground transition-transform hover:-translate-y-1"
+            style={delay("0.2s")}
+            className="reveal button-glow mt-10 inline-block rounded-full bg-harvest px-10 py-4 text-lg font-semibold text-harvest-foreground transition-transform hover:-translate-y-1"
           >
             Open Furrow
           </Link>

@@ -5,6 +5,7 @@ import {
   Noto_Sans_Gurmukhi,
   Public_Sans,
 } from "next/font/google";
+import { AuthProvider } from "@/components/auth-provider";
 import "./globals.css";
 
 const publicSans = Public_Sans({
@@ -44,7 +45,9 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       lang="en"
       className={`${publicSans.variable} ${fraunces.variable} ${barlow.variable} ${notoGurmukhi.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <AuthProvider>{children}</AuthProvider>
+      </body>
     </html>
   );
 }

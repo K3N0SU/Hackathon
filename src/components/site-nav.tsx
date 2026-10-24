@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Mark } from "@/components/mark";
+import { UserMenu } from "@/components/user-menu";
 
 const links = [
   { href: "#field", label: "Labels" },
@@ -40,7 +41,7 @@ export function SiteNav() {
           <Mark className="size-8 text-primary-foreground [--background:#0b1710]" />
           Furrow
         </Link>
-        <nav className="flex items-center gap-8 text-sm">
+        <nav className="flex items-center gap-3 text-sm md:gap-8">
           {links.map((link) => (
             <a
               key={link.href}
@@ -50,6 +51,7 @@ export function SiteNav() {
               {link.label}
             </a>
           ))}
+          <UserMenu dark />
           <Link
             href="/scan"
             className="rounded-full bg-harvest px-5 py-2 font-semibold text-harvest-foreground transition-transform hover:-translate-y-0.5 active:translate-y-0"
