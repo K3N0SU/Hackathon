@@ -1,4 +1,4 @@
-import type { Language } from "./scan";
+import type { CoreLanguage } from "./scan";
 
 export type HeatLevel = "normal" | "shade" | "high";
 
@@ -66,7 +66,7 @@ type HeatCopy = {
   rules: string;
 };
 
-export const heatCopy: Record<Language, HeatCopy> = {
+export const heatCopy: Record<CoreLanguage, HeatCopy> = {
   en: {
     tab: "Heat",
     title: "Heat today",

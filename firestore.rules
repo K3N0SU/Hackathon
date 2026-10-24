@@ -1,21 +1,30 @@
 rules_version = '2';
 service cloud.firestore {
   match /databases/{database}/documents {
-    match /users/{uid} {
-      allow read, write: if request.auth != null
+    function verified(uid) {
+      return request.auth != null
         && request.auth.uid == uid
         && request.auth.token.email_verified == true;
+    }
+
+    match /users/{uid} {
+      allow read, write: if verified(uid);
 
       match /scans/{scanId} {
-        allow read, delete: if request.auth != null
-          && request.auth.uid == uid
-          && request.auth.token.email_verified == true;
-        allow create, update: if request.auth != null
-          && request.auth.uid == uid
-          && request.auth.token.email_verified == true
+        allow read, delete: if verified(uid);
+        allow create, update: if verified(uid)
           && request.resource.data.size() < 20;
       }
     }
+
+    match /shares/{shareId} {
+      allow get: if true;
+      allow create: if verified(request.resource.data.uid)
+        && request.resource.data.size() < 10
+        && request.resource.data.thumb.size() < 200000;
+      allow delete: if verified(resource.data.uid);
+    }
+
     match /{document=**} {
       allow read, write: if false;
     }

@@ -1,9 +1,12 @@
 "use client";
 
-import { Droplets, MapPin, Phone, RefreshCw, Sun } from "lucide-react";
-import { useState } from "react";
+import { BellRing, Droplets, MapPin, Phone, RefreshCw, Sun } from "lucide-react";
+import { useEffect, useState } from "react";
+import { askNotifications, notify } from "@/lib/alarms";
+import { appCopy } from "@/lib/app-copy";
 import { Button } from "@/components/ui/button";
 import { fetchHeat, heatCopy, manteca, type Heat } from "@/lib/heat";
+import { useCopy } from "@/lib/i18n";
 import type { Language } from "@/lib/scan";
 
 type State =
@@ -36,8 +39,19 @@ function hourLabel(hour: number, language: Language) {
 }
 
 export function HeatCheck({ language }: { language: Language }) {
-  const text = heatCopy[language];
+  const text = useCopy(heatCopy, language);
   const [state, setState] = useState<State>({ step: "idle" });
+  const alarms = useCopy(appCopy, language).alarms;
+  const [water, setWater] = useState(false);
+
+  useEffect(() => {
+    if (!water) return;
+    const timer = setInterval(
+      () => notify(alarms.waterTitle, alarms.waterBody, "water"),
+      3600000,
+    );
+    return () => clearInterval(timer);
+  }, [water, alarms.waterTitle, alarms.waterBody]);
 
   async function check() {
     setState({ step: "checking" });
@@ -129,7 +143,23 @@ export function HeatCheck({ language }: { language: Language }) {
             style={{ animationDelay: "160ms" }}
           >
             <Droplets className="mt-0.5 size-6 shrink-0 text-sky-700" />
-            <p className="text-lg leading-snug">{text.water}</p>
+            <div className="flex-1">
+              <p className="text-lg leading-snug">{text.water}</p>
+              {state.heat.level !== "normal" && (
+                <button
+                  onClick={async () => {
+                    await askNotifications();
+                    setWater(true);
+                    navigator.vibrate?.(20);
+                  }}
+                  disabled={water}
+                  className="mt-3 flex items-center gap-2 rounded-full bg-sky-700 px-4 py-2 text-sm font-semibold text-white transition-all active:scale-95 disabled:bg-sky-700/15 disabled:text-sky-800"
+                >
+                  <BellRing className="size-4" />
+                  {water ? alarms.waterOff : alarms.waterOn}
+                </button>
+              )}
+            </div>
           </div>
           <div
             className="rise rounded-2xl border bg-card p-5"

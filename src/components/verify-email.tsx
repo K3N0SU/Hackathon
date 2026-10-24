@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { useEffect, useState } from "react";
 import { AuthCard } from "@/components/auth-card";
 import { useSavedLanguage, useSession } from "@/components/auth-provider";
+import { useCopy } from "@/lib/i18n";
 import { authCopy, authError } from "@/lib/auth-copy";
 import { auth } from "@/lib/firebase";
 
@@ -13,7 +14,7 @@ export function VerifyEmail() {
   const router = useRouter();
   const language = useSavedLanguage();
   const { user, ready } = useSession();
-  const text = authCopy[language];
+  const text = useCopy(authCopy, language);
   const [message, setMessage] = useState("");
   const [checking, setChecking] = useState(false);
 

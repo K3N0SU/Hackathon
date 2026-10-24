@@ -2,59 +2,11 @@
 
 import { Check, ImageIcon, RefreshCw, RotateCcw, X } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react";
+import { appCopy } from "@/lib/app-copy";
+import { useCopy } from "@/lib/i18n";
+import { checkPhoto, type PhotoQuality } from "@/lib/photo-quality";
+import { cameraCopy } from "@/lib/camera-copy";
 import type { Language } from "@/lib/scan";
-
-const cameraCopy: Record<
-  Language,
-  {
-    hint: string;
-    capture: string;
-    retake: string;
-    use: string;
-    flip: string;
-    gallery: string;
-    close: string;
-    blocked: string;
-    openApp: string;
-  }
-> = {
-  en: {
-    hint: "Fit the whole label inside the frame",
-    capture: "Take photo",
-    retake: "Retake",
-    use: "Read this label",
-    flip: "Switch camera",
-    gallery: "Choose a photo",
-    close: "Close camera",
-    blocked:
-      "Furrow can't open the camera here. Allow camera access in your browser settings, or use your phone's camera app.",
-    openApp: "Use the camera app",
-  },
-  es: {
-    hint: "Pon toda la etiqueta dentro del cuadro",
-    capture: "Tomar foto",
-    retake: "Tomar otra",
-    use: "Leer esta etiqueta",
-    flip: "Cambiar cámara",
-    gallery: "Elegir una foto",
-    close: "Cerrar cámara",
-    blocked:
-      "Furrow no puede abrir la cámara aquí. Permite el acceso a la cámara en tu navegador o usa la app de cámara del teléfono.",
-    openApp: "Usar la app de cámara",
-  },
-  pa: {
-    hint: "ਪੂਰਾ ਲੇਬਲ ਫਰੇਮ ਦੇ ਅੰਦਰ ਰੱਖੋ",
-    capture: "ਫੋਟੋ ਖਿੱਚੋ",
-    retake: "ਦੁਬਾਰਾ ਖਿੱਚੋ",
-    use: "ਇਹ ਲੇਬਲ ਪੜ੍ਹੋ",
-    flip: "ਕੈਮਰਾ ਬਦਲੋ",
-    gallery: "ਫੋਟੋ ਚੁਣੋ",
-    close: "ਕੈਮਰਾ ਬੰਦ ਕਰੋ",
-    blocked:
-      "Furrow ਇੱਥੇ ਕੈਮਰਾ ਨਹੀਂ ਖੋਲ੍ਹ ਸਕਦਾ। ਬ੍ਰਾਊਜ਼ਰ ਸੈਟਿੰਗਾਂ ਵਿੱਚ ਕੈਮਰੇ ਦੀ ਇਜਾਜ਼ਤ ਦਿਓ, ਜਾਂ ਫੋਨ ਦੀ ਕੈਮਰਾ ਐਪ ਵਰਤੋ।",
-    openApp: "ਕੈਮਰਾ ਐਪ ਵਰਤੋ",
-  },
-};
 
 export function LiveCamera({
   language,
@@ -67,7 +19,9 @@ export function LiveCamera({
   onFile: (file: File) => void;
   onClose: () => void;
 }) {
-  const text = cameraCopy[language];
+  const text = useCopy(cameraCopy, language);
+  const coach = useCopy(appCopy, language).coach;
+  const [quality, setQuality] = useState<PhotoQuality | null>(null);
   const video = useRef<HTMLVideoElement>(null);
   const stream = useRef<MediaStream | null>(null);
   const galleryRef = useRef<HTMLInputElement>(null);
@@ -143,7 +97,10 @@ export function LiveCamera({
     const context = canvas.getContext("2d");
     if (!context) return;
     context.drawImage(element, 0, 0);
-    setShot(canvas.toDataURL("image/jpeg", 0.9));
+    const dataUrl = canvas.toDataURL("image/jpeg", 0.9);
+    setShot(dataUrl);
+    setQuality(null);
+    checkPhoto(dataUrl).then(setQuality);
     setFlash(true);
     setTimeout(() => setFlash(false), 180);
     navigator.vibrate?.(15);
@@ -213,6 +170,11 @@ export function LiveCamera({
           </div>
         )}
         {flash && <div className="absolute inset-0 bg-white" />}
+        {shot && quality && (quality.dark || quality.bright || quality.blurry) && (
+          <div className="pop absolute inset-x-4 bottom-4 rounded-2xl bg-harvest p-4 text-lg font-semibold leading-snug text-harvest-foreground shadow-xl">
+            {quality.dark ? coach.dark : quality.bright ? coach.bright : coach.blurry}
+          </div>
+        )}
 
         <div className="absolute inset-x-0 top-0 flex items-center justify-between bg-gradient-to-b from-black/70 to-transparent p-4 pt-[max(1rem,env(safe-area-inset-top))]">
           <button
@@ -238,7 +200,10 @@ export function LiveCamera({
         {shot ? (
           <>
             <button
-              onClick={() => setShot("")}
+              onClick={() => {
+                setShot("");
+                setQuality(null);
+              }}
               className="flex h-14 items-center gap-2 rounded-full border border-white/30 px-6 text-base font-semibold"
             >
               <RotateCcw className="size-5" />
@@ -252,7 +217,7 @@ export function LiveCamera({
               className="flex h-14 items-center gap-2 rounded-full bg-harvest px-7 text-base font-semibold text-harvest-foreground"
             >
               <Check className="size-5" />
-              {text.use}
+              {quality && (quality.dark || quality.bright || quality.blurry) ? coach.useAnyway : text.use}
             </button>
           </>
         ) : (

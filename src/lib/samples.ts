@@ -1,11 +1,12 @@
-import type { Language, ScanResult } from "./scan";
+import type { CoreLanguage, Evidence, ScanResult } from "./scan";
 
 export type Sample = {
   id: string;
   title: string;
   detail: string;
   image: string;
-  results: Record<Language, ScanResult>;
+  results: Record<CoreLanguage, ScanResult>;
+  evidence: Evidence[];
 };
 
 const poison = "1-800-222-1222";
@@ -13,6 +14,13 @@ const poison = "1-800-222-1222";
 export const samples: Sample[] = [
   {
     id: "valley-guard",
+    evidence: [
+      { field: "product", quote: "VALLEY GUARD 2EC INSECTICIDE FOR ALMONDS AND STONE FRUIT" },
+      { field: "signal", quote: "CAUTION" },
+      { field: "reentry", quote: "Restricted-Entry Interval (REI): 12 hours. Do not enter or allow worker entry into treated areas during the REI." },
+      { field: "gear", quote: "long-sleeved shirt and long pants, chemical-resistant gloves, and shoes plus socks" },
+      { field: "firstAid", quote: "Rinse skin immediately with plenty of water for 15-20 minutes. Call a poison control center or doctor." },
+    ],
     title: "Almond insecticide label",
     detail: "Valley Guard 2EC",
     image: "/samples/valley-guard.svg",
@@ -82,6 +90,13 @@ export const samples: Sample[] = [
   },
   {
     id: "block-14",
+    evidence: [
+      { field: "product", quote: "PESTICIDES / PESTICIDAS. Almond Block 14" },
+      { field: "signal", quote: "DANGER / PELIGRO" },
+      { field: "reentry", quote: "DO NOT ENTER UNTIL OCT 26, 6:30 AM" },
+      { field: "gear", quote: "Early entry only by trained workers with respirator and chemical-resistant coveralls." },
+      { field: "firstAid", quote: "If exposed call Poison Control 1-800-222-1222." },
+    ],
     title: "Field sign after spraying",
     detail: "Almond block 14",
     image: "/samples/block-14.svg",
@@ -144,6 +159,13 @@ export const samples: Sample[] = [
   },
   {
     id: "rowkill",
+    evidence: [
+      { field: "product", quote: "ROWKILL 4L HERBICIDE FOR ORCHARD AND VINEYARD ROWS" },
+      { field: "signal", quote: "WARNING" },
+      { field: "reentry", quote: "Restricted-Entry Interval (REI): 24 hours. Do not enter or allow worker entry into treated areas during the REI." },
+      { field: "gear", quote: "coveralls over long-sleeved shirt and long pants, chemical-resistant gloves, protective eyewear (goggles), and chemical-resistant footwear plus socks" },
+      { field: "firstAid", quote: "Hold eye open and rinse slowly and gently with water for 15-20 minutes." },
+    ],
     title: "Weed killer label",
     detail: "Rowkill 4L",
     image: "/samples/rowkill.svg",

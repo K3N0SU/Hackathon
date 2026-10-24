@@ -1,4 +1,4 @@
-import type { Language } from "@/lib/scan";
+import type { CoreLanguage } from "@/lib/scan";
 
 export const authCopy = {
   en: {
@@ -137,7 +137,7 @@ export const authCopy = {
       notConfigured: "ਇਸ ਸਾਈਟ ਤੇ ਸਾਈਨ ਇਨ ਅਜੇ ਤਿਆਰ ਨਹੀਂ ਹੈ।",
     },
   },
-} satisfies Record<Language, unknown>;
+} satisfies Record<CoreLanguage, unknown>;
 
 export type AuthError = keyof (typeof authCopy)["en"]["errors"];
 

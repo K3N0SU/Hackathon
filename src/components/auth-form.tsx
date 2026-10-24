@@ -17,6 +17,7 @@ import { useEffect, useState } from "react";
 import { AuthCard } from "@/components/auth-card";
 import { useSavedLanguage, useSession } from "@/components/auth-provider";
 import { Input } from "@/components/ui/input";
+import { useCopy } from "@/lib/i18n";
 import { authCopy, authError, type AuthError } from "@/lib/auth-copy";
 import { auth } from "@/lib/firebase";
 
@@ -51,7 +52,7 @@ export function AuthForm({ mode }: { mode: Mode }) {
   const router = useRouter();
   const language = useSavedLanguage();
   const { user, ready } = useSession();
-  const text = authCopy[language];
+  const text = useCopy(authCopy, language);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

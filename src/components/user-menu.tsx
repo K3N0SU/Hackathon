@@ -5,6 +5,7 @@ import { LogOut, UserRound } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { useSession } from "@/components/auth-provider";
+import { useCopy } from "@/lib/i18n";
 import { authCopy } from "@/lib/auth-copy";
 import { auth } from "@/lib/firebase";
 import type { Language } from "@/lib/scan";
@@ -19,7 +20,7 @@ export function UserMenu({
   const { user, ready } = useSession();
   const [open, setOpen] = useState(false);
   const menu = useRef<HTMLDivElement>(null);
-  const text = authCopy[language];
+  const text = useCopy(authCopy, language);
 
   useEffect(() => {
     if (!open) return;

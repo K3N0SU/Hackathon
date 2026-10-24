@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { useCopy } from "@/lib/i18n";
 import { timeLeft, type Clock } from "@/lib/clocks";
 import { copy, type Language } from "@/lib/scan";
 
@@ -26,7 +27,7 @@ export function ClockStarter({
   hours: number;
   onStart: (sprayedAt: number) => void;
 }) {
-  const text = copy[language];
+  const text = useCopy(copy, language);
   const [time, setTime] = useState(() => clockTime(new Date()));
   const [started, setStarted] = useState(false);
 
@@ -74,7 +75,7 @@ export function ClockList({
   now: number;
   onRemove: (id: string) => void;
 }) {
-  const text = copy[language];
+  const text = useCopy(copy, language);
   if (clocks.length === 0) return null;
 
   return (

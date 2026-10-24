@@ -1,6 +1,11 @@
-import type { Language } from "./scan";
+import type { CoreLanguage, ScanResult } from "./scan";
 
-export type LastScan = { product: string; signal: string };
+export type LastScan = {
+  product: string;
+  signal: string;
+  result?: ScanResult;
+  at?: number;
+};
 
 export const lastScanKey = "furrow-last-scan";
 
@@ -22,7 +27,7 @@ type ExposureCopy = {
   interpreter: string;
 };
 
-export const exposureCopy: Record<Language, ExposureCopy> = {
+export const exposureCopy: Record<CoreLanguage, ExposureCopy> = {
   en: {
     tab: "Exposed",
     title: "Got pesticide on you?",

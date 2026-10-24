@@ -1,0 +1,359 @@
+{
+ "uybgyd": {
+  "headline": "Biết rõ trước khi bạn vào ruộng.",
+  "tagline": "Chụp ảnh nhãn thuốc trừ sâu hoặc biển báo ngoài ruộng. Furrow sẽ chỉ cho bạn, bằng tiếng Việt, khi nào vào lại an toàn và cách tự bảo vệ mình.",
+  "scan": "Chụp ảnh nhãn hoặc biển báo",
+  "samples": "Hoặc thử một ví dụ",
+  "reading": "Đang đọc nhãn thuốc",
+  "reentry": "Khi nào bạn có thể vào lại",
+  "gear": "Đồ bảo hộ cần mặc",
+  "firstAid": "Nếu bạn bị dính thuốc",
+  "summary": "Tóm tắt nhanh",
+  "listen": "Nghe",
+  "stop": "Dừng",
+  "another": "Quét ảnh khác",
+  "ask": "Chỗ này chưa rõ. Hãy hỏi người giám sát của bạn.",
+  "unreadable": "Không đọc được ảnh này. Hãy lại gần hơn, giữ chắc điện thoại và thử lại.",
+  "failed": "Đã có lỗi xảy ra. Kiểm tra lại mạng và thử lại nhé.",
+  "offline": "Không có mạng. Đang hiện kết quả mẫu đã lưu.",
+  "noVoice": "Điện thoại này không có giọng đọc cho ngôn ngữ này.",
+  "disclaimer": "Đây chỉ là công cụ hỗ trợ đọc. Luôn làm theo nhãn thuốc và người giám sát của bạn.",
+  "sprayedAt": "Đã phun thuốc lúc nào?",
+  "startClock": "Bắt đầu tính giờ",
+  "clocksHeading": "Các ruộng đang tính giờ",
+  "safeAt": "Vào an toàn lúc",
+  "safeNow": "Đã an toàn để vào",
+  "hoursUnit": "giờ",
+  "minutesUnit": "phút",
+  "leftWord": "còn lại",
+  "clearClock": "Xóa",
+  "callPoison": "Gọi Trung tâm Chống Độc",
+  "signal": {
+   "caution": "Cẩn thận",
+   "warning": "Cảnh báo",
+   "danger": "Nguy hiểm",
+   "unknown": "Không thấy ghi"
+  }
+ },
+ "1swoxky": {
+  "tab": "Nhiệt độ",
+  "title": "Nhiệt độ hôm nay",
+  "intro": "Xem nơi bạn làm việc sẽ nóng đến mức nào, và những gì California yêu cầu chủ của bạn phải chuẩn bị cho bạn.",
+  "check": "Kiểm tra nhiệt độ ở đây",
+  "checking": "Đang kiểm tra thời tiết...",
+  "again": "Kiểm tra lại",
+  "failed": "Không lấy được thông tin thời tiết. Hãy kiểm tra kết nối mạng rồi thử lại.",
+  "nearManteca": "Định vị đang tắt, nên đây là thời tiết ở Manteca.",
+  "now": "Bây giờ",
+  "feels": "Cảm giác như",
+  "high": "Nóng nhất hôm nay",
+  "levels": {
+   "normal": {
+    "title": "Nhiệt độ bình thường",
+    "body": "Uống nước thường xuyên, ngay cả trước khi thấy khát. Chủ của bạn phải chuẩn bị nước uống mát, miễn phí ngay gần chỗ bạn làm việc."
+   },
+   "shade": {
+    "title": "Phải có bóng râm sẵn sàng",
+    "body": "Khi trời trên 80°F, California yêu cầu phải có bóng râm gần nơi bạn làm việc, đủ chỗ cho tất cả mọi người khi nghỉ giải lao. Bạn có thể vào bóng râm nghỉ bất cứ lúc nào cần hạ nhiệt."
+   },
+   "high": {
+    "title": "Trời rất nóng",
+    "body": "Từ 95°F trở lên, phải có người theo dõi nhóm làm việc xem có ai bị kiệt sức vì nóng không, và người làm nông được nghỉ 10 phút để hạ nhiệt sau mỗi hai tiếng. Phải có bóng râm sẵn sàng."
+   }
+  },
+  "water": "Uống khoảng một quart nước mỗi tiếng. Tức là khoảng bốn cốc nước.",
+  "signsTitle": "Gọi người giúp ngay nếu có ai bị",
+  "signs": [
+   "Lú lẫn hoặc nói ngọng, nói khó nghe",
+   "Da nóng bừng và khô, hoặc đổ mồ hôi rất nhiều",
+   "Ngất xỉu hoặc co giật",
+   "Đau đầu dữ dội, buồn nôn hoặc nôn mửa"
+  ],
+  "call911": "Gọi 911",
+  "rules": "Dựa trên các quy định về làm việc ngoài trời nắng nóng của California."
+ },
+ "kkahit": {
+  "tab": "Bị dính thuốc",
+  "title": "Bị dính thuốc trừ sâu?",
+  "emergency": "Nếu có ai khó thở, ngất xỉu hoặc lên cơn co giật, hãy gọi 911 ngay.",
+  "call911": "Gọi 911",
+  "steps": [
+   "Rời khỏi khu vực vừa xịt thuốc và ra chỗ thoáng khí.",
+   "Cởi bỏ quần áo và giày dép bị dính thuốc xịt.",
+   "Rửa da với thật nhiều nước sạch và xà phòng trong 15 phút. Nếu dính vào mắt, hãy rửa bằng nước sạch trong 15 phút.",
+   "Gọi cho Trung Tâm Kiểm Soát Chất Độc. Dịch vụ này miễn phí, kín đáo và có thông dịch viên.",
+   "Báo cho người giám sát biết đó là loại thuốc nào. Chủ của bạn phải đưa bạn đi khám bệnh."
+  ],
+  "rinseStart": "Bắt đầu xả nước 15 phút",
+  "rinseKeep": "Tiếp tục xả nước",
+  "rinseDone": "Đã xong 15 phút",
+  "rinseAgain": "Bắt đầu lại",
+  "productLabel": "Tên sản phẩm, nếu bạn biết",
+  "productHint": "Tự điền từ lần quét trước của bạn",
+  "timeLabel": "Chuyện xảy ra lúc nào?",
+  "showCard": "Đưa thẻ tiếng Anh này cho bác sĩ xem",
+  "close": "Đóng",
+  "interpreter": ""
+ },
+ "12jsthl": {
+  "signInTitle": "Chào mừng bạn quay lại",
+  "signUpTitle": "Tạo tài khoản",
+  "intro": "Các mục quét, đồng hồ đếm ngược và ngôn ngữ của bạn được lưu vào tài khoản, nên bạn dùng điện thoại nào cũng có.",
+  "name": "Tên của bạn",
+  "email": "Email",
+  "password": "Mật khẩu",
+  "signIn": "Đăng nhập",
+  "signUp": "Tạo tài khoản",
+  "google": "Tiếp tục với Google",
+  "or": "hoặc",
+  "noAccount": "Bạn mới dùng Furrow?",
+  "createOne": "Tạo tài khoản",
+  "haveAccount": "Đã có tài khoản rồi?",
+  "signInLink": "Đăng nhập",
+  "forgot": "Quên mật khẩu?",
+  "resetNeedsEmail": "Nhập email của bạn trước, rồi bấm Quên mật khẩu.",
+  "resetSent": "Chúng tôi đã gửi liên kết để đặt lại mật khẩu. Hãy kiểm tra email của bạn.",
+  "working": "Chờ một chút...",
+  "verifyTitle": "Kiểm tra email của bạn",
+  "verifyBody": "Chúng tôi đã gửi một liên kết tới",
+  "verifyNext": "Mở liên kết để xác nhận email của bạn. Trang này sẽ tự động chuyển tiếp sau khi bạn làm xong.",
+  "resend": "Gửi lại liên kết",
+  "resent": "Đã gửi. Có thể mất một phút, và thư có thể nằm trong mục rác (spam).",
+  "verified": "Tôi đã mở liên kết",
+  "notYet": "Vẫn chưa được xác nhận. Hãy mở liên kết trong email, rồi thử lại.",
+  "useOther": "Dùng email khác",
+  "account": "Tài khoản",
+  "signedInAs": "Đã đăng nhập bằng",
+  "signOut": "Đăng xuất",
+  "errors": {
+   "invalid": "Email hoặc mật khẩu đó không đúng.",
+   "inUse": "Email đó đã có tài khoản rồi. Hãy đăng nhập lại.",
+   "weak": "Dùng ít nhất 6 ký tự cho mật khẩu.",
+   "badEmail": "Đó có vẻ không phải là địa chỉ email.",
+   "popup": "Cửa sổ Google đã đóng trước khi bạn hoàn tất.",
+   "tooMany": "Thử lại quá nhiều lần. Hãy đợi vài phút rồi thử lại.",
+   "network": "Không có mạng. Kiểm tra lại sóng rồi thử lại.",
+   "generic": "Có lỗi xảy ra. Hãy thử lại.",
+   "notConfigured": "Trang này chưa thiết lập tính năng đăng nhập."
+  }
+ },
+ "1moh18d": {
+  "tabs": {
+   "scan": "Quét",
+   "ask": "Hỏi",
+   "tools": "Công cụ",
+   "saved": "Đã lưu"
+  },
+  "language": "Ngôn ngữ",
+  "chooseLanguage": "Chọn ngôn ngữ của bạn",
+  "back": "Quay lại",
+  "toolsTitle": "Công cụ",
+  "toolsIntro": "Mọi thứ Furrow có thể làm. Bấm vào một mục.",
+  "tools": {
+   "heat": {
+    "title": "Kiểm tra độ nóng",
+    "body": "Giờ nóng nhất hôm nay và quyền lợi của bạn"
+   },
+   "symptoms": {
+    "title": "Tôi thấy mệt",
+    "body": "Tìm số để gọi trợ giúp"
+   },
+   "exposed": {
+    "title": "Bị dính thuốc",
+    "body": "911, hẹn giờ xả nước, thẻ khám bác sĩ"
+   },
+   "paper": {
+    "title": "Đọc giấy tờ",
+    "body": "Thông báo, cuống phiếu lương, giấy tờ"
+   },
+   "report": {
+    "title": "Báo cáo vấn đề",
+    "body": "Nói lại sự việc, nhận bản báo cáo tiếng Anh"
+   },
+   "brief": {
+    "title": "Kế hoạch hôm nay",
+    "body": "Lô làm việc và độ nóng, đọc to thành tiếng"
+   },
+   "map": {
+    "title": "Bản đồ xịt thuốc",
+    "body": "Nơi bạn đã quét nhãn thuốc"
+   },
+   "install": {
+    "title": "Thêm vào điện thoại",
+    "body": "Mở Furrow như một ứng dụng"
+   }
+  },
+  "ask": {
+   "title": "Hỏi Furrow",
+   "about": "Giới thiệu",
+   "general": "Hỏi về thuốc trừ sâu, trời nóng hoặc quyền của bạn khi đi làm.",
+   "placeholder": "Gõ chữ hoặc bấm vào mic",
+   "send": "Gửi",
+   "listening": "Đang lắng nghe...",
+   "thinking": "Đang suy nghĩ...",
+   "failed": "Không lấy được câu trả lời. Kiểm tra mạng rồi thử lại nhé.",
+   "starters": [
+    "Khi nào tôi được vào lại ruộng?",
+    "Tôi cần mặc đồ bảo hộ gì?",
+    "Nếu thuốc dính vào da thì sao?",
+    "Chủ có được bắt tôi vào làm sớm không?"
+   ],
+   "clear": "Trò chuyện mới",
+   "listen": "Nghe",
+   "call911": "Gọi 911"
+  },
+  "result": {
+   "askAbout": "Hỏi về nhãn thuốc này",
+   "supervisor": "Đưa quản lý xem",
+   "share": "Chia sẻ với nhóm",
+   "shared": "Đã có liên kết để gửi",
+   "copied": "Đã sao chép liên kết",
+   "shareFailed": "Không tạo được liên kết. Thử lại nhé.",
+   "howRead": "Cách Furrow đọc nhãn này",
+   "confidence": {
+    "high": "Đọc rõ ràng",
+    "medium": "Nên kiểm tra lại",
+    "low": "Không chắc chắn"
+   },
+   "confidenceNote": {
+    "high": "Nhãn rất rõ và mọi câu trả lời dưới đây đều có in trên đó.",
+    "medium": "Có chữ nhỏ hoặc bị che một phần. Xem lại nhãn hoặc đi hỏi nhé.",
+    "low": "Furrow không chắc về một phần nội dung này. Hãy hỏi quản lý của bạn."
+   },
+   "fields": {
+    "product": "Sản phẩm",
+    "signal": "Từ cảnh báo",
+    "reentry": "Thời gian vào lại",
+    "gear": "Đồ cần mặc",
+    "firstAid": "Sơ cứu"
+   },
+   "others": "Cũng có trong ảnh này"
+  },
+  "supervisorCard": {
+   "close": "Đóng",
+   "intro": "Đưa màn hình này cho quản lý của bạn xem."
+  },
+  "coach": {
+   "dark": "Tối quá. Ra chỗ sáng hơn hoặc bật thêm đèn lên.",
+   "bright": "Sáng quá. Đổi góc chụp để nắng không chiếu vào nhãn.",
+   "blurry": "Hơi mờ. Cầm chắc tay và đưa lại gần hơn.",
+   "useAnyway": "Cứ dùng ảnh này"
+  },
+  "symptoms": {
+   "title": "Bạn thấy trong người thế nào?",
+   "intro": "Bấm vào mọi dấu hiệu bạn đang có. Furrow sẽ chỉ cho bạn biết nên gọi cho ai.",
+   "list": [
+    "Đau đầu",
+    "Chóng mặt",
+    "Buồn nôn",
+    "Nôn mửa",
+    "Rát mắt",
+    "Phát ban hoặc rát da",
+    "Đổ mồ hôi nhiều",
+    "Giật cơ",
+    "Rất mệt",
+    "Chuột rút",
+    "Khó thở",
+    "Đau ngực",
+    "Lẫn lộn",
+    "Ngất xỉu"
+   ],
+   "note": "Còn gì khác không? Cứ nói theo lời của bạn.",
+   "check": "Chỉ cho tôi cách xử lý",
+   "checking": "Đang kiểm tra...",
+   "failed": "Không kiểm tra được. Nếu thấy quá mệt, hãy gọi 911.",
+   "again": "Làm lại từ đầu",
+   "callPoison": "Trung tâm Chống độc"
+  },
+  "paper": {
+   "title": "Đọc giấy tờ",
+   "intro": "Chụp ảnh giấy tờ ở chỗ làm. Furrow sẽ giải thích bằng tiếng của bạn.",
+   "take": "Chụp ảnh",
+   "choose": "Chọn ảnh",
+   "reading": "Đang đọc giấy tờ...",
+   "failed": "Không đọc được. Kiểm tra mạng rồi thử lại nhé.",
+   "unreadable": "Không đọc được giấy này. Hãy lại gần hơn, giữ chắc tay và chụp lại.",
+   "actions": "Việc bạn cần làm",
+   "dates": "Ngày tháng và số tiền",
+   "another": "Đọc tờ khác"
+  },
+  "report": {
+   "title": "Báo cáo vấn đề",
+   "intro": "Kể lại sự việc theo lời của bạn. Furrow sẽ viết một bản báo cáo rõ ràng bằng tiếng Anh để bạn gửi cho chủ vườn hoặc quận.",
+   "placeholder": "Ví dụ: Họ xịt thuốc ở ruộng bên cạnh khi chúng tôi đang hái, gió thổi thuốc bay hết vào người chúng tôi.",
+   "when": "Chuyện xảy ra khi nào?",
+   "write": "Viết báo cáo cho tôi",
+   "writing": "Đang viết...",
+   "failed": "Không viết được báo cáo. Thử lại nhé.",
+   "english": "Bản báo cáo bằng tiếng Anh",
+   "yourLanguage": "Nội dung ghi là gì",
+   "missing": "Thêm các mục này để bản báo cáo rõ hơn",
+   "copy": "Sao chép",
+   "copied": "Đã sao chép",
+   "share": "Gửi đi",
+   "edit": "Sửa lại lời kể"
+  },
+  "brief": {
+   "title": "Kế hoạch hôm nay",
+   "intro": "Furrow xem giờ giấc của bạn cùng mức độ nóng hôm nay rồi đọc to kế hoạch cho bạn nghe.",
+   "make": "Nói cho tôi kế hoạch hôm nay",
+   "making": "Đang lập kế hoạch...",
+   "failed": "Không lập được kế hoạch. Hãy kiểm tra kết nối mạng.",
+   "listen": "Nghe",
+   "again": "Cập nhật"
+  },
+  "map": {
+   "title": "Bản đồ xịt thuốc",
+   "intro": "Mỗi nhãn bạn quét sẽ được ghim đúng nơi bạn đã đứng.",
+   "empty": "Chưa có điểm quét nào được ghim. Hãy quét nhãn và nhớ bật định vị vị trí.",
+   "loading": "Đang tải các điểm quét của bạn...",
+   "failed": "Không tải được các điểm đã quét.",
+   "noPlace": "Các lượt quét này không có vị trí."
+  },
+  "alarms": {
+   "allow": "Rung báo cho tôi khi đã an toàn",
+   "on": "Báo thức đang bật",
+   "safeTitle": "Đã an toàn để vào lại",
+   "safeBody": "Đã hết thời gian cách ly cho",
+   "waterTitle": "Uống nước đi",
+   "waterBody": "Trời đang nóng. Hãy uống khoảng một lít nước mỗi giờ.",
+   "waterOn": "Nhắc tôi uống nước mỗi tiếng một lần",
+   "waterOff": "Đang bật nhắc uống nước"
+  },
+  "install": {
+   "title": "Thêm Furrow vào điện thoại",
+   "body": "Mở lên như một ứng dụng, xem được các nhãn đã quét, đồng hồ đếm giờ và các bước xử lý khi dính thuốc ngay cả khi mất sóng.",
+   "button": "Thêm vào màn hình chính",
+   "ios": "Trên iPhone: bấm Chia sẻ, rồi bấm Thêm vào Màn hình chính.",
+   "done": "Furrow đã có trên màn hình chính của bạn."
+  }
+ },
+ "1i1pcy3": {
+  "reading": [
+   "Đang đọc nhãn thuốc",
+   "Đang tìm giờ được vào lại",
+   "Đang đổi sang lời dễ hiểu"
+  ],
+  "saved": "Đã lưu vào lịch sử của bạn",
+  "choose": "Chọn ảnh khác thay thế"
+ },
+ "10g6smy": {
+  "hint": "Để trọn cả nhãn vào trong khung",
+  "capture": "Chụp ảnh",
+  "retake": "Chụp lại",
+  "use": "Đọc nhãn này",
+  "flip": "Đổi camera",
+  "gallery": "Chọn một ảnh",
+  "close": "Đóng camera",
+  "blocked": "Furrow không thể mở camera ở đây. Hãy cho phép mở camera trong phần cài đặt trình duyệt, hoặc dùng ứng dụng camera trên điện thoại của bạn.",
+  "openApp": "Dùng ứng dụng camera"
+ },
+ "pyuh1i": {
+  "tab": "Đã lưu",
+  "title": "Các nhãn bạn đã quét",
+  "intro": "Mỗi nhãn bạn quét đều được lưu vào tài khoản của bạn, trên bất kỳ điện thoại nào.",
+  "empty": "Chưa có gì được lưu. Hãy quét một nhãn và nhãn đó sẽ hiện ở đây cùng với ảnh chụp.",
+  "failed": "Không tải được các nhãn bạn đã quét. Hãy kiểm tra lại sóng và thử lại nhé.",
+  "remove": "Xóa"
+ }
+}

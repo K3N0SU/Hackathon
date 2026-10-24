@@ -4,6 +4,7 @@ import { Phone, ShowerHead, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { exposureCopy, lastScanKey, type LastScan } from "@/lib/exposure";
+import { useCopy } from "@/lib/i18n";
 import { copy, type Language } from "@/lib/scan";
 
 const rinseLength = 15 * 60 * 1000;
@@ -24,7 +25,8 @@ function englishTime(value: string) {
 }
 
 export function ExposureHelp({ language }: { language: Language }) {
-  const text = exposureCopy[language];
+  const text = useCopy(exposureCopy, language);
+  const callPoison = useCopy(copy, language).callPoison;
   const [product, setProduct] = useState("");
   const [fromScan, setFromScan] = useState(false);
   const [time, setTime] = useState("");
@@ -88,7 +90,7 @@ export function ExposureHelp({ language }: { language: Language }) {
             href="tel:18002221222"
             className="flex h-12 items-center justify-center rounded-lg border-2 border-white/80 px-2 text-center text-sm font-semibold leading-tight"
           >
-            {copy[language].callPoison}
+            {callPoison}
           </a>
         </div>
       </div>

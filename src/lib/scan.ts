@@ -1,6 +1,18 @@
-export type Language = "en" | "es" | "pa";
+export type CoreLanguage = "en" | "es" | "pa";
+
+export type Language = CoreLanguage | "hmn" | "tl" | "hi" | "ar" | "vi";
 
 export type Signal = "caution" | "warning" | "danger" | "unknown";
+
+export type Confidence = "high" | "medium" | "low";
+
+export type Evidence = { field: string; quote: string };
+
+export type OtherLabel = {
+  product: string;
+  signal: Signal;
+  reentryHours: number;
+};
 
 export type ScanResult = {
   readable: boolean;
@@ -12,19 +24,54 @@ export type ScanResult = {
   firstAid: string[];
   summary: string;
   ask: string;
+  confidence?: Confidence;
+  evidence?: Evidence[];
+  others?: OtherLabel[];
 };
 
-export const languages: { code: Language; name: string; speech: string }[] = [
-  { code: "en", name: "English", speech: "en-US" },
-  { code: "es", name: "Español", speech: "es-MX" },
-  { code: "pa", name: "ਪੰਜਾਬੀ", speech: "pa-IN" },
+export const languages: {
+  code: Language;
+  name: string;
+  english: string;
+  speech: string;
+  rtl?: boolean;
+}[] = [
+  { code: "en", name: "English", english: "English", speech: "en-US" },
+  { code: "es", name: "Español", english: "Spanish", speech: "es-MX" },
+  { code: "pa", name: "ਪੰਜਾਬੀ", english: "Punjabi", speech: "pa-IN" },
+  { code: "hmn", name: "Hmoob", english: "Hmong", speech: "hmn" },
+  { code: "tl", name: "Tagalog", english: "Tagalog", speech: "fil-PH" },
+  { code: "hi", name: "हिन्दी", english: "Hindi", speech: "hi-IN" },
+  { code: "ar", name: "العربية", english: "Arabic", speech: "ar", rtl: true },
+  { code: "vi", name: "Tiếng Việt", english: "Vietnamese", speech: "vi-VN" },
 ];
 
 export const languageNames: Record<Language, string> = {
   en: "English",
   es: "Spanish",
   pa: "Punjabi (Gurmukhi script)",
+  hmn: "Hmong (Hmong Daw, Romanized Popular Alphabet)",
+  tl: "Tagalog",
+  hi: "Hindi (Devanagari script)",
+  ar: "Arabic",
+  vi: "Vietnamese",
 };
+
+export function isLanguage(value: unknown): value is Language {
+  return typeof value === "string" && value in languageNames;
+}
+
+export function isCore(language: Language): language is CoreLanguage {
+  return language === "en" || language === "es" || language === "pa";
+}
+
+export function speechCode(language: Language) {
+  return languages.find((item) => item.code === language)?.speech ?? "en-US";
+}
+
+export function isRtl(language: Language) {
+  return Boolean(languages.find((item) => item.code === language)?.rtl);
+}
 
 type Copy = {
   headline: string;
@@ -58,7 +105,7 @@ type Copy = {
   signal: Record<Signal, string>;
 };
 
-export const copy: Record<Language, Copy> = {
+export const copy: Record<CoreLanguage, Copy> = {
   en: {
     headline: "Know before you enter the field.",
     tagline:

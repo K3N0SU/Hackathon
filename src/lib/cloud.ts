@@ -28,6 +28,8 @@ export type SavedScan = {
   language: Language;
   thumb: string;
   result: ScanResult;
+  latitude?: number;
+  longitude?: number;
 };
 
 function db() {
@@ -74,6 +76,25 @@ export async function listScans(): Promise<SavedScan[]> {
   return snapshot.docs.map(
     (item) => ({ id: item.id, ...item.data() }) as SavedScan,
   );
+}
+
+export type SharedScan = {
+  createdAt: number;
+  language: Language;
+  thumb: string;
+  result: ScanResult;
+};
+
+export async function shareScan(scan: SharedScan) {
+  const id = uid();
+  if (!id) throw new Error("signed out");
+  const created = await addDoc(collection(db(), "shares"), { ...scan, uid: id });
+  return created.id;
+}
+
+export async function loadShare(shareId: string) {
+  const snapshot = await getDoc(doc(db(), "shares", shareId));
+  return (snapshot.data() as SharedScan | undefined) ?? null;
 }
 
 export async function deleteScan(scanId: string) {
