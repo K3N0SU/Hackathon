@@ -12,7 +12,7 @@ Goal: win. Judges reward a working live demo, a clear story, and polish. Theme i
 - Ask the user only when blocked on a decision that is theirs. Otherwise pick the default and note it.
 
 ## Stack
-Next.js 16 (App Router, `src/`), TypeScript, Tailwind v4, shadcn/ui (`src/components/ui`), Google Gemini free tier via REST. Scan route at `src/app/api/scan/route.ts` takes a base64 image and language and returns schema-constrained JSON. Default model `gemini-2.5-flash` (env `GEMINI_MODEL`, key `GEMINI_API_KEY`). Everything must stay free. Secrets in `.env.local`, never committed; `.env.example` is the template.
+Next.js 16 (App Router, `src/`), TypeScript, Tailwind v4, shadcn/ui (`src/components/ui`), Google Gemini free tier via REST. Scan route at `src/app/api/scan/route.ts` takes a base64 image and language and returns schema-constrained JSON. Default model `gemini-3.8-flash` (env `GEMINI_MODEL`, key `GEMINI_API_KEY`). Everything must stay free. Secrets in `.env.local`, never committed; `.env.example` is the template.
 - Next 16 differs from older versions. For unfamiliar APIs read `node_modules/next/dist/docs/01-app/` before writing code.
 - Windows + PowerShell. Refresh PATH if a tool is missing: `$env:Path = [Environment]::GetEnvironmentVariable('Path','Machine') + ';' + [Environment]::GetEnvironmentVariable('Path','User')`. No `&&`.
 - Verify with `npm run build` and `npm run lint`. Run dev with `npm run dev` only when needed.

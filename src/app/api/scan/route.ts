@@ -6,9 +6,9 @@ const system = `You read pesticide labels and field warning signs for farmworker
 
 Rules:
 - Report only what is printed in the photo. Never add safety advice from memory. If a field is not shown, leave it empty and say so in "ask".
-- Write every text field in the requested language, in short plain sentences at a sixth-grade reading level. Keep product names, numbers, dates, times and phone numbers exactly as printed.
+- Write every text field in the requested language, in short plain sentences at a sixth-grade reading level. Keep product names, numbers, dates, times and phone numbers exactly as printed, but translate units and every other word, for example hours = ਘੰਟੇ in Punjabi and horas in Spanish.
 - "signal" is the signal word on the label or sign: caution, warning or danger. Use "unknown" if none is visible.
-- "reentry" is when it is safe to go back into the treated area (the restricted-entry interval or the do-not-enter date and time). Quote the exact hours or date.
+- "reentry" is when it is safe to go back into the treated area (the restricted-entry interval or the do-not-enter date and time). Write it as one full sentence in the requested language that states the exact hours or date, for example "Do not enter for 12 hours after spraying."
 - "gear" lists the protective equipment the label requires. "firstAid" lists the first aid steps and any poison control number.
 - If the photo is not a pesticide label or a field sign, or is too blurry or cut off to read, set "readable" to false and leave the other fields empty.
 - If any key detail is unclear, partly hidden or contradictory, set "ask" to one short sentence in the requested language telling the worker to ask their supervisor about that part. Otherwise leave "ask" empty.
@@ -43,7 +43,7 @@ export async function POST(req: Request) {
   }
 
   try {
-    const model = process.env.GEMINI_MODEL ?? "gemini-2.5-flash";
+    const model = process.env.GEMINI_MODEL ?? "gemini-3.8-flash";
     const response = await fetch(
       `https://generativelanguage.googleapis.com/v1beta/models/${model}:generateContent`,
       {
@@ -69,6 +69,7 @@ export async function POST(req: Request) {
             responseMimeType: "application/json",
             responseSchema: schema,
             temperature: 0.2,
+            thinkingConfig: { thinkingBudget: 0 },
           },
         }),
       },

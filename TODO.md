@@ -14,7 +14,8 @@ Update before ending every task. Keep terse.
 
 ## Next
 - User: Devpost account, free `GEMINI_API_KEY` from aistudio.google.com (no card) in `.env.local` and Vercel env, confirm deadline and sponsor credits at check-in, 3 label or sign photos (else I seed samples).
-- Me next: user adds GEMINI_API_KEY then test live scan with the 3 samples and a real photo, check on phone, fix Punjabi quality and any layout issues. Then polish (favicon, logo, spacing), README, Devpost copy, slides outline, demo script.
+- Done: GEMINI_API_KEY in `.env.local` (gitignored), live scan verified in Punjabi on valley-guard sample (about 5s, model gemini-3.8-flash because 2.5 was retired). Dev server may still be running on :3000.
+- Me next: add GEMINI_API_KEY to Vercel (user), test es and en plus the other 2 samples, check layout on phone, fix issues. Then polish (favicon, logo, spacing), README, Devpost copy, slides outline, demo script.
 - Not yet verified visually in a browser; lint and build pass.
 
 ## Decisions
