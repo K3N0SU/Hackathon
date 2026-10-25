@@ -26,3 +26,4 @@ Update before ending every task. Keep terse.
 ## Decisions
 - Accounts required. No Punjabi script on landing. Pay check facts: CA min wage $16.90 (2026), ag overtime after 8h/day or 40h/week, double after 12h. Labor Commissioner 1-833-526-4636.
 - Scanner is the main feature; everything else is a sub-tool. Chat is a bubble, not a tab.
+- Hero italic words no longer clip (word-mask padding, globals.css). Commit 169a55a.
