@@ -578,7 +578,7 @@ export default function Home() {
 
       <footer className="border-t border-white/10 bg-ink text-sm text-ink-foreground/70">
         <div className="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-6 py-8">
-          <p>Built at SierraHacks 2026 in Manteca, California.</p>
+          <p>Made by Mohammed Syed as a submission to SierraHacks 2026 in Manteca, California.</p>
           <a href="tel:18002221222" className="underline-draw font-medium text-ink-foreground">
             Poison Control: 1-800-222-1222
           </a>
