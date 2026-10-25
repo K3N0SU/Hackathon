@@ -9,6 +9,7 @@ import { fileToJpeg, toJpeg } from "@/lib/image";
 import type { Language } from "@/lib/scan";
 import { useSpeaker } from "@/lib/speech";
 import { toolsCopy } from "@/lib/tools-copy";
+import { remember } from "@/lib/history";
 
 type Status = "ok" | "ask" | "missing";
 
@@ -74,6 +75,7 @@ export function PayCheck({ language }: { language: Language }) {
         return;
       }
       setState({ step: "done", photo, stub });
+      remember("pay check", { employer: stub.employer, period: stub.period, hours: stub.hours, rate: stub.rate, gross: stub.gross, net: stub.net, verdict: stub.verdict, summary: stub.summary, checks: stub.checks.map((item) => `${item.label}: ${item.status}`) });
       navigator.vibrate?.(25);
     } catch {
       setState({ step: "problem", message: text.failed });

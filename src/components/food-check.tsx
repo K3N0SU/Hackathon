@@ -9,6 +9,7 @@ import { fileToJpeg, toJpeg } from "@/lib/image";
 import type { Language } from "@/lib/scan";
 import { useSpeaker } from "@/lib/speech";
 import { toolsCopy } from "@/lib/tools-copy";
+import { remember } from "@/lib/history";
 
 const allergyIds = ["milk", "eggs", "fish", "shellfish", "tree nuts", "peanuts", "wheat", "soy", "sesame"];
 const storageKey = "furrow-allergies";
@@ -156,6 +157,7 @@ export function FoodCheck({ language }: { language: Language }) {
         return;
       }
       setState({ step: "done", photo, food });
+      remember("food check", { product: food.product, verdict: food.verdict, summary: food.summary, allergens: food.allergens.map((item) => `${item.level} ${item.name}`), organic: food.organic, pesticides: food.pesticides, about: food.about, barcode: food.barcode });
       navigator.vibrate?.(food.verdict === "avoid" ? [150, 80, 150] : 25);
     } catch {
       setState({ step: "problem", message: text.failed });

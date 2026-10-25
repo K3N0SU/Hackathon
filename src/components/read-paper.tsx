@@ -3,6 +3,7 @@
 import { AlertTriangle, CalendarDays, Camera, CheckCircle2, ImageIcon, RotateCcw, Volume2, VolumeX } from "lucide-react";
 import { useRef, useState } from "react";
 import { LiveCamera } from "@/components/live-camera";
+import { remember } from "@/lib/history";
 import { appCopy } from "@/lib/app-copy";
 import { useCopy } from "@/lib/i18n";
 import { fileToJpeg, toJpeg } from "@/lib/image";
@@ -42,6 +43,7 @@ export function ReadPaper({ language }: { language: Language }) {
       });
       if (!response.ok) throw new Error("failed");
       const reading: Reading = await response.json();
+      if (reading.readable) remember("work paper", { kind: reading.kind, summary: reading.summary, actions: reading.actions, dates: reading.dates, warning: reading.warning });
       setState(
         reading.readable
           ? { step: "done", photo, reading }

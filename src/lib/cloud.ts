@@ -1,3 +1,4 @@
+import type { HistoryEntry } from "@/lib/history";
 import {
   addDoc,
   collection,
@@ -25,6 +26,7 @@ export type Profile = {
   language?: Language;
   clocks?: Clock[];
   lastScan?: LastScan;
+  history?: HistoryEntry[];
 };
 
 export type SavedScan = {

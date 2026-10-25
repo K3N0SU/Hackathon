@@ -1,5 +1,6 @@
 "use client";
 
+import { remember } from "@/lib/history";
 import { Check, LoaderCircle, Mic, Phone, RotateCcw, Stethoscope } from "lucide-react";
 import { useEffect, useState } from "react";
 import { appCopy } from "@/lib/app-copy";
@@ -62,7 +63,9 @@ export function SymptomCheck({ language }: { language: Language }) {
         }),
       });
       if (!response.ok) throw new Error("failed");
-      setAnswer(await response.json());
+      const answered: Answer = await response.json();
+      setAnswer(answered);
+      remember("symptom check", { urgency: answered.urgency, title: answered.title, why: answered.why, steps: answered.steps });
       setState("idle");
       navigator.vibrate?.(30);
     } catch {

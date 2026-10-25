@@ -1,5 +1,6 @@
 "use client";
 
+import { remember } from "@/lib/history";
 import { Check, ClipboardPen, Copy, LoaderCircle, Mic, Pencil, Send } from "lucide-react";
 import { useEffect, useState } from "react";
 import { appCopy } from "@/lib/app-copy";
@@ -58,7 +59,9 @@ export function ReportWriter({ language }: { language: Language }) {
         }),
       });
       if (!response.ok) throw new Error("failed");
-      setReport(await response.json());
+      const written: Report = await response.json();
+      setReport(written);
+      remember("spray report", { title: written.title, summary: written.summary, report: written.report.slice(0, 1500) });
       navigator.vibrate?.(25);
     } catch {
       setFailed(true);

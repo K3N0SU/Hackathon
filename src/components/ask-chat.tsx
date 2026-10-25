@@ -24,6 +24,7 @@ import { appCopy } from "@/lib/app-copy";
 import { freshChat, useChats, type Chat, type ChatMessage } from "@/lib/chats";
 import { listScans } from "@/lib/cloud";
 import { lastScanKey } from "@/lib/exposure";
+import { readHistory, syncHistory } from "@/lib/history";
 import type { Clock } from "@/lib/clocks";
 import { useCopy } from "@/lib/i18n";
 import { fileToJpeg, toJpeg } from "@/lib/image";
@@ -111,6 +112,7 @@ export function AskChat({
   useEffect(() => {
     if (!user) return;
     let active = true;
+    syncHistory();
     listScans()
       .then((scans) => {
         if (!active) return;
@@ -142,6 +144,7 @@ export function AskChat({
       lastScannedLabel: last ? { product: last.product, signal: last.signal, result: last.result } : undefined,
       savedScans: savedScans.current,
       foodAllergies: read("furrow-allergies") ?? [],
+      toolHistory: readHistory().slice(0, 12),
     };
   }
   const { chats, store, remove } = useChats(user?.uid);

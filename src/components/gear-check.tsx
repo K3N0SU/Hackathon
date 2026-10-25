@@ -10,6 +10,7 @@ import { fileToJpeg, toJpeg } from "@/lib/image";
 import type { Language } from "@/lib/scan";
 import { useSpeaker } from "@/lib/speech";
 import { toolsCopy } from "@/lib/tools-copy";
+import { remember } from "@/lib/history";
 
 type Status = "on" | "missing" | "unsure";
 
@@ -86,6 +87,7 @@ export function GearCheck({ language }: { language: Language }) {
         return;
       }
       setState({ step: "done", photo, check: result });
+      remember("gear check", { product: label?.product, verdict: result.verdict, summary: result.summary, items: result.items.map((item) => `${item.item}: ${item.status}`) });
       navigator.vibrate?.(result.verdict === "ready" ? 25 : [120, 60, 120]);
     } catch {
       setState({ step: "problem", message: text.failed });
