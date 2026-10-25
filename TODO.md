@@ -4,7 +4,7 @@ Update before ending every task. Keep terse.
 
 ## State
 - Name: Milpa (renamed from Furrow, briefly Rowen/Fieldwise). Storage keys still `furrow-*`, Firebase project `furrow-422fa`, Vercel URL is now milpa-california.vercel.app (renamed furrow-valley, milpa-valley, then milpa-cali, then milpa-california Oct 24; all in Firebase authorized domains via scratchpad authdomains.js).
-- Live: https://milpa-california.vercel.app. Repo https://github.com/K3N0SU/Hackathon (public) main, auto-deploys. Push with `git -c http.curloptResolve=github.com:443:140.82.112.3 push origin main`.
+- Live: https://milpa-california.vercel.app. Repo https://github.com/K3N0SU/Milpa-Safety-for-Workers (public) main, auto-deploys. Push with `git -c http.curloptResolve=github.com:443:140.82.112.3 push origin main`.
 - Hackathon facts: Downloads/IntroSlides.pdf, summarized in memory judging-rubric. Submissions close 6:30 PM Oct 24. Official weights: innovation 30, technical 25, design/UX 20, impact 15, presentation 10. Tracks to enter: Main, Best AI/ML, Best Solo.
 - Design: vibrant palette in globals.css (cobalt primary, poppy accent, sunflower harvest, leaf, ink navy, warm white). Fraunces + Public Sans. Pixel farm canvas src/components/pixel-farm.tsx only on the Today hero (user: pixel art nowhere else). Scroll zoom classes zoom-hero/zoom-depth/zoom-band/zoom-rise (KAWAKAWA = user wants it removed). hover-word effect on headings.
 - Landing src/app/page.tsx: plain hero + LabelReader, language/crop marquees, problem, tour, #ai bento (8 AI jobs with model chips), ask, numbers (cobalt band), heat, honest, 15 tools, FAQ, ink closing. Section rail 2xl only.

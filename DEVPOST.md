@@ -85,7 +85,7 @@ Google Gemini API (gemini-3.8-flash, gemini-3.8-flash-tts), Firebase Authenticat
 ## Links
 
 Live site: https://milpa-california.vercel.app (free, sign in with Google or email)
-Code: https://github.com/K3N0SU/Hackathon
+Code: https://github.com/K3N0SU/Milpa-Safety-for-Workers
 
 ## Closing line (put at the end of the story)
 
