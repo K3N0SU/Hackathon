@@ -29,3 +29,4 @@ Update before ending every task. Keep terse.
 - Hero italic words no longer clip (word-mask padding, globals.css). Commits 169a55a, edb32d4.
 - Landing polish: tools grid 4 columns (16 even), AI bento last card spans 2 (no hole), hero card gear list text-ink (was invisible).
 - Hero/Ask demo question now "Can I eat lunch in the field yet?" (was "between the rows", confusing).
+- Interpreter visuals: centered empty state per side (mic disc, big language name, hint), live sound bars + red ring while listening, bottom padding so Ask Milpa bubble no longer covers the Me button.

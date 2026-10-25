@@ -11,6 +11,8 @@ type Side = "me" | "them";
 
 type Turn = { id: number; side: Side; heard: string; translation: string };
 
+const barWeights = [0.45, 0.8, 1, 0.7, 0.4];
+
 export function Interpreter({ language }: { language: Language }) {
   const text = useCopy(toolsCopy, language).interpret;
   const [other, setOther] = useState<Language>(language === "en" ? "es" : "en");
@@ -83,7 +85,7 @@ export function Interpreter({ language }: { language: Language }) {
     return (
       <div
         lang={lang}
-        className={`flex min-h-0 flex-1 flex-col gap-3 rounded-[2rem] p-4 ${
+        className={`flex min-h-0 flex-1 flex-col gap-3 rounded-[2rem] p-5 ${
           own ? "bg-card ring-1 ring-border" : "bg-primary text-primary-foreground max-lg:rotate-180"
         }`}
       >
@@ -113,9 +115,37 @@ export function Interpreter({ language }: { language: Language }) {
 
         <div className="flex min-h-24 flex-1 flex-col justify-end gap-2 overflow-y-auto">
           {shown.length === 0 && (
-            <p className={`text-center text-sm ${own ? "text-muted-foreground" : "text-primary-foreground/70"}`}>
-              {text.empty}
-            </p>
+            <div className="m-auto flex flex-col items-center gap-2 py-2 text-center sm:gap-4 sm:py-6">
+              <span
+                className={`flex size-16 items-center justify-center rounded-full transition-all sm:size-24 ${
+                  listening
+                    ? "bg-danger text-white ring-[12px] ring-danger/20"
+                    : own
+                      ? "bg-secondary text-primary"
+                      : "bg-white/15"
+                }`}
+              >
+                {listening ? (
+                  <span className="flex h-12 items-center gap-1.5">
+                    {barWeights.map((weight, index) => (
+                      <span
+                        key={index}
+                        className="w-1.5 rounded-full bg-current transition-[height] duration-100"
+                        style={{ height: `${8 + Math.round(level * 40 * weight)}px` }}
+                      />
+                    ))}
+                  </span>
+                ) : translating ? (
+                  <LoaderCircle className="size-8 animate-spin sm:size-10" />
+                ) : (
+                  <Mic className="size-8 sm:size-10" />
+                )}
+              </span>
+              <p className="font-display text-3xl font-semibold sm:text-4xl">{name}</p>
+              <p className={`max-w-xs text-sm text-balance sm:text-base ${own ? "text-muted-foreground" : "text-primary-foreground/75"}`}>
+                {text.empty}
+              </p>
+            </div>
           )}
           {shown.map((turn) => {
             const said = turn.side === side;
@@ -187,7 +217,7 @@ export function Interpreter({ language }: { language: Language }) {
   }
 
   return (
-    <section className="rise flex flex-1 flex-col pt-6 pb-4">
+    <section className="rise flex flex-1 flex-col pt-6 pb-28 lg:pb-24">
       <div className="flex items-start justify-between gap-3">
         <h1 className="font-display text-4xl font-semibold leading-[1.02] text-primary sm:text-5xl">{text.title}</h1>
         {turns.length > 0 && (
@@ -207,7 +237,7 @@ export function Interpreter({ language }: { language: Language }) {
           {error}
         </p>
       )}
-      <div className="mt-5 flex min-h-[34rem] flex-1 flex-col gap-3 lg:flex-row">
+      <div className="mt-5 flex flex-1 flex-col gap-4 lg:min-h-[34rem] lg:flex-row">
         {Panel({ side: "them" })}
         {Panel({ side: "me" })}
       </div>
