@@ -195,7 +195,7 @@ const delay = (value: string) => ({ "--delay": value }) as React.CSSProperties;
 
 function Words({ text, start }: { text: string; start: number }) {
   return text.split(" ").map((word, index) => (
-    <span key={index} className="word-mask mr-[0.22em]">
+    <span key={index} className="word-mask mr-[0.07em]">
       <span style={delay(`${start + index * 0.07}s`)}>{word}</span>
     </span>
   ));

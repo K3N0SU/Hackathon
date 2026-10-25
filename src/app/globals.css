@@ -514,8 +514,9 @@
   display: inline-block;
   overflow: hidden;
   vertical-align: top;
-  padding-bottom: 0.1em;
+  padding: 0 0.15em 0.1em 0.05em;
   margin-bottom: -0.1em;
+  margin-left: -0.05em;
 }
 
 .word-mask > span {
