@@ -77,7 +77,7 @@ export function LabelReader() {
         style={step("0.6s")}
       >
         <MessageCircleQuestion className="size-4 shrink-0" />
-        Can I eat lunch between the rows?
+        Can I eat lunch in the field yet?
       </div>
     </Tilt>
   );

@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from "react";
 
 const chats = [
   {
-    question: "Can I eat lunch between the rows?",
+    question: "Can I eat lunch in the field yet?",
     answer:
       "Not yet. The label says stay out for 12 hours, and your clock has 4 hours left. Eat outside the block, and wash your hands with soap first.",
   },

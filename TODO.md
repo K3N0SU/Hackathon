@@ -28,3 +28,4 @@ Update before ending every task. Keep terse.
 - Scanner is the main feature; everything else is a sub-tool. Chat is a bubble, not a tab.
 - Hero italic words no longer clip (word-mask padding, globals.css). Commits 169a55a, edb32d4.
 - Landing polish: tools grid 4 columns (16 even), AI bento last card spans 2 (no hole), hero card gear list text-ink (was invisible).
+- Hero/Ask demo question now "Can I eat lunch in the field yet?" (was "between the rows", confusing).
