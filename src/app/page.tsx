@@ -142,6 +142,7 @@ const brains: Brain[] = [
     decides: "Turns every answer into a calm, natural voice, so someone who can't read still gets the whole answer.",
     model: "Gemini 3.8 Flash TTS",
     tone: "bg-card text-ink ring-1 ring-border",
+    span: "lg:col-span-2",
   },
 ];
 
@@ -334,7 +335,7 @@ export default function Home() {
           <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4 lg:grid-rows-[auto_auto_auto]">
             {brains.map((brain, index) => {
               const Icon = brain.icon;
-              const big = Boolean(brain.span);
+              const big = Boolean(brain.span?.includes("row-span"));
               return (
                 <div
                   key={brain.title}
@@ -508,13 +509,13 @@ export default function Home() {
         <h2 className="reveal mt-3 max-w-3xl font-display text-5xl font-semibold leading-[0.98] text-ink sm:text-6xl">
           <Hover text="Sixteen tools. One free app." />
         </h2>
-        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {tools.map((tool, index) => {
             const Icon = tool.icon;
             return (
-              <div key={tool.title} className="reveal" style={delay(`${(index % 3) * 0.08}s`)}>
+              <div key={tool.title} className="reveal" style={delay(`${(index % 4) * 0.08}s`)}>
                 <Tilt max={8} className="h-full">
-                  <div className="card lift sheen spin-once relative flex h-full items-start gap-4 overflow-hidden p-6 hover:border-primary/30">
+                  <div className="card lift sheen spin-once relative flex h-full items-start gap-4 overflow-hidden p-6 hover:border-primary/30 sm:flex-col">
                     <span
                       className={`spin-target flex size-12 shrink-0 items-center justify-center rounded-2xl ${
                         ["bg-primary text-primary-foreground", "bg-poppy text-poppy-foreground", "bg-ink text-ink-foreground"][index % 3]

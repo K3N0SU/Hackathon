@@ -60,7 +60,7 @@ export function LabelReader() {
               <Shirt className="size-4 shrink-0 text-primary" />
               What to wear
             </p>
-            <ul className="mt-1.5 space-y-1 text-sm leading-snug">
+            <ul className="mt-1.5 space-y-1 text-sm leading-snug text-ink">
               {result.gear.map((item) => (
                 <li key={item} className="flex gap-2">
                   <span className="mt-1.5 size-1.5 shrink-0 rounded-full bg-primary" />
