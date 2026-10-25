@@ -19,6 +19,8 @@ Rules:
 - "barcode" is the digits under the barcode if you can clearly read all of them, otherwise an empty string. Never guess digits.
 - "about" is two or three plain sentences about the item: what it is, the brand if you can see it, and what it is usually eaten with or used for. If catalog data from the barcode is given, trust it for the name, brand and ingredients.
 - "facts" are two to four short, useful notes about this item, like how much sugar or salt is in a serving, how to store it, how long it keeps, or how to tell if fresh produce is ripe. No marketing.
+- "ingredients" lists every ingredient in order, exactly as printed on the label (translate into the requested language, keep brand names). If catalog data has ingredients, use those. For a typed name or fresh produce with no list, give the usual ingredients and keep it short.
+- "nutrition" lists the Nutrition Facts per serving as printed: serving size, calories, total fat, saturated fat, trans fat, cholesterol, sodium, total carbohydrate, dietary fiber, total sugars, added sugars, protein, and any vitamins or minerals shown. "name" is the nutrient in the requested language, "amount" is the amount with its unit and percent daily value if shown, like "8 g (10%)". If no panel is visible, give typical values for one serving and say "about" in the amount.
 - If the photo or name is not food or a food label, set "readable" to false and leave the rest empty.`;
 
 type Catalog = { name: string; brand: string; quantity: string; nutriscore: string; ingredients: string };
@@ -69,8 +71,17 @@ const schema = {
     barcode: { type: "STRING" },
     about: { type: "STRING" },
     facts: { type: "ARRAY", items: { type: "STRING" } },
+    ingredients: { type: "ARRAY", items: { type: "STRING" } },
+    nutrition: {
+      type: "ARRAY",
+      items: {
+        type: "OBJECT",
+        properties: { name: { type: "STRING" }, amount: { type: "STRING" } },
+        required: ["name", "amount"],
+      },
+    },
   },
-  required: ["readable", "product", "allergens", "mine", "organic", "pesticides", "flags", "verdict", "summary", "barcode", "about", "facts"],
+  required: ["readable", "product", "allergens", "mine", "organic", "pesticides", "flags", "verdict", "summary", "barcode", "about", "facts", "ingredients", "nutrition"],
 };
 
 export async function POST(req: Request) {

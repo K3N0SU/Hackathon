@@ -27,6 +27,8 @@ type Food = {
   barcode?: string;
   about?: string;
   facts?: string[];
+  ingredients?: string[];
+  nutrition?: { name: string; amount: string }[];
   catalog?: { name: string; brand: string; quantity: string; nutriscore: string } | null;
 };
 
@@ -354,6 +356,27 @@ export function FoodCheck({ language }: { language: Language }) {
                     </span>
                   )}
                 </div>
+              </div>
+            )}
+
+            {food.nutrition && food.nutrition.length > 0 && (
+              <div className="rise card p-5">
+                <p className="font-display text-xl font-semibold">{text.nutrition}</p>
+                <dl className="mt-3 divide-y">
+                  {food.nutrition.map((item) => (
+                    <div key={item.name} className="flex items-baseline justify-between gap-4 py-2">
+                      <dt>{item.name}</dt>
+                      <dd className="shrink-0 font-semibold tabular-nums">{item.amount}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
+            )}
+
+            {food.ingredients && food.ingredients.length > 0 && (
+              <div className="rise card p-5">
+                <p className="font-display text-xl font-semibold">{text.ingredients}</p>
+                <p className="mt-2 leading-relaxed">{food.ingredients.join(", ")}</p>
               </div>
             )}
 

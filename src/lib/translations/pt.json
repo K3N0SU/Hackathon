@@ -451,10 +451,10 @@
   "failed": "Não deu para carregar suas leituras. Veja se o sinal de internet está bom e tente de novo.",
   "remove": "Apagar"
  },
- "hx6dl3": {
+ "j9z09q": {
   "food": {
    "title": "Verificar comida",
-   "intro": "Tire uma foto do rótulo da comida, do adesivo da fruta ou do próprio alimento. O Milpa confere suas alergias e mostra o que o rótulo diz sobre pesticidas.",
+   "intro": "Tire uma foto do rótulo da comida, do adesivo da fruta ou da própria fruta. O Milpa vê se tem coisas que te dão alergia e conta o que o rótulo diz sobre pesticidas.",
    "allergiesTitle": "Minhas alergias",
    "allergyNames": [
     "Leite",
@@ -472,7 +472,7 @@
    "checking": "Lendo o rótulo...",
    "verdict": {
     "safe": "Parece seguro para você",
-    "caution": "Confira antes de comer",
+    "caution": "Dê uma olhada antes de comer",
     "avoid": "Não coma isso"
    },
    "allergens": "Alérgenos",
@@ -487,28 +487,30 @@
    },
    "pesticides": "Pesticidas",
    "flags": "Bom saber",
-   "notFood": "Isso não parece comida nem rótulo de alimento. Tente tirar uma foto mais de perto.",
-   "failed": "Não deu para conferir a foto. Veja sua internet e tente de novo.",
+   "notFood": "Isso não se parece com comida nem com rótulo de comida. Tente tirar a foto mais de perto.",
+   "failed": "Não deu para verificar a foto. Veja se a sua internet está boa e tente de novo.",
    "again": "Verificar outro",
-   "typeTitle": "Sem rótulo ou código de barras? Escreva o que é",
+   "typeTitle": "Sem rótulo ou código de barras? Digite o que é",
    "typePlaceholder": "Morangos, Takis, tamales...",
    "typeCheck": "Verificar",
-   "byName": "Buscado pelo nome. Se você tiver a embalagem, uma foto do rótulo é mais certeira.",
+   "byName": "Verificado pelo nome. Se você tiver o pacote, uma foto do rótulo é mais segura.",
    "about": "Sobre este item",
    "barcode": "Código de barras",
-   "noBarcode": "Nenhum código de barras visto, então o Milpa reconheceu pela foto.",
-   "catalog": "Achado pelo código de barras",
+   "noBarcode": "Nenhum código de barras encontrado, então o Milpa reconheceu o item pela foto.",
+   "catalog": "Encontrado pelo código de barras",
    "shops": "Lojas perto de você",
    "zip": "Código postal (ZIP)",
    "findShops": "Achar lojas",
-   "noShops": "Nenhum mercado achado perto desse ZIP.",
-   "shopsFailed": "Não deu para buscar as lojas. Tente de novo."
+   "noShops": "Nenhum mercado encontrado perto desse código postal.",
+   "shopsFailed": "Não deu para procurar lojas. Tente de novo.",
+   "ingredients": "Ingredientes",
+   "nutrition": "Informações nutricionais"
   },
   "gear": {
-   "title": "Verificar proteção",
-   "intro": "Tire uma foto sua antes de começar. O Milpa confere com os equipamentos que o rótulo pede.",
-   "forProduct": "Conferindo proteção para",
-   "noLabel": "Nenhum rótulo escaneado ainda, então o Milpa confere o equipamento comum.",
+   "title": "Verificar equipamento",
+   "intro": "Tire uma foto de você antes de entrar. O Milpa confere se você está usando a proteção que o rótulo pede.",
+   "forProduct": "Verificando equipamento para",
+   "noLabel": "Nenhum rótulo escaneado ainda, então o Milpa vai checar o equipamento de sempre.",
    "defaultGear": [
     "Camisa de manga comprida",
     "Calça comprida",
@@ -516,25 +518,25 @@
     "Sapatos e meias"
    ],
    "take": "Tirar uma foto minha",
-   "hint": "Dê um passo para trás para que seus braços, mãos e pés apareçam.",
-   "checking": "Olhando seus equipamentos...",
+   "hint": "Fique mais para trás para que seus braços, mãos e pés apareçam.",
+   "checking": "Olhando o seu equipamento...",
    "verdict": {
     "ready": "Você parece pronto",
     "missing": "Arrume isso antes de entrar",
     "unsure": "O Milpa não conseguiu ver tudo"
    },
    "status": {
-    "on": "Certo",
+    "on": "No corpo",
     "missing": "Faltando",
     "unsure": "Não dá para ver"
    },
-   "noPerson": "O Milpa não achou uma pessoa nessa foto. Afaste-se um pouco e tente de novo.",
-   "failed": "Não deu para conferir a foto. Veja sua internet e tente de novo.",
-   "again": "Conferir de novo"
+   "noPerson": "O Milpa não conseguiu achar ninguém na foto. Dê um passo para trás e tente de novo.",
+   "failed": "Não deu para verificar a foto. Veja se a sua internet está boa e tente de novo.",
+   "again": "Verificar de novo"
   },
   "pay": {
    "title": "Verificar pagamento",
-   "intro": "Tire uma foto do seu contracheque. O Milpa lê as informações e confere com as regras de pagamento da Califórnia.",
+   "intro": "Tire uma foto do seu contracheque. O Milpa lê ele todo e confere com as regras de pagamento da Califórnia.",
    "take": "Tirar foto do meu contracheque",
    "choose": "Escolher uma foto",
    "reading": "Lendo seu contracheque...",
@@ -544,7 +546,7 @@
    "gross": "Antes dos descontos",
    "net": "O que cai na mão",
    "verdict": {
-    "ok": "Parece tudo certo",
+    "ok": "Parece certo",
     "ask": "Pergunte sobre isso",
     "unclear": "Difícil de ler"
    },
@@ -554,23 +556,23 @@
     "missing": "Não está no papel"
    },
    "labor": "Ligue para o Comissário do Trabalho",
-   "notStub": "Isso não parece um contracheque. Tente uma foto mais nítida.",
-   "failed": "Não deu para ler a foto. Veja sua internet e tente de novo.",
+   "notStub": "Isso não se parece com um contracheque. Tente tirar uma foto mais nítida.",
+   "failed": "Não deu para ler a foto. Veja se a sua internet está boa e tente de novo.",
    "again": "Verificar outro",
    "privacy": "A foto não fica salva em lugar nenhum."
   },
   "interpret": {
    "title": "Intérprete",
-   "intro": "Converse com um encarregado, enfermeiro ou atendente. Cada um aperta o seu lado e fala, e o Milpa diz em voz alta no outro idioma.",
+   "intro": "Converse com um encarregado, enfermeiro ou atendente. Cada um aperta o seu lado e fala, e o Milpa diz em voz alta na outra língua.",
    "me": "Eu",
    "them": "Eles",
    "other": "Eles falam",
-   "listening": "Ouvindo... toque para parar",
+   "listening": "Ouvindo... aperte para parar",
    "translating": "Traduzindo...",
-   "tapToStop": "Toque para parar",
-   "empty": "Toque no seu lado e fale. Passe o telefone quando for a vez da outra pessoa.",
+   "tapToStop": "Aperte para parar",
+   "empty": "Aperte o seu lado e fale. Passe o telefone quando for a vez da outra pessoa.",
    "failed": "Não deu certo. Tente de novo.",
-   "blocked": "O Milpa precisa do microfone. Permita o uso nas opções do seu navegador.",
+   "blocked": "O Milpa precisa do seu microfone. Dê permissão nas opções do seu navegador.",
    "clear": "Começar de novo",
    "replay": "Ouvir de novo",
    "unsupported": "Este navegador não grava som. Tente usar o Chrome ou o Safari."

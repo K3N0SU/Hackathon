@@ -451,10 +451,10 @@
   "failed": "Impossible de charger vos scans. Vérifiez votre réseau et réessayez.",
   "remove": "Supprimer"
  },
- "hx6dl3": {
+ "j9z09q": {
   "food": {
-   "title": "Vérif nourriture",
-   "intro": "Prenez en photo une étiquette d'aliment, un autocollant sur un fruit ou le fruit lui-même. Milpa vérifie vos allergies et vous dit ce que l'étiquette indique sur les pesticides.",
+   "title": "Vérifier la nourriture",
+   "intro": "Prenez en photo une étiquette, un autocollant sur un fruit ou le fruit lui-même. Milpa vérifie vos allergies et vous dit ce que l'étiquette indique sur les pesticides.",
    "allergiesTitle": "Mes allergies",
    "allergyNames": [
     "Lait",
@@ -467,101 +467,103 @@
     "Soja",
     "Sésame"
    ],
-   "take": "Prendre en photo l'aliment",
+   "take": "Prendre la nourriture en photo",
    "choose": "Choisir une photo",
    "checking": "Lecture de l'étiquette en cours...",
    "verdict": {
-    "safe": "Semble sans danger pour vous",
-    "caution": "Vérifiez avant de manger",
-    "avoid": "Ne mangez pas ceci"
+    "safe": "Ça a l'air bon pour vous",
+    "caution": "À vérifier avant de manger",
+    "avoid": "Ne mangez pas ça"
    },
    "allergens": "Allergènes",
    "contains": "Contient",
    "may": "Peut contenir",
    "noAllergens": "Aucun allergène majeur sur l'étiquette.",
-   "yours": "Contient votre allergène",
+   "yours": "Contient ce à quoi vous êtes allergique",
    "organic": {
     "yes": "Certifié bio",
     "no": "Pas bio",
-    "unknown": "Bio non indiqué"
+    "unknown": "Bio non précisé"
    },
    "pesticides": "Pesticides",
    "flags": "Bon à savoir",
-   "notFood": "Cela ne ressemble pas à de la nourriture ou à une étiquette. Essayez en prenant la photo de plus près.",
+   "notFood": "Ça ne ressemble pas à de la nourriture ou à une étiquette. Essayez de prendre la photo de plus près.",
    "failed": "Impossible de vérifier la photo. Vérifiez votre connexion et réessayez.",
    "again": "En vérifier un autre",
    "typeTitle": "Pas d'étiquette ni de code-barres ? Écrivez ce que c'est",
    "typePlaceholder": "Fraises, Takis, tamales...",
    "typeCheck": "Vérifier",
-   "byName": "Vérifié par le nom. Si vous avez l'emballage, une photo de l'étiquette est plus précise.",
+   "byName": "Vérifié d'après le nom. Si vous avez l'emballage, une photo de l'étiquette est plus précise.",
    "about": "À propos de ce produit",
    "barcode": "Code-barres",
-   "noBarcode": "Aucun code-barres repéré, Milpa a donc reconnu le produit d'après la photo.",
+   "noBarcode": "Aucun code-barres trouvé, alors Milpa a reconnu le produit grâce à la photo.",
    "catalog": "Trouvé grâce au code-barres",
    "shops": "Magasins près de chez vous",
    "zip": "Code postal",
    "findShops": "Trouver des magasins",
    "noShops": "Aucune épicerie trouvée près de ce code postal.",
-   "shopsFailed": "Impossible de chercher les magasins. Réessayez."
+   "shopsFailed": "Impossible de chercher des magasins. Réessayez.",
+   "ingredients": "Ingrédients",
+   "nutrition": "Valeurs nutritives"
   },
   "gear": {
-   "title": "Vérif équipement",
-   "intro": "Prenez-vous en photo avant d'y aller. Milpa vérifie si vous portez l'équipement demandé sur l'étiquette.",
-   "forProduct": "Vérification de l'équipement pour",
-   "noLabel": "Aucune étiquette scannée pour l'instant, Milpa vérifie donc l'équipement habituel.",
+   "title": "Vérifier la tenue",
+   "intro": "Prenez-vous en photo avant d'y aller. Milpa vérifie si vous portez la tenue demandée par l'étiquette.",
+   "forProduct": "Vérification de la tenue pour",
+   "noLabel": "Aucune étiquette scannée pour l'instant, alors Milpa vérifie la tenue habituelle.",
    "defaultGear": [
     "Chemise à manches longues",
     "Pantalon long",
     "Gants résistants aux produits chimiques",
     "Chaussures et chaussettes"
    ],
-   "take": "Prendre une photo de moi",
-   "hint": "Reculez un peu pour qu'on voie bien vos bras, vos mains et vos pieds.",
-   "checking": "Vérification de votre équipement...",
+   "take": "Me prendre en photo",
+   "hint": "Reculez pour qu'on voie bien vos bras, vos mains et vos pieds.",
+   "checking": "Vérification de votre tenue...",
    "verdict": {
     "ready": "Vous avez l'air prêt",
-    "missing": "Réglez ça avant d'entrer",
+    "missing": "Réglez ça avant d'y aller",
     "unsure": "Milpa n'a pas pu tout voir"
    },
    "status": {
-    "on": "Mis",
+    "on": "Porté",
     "missing": "Manquant",
-    "unsure": "Pas visible"
+    "unsure": "On ne voit pas bien"
    },
-   "noPerson": "Milpa n'a vu personne sur la photo. Reculez un peu et réessayez.",
+   "noPerson": "Milpa n'a vu personne sur cette photo. Reculez et réessayez.",
    "failed": "Impossible de vérifier la photo. Vérifiez votre connexion et réessayez.",
    "again": "Vérifier à nouveau"
   },
   "pay": {
-   "title": "Vérif paie",
+   "title": "Vérifier la paie",
    "intro": "Prenez votre fiche de paie en photo. Milpa la lit et la compare aux règles de paie de Californie.",
    "take": "Prendre ma fiche de paie en photo",
    "choose": "Choisir une photo",
-   "reading": "Lecture de votre fiche de paie...",
+   "reading": "Lecture de votre fiche de paie en cours...",
    "period": "Période de paie",
    "hours": "Heures",
    "rate": "Taux horaire",
-   "gross": "Avant déductions",
-   "net": "Montant touché",
+   "gross": "Avant retenues",
+   "net": "Montant net",
    "verdict": {
-    "ok": "Ça semble correct",
+    "ok": "Ça a l'air correct",
     "ask": "Posez des questions là-dessus",
     "unclear": "Difficile à lire"
    },
    "status": {
     "ok": "Semble correct",
-    "ask": "Posez des questions là-dessus",
-    "missing": "Pas sur la fiche"
+    "ask": "Renseignez-vous là-dessus",
+    "missing": "Absent de la fiche"
    },
-   "labor": "Appeler le commissaire au travail",
-   "notStub": "Cela ne ressemble pas à une fiche de paie. Essayez avec une photo plus nette.",
+   "labor": "Appelez le commissaire au travail",
+   "notStub": "Ça ne ressemble pas à une fiche de paie. Essayez avec une photo plus nette.",
    "failed": "Impossible de lire la photo. Vérifiez votre connexion et réessayez.",
    "again": "En vérifier une autre",
    "privacy": "La photo n'est enregistrée nulle part."
   },
   "interpret": {
    "title": "Interprète",
-   "intro": "Discutez avec un responsable, un infirmier ou un employé. Chacun appuie sur son côté et parle, et Milpa répète à voix haute dans l'autre langue.",
+   "intro": "Parlez avec un chef d'équipe, une infirmière ou un employé. Chacun appuie de son côté et parle, et Milpa le dit à voix haute dans l'autre langue.",
    "me": "Moi",
    "them": "Eux",
    "other": "Ils parlent",
@@ -570,7 +572,7 @@
    "tapToStop": "Appuyez pour arrêter",
    "empty": "Appuyez de votre côté et parlez. Passez le téléphone quand c'est à leur tour.",
    "failed": "Ça n'a pas marché. Réessayez.",
-   "blocked": "Milpa a besoin de votre micro. Autorisez-le dans les paramètres de votre navigateur.",
+   "blocked": "Milpa a besoin d'utiliser votre micro. Autorisez-le dans les réglages de votre navigateur.",
    "clear": "Recommencer",
    "replay": "Répéter",
    "unsupported": "Ce navigateur ne peut pas enregistrer le son. Essayez avec Chrome ou Safari."

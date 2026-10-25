@@ -34,6 +34,8 @@ export type ToolsCopy = {
     findShops: string;
     noShops: string;
     shopsFailed: string;
+    ingredients: string;
+    nutrition: string;
   };
   gear: {
     title: string;
@@ -122,6 +124,8 @@ export const toolsCopy: Record<CoreLanguage, ToolsCopy> = {
       findShops: "Find stores",
       noShops: "No grocery stores found near that ZIP code.",
       shopsFailed: "Could not look up stores. Try again.",
+      ingredients: "Ingredients",
+      nutrition: "Nutrition facts",
     },
     gear: {
       title: "Gear check",
@@ -216,6 +220,8 @@ export const toolsCopy: Record<CoreLanguage, ToolsCopy> = {
       findShops: "Buscar tiendas",
       noShops: "No se encontraron tiendas cerca de ese código postal.",
       shopsFailed: "No se pudieron buscar tiendas. Intente otra vez.",
+      ingredients: "Ingredientes",
+      nutrition: "Información nutricional",
     },
     gear: {
       title: "Revisar equipo",
@@ -310,6 +316,8 @@ export const toolsCopy: Record<CoreLanguage, ToolsCopy> = {
       findShops: "ਦੁਕਾਨਾਂ ਲੱਭੋ",
       noShops: "ਉਸ ZIP ਕੋਡ ਨੇੜੇ ਕੋਈ ਦੁਕਾਨ ਨਹੀਂ ਮਿਲੀ।",
       shopsFailed: "ਦੁਕਾਨਾਂ ਨਹੀਂ ਲੱਭ ਸਕੇ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
+      ingredients: "ਸਮੱਗਰੀ",
+      nutrition: "ਪੋਸ਼ਣ ਜਾਣਕਾਰੀ",
     },
     gear: {
       title: "ਸਾਮਾਨ ਦੀ ਜਾਂਚ",

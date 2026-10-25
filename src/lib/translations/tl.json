@@ -451,21 +451,21 @@
   "failed": "Hindi ma-load ang mga na-scan mo. Tingnan ang signal mo at subukan ulit.",
   "remove": "Burahin"
  },
- "hx6dl3": {
+ "j9z09q": {
   "food": {
-   "title": "Pagsusuri ng pagkain",
-   "intro": "Kumuha ng litrato ng label ng pagkain, sticker sa prutas, o mismong prutas. Susuriin ito ng Milpa para sa iyong mga allergy at sasabihin kung ano ang nakasulat sa label tungkol sa mga pesticide.",
+   "title": "Suriin ang pagkain",
+   "intro": "Kumuha ng litrato ng label ng pagkain, sticker sa prutas, o ang mismong prutas. Susuriin ito ng Milpa para sa iyong mga allergy at sasabihin kung ano ang nakasulat tungkol sa pestisidyo.",
    "allergiesTitle": "Aking mga allergy",
    "allergyNames": [
     "Gatas",
     "Itlog",
     "Isda",
-    "Hipon at alimango",
+    "Hipon at talaba",
     "Tree nuts",
     "Mani",
     "Trigo",
     "Soy",
-    "Linga"
+    "Sesame"
    ],
    "take": "Kumuha ng litrato ng pagkain",
    "choose": "Pumili ng litrato",
@@ -478,45 +478,47 @@
    "allergens": "Mga allergen",
    "contains": "May sangkap na",
    "may": "Maaaring may sangkap na",
-   "noAllergens": "Walang mga pangunahing allergen sa label.",
-   "yours": "May sangkap na allergy mo",
+   "noAllergens": "Walang pangunahing allergen sa label.",
+   "yours": "May sangkap na bawal sa iyo",
    "organic": {
     "yes": "Sertipikadong organic",
     "no": "Hindi organic",
-    "unknown": "Hindi nakalagay kung organic"
+    "unknown": "Hindi nakasaad kung organic"
    },
-   "pesticides": "Mga pesticide",
+   "pesticides": "Mga pestisidyo",
    "flags": "Dapat malaman",
-   "notFood": "Mukhang hindi iyon pagkain o label ng pagkain. Subukang kumuha ng mas malapit na litrato.",
-   "failed": "Hindi masuri ang litrato. Tingnan ang iyong koneksyon at subukan muli.",
-   "again": "Sumuri ng iba",
+   "notFood": "Hindi mukhang pagkain o label ng pagkain. Subukan ang mas malapit na litrato.",
+   "failed": "Hindi masuri ang litrato. Tingnan ang iyong koneksyon at subukan ulit.",
+   "again": "Suriin ang iba pa",
    "typeTitle": "Walang label o barcode? I-type kung ano ito",
    "typePlaceholder": "Strawberries, Takis, tamales...",
    "typeCheck": "Suriin",
-   "byName": "Sinuri ayon sa pangalan. Kung hawak mo ang balot, mas tumpak ang litrato ng label.",
-   "about": "Tungkol sa bagay na ito",
+   "byName": "Sinuri ayon sa pangalan. Kung hawak mo ang balot, mas tama ang litrato ng label.",
+   "about": "Tungkol dito",
    "barcode": "Barcode",
-   "noBarcode": "Walang nakitang barcode, kaya nalaman ng Milpa ang bagay mula sa litrato.",
-   "catalog": "Itinugma sa pamamagitan ng barcode",
+   "noBarcode": "Walang nakitang barcode, kaya nakilala ito ng Milpa mula sa litrato.",
+   "catalog": "Nahanap gamit ang barcode",
    "shops": "Mga tindahan malapit sa iyo",
    "zip": "ZIP code",
-   "findShops": "Maghanap ng mga tindahan",
-   "noShops": "Walang nahanap na grocery store malapit sa ZIP code na iyon.",
-   "shopsFailed": "Hindi mahanap ang mga tindahan. Subukan muli."
+   "findShops": "Maghanap ng tindahan",
+   "noShops": "Walang nakitang tindahan malapit sa ZIP code na iyan.",
+   "shopsFailed": "Hindi mahanap ang mga tindahan. Subukan ulit.",
+   "ingredients": "Mga Sangkap",
+   "nutrition": "Nutrition facts"
   },
   "gear": {
-   "title": "Pagsusuri ng gamit",
-   "intro": "Kumuha ng litrato ng iyong sarili bago ka pumasok. Susuriin ito ng Milpa kung tugma sa gamit na hinihingi sa label.",
+   "title": "Suriin ang gamit",
+   "intro": "Kunan ng litrato ang sarili bago pumasok sa trabaho. Titingnan ng Milpa kung tugma ito sa hinihingi ng label.",
    "forProduct": "Sinusuri ang gamit para sa",
-   "noLabel": "Wala pang na-scan na label, kaya karaniwang gamit ang sinusuri ng Milpa.",
+   "noLabel": "Wala pang na-scan na label, kaya karaniwang gamit ang tinitingnan ng Milpa.",
    "defaultGear": [
-    "Kamisetang mahaba ang manggas",
+    "Damit na may mahabang manggas",
     "Mahabang pantalon",
-    "Guwantes na pang-kemikal",
+    "Guwantes na panlaban sa kemikal",
     "Sapatos at medyas"
    ],
-   "take": "Kumuha ng litrato ko",
-   "hint": "Umatras nang kaunti para makita ang iyong mga braso, kamay, at paa.",
+   "take": "Kunan ako ng litrato",
+   "hint": "Umatras nang kaunti para kita ang iyong mga braso, kamay, at paa.",
    "checking": "Tinitingnan ang iyong gamit...",
    "verdict": {
     "ready": "Mukhang handa ka na",
@@ -524,28 +526,28 @@
     "unsure": "Hindi nakita ng Milpa ang lahat"
    },
    "status": {
-    "on": "Nasuot",
+    "on": "Suot",
     "missing": "Kulang",
     "unsure": "Hindi makita"
    },
-   "noPerson": "Walang nakitang tao ang Milpa sa litratong iyon. Umatras nang kaunti at subukan muli.",
-   "failed": "Hindi masuri ang litrato. Tingnan ang iyong koneksyon at subukan muli.",
-   "again": "Suriin muli"
+   "noPerson": "Walang makitang tao ang Milpa sa litratong iyan. Umatras nang kaunti at subukan ulit.",
+   "failed": "Hindi masuri ang litrato. Tingnan ang iyong koneksyon at subukan ulit.",
+   "again": "Suriin ulit"
   },
   "pay": {
-   "title": "Pagsusuri ng suweldo",
-   "intro": "Kumuha ng litrato ng iyong pay stub. Babasahin ito ng Milpa at ikukumpara sa mga patakaran sa sahod ng California.",
-   "take": "Kumuha ng litrato ng aking pay stub",
+   "title": "Suriin ang suweldo",
+   "intro": "Kunan ng litrato ang iyong pay stub. Babasahin ito ng Milpa at ikukumpara sa mga batas sa sahod sa California.",
+   "take": "Kunan ng litrato ang aking pay stub",
    "choose": "Pumili ng litrato",
    "reading": "Binabasa ang iyong pay stub...",
    "period": "Panahon ng suweldo",
    "hours": "Mga oras",
    "rate": "Sahod kada oras",
-   "gross": "Bago ang kaltas",
-   "net": "Take home",
+   "gross": "Kabuuang kita bago kaltas",
+   "net": "Naiuuwing sahod",
    "verdict": {
     "ok": "Mukhang tama ito",
-    "ask": "Itanong ito",
+    "ask": "Itanong ito sa amo",
     "unclear": "Mahirap basahin"
    },
    "status": {
@@ -554,25 +556,25 @@
     "missing": "Wala sa stub"
    },
    "labor": "Tawagan ang Labor Commissioner",
-   "notStub": "Mukhang hindi iyon pay stub. Subukang kumuha ng mas malinaw na litrato.",
-   "failed": "Hindi mabasa ang litrato. Tingnan ang iyong koneksyon at subukan muli.",
-   "again": "Sumuri ng iba",
-   "privacy": "Hindi naitatabi kahit saan ang litrato."
+   "notStub": "Hindi mukhang pay stub iyan. Kumuha ng mas malinaw na litrato.",
+   "failed": "Hindi mabasa ang litrato. Tingnan ang iyong koneksyon at subukan ulit.",
+   "again": "Suriin ang iba pa",
+   "privacy": "Hindi itinatago ang litrato kahit saan."
   },
   "interpret": {
    "title": "Tagasalin",
-   "intro": "Makisalamuha sa supervisor, nars, o klerk. Pindutin ng bawat isa ang inyong panig at magsalita, at bibigkasin ito ng Milpa sa kabilang wika.",
+   "intro": "Makisalamuha sa supervisor, nars, o klerk. Pindutin ang inyong bahagi bago magsalita, at bibigkasin ito ng Milpa sa kabilang wika.",
    "me": "Ako",
    "them": "Sila",
-   "other": "Sila ay nagsasalita ng",
-   "listening": "Nakikinig... pindutin para huminto",
+   "other": "Sila ay nagsasalita",
+   "listening": "Nakikinig... pindutin para ihinto",
    "translating": "Isinasalin...",
-   "tapToStop": "Pindutin para huminto",
-   "empty": "Pindutin ang iyong panig at magsalita. Iabot ang telepono kapag turn na nila.",
-   "failed": "Hindi iyon pumasok. Subukan muli.",
-   "blocked": "Kailangan ng Milpa ang iyong mikropono. Payagan ito sa settings ng iyong browser.",
-   "clear": "Magsimula muli",
-   "replay": "Sabihin muli",
+   "tapToStop": "Pindutin para ihinto",
+   "empty": "Pindutin ang iyong bahagi at magsalita. Iabot ang telepono kapag sila naman ang magsasalita.",
+   "failed": "Hindi iyon pumasok. Subukan ulit.",
+   "blocked": "Kailangan ng Milpa ang mikropono mo. Payagan ito sa settings ng iyong browser.",
+   "clear": "Ulitin mula sa simula",
+   "replay": "Sabihin ulit",
    "unsupported": "Hindi makapag-record ng boses ang browser na ito. Subukan ang Chrome o Safari."
   }
  }
