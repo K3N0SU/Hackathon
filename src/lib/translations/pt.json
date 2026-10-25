@@ -95,10 +95,10 @@
   "close": "Fechar",
   "interpreter": ""
  },
- "2nvoxz": {
-  "signInTitle": "Bem-vindo de volta",
+ "e639wk": {
+  "signInTitle": "Bom te ver de novo",
   "signUpTitle": "Criar uma conta",
-  "intro": "Suas leituras, cronômetros e idioma ficam salvos na sua conta, para você usar em qualquer celular.",
+  "intro": "Suas leituras, relógios e o idioma ficam salvos na sua conta, para irem com você para qualquer celular.",
   "name": "Seu nome",
   "email": "E-mail",
   "password": "Senha",
@@ -111,31 +111,31 @@
   "haveAccount": "Já tem uma conta?",
   "signInLink": "Entrar",
   "forgot": "Esqueceu a senha?",
-  "resetNeedsEmail": "Digite seu e-mail primeiro e depois toque em Esqueceu a senha.",
-  "resetSent": "Enviamos um link para você mudar sua senha. Olhe o seu e-mail.",
+  "resetNeedsEmail": "Digite seu e-mail primeiro, depois toque em Esqueceu a senha.",
+  "resetSent": "Enviamos um link para mudar sua senha. Olhe o seu e-mail.",
   "working": "Só um momento...",
   "verifyTitle": "Olhe o seu e-mail",
   "verifyBody": "Enviamos um link para",
   "verifyNext": "Abra o link para confirmar seu e-mail. Esta página vai mudar sozinha depois que você fizer isso.",
   "resend": "Enviar o link de novo",
-  "resent": "Enviado. Pode levar um minuto, e pode ter caído no lixo eletrônico (spam).",
+  "resent": "Enviado. Pode levar um minuto e pode cair no lixo eletrônico.",
   "verified": "Já abri o link",
-  "notYet": "Ainda não confirmou. Abra o link no seu e-mail e tente de novo.",
+  "notYet": "Ainda não foi confirmado. Abra o link no e-mail e tente de novo.",
   "useOther": "Usar outro e-mail",
   "account": "Conta",
   "signedInAs": "Conectado como",
   "signOut": "Sair",
   "errors": {
    "invalid": "Esse e-mail ou senha está errado.",
-   "inUse": "Esse e-mail já tem uma conta. Tente entrar em vez disso.",
-   "weak": "Use pelo menos 6 letras ou números para a senha.",
-   "badEmail": "Isso não parece ser um e-mail de verdade.",
+   "inUse": "Esse e-mail já tem uma conta. Em vez disso, entre na conta.",
+   "weak": "Use pelo menos 6 caracteres na senha.",
+   "badEmail": "Isso não parece um endereço de e-mail.",
    "popup": "A janela do Google fechou antes de você terminar.",
-   "tooMany": "Muitas tentativas. Espere alguns minutos e tente de novo.",
-   "network": "Sem internet. Veja se o sinal está bom e tente de novo.",
+   "tooMany": "Tentativas demais. Espere alguns minutos e tente de novo.",
+   "network": "Sem conexão. Veja se tem sinal e tente de novo.",
    "generic": "Algo deu errado. Tente de novo.",
-   "notConfigured": "A entrada na conta ainda não está funcionando neste site.",
-   "wrongSite": "O login com o Google só funciona em milpa-california.vercel.app. Abra o Milpa por lá ou use seu e-mail."
+   "notConfigured": "A entrada ainda não está pronta neste site.",
+   "wrongSite": "A entrada com o Google só funciona em milpa-california.vercel.app. Abra o Milpa lá ou use seu e-mail."
   }
  },
  "1m3i1h": {
@@ -451,10 +451,10 @@
   "failed": "Não deu para carregar suas leituras. Veja se o sinal de internet está bom e tente de novo.",
   "remove": "Apagar"
  },
- "1tl1wjl": {
+ "hx6dl3": {
   "food": {
-   "title": "Checar comida",
-   "intro": "Tire uma foto do rótulo, do adesivo da fruta ou da própria comida. O Milpa vê se tem algo que te dá alergia e mostra o que o rótulo diz sobre agrotóxicos.",
+   "title": "Verificar comida",
+   "intro": "Tire uma foto do rótulo da comida, do adesivo da fruta ou do próprio alimento. O Milpa confere suas alergias e mostra o que o rótulo diz sobre pesticidas.",
    "allergiesTitle": "Minhas alergias",
    "allergyNames": [
     "Leite",
@@ -472,60 +472,69 @@
    "checking": "Lendo o rótulo...",
    "verdict": {
     "safe": "Parece seguro para você",
-    "caution": "Dê uma olhada antes de comer",
+    "caution": "Confira antes de comer",
     "avoid": "Não coma isso"
    },
-   "allergens": "Alergênicos",
+   "allergens": "Alérgenos",
    "contains": "Contém",
    "may": "Pode conter",
-   "noAllergens": "Nenhum alergênico comum no rótulo.",
+   "noAllergens": "Nenhum alérgeno comum no rótulo.",
    "yours": "Tem algo que te dá alergia",
    "organic": {
     "yes": "Orgânico certificado",
     "no": "Não é orgânico",
     "unknown": "Não diz se é orgânico"
    },
-   "pesticides": "Agrotóxicos",
+   "pesticides": "Pesticidas",
    "flags": "Bom saber",
-   "notFood": "Isso não parece comida nem rótulo. Tente tirar uma foto mais de perto.",
-   "failed": "Não deu para checar a foto. Veja sua internet e tente de novo.",
-   "again": "Checar outro",
-   "typeTitle": "Sem rótulo ou código? Digite o que é",
-   "typePlaceholder": "Morangos, Takis, pamonha...",
-   "typeCheck": "Checar",
-   "byName": "Checado pelo nome. Se tiver a embalagem, a foto do rótulo é mais exata."
+   "notFood": "Isso não parece comida nem rótulo de alimento. Tente tirar uma foto mais de perto.",
+   "failed": "Não deu para conferir a foto. Veja sua internet e tente de novo.",
+   "again": "Verificar outro",
+   "typeTitle": "Sem rótulo ou código de barras? Escreva o que é",
+   "typePlaceholder": "Morangos, Takis, tamales...",
+   "typeCheck": "Verificar",
+   "byName": "Buscado pelo nome. Se você tiver a embalagem, uma foto do rótulo é mais certeira.",
+   "about": "Sobre este item",
+   "barcode": "Código de barras",
+   "noBarcode": "Nenhum código de barras visto, então o Milpa reconheceu pela foto.",
+   "catalog": "Achado pelo código de barras",
+   "shops": "Lojas perto de você",
+   "zip": "Código postal (ZIP)",
+   "findShops": "Achar lojas",
+   "noShops": "Nenhum mercado achado perto desse ZIP.",
+   "shopsFailed": "Não deu para buscar as lojas. Tente de novo."
   },
   "gear": {
-   "title": "Checar proteção",
-   "intro": "Tire uma foto sua antes de entrar. O Milpa vê se você está com a roupa de proteção que o produto pede.",
-   "forProduct": "Checando proteção para",
-   "noLabel": "Nenhum produto lido ainda, então o Milpa checa o básico de sempre.",
+   "title": "Verificar proteção",
+   "intro": "Tire uma foto sua antes de começar. O Milpa confere com os equipamentos que o rótulo pede.",
+   "forProduct": "Conferindo proteção para",
+   "noLabel": "Nenhum rótulo escaneado ainda, então o Milpa confere o equipamento comum.",
    "defaultGear": [
     "Camisa de manga comprida",
     "Calça comprida",
-    "Luvas resistentes a químicos",
+    "Luvas resistentes a produtos químicos",
     "Sapatos e meias"
    ],
    "take": "Tirar uma foto minha",
-   "hint": "Dê um passo para trás para mostrar braços, mãos e pés.",
-   "checking": "Olhando sua proteção...",
+   "hint": "Dê um passo para trás para que seus braços, mãos e pés apareçam.",
+   "checking": "Olhando seus equipamentos...",
    "verdict": {
-    "ready": "Tudo certo para você ir",
+    "ready": "Você parece pronto",
     "missing": "Arrume isso antes de entrar",
     "unsure": "O Milpa não conseguiu ver tudo"
    },
    "status": {
-    "on": "No corpo",
+    "on": "Certo",
     "missing": "Faltando",
     "unsure": "Não dá para ver"
    },
-   "noPerson": "O Milpa não achou ninguém nessa foto. Dê um passo para trás e tente de novo.",
-   "failed": "Não deu para checar a foto. Veja sua internet e tente de novo.",
-   "again": "Checar de novo"
+   "noPerson": "O Milpa não achou uma pessoa nessa foto. Afaste-se um pouco e tente de novo.",
+   "failed": "Não deu para conferir a foto. Veja sua internet e tente de novo.",
+   "again": "Conferir de novo"
   },
   "pay": {
-   "title": "Checar pagamento",
-   "intro": "Tire uma foto do seu contracheque. O Milpa lê tudo e vê se bate com as leis de pagamento da Califórnia.",
+   "title": "Verificar pagamento",
+   "intro": "Tire uma foto do seu contracheque. O Milpa lê as informações e confere com as regras de pagamento da Califórnia.",
    "take": "Tirar foto do meu contracheque",
    "choose": "Escolher uma foto",
    "reading": "Lendo seu contracheque...",
@@ -533,9 +542,9 @@
    "hours": "Horas",
    "rate": "Valor por hora",
    "gross": "Antes dos descontos",
-   "net": "O que você recebe",
+   "net": "O que cai na mão",
    "verdict": {
-    "ok": "Parece certo",
+    "ok": "Parece tudo certo",
     "ask": "Pergunte sobre isso",
     "unclear": "Difícil de ler"
    },
@@ -544,27 +553,27 @@
     "ask": "Pergunte sobre isso",
     "missing": "Não está no papel"
    },
-   "labor": "Ligue para a Comissão do Trabalho",
+   "labor": "Ligue para o Comissário do Trabalho",
    "notStub": "Isso não parece um contracheque. Tente uma foto mais nítida.",
    "failed": "Não deu para ler a foto. Veja sua internet e tente de novo.",
-   "again": "Checar outro",
+   "again": "Verificar outro",
    "privacy": "A foto não fica salva em lugar nenhum."
   },
   "interpret": {
    "title": "Intérprete",
-   "intro": "Converse com o encarregado, médico ou atendente. Cada um aperta o seu lado e fala, e o Milpa traduz em voz alta.",
+   "intro": "Converse com um encarregado, enfermeiro ou atendente. Cada um aperta o seu lado e fala, e o Milpa diz em voz alta no outro idioma.",
    "me": "Eu",
    "them": "Eles",
    "other": "Eles falam",
-   "listening": "Ouvindo... aperte para parar",
+   "listening": "Ouvindo... toque para parar",
    "translating": "Traduzindo...",
-   "tapToStop": "Aperte para parar",
-   "empty": "Aperte o seu lado e fale. Passe o celular na vez da outra pessoa.",
+   "tapToStop": "Toque para parar",
+   "empty": "Toque no seu lado e fale. Passe o telefone quando for a vez da outra pessoa.",
    "failed": "Não deu certo. Tente de novo.",
-   "blocked": "O Milpa precisa do microfone. Ative ele nas configurações da internet.",
-   "clear": "Recomeçar",
+   "blocked": "O Milpa precisa do microfone. Permita o uso nas opções do seu navegador.",
+   "clear": "Começar de novo",
    "replay": "Ouvir de novo",
-   "unsupported": "Este navegador não grava áudio. Tente no Chrome ou Safari."
+   "unsupported": "Este navegador não grava som. Tente usar o Chrome ou o Safari."
   }
  }
 }

@@ -95,10 +95,10 @@
   "close": "Fermer",
   "interpreter": ""
  },
- "2nvoxz": {
-  "signInTitle": "Bon retour",
+ "e639wk": {
+  "signInTitle": "Bon retour parmi nous",
   "signUpTitle": "Créer un compte",
-  "intro": "Vos scans, vos comptes à rebours et votre langue restent sur votre compte. Ils vous suivent sur n'importe quel téléphone.",
+  "intro": "Vos scans, vos comptes à rebours et votre langue sont enregistrés sur votre compte. Vous les retrouvez sur n'importe quel téléphone.",
   "name": "Votre nom",
   "email": "E-mail",
   "password": "Mot de passe",
@@ -111,31 +111,31 @@
   "haveAccount": "Vous avez déjà un compte ?",
   "signInLink": "Se connecter",
   "forgot": "Mot de passe oublié ?",
-  "resetNeedsEmail": "Écrivez votre e-mail d'abord, puis appuyez sur Mot de passe oublié.",
-  "resetSent": "On vous a envoyé un lien pour changer votre mot de passe. Regardez dans vos e-mails.",
+  "resetNeedsEmail": "Tapez d'abord votre e-mail, puis appuyez sur Mot de passe oublié.",
+  "resetSent": "Nous avons envoyé un lien pour changer votre mot de passe. Regardez vos e-mails.",
   "working": "Un instant...",
   "verifyTitle": "Regardez vos e-mails",
-  "verifyBody": "On a envoyé un lien à",
-  "verifyNext": "Ouvrez-le pour confirmer votre adresse. Cette page changera toute seule après.",
+  "verifyBody": "Nous avons envoyé un lien à",
+  "verifyNext": "Ouvrez-le pour confirmer votre adresse. Cette page changera toute seule une fois que c'est fait.",
   "resend": "Renvoyer le lien",
-  "resent": "C'est envoyé. Ça peut prendre une minute, et pensez à vérifier vos spams.",
+  "resent": "Envoyé. Ça peut prendre une minute, et pensez à vérifier vos spams.",
   "verified": "J'ai ouvert le lien",
   "notYet": "Pas encore confirmé. Ouvrez le lien dans l'e-mail, puis réessayez.",
   "useOther": "Utiliser un autre e-mail",
   "account": "Compte",
-  "signedInAs": "Connecté en tant que",
+  "signedInAs": "Connecté sous",
   "signOut": "Se déconnecter",
   "errors": {
-   "invalid": "Cet e-mail ou ce mot de passe est faux.",
-   "inUse": "Cet e-mail a déjà un compte. Connectez-vous plutôt.",
+   "invalid": "Cet e-mail ou ce mot de passe n'est pas bon.",
+   "inUse": "Il y a déjà un compte avec cet e-mail. Connectez-vous plutôt.",
    "weak": "Mettez au moins 6 caractères pour le mot de passe.",
    "badEmail": "Ça ne ressemble pas à une adresse e-mail.",
    "popup": "La fenêtre Google s'est fermée avant la fin.",
    "tooMany": "Trop d'essais. Attendez quelques minutes et réessayez.",
-   "network": "Pas de connexion. Vérifiez votre réseau et réessayez.",
-   "generic": "Un problème est arrivé. Réessayez.",
+   "network": "Pas de réseau. Vérifiez votre signal et réessayez.",
+   "generic": "Un problème est survenu. Réessayez.",
    "notConfigured": "La connexion n'est pas encore prête sur ce site.",
-   "wrongSite": "La connexion Google marche seulement sur milpa-california.vercel.app. Ouvrez Milpa là-bas, ou utilisez votre e-mail."
+   "wrongSite": "La connexion avec Google marche seulement sur milpa-california.vercel.app. Ouvrez Milpa là-bas, ou utilisez votre e-mail."
   }
  },
  "1m3i1h": {
@@ -451,10 +451,10 @@
   "failed": "Impossible de charger vos scans. Vérifiez votre réseau et réessayez.",
   "remove": "Supprimer"
  },
- "1tl1wjl": {
+ "hx6dl3": {
   "food": {
    "title": "Vérif nourriture",
-   "intro": "Prenez en photo une étiquette d'aliment, un autocollant sur le fruit ou le fruit lui-même. Milpa vérifie vos allergies et vous dit ce que l'étiquette dit sur les pesticides.",
+   "intro": "Prenez en photo une étiquette d'aliment, un autocollant sur un fruit ou le fruit lui-même. Milpa vérifie vos allergies et vous dit ce que l'étiquette indique sur les pesticides.",
    "allergiesTitle": "Mes allergies",
    "allergyNames": [
     "Lait",
@@ -469,7 +469,7 @@
    ],
    "take": "Prendre en photo l'aliment",
    "choose": "Choisir une photo",
-   "checking": "Lecture de l'étiquette...",
+   "checking": "Lecture de l'étiquette en cours...",
    "verdict": {
     "safe": "Semble sans danger pour vous",
     "caution": "Vérifiez avant de manger",
@@ -479,7 +479,7 @@
    "contains": "Contient",
    "may": "Peut contenir",
    "noAllergens": "Aucun allergène majeur sur l'étiquette.",
-   "yours": "Contient votre allergie",
+   "yours": "Contient votre allergène",
    "organic": {
     "yes": "Certifié bio",
     "no": "Pas bio",
@@ -487,19 +487,28 @@
    },
    "pesticides": "Pesticides",
    "flags": "Bon à savoir",
-   "notFood": "Cela ne ressemble pas à un aliment ou à une étiquette. Essayez de prendre une photo de plus près.",
+   "notFood": "Cela ne ressemble pas à de la nourriture ou à une étiquette. Essayez en prenant la photo de plus près.",
    "failed": "Impossible de vérifier la photo. Vérifiez votre connexion et réessayez.",
    "again": "En vérifier un autre",
-   "typeTitle": "Pas d'étiquette ou de code-barres ? Écrivez ce que c'est",
+   "typeTitle": "Pas d'étiquette ni de code-barres ? Écrivez ce que c'est",
    "typePlaceholder": "Fraises, Takis, tamales...",
    "typeCheck": "Vérifier",
-   "byName": "Vérifié par le nom. Si vous avez l'emballage, une photo de l'étiquette est plus précise."
+   "byName": "Vérifié par le nom. Si vous avez l'emballage, une photo de l'étiquette est plus précise.",
+   "about": "À propos de ce produit",
+   "barcode": "Code-barres",
+   "noBarcode": "Aucun code-barres repéré, Milpa a donc reconnu le produit d'après la photo.",
+   "catalog": "Trouvé grâce au code-barres",
+   "shops": "Magasins près de chez vous",
+   "zip": "Code postal",
+   "findShops": "Trouver des magasins",
+   "noShops": "Aucune épicerie trouvée près de ce code postal.",
+   "shopsFailed": "Impossible de chercher les magasins. Réessayez."
   },
   "gear": {
    "title": "Vérif équipement",
-   "intro": "Prenez-vous en photo avant d'entrer. Milpa vérifie si vous avez la tenue demandée par l'étiquette.",
+   "intro": "Prenez-vous en photo avant d'y aller. Milpa vérifie si vous portez l'équipement demandé sur l'étiquette.",
    "forProduct": "Vérification de l'équipement pour",
-   "noLabel": "Aucune étiquette scannée, Milpa vérifie donc l'équipement habituel.",
+   "noLabel": "Aucune étiquette scannée pour l'instant, Milpa vérifie donc l'équipement habituel.",
    "defaultGear": [
     "Chemise à manches longues",
     "Pantalon long",
@@ -507,11 +516,11 @@
     "Chaussures et chaussettes"
    ],
    "take": "Prendre une photo de moi",
-   "hint": "Reculez un peu pour que vos bras, vos mains et vos pieds soient visibles.",
+   "hint": "Reculez un peu pour qu'on voie bien vos bras, vos mains et vos pieds.",
    "checking": "Vérification de votre équipement...",
    "verdict": {
-    "ready": "Vous semblez prêt",
-    "missing": "Corrigez ceci avant d'entrer",
+    "ready": "Vous avez l'air prêt",
+    "missing": "Réglez ça avant d'entrer",
     "unsure": "Milpa n'a pas pu tout voir"
    },
    "status": {
@@ -519,14 +528,14 @@
     "missing": "Manquant",
     "unsure": "Pas visible"
    },
-   "noPerson": "Milpa n'a vu personne sur la photo. Reculez et réessayez.",
+   "noPerson": "Milpa n'a vu personne sur la photo. Reculez un peu et réessayez.",
    "failed": "Impossible de vérifier la photo. Vérifiez votre connexion et réessayez.",
    "again": "Vérifier à nouveau"
   },
   "pay": {
    "title": "Vérif paie",
-   "intro": "Prenez en photo votre fiche de paie. Milpa la lit et la compare aux règles de paie de Californie.",
-   "take": "Prendre en photo ma fiche de paie",
+   "intro": "Prenez votre fiche de paie en photo. Milpa la lit et la compare aux règles de paie de Californie.",
+   "take": "Prendre ma fiche de paie en photo",
    "choose": "Choisir une photo",
    "reading": "Lecture de votre fiche de paie...",
    "period": "Période de paie",
@@ -535,13 +544,13 @@
    "gross": "Avant déductions",
    "net": "Montant touché",
    "verdict": {
-    "ok": "Cela semble correct",
+    "ok": "Ça semble correct",
     "ask": "Posez des questions là-dessus",
     "unclear": "Difficile à lire"
    },
    "status": {
     "ok": "Semble correct",
-    "ask": "Posez des questions",
+    "ask": "Posez des questions là-dessus",
     "missing": "Pas sur la fiche"
    },
    "labor": "Appeler le commissaire au travail",
@@ -552,19 +561,19 @@
   },
   "interpret": {
    "title": "Interprète",
-   "intro": "Parlez avec un chef, une infirmière ou un employé. Chacun appuie de son côté et parle, et Milpa répète à voix haute dans l'autre langue.",
+   "intro": "Discutez avec un responsable, un infirmier ou un employé. Chacun appuie sur son côté et parle, et Milpa répète à voix haute dans l'autre langue.",
    "me": "Moi",
    "them": "Eux",
    "other": "Ils parlent",
    "listening": "Écoute en cours... appuyez pour arrêter",
-   "translating": "Traduction...",
+   "translating": "Traduction en cours...",
    "tapToStop": "Appuyez pour arrêter",
-   "empty": "Appuyez de votre côté et parlez. Donnez le téléphone quand c'est à leur tour.",
+   "empty": "Appuyez de votre côté et parlez. Passez le téléphone quand c'est à leur tour.",
    "failed": "Ça n'a pas marché. Réessayez.",
-   "blocked": "Milpa a besoin de votre micro. Autorisez-le dans les réglages de votre navigateur.",
+   "blocked": "Milpa a besoin de votre micro. Autorisez-le dans les paramètres de votre navigateur.",
    "clear": "Recommencer",
    "replay": "Répéter",
-   "unsupported": "Ce navigateur ne peut pas enregistrer le son. Essayez Chrome ou Safari."
+   "unsupported": "Ce navigateur ne peut pas enregistrer le son. Essayez avec Chrome ou Safari."
   }
  }
 }

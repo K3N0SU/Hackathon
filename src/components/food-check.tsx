@@ -1,6 +1,6 @@
 "use client";
 
-import { Apple, ArrowRight, Check, ImageIcon, Keyboard, Leaf, RotateCcw, ShieldAlert, Sprout, TriangleAlert, Volume2, VolumeX } from "lucide-react";
+import { Apple, ArrowRight, Barcode, Check, ImageIcon, Info, Keyboard, Leaf, MapPin, RotateCcw, ShieldAlert, Sprout, Store, TriangleAlert, Volume2, VolumeX } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { appCopy } from "@/lib/app-copy";
 import { useCopy } from "@/lib/i18n";
@@ -23,7 +23,29 @@ type Food = {
   flags: string[];
   verdict: "safe" | "caution" | "avoid";
   summary: string;
+  barcode?: string;
+  about?: string;
+  facts?: string[];
+  catalog?: { name: string; brand: string; quantity: string; nutriscore: string } | null;
 };
+
+type Shop = { name: string; kind: string; address: string; miles: number };
+
+const zipKey = "furrow-zip";
+
+async function findBarcode(photo: string) {
+  try {
+    const Detector = (window as unknown as { BarcodeDetector?: new (options: { formats: string[] }) => { detect: (image: HTMLImageElement) => Promise<{ rawValue: string }[]> } }).BarcodeDetector;
+    if (!Detector) return "";
+    const image = new Image();
+    image.src = photo;
+    await image.decode();
+    const codes = await new Detector({ formats: ["ean_13", "ean_8", "upc_a", "upc_e"] }).detect(image);
+    return codes[0]?.rawValue ?? "";
+  } catch {
+    return "";
+  }
+}
 
 type State =
   | { step: "start" }
@@ -45,6 +67,35 @@ export function FoodCheck({ language }: { language: Language }) {
   const [state, setState] = useState<State>({ step: "start" });
   const [allergies, setAllergies] = useState<string[]>([]);
   const [name, setName] = useState("");
+  const [zip, setZip] = useState("");
+  const [shops, setShops] = useState<{ status: "idle" | "loading" | "done" | "failed"; list: Shop[] }>({ status: "idle", list: [] });
+
+  useEffect(() => {
+    const start = setTimeout(() => {
+      try {
+        setZip(localStorage.getItem(zipKey) ?? "");
+      } catch {}
+    }, 0);
+    return () => clearTimeout(start);
+  }, []);
+
+  async function findShops(event: React.FormEvent) {
+    event.preventDefault();
+    const code = zip.trim();
+    if (!/^\d{5}$/.test(code)) return;
+    try {
+      localStorage.setItem(zipKey, code);
+    } catch {}
+    setShops({ status: "loading", list: [] });
+    try {
+      const response = await fetch(`/api/shops?zip=${code}`);
+      if (!response.ok) throw new Error("shops");
+      const data: { shops: Shop[] } = await response.json();
+      setShops({ status: "done", list: data.shops });
+    } catch {
+      setShops({ status: "failed", list: [] });
+    }
+  }
   const [cameraOpen, setCameraOpen] = useState(false);
   const gallery = useRef<HTMLInputElement>(null);
   const { speaking, speak } = useSpeaker(language);
@@ -79,7 +130,8 @@ export function FoodCheck({ language }: { language: Language }) {
       return;
     }
     setState({ step: "checking", photo, name: "" });
-    await send({ image: photo.split(",")[1], mediaType: "image/jpeg" }, photo);
+    const barcode = await findBarcode(photo);
+    await send({ image: photo.split(",")[1], mediaType: "image/jpeg", ...(barcode ? { barcode } : {}) }, photo);
   }
 
   async function checkName(event: React.FormEvent) {
@@ -262,6 +314,47 @@ export function FoodCheck({ language }: { language: Language }) {
               </p>
             )}
 
+            {(food.about || food.catalog || food.barcode) && (
+              <div className="rise card p-5">
+                <p className="flex items-center gap-2 font-display text-xl font-semibold">
+                  <Info className="size-5 text-primary" />
+                  {text.about}
+                </p>
+                {food.catalog && (
+                  <p className="mt-2 font-semibold">
+                    {[food.catalog.brand, food.catalog.name, food.catalog.quantity].filter(Boolean).join(" · ")}
+                  </p>
+                )}
+                {food.about && <p className="mt-2 leading-relaxed">{food.about}</p>}
+                {food.facts && food.facts.length > 0 && (
+                  <ul className="mt-3 space-y-1.5">
+                    {food.facts.map((fact) => (
+                      <li key={fact} className="flex gap-2">
+                        <span className="mt-2 size-1.5 shrink-0 rounded-full bg-primary" />
+                        {fact}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+                <div className="mt-3 flex flex-wrap gap-2 text-sm">
+                  {food.barcode ? (
+                    <span className="flex items-center gap-1.5 rounded-full bg-secondary px-3 py-1 font-medium">
+                      <Barcode className="size-4" />
+                      {text.barcode} {food.barcode}
+                    </span>
+                  ) : (
+                    state.photo && <span className="text-muted-foreground">{text.noBarcode}</span>
+                  )}
+                  {food.catalog && <span className="rounded-full bg-leaf/15 px-3 py-1 font-medium text-leaf">{text.catalog}</span>}
+                  {food.catalog?.nutriscore && (
+                    <span className="rounded-full bg-harvest/30 px-3 py-1 font-semibold text-harvest-foreground">
+                      Nutri-Score {food.catalog.nutriscore}
+                    </span>
+                  )}
+                </div>
+              </div>
+            )}
+
             {food.mine.length > 0 && (
               <div className="rise rounded-2xl border-2 border-danger bg-red-50 p-4 text-red-900">
                 <p className="font-semibold">{text.yours}</p>
@@ -320,6 +413,54 @@ export function FoodCheck({ language }: { language: Language }) {
                 </ul>
               </div>
             )}
+
+            <div className="rise card p-5">
+              <p className="flex items-center gap-2 font-display text-xl font-semibold">
+                <Store className="size-5 text-primary" />
+                {text.shops}
+              </p>
+              <form onSubmit={findShops} className="mt-3 flex gap-2">
+                <input
+                  value={zip}
+                  onChange={(event) => setZip(event.target.value.replace(/\D/g, "").slice(0, 5))}
+                  inputMode="numeric"
+                  placeholder={text.zip}
+                  aria-label={text.zip}
+                  className="h-12 w-32 rounded-xl border bg-background px-3 text-lg"
+                />
+                <button
+                  type="submit"
+                  disabled={zip.length !== 5 || shops.status === "loading"}
+                  className="flex h-12 flex-1 items-center justify-center gap-2 rounded-xl bg-primary font-semibold text-primary-foreground transition-all active:scale-95 disabled:opacity-50"
+                >
+                  <MapPin className="size-4" />
+                  {text.findShops}
+                </button>
+              </form>
+              {shops.status === "loading" && <div className="mt-3 h-20 animate-pulse rounded-xl bg-secondary" />}
+              {shops.status === "failed" && <p className="mt-3 text-danger">{text.shopsFailed}</p>}
+              {shops.status === "done" && shops.list.length === 0 && <p className="mt-3 text-muted-foreground">{text.noShops}</p>}
+              {shops.list.length > 0 && (
+                <ul className="mt-3 divide-y">
+                  {shops.list.map((shop) => (
+                    <li key={`${shop.name}-${shop.miles}`}>
+                      <a
+                        href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(`${shop.name} ${shop.address || zip}`)}`}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="flex items-center justify-between gap-3 py-3 hover:text-primary"
+                      >
+                        <span className="min-w-0">
+                          <span className="block truncate font-semibold">{shop.name}</span>
+                          {shop.address && <span className="block truncate text-sm text-muted-foreground">{shop.address}</span>}
+                        </span>
+                        <span className="shrink-0 text-sm font-semibold tabular-nums text-muted-foreground">{shop.miles} mi</span>
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              )}
+            </div>
 
             <div className="grid grid-cols-2 gap-3">
               <button

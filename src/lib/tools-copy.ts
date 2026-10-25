@@ -25,6 +25,15 @@ export type ToolsCopy = {
     typePlaceholder: string;
     typeCheck: string;
     byName: string;
+    about: string;
+    barcode: string;
+    noBarcode: string;
+    catalog: string;
+    shops: string;
+    zip: string;
+    findShops: string;
+    noShops: string;
+    shopsFailed: string;
   };
   gear: {
     title: string;
@@ -104,6 +113,15 @@ export const toolsCopy: Record<CoreLanguage, ToolsCopy> = {
       typePlaceholder: "Strawberries, Takis, tamales...",
       typeCheck: "Check",
       byName: "Checked by name. If you have the package, a photo of the label is more exact.",
+      about: "About this item",
+      barcode: "Barcode",
+      noBarcode: "No barcode seen, so Milpa recognized the item from the photo.",
+      catalog: "Matched by barcode",
+      shops: "Stores near you",
+      zip: "ZIP code",
+      findShops: "Find stores",
+      noShops: "No grocery stores found near that ZIP code.",
+      shopsFailed: "Could not look up stores. Try again.",
     },
     gear: {
       title: "Gear check",
@@ -189,6 +207,15 @@ export const toolsCopy: Record<CoreLanguage, ToolsCopy> = {
       typePlaceholder: "Fresas, Takis, tamales...",
       typeCheck: "Revisar",
       byName: "Revisado por nombre. Si tienes el paquete, una foto de la etiqueta es más exacta.",
+      about: "Sobre este producto",
+      barcode: "Código de barras",
+      noBarcode: "No se vio código de barras, así que Milpa reconoció el producto por la foto.",
+      catalog: "Encontrado por código de barras",
+      shops: "Tiendas cerca de usted",
+      zip: "Código postal",
+      findShops: "Buscar tiendas",
+      noShops: "No se encontraron tiendas cerca de ese código postal.",
+      shopsFailed: "No se pudieron buscar tiendas. Intente otra vez.",
     },
     gear: {
       title: "Revisar equipo",
@@ -274,6 +301,15 @@ export const toolsCopy: Record<CoreLanguage, ToolsCopy> = {
       typePlaceholder: "ਸਟ੍ਰਾਬੇਰੀ, ਸਮੋਸੇ, ਚਿਪਸ...",
       typeCheck: "ਜਾਂਚੋ",
       byName: "ਨਾਮ ਨਾਲ ਜਾਂਚਿਆ। ਜੇ ਪੈਕੇਟ ਹੈ ਤਾਂ ਲੇਬਲ ਦੀ ਫ਼ੋਟੋ ਜ਼ਿਆਦਾ ਸਹੀ ਹੈ।",
+      about: "ਇਸ ਚੀਜ਼ ਬਾਰੇ",
+      barcode: "ਬਾਰਕੋਡ",
+      noBarcode: "ਬਾਰਕੋਡ ਨਹੀਂ ਦਿਸਿਆ, ਇਸ ਲਈ Milpa ਨੇ ਫ਼ੋਟੋ ਤੋਂ ਚੀਜ਼ ਪਛਾਣੀ।",
+      catalog: "ਬਾਰਕੋਡ ਨਾਲ ਮਿਲਿਆ",
+      shops: "ਨੇੜੇ ਦੀਆਂ ਦੁਕਾਨਾਂ",
+      zip: "ZIP ਕੋਡ",
+      findShops: "ਦੁਕਾਨਾਂ ਲੱਭੋ",
+      noShops: "ਉਸ ZIP ਕੋਡ ਨੇੜੇ ਕੋਈ ਦੁਕਾਨ ਨਹੀਂ ਮਿਲੀ।",
+      shopsFailed: "ਦੁਕਾਨਾਂ ਨਹੀਂ ਲੱਭ ਸਕੇ। ਦੁਬਾਰਾ ਕੋਸ਼ਿਸ਼ ਕਰੋ।",
     },
     gear: {
       title: "ਸਾਮਾਨ ਦੀ ਜਾਂਚ",

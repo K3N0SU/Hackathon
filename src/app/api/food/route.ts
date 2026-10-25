@@ -16,7 +16,33 @@ Rules:
 - "verdict" is "safe" if none of the person's allergies are in it and nothing serious is flagged, "avoid" if one of their allergies is in it, "caution" otherwise.
 - "summary" is one or two short sentences a worker can act on.
 - If the person typed a food name instead of sending a photo, judge from what that food usually contains. Use "may" for allergens that depend on the brand or recipe, set "organic" to "unknown" unless they said organic, and have the summary say to check the package label if there is one.
+- "barcode" is the digits under the barcode if you can clearly read all of them, otherwise an empty string. Never guess digits.
+- "about" is two or three plain sentences about the item: what it is, the brand if you can see it, and what it is usually eaten with or used for. If catalog data from the barcode is given, trust it for the name, brand and ingredients.
+- "facts" are two to four short, useful notes about this item, like how much sugar or salt is in a serving, how to store it, how long it keeps, or how to tell if fresh produce is ripe. No marketing.
 - If the photo or name is not food or a food label, set "readable" to false and leave the rest empty.`;
+
+type Catalog = { name: string; brand: string; quantity: string; nutriscore: string; ingredients: string };
+
+async function lookup(code: string): Promise<Catalog | null> {
+  if (!/^\d{8,14}$/.test(code)) return null;
+  try {
+    const data = await fetch(
+      `https://world.openfoodfacts.org/api/v2/product/${code}.json?fields=product_name,brands,quantity,nutriscore_grade,ingredients_text`,
+      { headers: { "User-Agent": "Milpa/1.0 (milpa-california.vercel.app)" }, signal: AbortSignal.timeout(6000) },
+    ).then((response) => response.json());
+    const product = data?.product;
+    if (data?.status !== 1 || !product?.product_name) return null;
+    return {
+      name: product.product_name,
+      brand: product.brands ?? "",
+      quantity: product.quantity ?? "",
+      nutriscore: typeof product.nutriscore_grade === "string" && /^[a-e]$/.test(product.nutriscore_grade) ? product.nutriscore_grade.toUpperCase() : "",
+      ingredients: (product.ingredients_text ?? "").slice(0, 1200),
+    };
+  } catch {
+    return null;
+  }
+}
 
 const schema = {
   type: "OBJECT",
@@ -40,12 +66,15 @@ const schema = {
     flags: { type: "ARRAY", items: { type: "STRING" } },
     verdict: { type: "STRING", enum: ["safe", "caution", "avoid"] },
     summary: { type: "STRING" },
+    barcode: { type: "STRING" },
+    about: { type: "STRING" },
+    facts: { type: "ARRAY", items: { type: "STRING" } },
   },
-  required: ["readable", "product", "allergens", "mine", "organic", "pesticides", "flags", "verdict", "summary"],
+  required: ["readable", "product", "allergens", "mine", "organic", "pesticides", "flags", "verdict", "summary", "barcode", "about", "facts"],
 };
 
 export async function POST(req: Request) {
-  const { image, mediaType, name, language, allergies } = await req.json();
+  const { image, mediaType, name, language, allergies, barcode } = await req.json();
   const typed = typeof name === "string" ? name.trim().slice(0, 120) : "";
   const photo = isImage(image, mediaType);
   if ((!photo && !typed) || !isLanguage(language)) {
@@ -54,8 +83,10 @@ export async function POST(req: Request) {
   const mine = Array.isArray(allergies)
     ? allergies.filter((item): item is string => typeof item === "string").slice(0, 12)
     : [];
+  const scanned = typeof barcode === "string" ? barcode.replace(/\D/g, "") : "";
+  let catalog = scanned ? await lookup(scanned) : null;
   try {
-    const result = await gemini({
+    const result = await gemini<{ barcode?: string }>({
       system,
       schema,
       contents: [
@@ -64,13 +95,15 @@ export async function POST(req: Request) {
           parts: [
             ...(photo ? [{ inlineData: { mimeType: mediaType, data: image } }] : []),
             {
-              text: `My allergies: ${mine.length ? mine.join(", ") : "none"}. Today is ${new Date().toDateString()}. ${photo ? "Check this food." : `I have no label, only the name. The food is: ${typed}`} Answer in ${languageNames[language]}.`,
+              text: `My allergies: ${mine.length ? mine.join(", ") : "none"}. Today is ${new Date().toDateString()}. ${photo ? "Check this food." : `I have no label, only the name. The food is: ${typed}`}${scanned ? ` The phone read barcode ${scanned}.` : ""}${catalog ? ` Catalog data for that barcode: ${JSON.stringify(catalog)}` : ""} Answer in ${languageNames[language]}.`,
             },
           ],
         },
       ],
     });
-    return Response.json(result);
+    const code = scanned || (result.barcode ?? "").replace(/\D/g, "");
+    if (!catalog && code) catalog = await lookup(code);
+    return Response.json({ ...result, barcode: code, catalog });
   } catch {
     return new Response("food check failed", { status: 502 });
   }

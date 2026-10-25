@@ -95,10 +95,10 @@
   "close": "Isara",
   "interpreter": ""
  },
- "2nvoxz": {
+ "e639wk": {
   "signInTitle": "Maligayang pagbabalik",
   "signUpTitle": "Gumawa ng account",
-  "intro": "Naka-save sa account mo ang mga scan, timer, at wika mo, kaya kasama mo ang mga ito sa kahit saang telepono.",
+  "intro": "Naka-save ang iyong mga scan, timer, at wika sa iyong account, kaya kasama mo pa rin ang mga ito sa kahit saang telepono.",
   "name": "Pangalan mo",
   "email": "Email",
   "password": "Password",
@@ -111,31 +111,31 @@
   "haveAccount": "May account ka na ba?",
   "signInLink": "Mag-sign in",
   "forgot": "Nakalimutan ang password?",
-  "resetNeedsEmail": "I-type muna ang email mo, tapos pindutin ang Nakalimutan ang password.",
+  "resetNeedsEmail": "I-type muna ang iyong email, tapos pindutin ang Nakalimutan ang password.",
   "resetSent": "Nagpadala kami ng link para palitan ang password mo. Tingnan ang iyong email.",
   "working": "Sandali lang...",
   "verifyTitle": "Tingnan ang iyong email",
   "verifyBody": "Nagpadala kami ng link sa",
-  "verifyNext": "Buksan ito para kumpirmahin ang email mo. Kusa itong lilipat kapag nagawa mo na.",
+  "verifyNext": "Buksan ito para makumpirma ang iyong email. Kusang lilipat ang pahinang ito kapag natapos mo na.",
   "resend": "Ipadala ulit ang link",
-  "resent": "Naipadala na. Baka abutin ng isang minuto, at baka nasa spam folder ito.",
-  "verified": "Nabuksan ko na ang link",
+  "resent": "Naipadala na. Pwedeng abutin ng isang minuto, at baka nasa spam folder.",
+  "verified": "Binuksan ko na ang link",
   "notYet": "Hindi pa nakukumpirma. Buksan ang link sa email, tapos subukan ulit.",
   "useOther": "Gumamit ng ibang email",
   "account": "Account",
   "signedInAs": "Naka-sign in bilang",
   "signOut": "Mag-sign out",
   "errors": {
-   "invalid": "Mali ang email o password na iyon.",
+   "invalid": "Mali ang email o password na iyan.",
    "inUse": "May account na ang email na iyan. Mag-sign in na lang.",
-   "weak": "Gumamit ng hindi bababa sa 6 na character para sa password.",
-   "badEmail": "Parang hindi iyan totoong email address.",
+   "weak": "Gumamit ng kahit 6 na letra o numero para sa password.",
+   "badEmail": "Mukhang hindi tama ang email address na iyan.",
    "popup": "Nagsara ang Google window bago ka natapos.",
-   "tooMany": "Masyadong maraming beses sumubok. Maghintay muna nang ilang minuto at subukan ulit.",
+   "tooMany": "Masyadong maraming subok. Maghintay nang ilang minuto at subukan ulit.",
    "network": "Walang koneksyon. Tingnan ang signal mo at subukan ulit.",
    "generic": "May nagkaproblema. Subukan ulit.",
-   "notConfigured": "Hindi pa handa ang sign-in sa site na ito.",
-   "wrongSite": "Gumagana lang ang Google sign-in sa milpa-california.vercel.app. Buksan ang Milpa doon, o gamitin ang email mo."
+   "notConfigured": "Hindi pa handa ang sign in sa site na ito.",
+   "wrongSite": "Gumagana lang ang Google sign-in sa milpa-california.vercel.app. Buksan doon ang Milpa, o gamitin ang iyong email."
   }
  },
  "1m3i1h": {
@@ -451,21 +451,21 @@
   "failed": "Hindi ma-load ang mga na-scan mo. Tingnan ang signal mo at subukan ulit.",
   "remove": "Burahin"
  },
- "1tl1wjl": {
+ "hx6dl3": {
   "food": {
-   "title": "Pagsusuri sa pagkain",
-   "intro": "Kumuha ng litrato ng label ng pagkain, sticker sa prutas o gulay, o ang mismong prutas. Susuriin ito ng Milpa para sa mga allergy mo at sasabihin sa iyo kung ano ang sinasabi ng label tungkol sa mga pesticide.",
+   "title": "Pagsusuri ng pagkain",
+   "intro": "Kumuha ng litrato ng label ng pagkain, sticker sa prutas, o mismong prutas. Susuriin ito ng Milpa para sa iyong mga allergy at sasabihin kung ano ang nakasulat sa label tungkol sa mga pesticide.",
    "allergiesTitle": "Aking mga allergy",
    "allergyNames": [
     "Gatas",
     "Itlog",
     "Isda",
-    "Shellfish",
+    "Hipon at alimango",
     "Tree nuts",
     "Mani",
     "Trigo",
     "Soy",
-    "Sesame"
+    "Linga"
    ],
    "take": "Kumuha ng litrato ng pagkain",
    "choose": "Pumili ng litrato",
@@ -475,40 +475,49 @@
     "caution": "Tingnan muna bago kainin",
     "avoid": "Huwag itong kainin"
    },
-   "allergens": "Mga Allergen",
+   "allergens": "Mga allergen",
    "contains": "May sangkap na",
    "may": "Maaaring may sangkap na",
-   "noAllergens": "Walang pangunahing allergen sa label.",
-   "yours": "May sangkap na bawal sa allergy mo",
+   "noAllergens": "Walang mga pangunahing allergen sa label.",
+   "yours": "May sangkap na allergy mo",
    "organic": {
     "yes": "Sertipikadong organic",
     "no": "Hindi organic",
-    "unknown": "Hindi nakasaad kung organic"
+    "unknown": "Hindi nakalagay kung organic"
    },
    "pesticides": "Mga pesticide",
    "flags": "Dapat malaman",
-   "notFood": "Hindi iyon mukhang pagkain o label ng pagkain. Subukang kumuha ng mas malapit na litrato.",
+   "notFood": "Mukhang hindi iyon pagkain o label ng pagkain. Subukang kumuha ng mas malapit na litrato.",
    "failed": "Hindi masuri ang litrato. Tingnan ang iyong koneksyon at subukan muli.",
-   "again": "Sumuri ng iba pa",
+   "again": "Sumuri ng iba",
    "typeTitle": "Walang label o barcode? I-type kung ano ito",
    "typePlaceholder": "Strawberries, Takis, tamales...",
    "typeCheck": "Suriin",
-   "byName": "Sinuri ayon sa pangalan. Kung hawak mo ang balot, mas tama ang litrato ng label."
+   "byName": "Sinuri ayon sa pangalan. Kung hawak mo ang balot, mas tumpak ang litrato ng label.",
+   "about": "Tungkol sa bagay na ito",
+   "barcode": "Barcode",
+   "noBarcode": "Walang nakitang barcode, kaya nalaman ng Milpa ang bagay mula sa litrato.",
+   "catalog": "Itinugma sa pamamagitan ng barcode",
+   "shops": "Mga tindahan malapit sa iyo",
+   "zip": "ZIP code",
+   "findShops": "Maghanap ng mga tindahan",
+   "noShops": "Walang nahanap na grocery store malapit sa ZIP code na iyon.",
+   "shopsFailed": "Hindi mahanap ang mga tindahan. Subukan muli."
   },
   "gear": {
-   "title": "Pagsusuri sa gamit pananggalang",
-   "intro": "Kumuha ng litrato ng iyong sarili bago ka pumasok sa trabaho. Susuriin ito ng Milpa batay sa gamit na kailangan ayon sa label.",
+   "title": "Pagsusuri ng gamit",
+   "intro": "Kumuha ng litrato ng iyong sarili bago ka pumasok. Susuriin ito ng Milpa kung tugma sa gamit na hinihingi sa label.",
    "forProduct": "Sinusuri ang gamit para sa",
-   "noLabel": "Wala pang na-scan na label, kaya karaniwang gamit pananggalang ang susuriin ng Milpa.",
+   "noLabel": "Wala pang na-scan na label, kaya karaniwang gamit ang sinusuri ng Milpa.",
    "defaultGear": [
-    "Damit na may mahabang manggas",
+    "Kamisetang mahaba ang manggas",
     "Mahabang pantalon",
-    "Guwantes na panlaban sa kemikal",
+    "Guwantes na pang-kemikal",
     "Sapatos at medyas"
    ],
    "take": "Kumuha ng litrato ko",
    "hint": "Umatras nang kaunti para makita ang iyong mga braso, kamay, at paa.",
-   "checking": "Tinitingnan ang iyong gamit pananggalang...",
+   "checking": "Tinitingnan ang iyong gamit...",
    "verdict": {
     "ready": "Mukhang handa ka na",
     "missing": "Ayusin ito bago ka pumasok",
@@ -524,47 +533,47 @@
    "again": "Suriin muli"
   },
   "pay": {
-   "title": "Pagsusuri sa sweldo",
-   "intro": "Kumuha ng litrato ng iyong pay stub. Babasahin ito ng Milpa at susuriin batay sa mga patakaran sa sweldo sa California.",
+   "title": "Pagsusuri ng suweldo",
+   "intro": "Kumuha ng litrato ng iyong pay stub. Babasahin ito ng Milpa at ikukumpara sa mga patakaran sa sahod ng California.",
    "take": "Kumuha ng litrato ng aking pay stub",
    "choose": "Pumili ng litrato",
    "reading": "Binabasa ang iyong pay stub...",
-   "period": "Panahon ng sweldo",
+   "period": "Panahon ng suweldo",
    "hours": "Mga oras",
    "rate": "Sahod kada oras",
-   "gross": "Bago ang mga bawas",
-   "net": "Naiuuwing sweldo",
+   "gross": "Bago ang kaltas",
+   "net": "Take home",
    "verdict": {
     "ok": "Mukhang tama ito",
-    "ask": "Itanong ito sa opisina",
+    "ask": "Itanong ito",
     "unclear": "Mahirap basahin"
    },
    "status": {
     "ok": "Mukhang tama",
     "ask": "Itanong ito",
-    "missing": "Wala sa pay stub"
+    "missing": "Wala sa stub"
    },
    "labor": "Tawagan ang Labor Commissioner",
-   "notStub": "Hindi iyon mukhang pay stub. Subukang kumuha ng mas malinaw na litrato.",
+   "notStub": "Mukhang hindi iyon pay stub. Subukang kumuha ng mas malinaw na litrato.",
    "failed": "Hindi mabasa ang litrato. Tingnan ang iyong koneksyon at subukan muli.",
-   "again": "Sumuri ng iba pa",
-   "privacy": "Hindi naitatabi ang litrato kahit saan."
+   "again": "Sumuri ng iba",
+   "privacy": "Hindi naitatabi kahit saan ang litrato."
   },
   "interpret": {
    "title": "Tagasalin",
-   "intro": "Kausapin ang superbisor, nars, o klerk. Pindutin ang inyong panig at magsalita, at bibigkasin ito ng Milpa sa kabilang wika.",
+   "intro": "Makisalamuha sa supervisor, nars, o klerk. Pindutin ng bawat isa ang inyong panig at magsalita, at bibigkasin ito ng Milpa sa kabilang wika.",
    "me": "Ako",
    "them": "Sila",
    "other": "Sila ay nagsasalita ng",
    "listening": "Nakikinig... pindutin para huminto",
    "translating": "Isinasalin...",
    "tapToStop": "Pindutin para huminto",
-   "empty": "Pindutin ang iyong panig at magsalita. Iabot ang telepono kapag sila naman ang magsasalita.",
-   "failed": "Hindi iyon gumana. Subukan muli.",
+   "empty": "Pindutin ang iyong panig at magsalita. Iabot ang telepono kapag turn na nila.",
+   "failed": "Hindi iyon pumasok. Subukan muli.",
    "blocked": "Kailangan ng Milpa ang iyong mikropono. Payagan ito sa settings ng iyong browser.",
    "clear": "Magsimula muli",
    "replay": "Sabihin muli",
-   "unsupported": "Hindi kayang mag-record ng tunog sa browser na ito. Subukan ang Chrome o Safari."
+   "unsupported": "Hindi makapag-record ng boses ang browser na ito. Subukan ang Chrome o Safari."
   }
  }
 }
