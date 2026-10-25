@@ -22,6 +22,8 @@ import { useSession } from "@/components/auth-provider";
 import { VoiceChat, type VoiceReply } from "@/components/voice-chat";
 import { appCopy } from "@/lib/app-copy";
 import { freshChat, useChats, type Chat, type ChatMessage } from "@/lib/chats";
+import { listScans } from "@/lib/cloud";
+import { lastScanKey } from "@/lib/exposure";
 import type { Clock } from "@/lib/clocks";
 import { useCopy } from "@/lib/i18n";
 import { fileToJpeg, toJpeg } from "@/lib/image";
@@ -104,6 +106,44 @@ export function AskChat({
   const text = useCopy(appCopy, language).ask;
   const noVoice = useCopy(copy, language).noVoice;
   const { user } = useSession();
+  const savedScans = useRef<{ product: string; signal: string; reentry: string; gear: string[]; firstAid: string[]; scannedAt: string }[]>([]);
+
+  useEffect(() => {
+    if (!user) return;
+    let active = true;
+    listScans()
+      .then((scans) => {
+        if (!active) return;
+        savedScans.current = scans.slice(0, 8).map((scan) => ({
+          product: scan.result.product,
+          signal: scan.result.signal,
+          reentry: scan.result.reentry,
+          gear: scan.result.gear,
+          firstAid: scan.result.firstAid,
+          scannedAt: new Date(scan.createdAt).toLocaleString("en-US", { timeZone: "America/Los_Angeles" }),
+        }));
+      })
+      .catch(() => {});
+    return () => {
+      active = false;
+    };
+  }, [user]);
+
+  function appData() {
+    const read = (key: string) => {
+      try {
+        return JSON.parse(localStorage.getItem(key) ?? "null");
+      } catch {
+        return null;
+      }
+    };
+    const last = read(lastScanKey);
+    return {
+      lastScannedLabel: last ? { product: last.product, signal: last.signal, result: last.result } : undefined,
+      savedScans: savedScans.current,
+      foodAllergies: read("furrow-allergies") ?? [],
+    };
+  }
   const { chats, store, remove } = useChats(user?.uid);
   const [current, setCurrent] = useState<Chat>(() => freshChat(focus));
   const [draft, setDraft] = useState("");
@@ -230,6 +270,7 @@ export function AskChat({
           image: image ? image.split(",")[1] : undefined,
           messages: asked.slice(-12).map(({ role, text }) => ({ role, text })),
           context: {
+            ...appData(),
             scannedLabel: base.label,
             reentryClocks: clocks.map((clock) => ({
               product: clock.product,
