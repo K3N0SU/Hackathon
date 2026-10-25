@@ -14,6 +14,7 @@ Update before ending every task. Keep terse.
 - 17 languages (scan.ts): en es pa hmn tl hi ar vi zh ko ur fa hy ru fr pt ja; RTL ar ur fa. i18n in-memory cache + preload on language button hover. After copy changes: dev server on 3100, `FURROW_URL=http://localhost:3100 node scripts/translate.mjs`.
 - QA account in scratchpad qa.json. Screenshot scripts: scratchpad app2.js (app), shoot.js (landing).
 
+- Food check: BarcodeDetector on photo, Open Food Facts lookup (food route lookup()), about/facts fields, /api/shops (Nominatim supermarket search in a ZIP viewbox; Overpass blocked on venue wifi), ZIP in furrow-zip. Ask Milpa context includes savedScans/lastScannedLabel/foodAllergies.
 - Oct 24 late adds: Today risk banner + clock rings, client-side 911 on emergency words in chat, field mode (html.field-mode, furrow-field-mode), tools grouped (pesticides/health/work), LiveCamera mode hints + torch, Gemini retries (gemini.ts), dark landing hero.
 - Pay, food and gear checks open the in-app LiveCamera (portaled to body; gear uses front camera). Tool names/intro reworded to say farmworker pesticide/heat/pay (en, es; others via translate.mjs). Tool cards: no blob, hover arrow.
 - Food check also takes a typed name (no label/barcode); "Check another" returns to start. Google sign-in: unauthorized-domain shows a "use milpa-california.vercel.app" message, popup failures fall back to redirect, getRedirectResult surfaces errors.
